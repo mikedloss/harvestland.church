@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from "../../global.css"
-import theme from "../Elements/theme"
-import Header from "../Header"
+import GlobalStyle from '../../global.css';
+import theme from '../Elements/theme';
+import Header from '../Header';
 import { Container } from './Layout.styles';
 
 const Layout = ({ children }) => (
@@ -19,8 +19,8 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <ThemeProvider theme={ theme }>
+    render={(data) => (
+      <ThemeProvider theme={theme}>
         <Container>
           <GlobalStyle />
           <Header siteTitle={data.site.siteMetadata.title} />
@@ -34,10 +34,10 @@ const Layout = ({ children }) => (
       </ThemeProvider>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

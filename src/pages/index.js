@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-import Layout from "../components/Layout"
-import Image from "../components/Image"
-import SEO from "../components/SEO"
+import Layout from '../components/Layout';
+import Image from '../components/Image';
+import SEO from '../components/SEO';
 
 import FrontVideoHero from '../components/Heroes/FrontVideoHero';
 
@@ -20,6 +20,6 @@ const IndexPage = () => (
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,12 +1,12 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby'; 
+import { StaticQuery, graphql } from 'gatsby';
 
-import { Heading } from  'rebass';
+import { Heading } from 'rebass';
 
-import * as Styles from '../../Hero.styles'
+import * as Styles from '../../Hero.styles';
 
 export const FrontHero = (props) => {
-  console.log(props)
+  console.log(props);
   return (
     <StaticQuery
       query={graphql`
@@ -20,24 +20,21 @@ export const FrontHero = (props) => {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         console.log(data);
         return (
           <Styles.HeroStyle
             alignItems="center"
             justifyContent="center"
-            height='60vh'
+            height="60vh"
             img={data}
           >
-            <Heading 
-              textAlign='center' 
-              color='white'
-              fontSize={[4, 5, 5]}>
+            <Heading textAlign="center" color="white" fontSize={[4, 5, 5]}>
               hello
             </Heading>
           </Styles.HeroStyle>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};

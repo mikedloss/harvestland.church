@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heading, Flex } from  'rebass';
+import { Heading, Flex } from 'rebass';
 
 export const VideoHeroStyle = styled.section`
   background-color: #000;
