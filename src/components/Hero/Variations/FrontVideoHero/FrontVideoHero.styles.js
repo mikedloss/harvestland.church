@@ -54,4 +54,9 @@ export const Video = styled.video`
   width: 100%;
   height: 100%;
   opacity: 0.8;
+  min-height: 320px;
+
+  @media screen and (min-width: 767px) {
+    min-height: inherit;
+  }
 `;
