@@ -27,7 +27,7 @@ export const FrontVideoHero = (props) => {
           </Styles.MediaContainer>
           <Styles.TextContainer>
               <Styles.TextOverlay alignItems="center" justifyContent="center">
-                <Styles.WelcomeText fontSize={[3, 4, 4]}>overlay text</Styles.WelcomeText>
+                <Styles.WelcomeText fontSize={[5, 6]}>overlay text</Styles.WelcomeText>
               </Styles.TextOverlay>
           </Styles.TextContainer>
         </Styles.VideoHeroStyle>

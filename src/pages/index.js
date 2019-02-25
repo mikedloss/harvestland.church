@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 import Image from "../components/Image"
 import SEO from "../components/SEO"
 
-import FrontVideoHero from '../components/Hero/Variations/FrontVideoHero';
+import FrontVideoHero from '../components/Heroes/FrontVideoHero';
 
 const IndexPage = () => (
   <Layout>
