@@ -7,7 +7,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <Flex alignItems="center" bg="white" py="16px" px="16px" my="0" mx="auto">
     <Box>
-      <Heading m="0" as="h1">
+      <Heading m="0" as="h1" fontSize={2}>
         <Link to="/" style={{ color: "#222", textDecoration: "none", }}>
           {siteTitle}
         </Link>
