@@ -194,13 +194,13 @@ export default createGlobalStyle`
     overflow-y: scroll;
   }
   * {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   *:before {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   body {
     color: #222;
@@ -623,5 +623,10 @@ export default createGlobalStyle`
     html {
       font-size: 100%;
     }
+  }
+
+  /* stuff for navbar */
+  .nav-visible {
+    display: block;
   }
 `;
