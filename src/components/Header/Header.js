@@ -43,7 +43,7 @@ class Header extends React.Component {
                   onClick={this.toggleMenu}
                   menuOpen={this.state.menuOpen}
                 >
-                  Menu
+                  { this.state.menuOpen ? 'Close' : 'Menu' }
                 </Styles.MenuButton>
               </Media.SmallOnly>
               <Heading
