@@ -43,7 +43,7 @@ class Header extends React.Component {
                   onClick={this.toggleMenu}
                   menuOpen={this.state.menuOpen}
                 >
-                  { this.state.menuOpen ? 'Close' : 'Menu' }
+                  {this.state.menuOpen ? 'Close' : 'Menu'}
                 </Styles.MenuButton>
               </Media.SmallOnly>
               <Heading
@@ -83,45 +83,3 @@ Header.defaultProps = {
 };
 
 export default Header;
-
-{
-  /* 
-<Box>
-            <Flex justifyContent="space-between" bg="white" py="16px" pl="16px" my="0" mx="auto">
-              <Heading m="0" as="h1" fontSize={2}>
-                <Link to="/" style={{ color: '#222', textDecoration: 'none' }}>
-                  <Styles.LogoImage src={`${data.file.childImageSharp.fluid.src}`} alt="Harvestland Church" />
-                </Link>
-              </Heading>
-              <Media.SmallOnly>
-                <Styles.MenuButton as="span" p="16px" fontSize={0} onClick={this.toggleMenu}>Menu</Styles.MenuButton>
-              </Media.SmallOnly>
-              <Media.NotSmall>
-                <Styles.NavList isVisible={this.state.menuOpen}>
-                  <Styles.NavItem as="li">
-                    <Styles.NavContent as="p" mr="16px" fontSize={3} fontWeight="bold">Abc</Styles.NavContent>
-                  </Styles.NavItem>
-                  <Styles.NavItem as="li">
-                    <Styles.NavContent as="p" mr="16px" fontSize={3} fontWeight="bold">123</Styles.NavContent>
-                  </Styles.NavItem>
-                  <Styles.NavItem as="li">
-                    <Styles.NavContent as="p" mr="16px" fontSize={3} fontWeight="bold">Def</Styles.NavContent>
-                  </Styles.NavItem>
-                </Styles.NavList>
-              </Media.NotSmall>
-            </Flex>
-            <Media.SmallOnly>
-              <Styles.NavList isVisible={this.state.menuOpen}>
-                <Styles.NavItem as="li">
-                  <Styles.NavContent my="16px" mr="16px" fontSize={3} fontWeight="bold">Abc</Styles.NavContent>
-                </Styles.NavItem>
-                <Styles.NavItem as="li">
-                  <Styles.NavContent my="16px" mr="16px" fontSize={3} fontWeight="bold">123</Styles.NavContent>
-                </Styles.NavItem>
-                <Styles.NavItem as="li">
-                  <Styles.NavContent my="16px" mr="16px" fontSize={3} fontWeight="bold">Def</Styles.NavContent>
-                </Styles.NavItem>
-              </Styles.NavList>
-            </Media.SmallOnly>
-          </Box> */
-}
