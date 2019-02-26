@@ -1,9 +1,14 @@
 import styled from 'styled-components';
-import { Image, Text, Box } from 'rebass';
-import Img from 'gatsby-image';
+import { Image, Text, Box, Button } from 'rebass';
+import { Link } from 'gatsby';
 import { breakpoints as bp } from '../Elements/theme';
 
-export const LogoImage = styled(Image)`\
+export const Logo = styled(Link)`
+  text-decoration: none;
+  color: #222;
+`;
+
+export const LogoImage = styled(Image)`
   color: #42613d;
 `;
 
@@ -16,11 +21,21 @@ export const Nav = styled(Box)`
   }
 `;
 
-export const MenuButton = styled(Text)`
+export const MenuButton = styled(Button)`
   position: absolute;
   top: 0px;
   right: 0px;
   cursor: pointer;
+  ${(props) => {
+    console.log(props);
+    return (
+      props.menuOpen &&
+      `
+      background-color: #42613d;
+      color: #fff;
+    `
+    );
+  }}
 `;
 
 // main-nav
@@ -34,6 +49,7 @@ export const NavList = styled.ul`
   background-color: #fff;
   top: 60px;
   z-index: ${({ isVisible }) => (isVisible ? '2' : '-1')};
+  border-bottom: 2px solid #42613d;
 
   @media screen and (min-width: ${bp.SMALL}) {
     display: flex;
@@ -43,20 +59,6 @@ export const NavList = styled.ul`
     position: relative;
     top: 0;
     width: inherit;
+    border: none;
   }
-`;
-
-// li
-export const NavItem = styled(Text)`
-  text-align: center;
-  margin: 16px auto;
-
-  @media screen and (min-width: ${bp.SMALL}) {
-    margin-right: 16px;
-  }
-`;
-
-// li content
-export const NavContent = styled(Text)`
-  text-decoration: none;
 `;

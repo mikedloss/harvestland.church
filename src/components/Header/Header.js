@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import { Heading, Box, Text, Flex } from 'rebass';
+import { Heading } from 'rebass';
 
+import NavItem from './components/NavItem';
 import * as Media from '../Elements/media';
 import * as Styles from './Header.styles';
 
@@ -33,11 +33,15 @@ class Header extends React.Component {
             <Styles.Nav as="nav">
               <Media.SmallOnly>
                 <Styles.MenuButton
-                  as="span"
-                  p="20px"
-                  pt="20px"
+                  bg="white"
+                  color="black"
+                  py="5px"
+                  px="10px"
+                  my="15px"
+                  mx="10px"
                   fontSize={0}
                   onClick={this.toggleMenu}
+                  menuOpen={this.state.menuOpen}
                 >
                   Menu
                 </Styles.MenuButton>
@@ -49,29 +53,18 @@ class Header extends React.Component {
                 fontSize={2}
                 style={{ display: 'inline-block' }}
               >
-                <Link to="/">
-                  <Styles.LogoImage
+                <Styles.Logo to="/">
+                  <Heading>words</Heading>
+                  {/* <Styles.LogoImage
                     src={data.file.childImageSharp.fluid.src}
                     alt="Harvestland Church"
-                  />
-                </Link>
+                  /> */}
+                </Styles.Logo>
               </Heading>
               <Styles.NavList isVisible={this.state.menuOpen}>
-                <Styles.NavItem as="li">
-                  <Styles.NavContent as="p" fontSize={3} fontWeight="bold">
-                    Abc
-                  </Styles.NavContent>
-                </Styles.NavItem>
-                <Styles.NavItem as="li">
-                  <Styles.NavContent as="p" fontSize={3} fontWeight="bold">
-                    123
-                  </Styles.NavContent>
-                </Styles.NavItem>
-                <Styles.NavItem as="li">
-                  <Styles.NavContent as="p" fontSize={3} fontWeight="bold">
-                    Def
-                  </Styles.NavContent>
-                </Styles.NavItem>
+                <NavItem>Abc</NavItem>
+                <NavItem>123</NavItem>
+                <NavItem>Def</NavItem>
               </Styles.NavList>
             </Styles.Nav>
           )
