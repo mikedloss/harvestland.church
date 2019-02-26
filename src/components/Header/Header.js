@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { Heading, Box, Text, Flex } from 'rebass';
 
 import * as Media from '../Elements/media';
@@ -50,7 +51,7 @@ class Header extends React.Component {
               >
                 <Link to="/">
                   <Styles.LogoImage
-                    src={`${data.file.childImageSharp.fluid.src}`}
+                    fluid={data.file.childImageSharp.fluid}
                     alt="Harvestland Church"
                   />
                 </Link>
