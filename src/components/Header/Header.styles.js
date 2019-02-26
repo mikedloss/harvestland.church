@@ -26,16 +26,10 @@ export const MenuButton = styled(Button)`
   top: 0px;
   right: 0px;
   cursor: pointer;
-  ${(props) => {
-    console.log(props);
-    return (
-      props.menuOpen &&
-      `
-      background-color: #42613d;
-      color: #fff;
-    `
-    );
-  }}
+  ${(props) => {props.menuOpen && `
+    background-color: #42613d;
+    color: #fff;
+  `}}
 `;
 
 // main-nav
