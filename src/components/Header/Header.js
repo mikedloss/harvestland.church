@@ -51,7 +51,7 @@ class Header extends React.Component {
               >
                 <Link to="/">
                   <Styles.LogoImage
-                    fluid={data.file.childImageSharp.fluid}
+                    src={data.file.childImageSharp.fluid.src}
                     alt="Harvestland Church"
                   />
                 </Link>

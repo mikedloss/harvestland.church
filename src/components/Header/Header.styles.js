@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Text, Box } from 'rebass';
+import { Image, Text, Box } from 'rebass';
 import Img from 'gatsby-image';
 import { breakpoints as bp } from '../Elements/theme';
 
-export const LogoImage = styled(Img)`
+export const LogoImage = styled(Image)`
   content: 'Harvestland Church';
   color: #42613d;
 `;

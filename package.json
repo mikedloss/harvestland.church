@@ -9,6 +9,7 @@
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.13",
+    "intersection-observer": "^0.5.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
@@ -18,10 +19,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "clean": "rm -rf public .cache",
+    "build": "npm run clean && gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "rm -rf public .cache && npm run build && gatsby serve",
+    "serve": "npm run clean && npm run build && gatsby serve",
     "format": "prettier --write \"src/**/*.js\" --config-precedence file-override"
   },
   "devDependencies": {
