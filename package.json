@@ -23,11 +23,15 @@
     "build": "npm run clean && gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "npm run clean && npm run build && gatsby serve",
+    "serve": "npm run build && gatsby serve",
     "format": "prettier --write \"src/**/*.js\" --config-precedence file-override"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.7"
-  }
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
 }

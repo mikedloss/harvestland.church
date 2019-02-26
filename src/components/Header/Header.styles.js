@@ -3,8 +3,7 @@ import { Image, Text, Box } from 'rebass';
 import Img from 'gatsby-image';
 import { breakpoints as bp } from '../Elements/theme';
 
-export const LogoImage = styled(Image)`
-  content: 'Harvestland Church';
+export const LogoImage = styled(Image)`\
   color: #42613d;
 `;
 
