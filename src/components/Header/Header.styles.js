@@ -38,13 +38,13 @@ export const MenuButton = styled(Button)`
 export const NavList = styled.ul`
   list-style-type: none;
   margin: 0;
-  display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
+  display: ${({ isVisible }) => (isVisible ? '' : 'none')};
 
   position: absolute;
   width: 100%;
   background-color: #fff;
   top: 60px;
-  z-index: ${({ isVisible }) => (isVisible ? '2' : '-1')};
+  z-index: ${({ isVisible }) => (isVisible ? '2' : '0')};
   border-bottom: 2px solid #42613d;
 
   @media screen and (min-width: ${bp.SMALL}) {
