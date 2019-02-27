@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heading, Flex } from 'rebass';
+import { Heading, Flex, Box } from 'rebass';
 
 export const VideoHeroStyle = styled.section`
   background-color: #000;
@@ -12,6 +12,19 @@ export const VideoHeroStyle = styled.section`
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
+`;
+
+export const StaticImage = styled(Box)`
+  height: ${(props) => (props.height ? `${props.height}` : '40vh')};
+  width: 100%;
+  background-image: url('${(props) => {
+    console.log(props);
+    return props.img.staticImage.childImageSharp.fluid.src;
+  }}');
+  background-position: center center;
+  background-repeat: no-repeat;
+  ${'' /* background-attachment: fixed; */}
+  background-size: cover;
 `;
 
 export const MediaContainer = styled.div`

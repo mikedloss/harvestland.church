@@ -1,7 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { Image } from 'rebass';
 
+import FrontHero from '../FrontHero';
 import * as Styles from './FrontVideoHero.styles';
+import * as Media from '../../Elements/media';
 
 export const FrontVideoHero = (props) => {
   console.log(props);
@@ -9,11 +12,15 @@ export const FrontVideoHero = (props) => {
     <StaticQuery
       query={graphql`
         {
-          file(relativePath: { eq: "videos/front.mp4" }) {
-            id
-            relativePath
-            absolutePath
+          video: file(relativePath: { eq: "videos/front.mp4" }) {
             publicURL
+          }
+          staticImage: file(relativePath: { eq: "images/tall.png" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       `}
@@ -22,9 +29,14 @@ export const FrontVideoHero = (props) => {
           <Styles.VideoHeroStyle>
             <Styles.MediaContainer>
               {/* static image goes here */}
-              <Styles.Video autoPlay loop muted>
-                <source src={data.file.publicURL} type="video/mp4" />
-              </Styles.Video>
+              <Media.SmallOnly>
+                <Styles.StaticImage img={data} />
+              </Media.SmallOnly>
+              <Media.NotSmall>
+                <Styles.Video autoPlay loop muted>
+                  <source src={data.video.publicURL} type="video/mp4" />
+                </Styles.Video>
+              </Media.NotSmall>
             </Styles.MediaContainer>
             <Styles.TextContainer>
               <Styles.TextOverlay alignItems="center" justifyContent="center">

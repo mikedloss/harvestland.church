@@ -62,9 +62,41 @@ class Header extends React.Component {
                 </Styles.Logo>
               </Heading>
               <Styles.NavList isVisible={this.state.menuOpen}>
-                <NavItem>Abc</NavItem>
-                <NavItem>123</NavItem>
-                <NavItem>Def</NavItem>
+                <NavItem>
+                  <Styles.NavLink to="/about">
+                    <Heading as="h3" fontSize={3}>
+                      About
+                    </Heading>
+                  </Styles.NavLink>
+                </NavItem>
+                <NavItem>
+                  <Styles.NavLink to="/connect">
+                    <Heading as="h3" fontSize={3}>
+                      Connect
+                    </Heading>
+                  </Styles.NavLink>
+                </NavItem>
+                <NavItem>
+                  <Styles.NavLink to="/sermons">
+                    <Heading as="h3" fontSize={3}>
+                      Sermons
+                    </Heading>
+                  </Styles.NavLink>
+                </NavItem>
+                <NavItem>
+                  <Styles.NavLink to="/events">
+                    <Heading as="h3" fontSize={3}>
+                      Events
+                    </Heading>
+                  </Styles.NavLink>
+                </NavItem>
+                <NavItem>
+                  <Styles.NavLink to="/give">
+                    <Heading as="h3" fontSize={3}>
+                      Give
+                    </Heading>
+                  </Styles.NavLink>
+                </NavItem>
               </Styles.NavList>
             </Styles.Nav>
           )

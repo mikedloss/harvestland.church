@@ -5,8 +5,10 @@ export const HeroStyle = styled(Flex)`
   flex-direction: column;
   height: ${(props) => (props.height ? `${props.height}` : '20vh')};
   width: 100%;
-  background-image: url('${(props) =>
-    props.img.file.childImageSharp.fluid.src}');
+  background-image: url('${(props) => {
+    console.log(props);
+    return props.img.file.childImageSharp.fluid.src;
+  }}');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

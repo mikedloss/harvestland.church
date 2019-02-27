@@ -1,1 +1,1 @@
-export { FrontHero as default } from './FrontHero';
+export { default } from './FrontHero';

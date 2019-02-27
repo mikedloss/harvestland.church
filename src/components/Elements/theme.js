@@ -12,7 +12,15 @@ export const breakpoints = {
 };
 export const breakpointArray = [SMALL, MEDIUM, LARGE];
 
+export const colors = {
+  primary: '#42613d',
+  black: '#222',
+  white: '#fff',
+  realBlack: '#000',
+};
+
 export default {
+  colors,
   fontSizes,
   breakpoints,
 };

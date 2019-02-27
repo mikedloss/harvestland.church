@@ -3,15 +3,15 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { Heading } from 'rebass';
 
-import * as Styles from '../../Hero.styles';
+import * as Styles from './FrontHero.styles';
 
-export const FrontHero = (props) => {
+const FrontHero = (props) => {
   console.log(props);
   return (
     <StaticQuery
       query={graphql`
         {
-          file(relativePath: { eq: "images/stall.png" }) {
+          file(relativePath: { eq: "images/tall.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -38,3 +38,5 @@ export const FrontHero = (props) => {
     />
   );
 };
+
+export default FrontHero;
