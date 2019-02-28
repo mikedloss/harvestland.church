@@ -11,7 +11,7 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <VideoHero 
+      <VideoHero
         videoSrc={video.publicURL}
         imageSrc={image.childImageSharp.fluid.src}
         imageHeight="80vh"
@@ -21,7 +21,7 @@ const IndexPage = (props) => {
       <p>Now go build something great.</p>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
-  )
+  );
 };
 
 export const query = graphql`

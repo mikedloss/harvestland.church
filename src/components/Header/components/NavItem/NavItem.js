@@ -15,6 +15,6 @@ const NavItem = (props) => {
 
 NavItem.propTypes = {
   children: PropTypes.node,
-}
+};
 
 export default NavItem;

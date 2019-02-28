@@ -9,10 +9,7 @@ export const VideoHero = ({ videoSrc, imageSrc, imageHeight }) => {
     <Styles.VideoHeroStyle>
       <Styles.MediaContainer>
         <Media.SmallOnly>
-          <Styles.StaticImage 
-            src={imageSrc} 
-            height={imageHeight}
-          />
+          <Styles.StaticImage src={imageSrc} height={imageHeight} />
         </Media.SmallOnly>
         <Media.NotSmall>
           <Styles.Video autoPlay loop muted>
@@ -35,4 +32,4 @@ VideoHero.propTypes = {
   videoSrc: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   imageHeight: PropTypes.string,
-}
+};

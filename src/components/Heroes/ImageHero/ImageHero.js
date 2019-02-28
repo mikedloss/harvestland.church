@@ -7,10 +7,7 @@ export const ImageHero = ({ imageSrc, height }) => {
   return (
     <Styles.ImageHeroStyle>
       <Styles.MediaContainer>
-        <Styles.StaticImage 
-          src={imageSrc}
-          height={height}
-        />
+        <Styles.StaticImage src={imageSrc} height={height} />
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">
@@ -25,5 +22,5 @@ export const ImageHero = ({ imageSrc, height }) => {
 
 ImageHero.propTypes = {
   imageSrc: PropTypes.string.isRequired,
-  height: PropTypes.string
-}
+  height: PropTypes.string,
+};

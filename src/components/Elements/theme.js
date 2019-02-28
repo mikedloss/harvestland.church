@@ -10,11 +10,7 @@ export const breakpointValues = {
   MEDIUM,
   LARGE,
 };
-export const breakpoints = [
-  `${ SMALL }px`,
-  `${ MEDIUM }px`,
-  `${ LARGE }px`,
-];
+export const breakpoints = [`${SMALL}px`, `${MEDIUM}px`, `${LARGE}px`];
 
 export const colors = {
   primary: '#42613d',
