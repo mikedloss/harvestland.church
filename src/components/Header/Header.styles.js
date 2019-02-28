@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Image, Text, Box, Button } from 'rebass';
+import { Image, Box, Button } from 'rebass';
 import { Link } from 'gatsby';
-import { breakpoints as bp } from '../Elements/theme';
+import { breakpointValues as bp } from '../Elements/theme';
 
 export const Logo = styled(Link)`
   text-decoration: none;
@@ -14,7 +14,7 @@ export const LogoImage = styled(Image)`
 
 export const Nav = styled(Box)`
   min-height: 64px;
-  @media screen and (min-width: ${bp.SMALL}) {
+  @media screen and (min-width: ${bp.SMALL}px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +47,7 @@ export const NavList = styled.ul`
   z-index: ${({ isVisible }) => (isVisible ? '2' : '0')};
   border-bottom: 2px solid ${(props) => props.theme.colors.primary};
 
-  @media screen and (min-width: ${bp.SMALL}) {
+  @media screen and (min-width: ${bp.SMALL}px) {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

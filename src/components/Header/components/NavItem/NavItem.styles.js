@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Text } from 'rebass';
-import { breakpoints as bp } from '../../../Elements/theme';
+import { breakpointValues as bp } from '../../../Elements/theme';
 
 export const NavItem = styled(Text)`
   text-align: center;
   margin: 16px auto;
 
-  @media screen and (min-width: ${bp.SMALL}) {
+  @media screen and (min-width: ${bp.SMALL}px) {
     margin-right: 16px;
   }
 `;

@@ -2,15 +2,19 @@
 // [ 12, 14, 16, 20, 24, 32, 48, 64, 72 ]
 export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72];
 
-const SMALL = '800px';
-const MEDIUM = '1040px';
-const LARGE = '1280px';
-export const breakpoints = {
+const SMALL = 800;
+const MEDIUM = 1040;
+const LARGE = 1280;
+export const breakpointValues = {
   SMALL,
   MEDIUM,
   LARGE,
 };
-export const breakpointArray = [SMALL, MEDIUM, LARGE];
+export const breakpoints = [
+  `${ SMALL }px`,
+  `${ MEDIUM }px`,
+  `${ LARGE }px`,
+];
 
 export const colors = {
   primary: '#42613d',

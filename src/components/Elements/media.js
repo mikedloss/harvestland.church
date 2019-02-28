@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { breakpoints as bp } from './theme';
+import { breakpointValues as bp } from './theme';
 
 export const SmallOnly = styled.div`
-  @media screen and (min-width: ${bp.SMALL}) {
+  @media screen and (min-width: ${bp.SMALL}px) {
     display: none;
   }
 `;
 
 export const NotSmall = styled.div`
-  @media screen and (max-width: ${bp.SMALL}) {
+  @media screen and (max-width: ${bp.SMALL - 1}px) {
     display: none;
   }
 `;
