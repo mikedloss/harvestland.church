@@ -1,25 +1,42 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Image from '../components/Image';
 import SEO from '../components/SEO';
+import VideoHero from '../components/Heroes/VideoHero';
 
-import FrontVideoHero from '../components/Heroes/FrontVideoHero';
+const IndexPage = (props) => {
+  const { video, image } = props.data;
+  console.log(image);
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <VideoHero 
+        videoSrc={video.publicURL}
+        imageSrc={image.childImageSharp.fluid.src}
+        imageHeight="80vh"
+      />
+      <h1>Hi people</h1>
+      <p>Welcome to your new Gatsby site.</p>
+      <p>Now go build something great.</p>
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+  )
+};
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <FrontVideoHero />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-);
+export const query = graphql`
+  {
+    video: file(relativePath: { eq: "videos/front.mp4" }) {
+      publicURL
+    }
+    image: file(relativePath: { eq: "images/tall.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 810) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

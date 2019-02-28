@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 import { Heading, Flex, Box } from 'rebass';
 
-export const VideoHeroStyle = styled.section`
+export const ImageHeroStyle = styled.section`
   background-color: #000;
   color: #fff;
   display: block;
   position: relative;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
@@ -19,7 +16,7 @@ export const StaticImage = styled(Box)`
   width: 100%;
   background-image: url('${(props) => {
     console.log(props);
-    return props.img.staticImage.childImageSharp.fluid.src;
+    return props.src;
   }}');
   background-position: center center;
   background-repeat: no-repeat;
@@ -55,21 +52,5 @@ export const WelcomeText = styled(Heading)`
   ::-moz-selection {
     background: #386238; /* Gecko Browsers */
     color: #fff;
-  }
-`;
-
-export const Video = styled.video`
-  box-sizing: border-box;
-  display: block;
-  object-fit: cover;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  min-height: 320px;
-
-  @media screen and (min-width: 767px) {
-    min-height: inherit;
   }
 `;
