@@ -17,11 +17,8 @@ export const VideoHeroStyle = styled.section`
 
 export const StaticImage = styled(Box)`
   height: ${(props) => (props.height ? `${props.height}` : '40vh')};
-  width: 100%;
-  background-image: url('${(props) => {
-    console.log(props);
-    return props.src;
-  }}');
+  ${'' /* width: 100%; */}
+  background-image: url('${(props) => props.src}');
   background-position: center center;
   background-repeat: no-repeat;
   ${'' /* background-attachment: fixed; */}

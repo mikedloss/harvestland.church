@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as Styles from './VideoHero.styles';
 import * as Media from '../../Elements/media';
 
-export const VideoHero = ({ videoSrc, imageSrc, imageHeight }) => {
+export const VideoHero = ({ text, videoSrc, imageSrc, imageHeight }) => {
   return (
     <Styles.VideoHeroStyle>
       <Styles.MediaContainer>
@@ -20,7 +20,7 @@ export const VideoHero = ({ videoSrc, imageSrc, imageHeight }) => {
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">
           <Styles.WelcomeText fontSize={[5, 6]}>
-            overlay text
+            { text || "Hero Text" }
           </Styles.WelcomeText>
         </Styles.TextOverlay>
       </Styles.TextContainer>
@@ -29,6 +29,7 @@ export const VideoHero = ({ videoSrc, imageSrc, imageHeight }) => {
 };
 
 VideoHero.propTypes = {
+  text: PropTypes.string,
   videoSrc: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   imageHeight: PropTypes.string,

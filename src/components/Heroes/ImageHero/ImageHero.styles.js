@@ -14,10 +14,7 @@ export const ImageHeroStyle = styled.section`
 export const StaticImage = styled(Box)`
   height: ${(props) => (props.height ? `${props.height}` : '40vh')};
   width: 100%;
-  background-image: url('${(props) => {
-    console.log(props);
-    return props.src;
-  }}');
+  background-image: url('${(props) => props.src}');
   background-position: center center;
   background-repeat: no-repeat;
   ${'' /* background-attachment: fixed; */}
@@ -28,6 +25,7 @@ export const MediaContainer = styled.div`
   display: block;
   box-sizing: border-box;
   overflow: hidden;
+  opacity: 0.5;
 `;
 
 export const TextContainer = styled.div`
