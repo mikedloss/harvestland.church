@@ -3,14 +3,24 @@ import PropTypes from 'prop-types';
 
 import * as Styles from './TextHero.styles';
 
-export const TextHero = ({ text, bg, color }) => {
+export const TextHero = ({
+  text,
+  useMargin,
+  bg,
+  color,
+  alignItems,
+  justifyContent,
+  flexDirection,
+}) => {
   return (
     <Styles.TextHeroStyle
-      alignItems="center"
-      justifyContent="center"
+      flexDirection={flexDirection || 'column'}
+      alignItems={alignItems || 'center'}
+      justifyContent={justifyContent || 'center'}
       bg={bg || 'white'}
       color={color || 'primary'}
-      p={['6rem', '8rem']}
+      m={useMargin && ['6rem', '8rem']}
+      p={!useMargin && ['6rem', '8rem']}
     >
       <Styles.HeroText fontSize={6}>{text || 'Text Hero'}</Styles.HeroText>
     </Styles.TextHeroStyle>

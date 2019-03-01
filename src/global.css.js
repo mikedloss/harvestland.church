@@ -49,6 +49,8 @@ export default createGlobalStyle`
   a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+    text-decoration: none;
+    color: #42613d;
   }
   a:active,
   a:hover {

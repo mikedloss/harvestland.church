@@ -4,36 +4,37 @@ import { Heading, Text, Flex, Button, Box } from 'rebass';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import { graphql } from 'gatsby';
-import ImageHero from '../../components/Heroes/ImageHero';
+// import ImageHero from '../../components/Heroes/ImageHero';
 
-import * as LayoutStyle from '../../components/Layout/Layout.styles';
+import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 import TextHero from '../../components/Heroes/TextHero';
+import Side2SideHero from '../../components/Heroes/Side2SideHero';
 
 const GivePage = (props) => {
   const { image } = props.data;
   return (
     <Layout>
       <SEO title="Give" keywords={[`gatsby`, `application`, `react`]} />
-      {/* <ImageHero
-        text="Give Online"
-        imageSrc={image.childImageSharp.fluid.src}
-        height="30vh"
-      /> */}
       <TextHero />
-      <LayoutStyle.ContentContainer>
+      <Container>
         <Flex flexDirection="column" alignItems="center">
           <Box width="100%" px={['2rem', '4rem']}>
             <Text>
               The Bible gives us many references what Jesus thinks about
-              competing interests. In Matthew 6:24, Jesus tells us that we
-              cannot worship two masters. Giving to the local church
-              demonstrates that He is greater than material things in our lives.
-              Your giving directly impacts Harvestland's potential to change the
-              world.
+              competing interests. In{' '}
+              <a
+                href="https://www.bible.com/bible/116/MAT.6.24.NLT"
+                target="_blank"
+              >
+                Matthew 6:24
+              </a>
+              , Jesus tells us that we cannot worship two masters. Giving to the
+              local church demonstrates that He is greater than material things
+              in our lives. Your giving directly impacts Harvestland's potential
+              to change the world.
             </Text>
           </Box>
           <Box m="2rem">
-            {/* button to give now */}
             <a href="https://tithe.ly/give?c=9749" target="_blank">
               <Button
                 py="20px"
@@ -51,8 +52,28 @@ const GivePage = (props) => {
           </Box>
         </Flex>
         {/* image of someone on phone */}
-        {/* explain what is tithing (use bible photo) */}
-        {/* faq section */}
+      </Container>
+
+      {/* explain what is tithing (use bible photo) */}
+      <Side2SideHero
+        heroText="words"
+        imageSrc={image.childImageSharp.fluid.src}
+        height="60vh"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        molestie, enim in aliquam egestas, nibh diam tristique metus, vel
+        consequat libero orci nec neque. Quisque aliquam massa sed lectus
+        porttitor, vitae blandit urna vehicula. Proin leo sem, sagittis sit amet
+        convallis non, condimentum nec lacus. Nulla facilisi. In accumsan lacus
+        sit amet interdum eleifend. Sed odio libero, varius non placerat non,
+        aliquam vel ipsum. Curabitur rutrum iaculis eros, id egestas ex maximus
+        in. Etiam et augue ut enim tristique feugiat.
+      </Side2SideHero>
+
+      {/* faq section */}
+      <Container />
+
+      <Container>
         <Flex flexDirection="column" my="2rem">
           <Heading>It's Safe</Heading>
           <Text>
@@ -82,7 +103,20 @@ const GivePage = (props) => {
             our building.
           </Text>
         </Flex>
-      </LayoutStyle.ContentContainer>
+      </Container>
+
+      {/* still have questions? */}
+      <TextHero text="Still have questions?" color="black" />
+      <Container>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Text>send us an email at </Text>
+          <a href="mailto:email">email@email.com</a>
+        </Flex>
+      </Container>
     </Layout>
   );
 };
