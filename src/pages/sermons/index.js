@@ -40,7 +40,13 @@ export const query = graphql`
         }
       }
     }
-    sermons: allContentfulSermon(limit: 5) {
+    sermons: allContentfulSermon(
+      limit: 5,
+      sort: {
+        fields: [date],
+        order: DESC
+      }
+    ) {
       edges {
         node {
           id
