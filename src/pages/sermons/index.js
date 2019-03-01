@@ -21,8 +21,8 @@ const SermonsPage = (props) => {
         height="30vh"
       />
       <LayoutStyle.ContentContainer>
-        {sermons.edges.map((sermon) => {
-          return <SermonCard key={sermon.node.id} data={sermon.node} />;
+        {sermons.edges.map((sermon, index) => {
+          return <SermonCard key={index} data={sermon.node} />;
         })}
       </LayoutStyle.ContentContainer>
     </Layout>
@@ -44,12 +44,18 @@ export const query = graphql`
     ) {
       edges {
         node {
-          id
           title
           speaker
           date
           audioUrl
           verses
+          audio {
+            file {
+              url
+              fileName
+              contentType
+            }
+          }
           description {
             childContentfulRichText {
               html
