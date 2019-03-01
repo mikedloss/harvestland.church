@@ -22,7 +22,7 @@ const GivePage = (props) => {
       <TextHero />
       <LayoutStyle.ContentContainer>
         <Flex flexDirection="column" alignItems="center">
-          <Box px={["2rem", "4rem"]}>
+          <Box width="100%" px={['2rem', '4rem']}>
             <Text>
               The Bible gives us many references what Jesus thinks about
               competing interests. In Matthew 6:24, Jesus tells us that we
@@ -40,7 +40,7 @@ const GivePage = (props) => {
                 px="36px"
                 fontSize={4}
                 borderColor="primary"
-                border="2px solid"
+                border="4px solid"
                 borderRadius="0"
                 bg="white"
                 color="primary"

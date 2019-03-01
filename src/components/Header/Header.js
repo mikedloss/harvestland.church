@@ -13,6 +13,7 @@ class Header extends React.Component {
   };
 
   toggleMenu = () => this.setState({ menuOpen: !this.state.menuOpen });
+  resetMenu = () => this.setState({ menuOpen: false });
 
   render() {
     return (
@@ -62,35 +63,55 @@ class Header extends React.Component {
             </Heading>
             <Styles.NavList isVisible={this.state.menuOpen}>
               <NavItem>
-                <Styles.NavLink to="/about">
+                <Styles.NavLink
+                  to="/about"
+                  onClick={() => this.setState({ menuOpen: false })}
+                  activeStyle={{ color: '#42613d' }}
+                >
                   <Heading as="h3" fontSize={3}>
                     About
                   </Heading>
                 </Styles.NavLink>
               </NavItem>
               <NavItem>
-                <Styles.NavLink to="/connect">
+                <Styles.NavLink
+                  to="/connect"
+                  onClick={() => this.setState({ menuOpen: false })}
+                  activeStyle={{ color: '#42613d' }}
+                >
                   <Heading as="h3" fontSize={3}>
                     Connect
                   </Heading>
                 </Styles.NavLink>
               </NavItem>
               <NavItem>
-                <Styles.NavLink to="/sermons">
+                <Styles.NavLink
+                  to="/sermons"
+                  onClick={() => this.setState({ menuOpen: false })}
+                  activeStyle={{ color: '#42613d' }}
+                >
                   <Heading as="h3" fontSize={3}>
                     Sermons
                   </Heading>
                 </Styles.NavLink>
               </NavItem>
               <NavItem>
-                <Styles.NavLink to="/events">
+                <Styles.NavLink
+                  to="/events"
+                  onClick={() => this.setState({ menuOpen: false })}
+                  activeStyle={{ color: '#42613d' }}
+                >
                   <Heading as="h3" fontSize={3}>
                     Events
                   </Heading>
                 </Styles.NavLink>
               </NavItem>
               <NavItem>
-                <Styles.NavLink to="/give">
+                <Styles.NavLink
+                  to="/give"
+                  onClick={() => this.setState({ menuOpen: false })}
+                  activeStyle={{ color: '#42613d' }}
+                >
                   <Heading as="h3" fontSize={3}>
                     Give
                   </Heading>

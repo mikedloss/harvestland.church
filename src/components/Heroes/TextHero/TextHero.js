@@ -9,8 +9,8 @@ export const TextHero = ({ text, bg, color }) => {
       alignItems="center"
       justifyContent="center"
       bg={bg || 'white'}
-      color={color || 'black'}
-      m={['6rem', '8rem']}
+      color={color || 'primary'}
+      p={['6rem', '8rem']}
     >
       <Styles.HeroText fontSize={6}>{text || 'Text Hero'}</Styles.HeroText>
     </Styles.TextHeroStyle>
