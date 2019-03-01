@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-const fontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif'
+const fontFamily =
+  '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
 
 export default createGlobalStyle`
   html {
@@ -206,7 +207,7 @@ export default createGlobalStyle`
   }
   body {
     color: #222;
-    font-family: ${ fontFamily };
+    font-family: ${fontFamily};
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -224,7 +225,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     color: inherit;
-    font-family: ${ fontFamily };
+    font-family: ${fontFamily};
     letter-spacing: -1px;
     font-weight: bold;
     text-rendering: optimizeLegibility;

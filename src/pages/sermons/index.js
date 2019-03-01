@@ -18,17 +18,15 @@ const SermonsPage = (props) => {
       <ImageHero
         text="Sermons"
         imageSrc={image.childImageSharp.fluid.src}
-        height="30vh"  
+        height="30vh"
       />
       <LayoutStyle.ContentContainer>
-        { sermons.edges.map(sermon => {
-          return (
-            <SermonCard key={sermon.node.id} data={sermon.node} />
-          )
+        {sermons.edges.map((sermon) => {
+          return <SermonCard key={sermon.node.id} data={sermon.node} />;
         })}
       </LayoutStyle.ContentContainer>
     </Layout>
-  )
+  );
 };
 
 export const query = graphql`
@@ -41,11 +39,8 @@ export const query = graphql`
       }
     }
     sermons: allContentfulSermon(
-      limit: 5,
-      sort: {
-        fields: [date],
-        order: DESC
-      }
+      limit: 5
+      sort: { fields: [date], order: DESC }
     ) {
       edges {
         node {
@@ -54,7 +49,7 @@ export const query = graphql`
           speaker
           date
           audioUrl
-        	verses
+          verses
           description {
             childContentfulRichText {
               html
