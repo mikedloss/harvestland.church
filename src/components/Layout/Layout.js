@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../global.css';
 import theme from '../Elements/theme';
 import Header from '../Header';
-import { Container } from './Layout.styles';
+import { SiteContainer } from './Layout.styles';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
     `}
     render={(data) => (
       <ThemeProvider theme={theme}>
-        <Container>
+        <SiteContainer>
           <GlobalStyle />
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
-        </Container>
+        </SiteContainer>
       </ThemeProvider>
     )}
   />
