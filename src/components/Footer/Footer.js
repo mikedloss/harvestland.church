@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+
+import PageLinks from './components/PageLinks';
 
 import * as Media from '../Elements/media';
 import * as Styles from './Footer.styles';
@@ -46,28 +47,7 @@ export const Footer = () => {
         justifyContent="flex-end"
       >
         <Media.NotSmall>
-          <Styles.SmallLine>
-            <Styles.LinkText as={Link} to="about">
-              about
-            </Styles.LinkText>{' '}
-            /{' '}
-            <Styles.LinkText as={Link} to="connect">
-              connect
-            </Styles.LinkText>{' '}
-            /{' '}
-            <Styles.LinkText as={Link} to="sermons">
-              sermons
-            </Styles.LinkText>{' '}
-            /{' '}
-            <Styles.LinkText as={Link} to="events">
-              events
-            </Styles.LinkText>{' '}
-            /{' '}
-            <Styles.LinkText as={Link} to="give">
-              give
-            </Styles.LinkText>{' '}
-            /{' '}
-          </Styles.SmallLine>
+          <PageLinks />
         </Media.NotSmall>
       </Styles.RightContainer>
     </Styles.FooterStyle>
