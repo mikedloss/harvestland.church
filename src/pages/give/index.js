@@ -56,7 +56,7 @@ const GivePage = (props) => {
 
       {/* explain what is tithing (use bible photo) */}
       <Side2SideHero
-        heroText="words"
+        heroText="What is Tithing?"
         imageSrc={image.childImageSharp.fluid.src}
         height="60vh"
       >
