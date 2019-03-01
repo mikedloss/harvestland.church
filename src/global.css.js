@@ -215,6 +215,7 @@ export default createGlobalStyle`
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
+    line-height: 1.4;
   }
   img {
     max-width: 100%;
@@ -539,5 +540,14 @@ export default createGlobalStyle`
   /* stuff for navbar */
   .nav-visible {
     display: block;
+  }
+
+  *::selection {
+    background: #386238; /* WebKit/Blink Browsers */
+    color: #fff;
+  }
+  *::-moz-selection {
+    background: #386238; /* Gecko Browsers */
+    color: #fff;
   }
 `;

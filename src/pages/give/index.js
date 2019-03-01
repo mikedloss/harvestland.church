@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Text, Flex } from 'rebass';
+import { Heading, Text, Flex, Button, Box } from 'rebass';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -7,34 +7,52 @@ import { graphql } from 'gatsby';
 import ImageHero from '../../components/Heroes/ImageHero';
 
 import * as LayoutStyle from '../../components/Layout/Layout.styles';
+import TextHero from '../../components/Heroes/TextHero';
 
 const GivePage = (props) => {
   const { image } = props.data;
   return (
     <Layout>
       <SEO title="Give" keywords={[`gatsby`, `application`, `react`]} />
-      <ImageHero
+      {/* <ImageHero
         text="Give Online"
         imageSrc={image.childImageSharp.fluid.src}
         height="30vh"
-      />
+      /> */}
+      <TextHero />
       <LayoutStyle.ContentContainer>
-        <Flex
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          p="1rem"
-        >
-          <Heading>"It is more blessed to give than to receive."</Heading>
-          <Text fontSize={1}>Acts 20:35</Text>
+        <Flex flexDirection="column" alignItems="center">
+          <Box px={["2rem", "4rem"]}>
+            <Text>
+              The Bible gives us many references what Jesus thinks about
+              competing interests. In Matthew 6:24, Jesus tells us that we
+              cannot worship two masters. Giving to the local church
+              demonstrates that He is greater than material things in our lives.
+              Your giving directly impacts Harvestland's potential to change the
+              world.
+            </Text>
+          </Box>
+          <Box m="2rem">
+            {/* button to give now */}
+            <a href="https://tithe.ly/give?c=9749" target="_blank">
+              <Button
+                py="20px"
+                px="36px"
+                fontSize={4}
+                borderColor="primary"
+                border="2px solid"
+                borderRadius="0"
+                bg="white"
+                color="primary"
+              >
+                Give Online
+              </Button>
+            </a>
+          </Box>
         </Flex>
-        <Text>
-          Giving gives us an opportunity to give back to God a portion of what
-          He's so graciously given us in our lives. By giving, we demonstrate a
-          couple key things - that we trust Him with all of our needs, and that
-          we support the church to keep reaching out beyond these 4 walls to
-          help our community.
-        </Text>
+        {/* image of someone on phone */}
+        {/* explain what is tithing (use bible photo) */}
+        {/* faq section */}
         <Flex flexDirection="column" my="2rem">
           <Heading>It's Safe</Heading>
           <Text>

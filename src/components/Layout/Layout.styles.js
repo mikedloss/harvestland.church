@@ -6,5 +6,5 @@ export const SiteContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  padding: 10px;
+  padding: 1rem;
 `;
