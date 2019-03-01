@@ -4,15 +4,19 @@ import dayjs from 'dayjs';
 import * as Styles from './SermonCard.style';
 
 export const SermonCard = (props) => {
+  console.log(props);
   const { title, speaker, date, audioUrl, verses } = props.data;
   return (
     <Styles.SermonCardStyle
       width={[1, 1/2]}
-      m="0 auto"
+      mt="0"
+      mb="8px"
+      mx="auto"
       p="1rem"
+      onClick={props.onClick}
     >
       <Styles.SermonInfoContainer mb="16px">
-        <Styles.SermonDate fontSize={1}>
+        <Styles.SermonDate fontSize={1} color="#888">
           { dayjs(date).format("MMMM DD, YYYY") }
         </Styles.SermonDate>
         <Styles.SermonTitle>
