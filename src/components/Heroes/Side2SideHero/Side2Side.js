@@ -18,7 +18,7 @@ export const Side2SideHero = ({
       <Styles.HeroContainer>
         <ImageHero text={heroText} imageSrc={imageSrc} height={height} />
       </Styles.HeroContainer>
-      <Styles.TextBlockContainer p="24px" alignItems="center">
+      <Styles.TextBlockContainer p="24px" flexDirection="column" alignItems="center">
         {children}
       </Styles.TextBlockContainer>
     </Styles.Side2SideHeroStyle>

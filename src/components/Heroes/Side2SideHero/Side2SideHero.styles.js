@@ -18,11 +18,11 @@ export const HeroContainer = styled(Flex)`
 `;
 export const TextBlockContainer = styled(Flex)`
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   @media screen and (min-width: ${bp.SMALL}px) {
     width: 50%;
-    justify-content: ${(props) => props.textBlockJustify || 'flex-start'};
+    align-items: ${(props) => props.textBlockJustify || 'flex-start'};
   }
 `;
