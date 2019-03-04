@@ -9,7 +9,7 @@ import SermonCard from '../components/SermonCard';
 
 import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 
-const SermonsPage = (props) => {
+const SermonPostTemplate = (props) => {
   const { image, sermon } = props.data;
   return (
     <Layout>
@@ -20,7 +20,7 @@ const SermonsPage = (props) => {
         height={['50vh', '30vh']}
       />
       <Container>
-        <SermonCard data={sermon} />
+        <SermonCard data={sermon} currentPath={props['*']} />
         <Flex alignItems="center" justifyContent="center">
           <Link to="/sermons">
             <Text fontSize={1}>Return to All Sermons</Text>
@@ -62,4 +62,4 @@ export const query = graphql`
   }
 `;
 
-export default SermonsPage;
+export default SermonPostTemplate;

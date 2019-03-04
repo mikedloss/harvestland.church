@@ -11,7 +11,11 @@ const BeliefsPage = (props) => {
   return (
     <Layout>
       <SEO title="Beliefs" keywords={[`gatsby`, `application`, `react`]} />
-
+      <ImageHero
+        imageSrc={heroImage.childImageSharp.fluid.src}
+        text="Beliefs"
+        height="30vh"
+      />
       <Heading>Beliefs Page</Heading>
     </Layout>
   );

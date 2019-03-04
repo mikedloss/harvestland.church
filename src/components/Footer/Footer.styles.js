@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Text, Flex, Box, Link } from 'rebass';
+import { Text, Flex, Box } from 'rebass';
 
 export const FooterStyle = styled(Flex)``;
 

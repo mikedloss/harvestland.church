@@ -24,6 +24,7 @@ const GivePage = (props) => {
               <a
                 href="https://www.bible.com/bible/116/MAT.6.24.NLT"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Matthew 6:24
               </a>
@@ -34,7 +35,11 @@ const GivePage = (props) => {
             </Text>
           </Box>
           <Box m="2rem">
-            <a href="https://tithe.ly/give?c=9749" target="_blank">
+            <a
+              href="https://tithe.ly/give?c=9749"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 py="20px"
                 px="36px"
@@ -129,7 +134,7 @@ const GivePage = (props) => {
           justifyContent="center"
         >
           <Text>send us an email at </Text>
-          <a href="mailto:giving@harvestland.church">
+          <a href="mailto:giving@harvestland.church" rel="noopener noreferrer">
             giving@harvestland.church
           </a>
         </Flex>

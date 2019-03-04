@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const slugify = (text, separator) => {
   text = text.toString().toLowerCase().trim();
 

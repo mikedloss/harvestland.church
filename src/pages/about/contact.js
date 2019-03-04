@@ -11,7 +11,11 @@ const ContactPage = (props) => {
   return (
     <Layout>
       <SEO title="Beliefs" keywords={[`gatsby`, `application`, `react`]} />
-
+      <ImageHero
+        imageSrc={heroImage.childImageSharp.fluid.src}
+        text="Contact"
+        height="30vh"
+      />
       <Heading>Contact Page</Heading>
     </Layout>
   );

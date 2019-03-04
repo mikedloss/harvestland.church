@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from 'rebass';
+// import { Heading } from 'rebass';
 import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
@@ -21,7 +21,13 @@ const SermonsPage = (props) => {
       />
       <LayoutStyle.ContentContainer>
         {sermons.edges.map((sermon, index) => {
-          return <SermonCard key={index} data={sermon.node} />;
+          return (
+            <SermonCard
+              key={index}
+              data={sermon.node}
+              currentPath={props['*']}
+            />
+          );
         })}
       </LayoutStyle.ContentContainer>
     </Layout>
