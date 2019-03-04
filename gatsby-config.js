@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Harvestland Church`,
@@ -30,8 +32,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'm1p6j93uez0z',
-        accessToken: '40259e806b95801510b8c4a6cb2f693166aefa63876553fba5a2753b73901156'
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
       }
     },
     '@contentful/gatsby-transformer-contentful-richtext',
