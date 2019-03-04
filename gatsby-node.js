@@ -6,6 +6,9 @@
 
 // You can delete this file if you're not using it
 const path = require('path');
+const fs = require('fs');
+const slugify = require('./scripts/slugify');
+const podcast = require('./scripts/podcast-rss');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -24,8 +27,6 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   speaker
                   date
-                  audioUrl
-                  verses
                   audio {
                     file {
                       url
@@ -33,6 +34,9 @@ exports.createPages = ({ graphql, actions }) => {
                       contentType
                     }
                   }
+                  audioUrl
+                  duration
+                  verses
                   description {
                     childContentfulRichText {
                       html
@@ -46,68 +50,35 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) reject(result.errors);
 
-        result.data.allContentfulSermon.edges.forEach(({ node }) => {
+        // console.log("beginning XML")
+        // podcast.beginningXML();
+        
+        const sermons = result.data.allContentfulSermon.edges
+        // create sermon pages
+        sermons.forEach(({ node }) => {
+          const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
+          
+          // console.log("sermon XML 1")
+          // podcast.writeSermonXML(node, sermonPath);
+          // console.log("sermon XML 2")
+          
           createPage({
             component: path.resolve('./src/templates/sermon-post.js'),
-            path: `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`,
+            path: sermonPath,
             context: {
               id: node.id
             }
           })
+          // console.log("sermon XML 3")
         })
+          
+        // console.log("end XML")
+        // podcast.endXML();
+
+        podcast.writeRSS(sermons)
 
         resolve();
       })
     )
   })
-}
-
-const slugify = (text, separator) => {
-  text = text.toString().toLowerCase().trim();
-
-  const sets = [
-      {to: 'a', from: '[ÀÁÂÃÄÅÆĀĂĄẠẢẤẦẨẪẬẮẰẲẴẶ]'},
-      {to: 'c', from: '[ÇĆĈČ]'},
-      {to: 'd', from: '[ÐĎĐÞ]'},
-      {to: 'e', from: '[ÈÉÊËĒĔĖĘĚẸẺẼẾỀỂỄỆ]'},
-      {to: 'g', from: '[ĜĞĢǴ]'},
-      {to: 'h', from: '[ĤḦ]'},
-      {to: 'i', from: '[ÌÍÎÏĨĪĮİỈỊ]'},
-      {to: 'j', from: '[Ĵ]'},
-      {to: 'ij', from: '[Ĳ]'},
-      {to: 'k', from: '[Ķ]'},
-      {to: 'l', from: '[ĹĻĽŁ]'},
-      {to: 'm', from: '[Ḿ]'},
-      {to: 'n', from: '[ÑŃŅŇ]'},
-      {to: 'o', from: '[ÒÓÔÕÖØŌŎŐỌỎỐỒỔỖỘỚỜỞỠỢǪǬƠ]'},
-      {to: 'oe', from: '[Œ]'},
-      {to: 'p', from: '[ṕ]'},
-      {to: 'r', from: '[ŔŖŘ]'},
-      {to: 's', from: '[ßŚŜŞŠ]'},
-      {to: 't', from: '[ŢŤ]'},
-      {to: 'u', from: '[ÙÚÛÜŨŪŬŮŰŲỤỦỨỪỬỮỰƯ]'},
-      {to: 'w', from: '[ẂŴẀẄ]'},
-      {to: 'x', from: '[ẍ]'},
-      {to: 'y', from: '[ÝŶŸỲỴỶỸ]'},
-      {to: 'z', from: '[ŹŻŽ]'},
-      {to: '-', from: '[·/_,:;\']'}
-  ];
-
-  sets.forEach(set => {
-      text = text.replace(new RegExp(set.from,'gi'), set.to);
-  });
-
-  text = text.toString().toLowerCase()
-      .replace(/\s+/g, '-')         // Replace spaces with -
-      .replace(/&/g, '-and-')       // Replace & with 'and'
-      .replace(/[^\w\-]+/g, '')     // Remove all non-word chars
-      .replace(/\--+/g, '-')        // Replace multiple - with single -
-      .replace(/^-+/, '')           // Trim - from start of text
-      .replace(/-+$/, '');          // Trim - from end of text
-
-  if ((typeof separator !== 'undefined') && (separator !== '-')) {
-      text = text.replace(/-/g, separator);
-  }
-
-  return text;
 }
