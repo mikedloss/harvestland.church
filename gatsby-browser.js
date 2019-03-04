@@ -9,6 +9,6 @@ export const onClientEntry = () => {
   // gatsby-image polyfill (Safari, IE)
   if (typeof IntersectionObserver === `undefined`) {
     import(`intersection-observer`);
-    console.log(`👍 IntersectionObserver is polyfilled`)
+    console.log(`IntersectionObserver is polyfilled`)
   }
 }

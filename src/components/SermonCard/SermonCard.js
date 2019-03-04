@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import * as Styles from './SermonCard.style';
 
 export const SermonCard = (props) => {
-  console.log(props);
   const { title, speaker, date, audioUrl, verses, audio } = props.data;
   return (
     <Styles.SermonCardStyle

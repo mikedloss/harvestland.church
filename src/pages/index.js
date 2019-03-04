@@ -7,7 +7,6 @@ import VideoHero from '../components/Heroes/VideoHero';
 
 const IndexPage = (props) => {
   const { video, image } = props.data;
-  // console.log(image);
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Harvestland Church`,
-    author: `@mikedloss`,
+    author: `Mike DLoss`,
+    siteUrl: 'https://harvestland.church'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Harvestland Church`,
+        short_name: `Harvestland`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#42613d`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
