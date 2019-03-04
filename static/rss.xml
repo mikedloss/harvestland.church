@@ -3,7 +3,7 @@
   <channel>
     <title>Harvestland Church</title>
     <link>https://www.harvestland.church/sermons/</link>
-    <lastBuildDate>Mon, 04 Mar 2019 19:18:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 19:23:14 GMT</lastBuildDate>
     <language>en-US</language>
     <generator>custom node script</generator>
     <itunes:author>Harvestland Church</itunes:author>
@@ -63,7 +63,7 @@
       <pubDate>Sun, 23 Dec 2018 00:00:00 GMT</pubDate>
       <link>https://www.harvestland.church/sermons/2018/12/23/christmas-service</link>
       <guid isPermaLink="false">5eafea71-797e-525a-9447-b3198744fcfe</guid>
-      <description><![CDATA[<p>null</p>]]></description>
+      <description></description>
       <itunes:author>Pete Freeman</itunes:author>
       <itunes:explicit>no</itunes:explicit>
       <itunes:duration>00:17:41</itunes:duration>
