@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import dayjs from 'dayjs';
 
 import * as Styles from './SermonCard.style';
 
 export const SermonCard = (props) => {
   const { title, speaker, date, audioUrl, verses, audio } = props.data;
+  // debugger;
   return (
     <Styles.SermonCardStyle
       width={[1, 1 / 2]}
@@ -26,7 +28,9 @@ export const SermonCard = (props) => {
           <source src={audio.file.url || audioUrl} type="audio/mpeg" />
         </Styles.SermonAudio>
       )}
-      <Styles.SermonVerses fontSize={1}>Verses: {verses}</Styles.SermonVerses>
+      {verses && (
+        <Styles.SermonVerses fontSize={1}>Verses: {verses}</Styles.SermonVerses>
+      )}
     </Styles.SermonCardStyle>
   );
 };
