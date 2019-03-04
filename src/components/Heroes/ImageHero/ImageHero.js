@@ -23,5 +23,8 @@ export const ImageHero = ({ text, imageSrc, height }) => {
 ImageHero.propTypes = {
   text: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
-  height: PropTypes.string,
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
 };

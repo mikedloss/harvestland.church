@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Heading, Flex, Box } from 'rebass';
+import { breakpointValues as bp } from '../../Elements/theme';
 
 export const ImageHeroStyle = styled.section`
   background-color: #000;
@@ -12,13 +13,19 @@ export const ImageHeroStyle = styled.section`
 `;
 
 export const StaticImage = styled(Box)`
-  height: ${(props) => (props.height ? `${props.height}` : '40vh')};
+  height: ${(props) => `${getHeight(props.height)};`}
   width: 100%;
   background-image: url('${(props) => props.src}');
   background-position: center center;
   background-repeat: no-repeat;
   ${'' /* background-attachment: fixed; */}
   background-size: cover;
+
+  ${(props) =>
+    Array.isArray(props.height) &&
+    `@media screen and (min-width: ${bp.SMALL}px) {
+      height: ${getHeight(props.height, 1)};
+    }`}
 `;
 
 export const MediaContainer = styled.div`
@@ -52,3 +59,11 @@ export const WelcomeText = styled(Heading)`
     color: #fff;
   }
 `;
+
+const getHeight = (height, index = 0) => {
+  return height
+    ? Array.isArray(height)
+      ? `${height[index]}`
+      : `${height}`
+    : '40vh';
+};

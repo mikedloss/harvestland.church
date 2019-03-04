@@ -18,7 +18,11 @@ export const Side2SideHero = ({
       <Styles.HeroContainer>
         <ImageHero text={heroText} imageSrc={imageSrc} height={height} />
       </Styles.HeroContainer>
-      <Styles.TextBlockContainer p="24px" flexDirection="column" alignItems="center">
+      <Styles.TextBlockContainer
+        p="24px"
+        flexDirection="column"
+        alignItems="center"
+      >
         {children}
       </Styles.TextBlockContainer>
     </Styles.Side2SideHeroStyle>
@@ -28,7 +32,10 @@ export const Side2SideHero = ({
 Side2SideHero.propTypes = {
   heroText: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
-  height: PropTypes.string,
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
   textBlockJustify: PropTypes.string,
   children: PropTypes.node,
 };
