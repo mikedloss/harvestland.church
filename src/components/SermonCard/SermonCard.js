@@ -44,10 +44,10 @@ export const SermonCard = (props) => {
         <Styles.SermonVerses fontSize={1}>
           Verses:{' '}
           {verses.map((verse, index) => (
-            <>
-              <Verse key={index} verse={verse} />
+            <span key={index}>
+              <Verse verse={verse} />
               {index === verses.length - 1 ? '' : ', '}
-            </>
+            </span>
           ))}
         </Styles.SermonVerses>
       )}

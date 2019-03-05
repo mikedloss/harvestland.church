@@ -11,7 +11,7 @@ export const ImageHero = ({ text, imageSrc, height }) => {
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">
-          <Styles.WelcomeText fontSize={[5, 6]}>
+          <Styles.WelcomeText p="20px" fontSize={[5, 6]}>
             {text || 'Hero Text'}
           </Styles.WelcomeText>
         </Styles.TextOverlay>

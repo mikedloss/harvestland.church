@@ -18,7 +18,6 @@ export const StaticImage = styled(Box)`
   background-image: url('${(props) => props.src}');
   background-position: center center;
   background-repeat: no-repeat;
-  ${'' /* background-attachment: fixed; */}
   background-size: cover;
 
   ${(props) =>
@@ -50,14 +49,7 @@ export const TextOverlay = styled(Flex)`
 `;
 
 export const WelcomeText = styled(Heading)`
-  ::selection {
-    background: #386238; /* WebKit/Blink Browsers */
-    color: #fff;
-  }
-  ::-moz-selection {
-    background: #386238; /* Gecko Browsers */
-    color: #fff;
-  }
+  text-align: center;
 `;
 
 const getHeight = (height, index = 0) => {
