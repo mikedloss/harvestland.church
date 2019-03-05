@@ -24,7 +24,7 @@ export const Nav = styled(Box)`
 
 export const MenuButton = styled(Button)`
   position: absolute;
-  top: 0px;
+  top: 2px;
   right: 0px;
   cursor: pointer;
   ${(props) =>

@@ -104,6 +104,17 @@ const Header = (props) => {
         </NavItem>
         <NavItem>
           <Styles.NavLink
+            to="/visit"
+            onClick={resetMenu}
+            activeStyle={{ color: '#42613d' }}
+          >
+            <Heading as="h3" fontSize={3}>
+              Visit
+            </Heading>
+          </Styles.NavLink>
+        </NavItem>
+        <NavItem>
+          <Styles.NavLink
             to="/give"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}

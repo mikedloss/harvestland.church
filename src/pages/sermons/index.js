@@ -17,7 +17,7 @@ const SermonsPage = (props) => {
       <ImageHero
         text="Sermons"
         imageSrc={image.childImageSharp.fluid.src}
-        height={['50vh', '30vh']}
+        height={['30vh', '50vh']}
       />
       <LayoutStyle.ContentContainer>
         {sermons.edges.map((sermon, index) => {

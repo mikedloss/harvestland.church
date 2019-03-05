@@ -20,8 +20,22 @@ export const colors = {
   offWhite: '#f8fafc',
 };
 
+export const buttons = {
+  default: {
+    backgroundColor: colors.primary,
+    color: colors.white,
+    border: `2px solid ${colors.primary}`,
+  },
+  inverse: {
+    backgroundColor: colors.white,
+    color: colors.primary,
+    border: `2px solid ${colors.primary}`,
+  },
+};
+
 export default {
   colors,
   fontSizes,
   breakpoints,
+  buttons,
 };

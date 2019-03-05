@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { Heading, Text } from 'rebass';
+import { Heading, Text, Flex, Box } from 'rebass';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
+import TextHero from '../../components/Heroes/TextHero';
 import ImageHero from '../../components/Heroes/ImageHero';
+import Button from '../../components/Button';
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 
 const AboutPage = (props) => {
@@ -12,22 +14,33 @@ const AboutPage = (props) => {
   return (
     <Layout>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
-      <ImageHero
-        imageSrc={heroImage.childImageSharp.fluid.src}
-        text="About Us"
-        height="30vh"
-      />
+      <TextHero color="black">
+        <Text>Win.</Text>
+        <Text>Build.</Text>
+        <Text>Equip.</Text>
+      </TextHero>
       <Container>
-        <Heading>About Page</Heading>
-        <Link to="/about/beliefs">
-          <Text>Beliefs</Text>
-        </Link>
-        <Link to="/about/leaders">
-          <Text>Leaders</Text>
-        </Link>
-        <Link to="/about/contact">
-          <Text>Contact</Text>
-        </Link>
+        <Flex justifyContent="center">
+          <Text>
+            Our mission is to <strong>win</strong> people to Jesus, and to{' '}
+            <strong>build</strong> a community where people are{' '}
+            <strong>equipped</strong> to do God's work.
+          </Text>
+        </Flex>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Box width="100%">
+            <Link to="/about/beliefs">
+              <Button variant="default">Beliefs</Button>
+            </Link>
+          </Box>
+          <Link to="/about/leaders">
+            <Button variant="inverse">Leaders</Button>
+          </Link>
+        </Flex>
       </Container>
     </Layout>
   );
