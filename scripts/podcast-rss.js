@@ -6,10 +6,10 @@ const STATIC_PATH = './static';
 const RSS_PATH = `${STATIC_PATH}/rss.xml`;
 
 exports.writeRSS = async (sermons) => {
-  console.log(`TRUNCATING ${ RSS_PATH }`);
+  // console.log(`TRUNCATING ${ RSS_PATH }`);
   fs.truncateSync(RSS_PATH);
 
-  console.log(`WRITING TO ${RSS_PATH}`);
+  // console.log(`WRITING TO ${RSS_PATH}`);
   fs.writeFileSync(
     RSS_PATH, `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://www.rssboard.org/media-rss" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0">
@@ -38,7 +38,7 @@ exports.writeRSS = async (sermons) => {
   );
 
   await asyncForEach(sermons, async ({ node }) => {
-    console.log(`LOOKING AT ${ node.title }`);
+    // console.log(`LOOKING AT ${ node.title }`);
     const data = node;
     const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
     
@@ -51,7 +51,7 @@ exports.writeRSS = async (sermons) => {
       method: "HEAD"
     });
 
-    console.log(`WRITING ${ node.title }`);
+    // console.log(`WRITING ${ node.title }`);
     fs.appendFileSync(
       RSS_PATH, `    <item>
       <title>${ data.title }</title>
@@ -74,7 +74,7 @@ exports.writeRSS = async (sermons) => {
 `);
   })
 
-  console.log(`FINISHING XML`);
+  // console.log(`FINISHING XML`);
   fs.appendFileSync(
     RSS_PATH, `  </channel>
 </rss>`

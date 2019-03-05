@@ -49,18 +49,10 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then(result => {
         if (result.errors) reject(result.errors);
-
-        // console.log("beginning XML")
-        // podcast.beginningXML();
         
         const sermons = result.data.allContentfulSermon.edges
-        // create sermon pages
         sermons.forEach(({ node }) => {
           const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
-          
-          // console.log("sermon XML 1")
-          // podcast.writeSermonXML(node, sermonPath);
-          // console.log("sermon XML 2")
           
           createPage({
             component: path.resolve('./src/templates/sermon-post.js'),
@@ -69,11 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
               id: node.id
             }
           })
-          // console.log("sermon XML 3")
         })
-          
-        // console.log("end XML")
-        // podcast.endXML();
 
         podcast.writeRSS(sermons)
 

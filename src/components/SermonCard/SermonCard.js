@@ -5,10 +5,12 @@ import dayjs from 'dayjs';
 import slugify from '../../../scripts/slugify';
 
 import * as Styles from './SermonCard.style';
+import Verse from '../Verse';
 
 export const SermonCard = (props) => {
-  const { title, speaker, date, audioUrl, verses, audio } = props.data;
+  const { title, speaker, date, audioUrl, audio } = props.data;
   const { currentPath } = props;
+  const verses = props.data.verses && props.data.verses.split(', ');
   return (
     <Styles.SermonCardStyle
       width={[1, 1 / 2]}
@@ -39,7 +41,15 @@ export const SermonCard = (props) => {
         </Styles.SermonAudio>
       )}
       {verses && (
-        <Styles.SermonVerses fontSize={1}>Verses: {verses}</Styles.SermonVerses>
+        <Styles.SermonVerses fontSize={1}>
+          Verses:{' '}
+          {verses.map((verse, index) => (
+            <>
+              <Verse key={index} verse={verse} />
+              {index === verses.length - 1 ? '' : ', '}
+            </>
+          ))}
+        </Styles.SermonVerses>
       )}
     </Styles.SermonCardStyle>
   );
