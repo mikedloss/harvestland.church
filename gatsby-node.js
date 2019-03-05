@@ -6,7 +6,6 @@
 
 // You can delete this file if you're not using it
 const path = require('path');
-const fs = require('fs');
 const slugify = require('./scripts/slugify');
 const podcast = require('./scripts/podcast-rss');
 
@@ -63,7 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        podcast.writeRSS(sermons)
+        process.env.NODE_ENV === "production" && podcast.writeRSS(sermons);
 
         resolve();
       })
