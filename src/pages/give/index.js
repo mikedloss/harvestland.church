@@ -14,7 +14,10 @@ const GivePage = (props) => {
   return (
     <Layout>
       <SEO title="Give" keywords={[`gatsby`, `application`, `react`]} />
-      <TextHero />
+      <TextHero>
+        <Text as="p">Generosity</Text>
+        <Text as="span" fontSize={5}>🙏</Text>
+      </TextHero>
       <Container>
         <Flex flexDirection="column" alignItems="center">
           <Box width="100%" px={['2rem', '4rem']}>
@@ -126,7 +129,7 @@ const GivePage = (props) => {
       </Container>
 
       {/* still have questions? */}
-      <TextHero text="Still have questions?" color="black" />
+      <TextHero color="black">Still have questions?</TextHero>
       <Container>
         <Flex
           flexDirection="column"

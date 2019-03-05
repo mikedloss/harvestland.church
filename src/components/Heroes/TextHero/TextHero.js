@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import * as Styles from './TextHero.styles';
 
 export const TextHero = ({
-  text,
   useMargin,
   bg,
   color,
   alignItems,
   justifyContent,
   flexDirection,
+  children,
 }) => {
   return (
     <Styles.TextHeroStyle
@@ -22,13 +22,17 @@ export const TextHero = ({
       m={useMargin && ['6rem', '8rem']}
       p={!useMargin && ['6rem', '8rem']}
     >
-      <Styles.HeroText fontSize={6}>{text || 'Text Hero'}</Styles.HeroText>
+      <Styles.HeroText fontSize={6}>{children || 'Text Hero'}</Styles.HeroText>
     </Styles.TextHeroStyle>
   );
 };
 
 TextHero.propTypes = {
-  text: PropTypes.string,
-  color: PropTypes.string,
+  useMargin: PropTypes.bool,
   bg: PropTypes.string,
+  color: PropTypes.string,
+  alignItems: PropTypes.string,
+  justifyContent: PropTypes.string,
+  flexDirection: PropTypes.string,
+  children: PropTypes.node,
 };
