@@ -8,14 +8,17 @@ export const VideoHero = ({ text, videoSrc, imageSrc, imageHeight }) => {
   return (
     <Styles.VideoHeroStyle>
       <Styles.MediaContainer>
-        <Media.SmallOnly>
+        {/* <Media.SmallOnly>
           <Styles.StaticImage src={imageSrc} height={imageHeight} />
         </Media.SmallOnly>
         <Media.NotSmall>
           <Styles.Video autoPlay loop muted>
             <source src={videoSrc} type="video/mp4" />
           </Styles.Video>
-        </Media.NotSmall>
+        </Media.NotSmall> */}
+        <Styles.Video autoPlay loop muted>
+          <source src={videoSrc} type="video/mp4" />
+        </Styles.Video>
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">

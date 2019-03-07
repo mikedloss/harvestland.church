@@ -34,7 +34,8 @@ const HeroContentContainer = styled(Flex)`
 `;
 
 const AboutPage = (props) => {
-  const { heroImage } = props.data;
+  const { heroImage, groupsImage } = props.data;
+  console.log(groupsImage);
   return (
     <Layout>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
@@ -94,7 +95,7 @@ const AboutPage = (props) => {
           are you are.
         </Text>
       </Side2SideHero>
-      <ImageHero imageSrc={heroImage.childImageSharp.fluid.src} height="50vh">
+      <ImageHero imageSrc={groupsImage.childImageSharp.fluid.src} height="50vh">
         <HeroContentContainer width="100%" p="4rem">
           <Box width={[null, "50%"]}>
             <Heading py="2rem" fontSize={[5, 6]}>
@@ -113,6 +114,13 @@ const AboutPage = (props) => {
 export const query = graphql`
   {
     heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    groupsImage: file(relativePath: { eq: "images/campfire.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid
