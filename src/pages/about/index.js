@@ -110,7 +110,6 @@ const AboutPage = (props) => {
         height="50vh"
         textAlign="flex-start"
         textJustify="flex-start"
-        opacity="0.3"
       >
         {/* <HeroContentContainer alignItems="center" justifyContent="center" p="2rem">
           <Box>
