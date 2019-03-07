@@ -16,9 +16,6 @@ export const VideoHero = ({ text, videoSrc, imageSrc, imageHeight }) => {
             <source src={videoSrc} type="video/mp4" />
           </Styles.Video>
         </Media.NotSmall>
-        <Media.Query small large>
-          something
-        </Media.Query>
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">

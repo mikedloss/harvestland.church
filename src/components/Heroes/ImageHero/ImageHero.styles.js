@@ -32,7 +32,7 @@ export const MediaContainer = styled.div`
   display: block;
   box-sizing: border-box;
   overflow: hidden;
-  opacity: 0.5;
+  opacity: ${props => props.opacity};
   height: 100%;
 `;
 

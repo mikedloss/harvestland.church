@@ -24,14 +24,20 @@ const ButtonLinksContainer = styled(Flex)`
 `;
 
 const HeroContentContainer = styled(Flex)`
+  height: 100%;
+  width: 100%;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: ${bp.SMALL}px) {
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
   }
 `;
+
+const GroupsContent = styled(Box)`
+  text-align: center;
+`
 
 const AboutPage = (props) => {
   const { heroImage, groupsImage } = props.data;
@@ -99,16 +105,41 @@ const AboutPage = (props) => {
           are you are.
         </Text>
       </Side2SideHero>
-      <ImageHero imageSrc={groupsImage.childImageSharp.fluid.src} height="50vh">
-        <HeroContentContainer width="100%" p="4rem">
-          <Box width={[null, '50%']}>
+      <ImageHero
+        imageSrc={groupsImage.childImageSharp.fluid.src}
+        height="50vh"
+        textAlign="flex-start"
+        textJustify="flex-start"
+        opacity="0.3"
+      >
+        {/* <HeroContentContainer alignItems="center" justifyContent="center" p="2rem">
+          <Box>
             <Heading py="2rem" fontSize={[5, 6]}>
-              something
+              Groups
             </Heading>
           </Box>
-          <Box width={[null, '50%']}>
-            <Text>Text text text</Text>
+          <Box mx="auto" />
+          <Box>
+            <Text>We want to offer a path for everyone to grow their faith in community. We have groups for all ages that give everyone that opportunity.</Text>
+            <Button width="auto">See our Groups</Button>
           </Box>
+        </HeroContentContainer> */}
+        <HeroContentContainer alignItems="center">
+          <Box width={[null, '60%']}>
+            <Heading py="2rem" fontSize={[5, 6]}>
+              Groups
+            </Heading>
+          </Box>
+          <GroupsContent width={[null, '60%']}>
+            <Text>
+              We want to offer a path for everyone to grow their faith in
+              community. We have groups for all ages that give everyone that
+              opportunity.
+            </Text>
+            <Link to="/groups">
+              <Button mt="1rem">See our Groups</Button>
+            </Link>
+          </GroupsContent>
         </HeroContentContainer>
       </ImageHero>
     </Layout>
