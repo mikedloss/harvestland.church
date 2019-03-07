@@ -13,9 +13,10 @@ export const Side2SideHero = ({
   textBlockJustify,
   children,
 }) => {
+  console.log(height);
   return (
     <Styles.Side2SideHeroStyle as="section">
-      <Styles.HeroContainer>
+      <Styles.HeroContainer height={height}>
         <ImageHero text={heroText} imageSrc={imageSrc} height={height} />
       </Styles.HeroContainer>
       <Styles.TextBlockContainer

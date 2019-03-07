@@ -9,8 +9,7 @@ export const ButtonStyle = styled(Button)`
 
 ButtonStyle.defaultProps = {
   as: 'button',
-  py: '8px',
-  px: '16px',
-  borderRadius: '0',
+  p: '0.75rem 1.25rem',
   fontWeight: 'bold',
+  borderRadius: '4rem',
 };

@@ -5,9 +5,9 @@ import * as Styles from './ImageHero.styles';
 
 export const ImageHero = ({ text, imageSrc, height }) => {
   return (
-    <Styles.ImageHeroStyle>
+    <Styles.ImageHeroStyle height={height}>
       <Styles.MediaContainer>
-        <Styles.StaticImage src={imageSrc} height={height} />
+        <Styles.StaticImage src={imageSrc} />
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">

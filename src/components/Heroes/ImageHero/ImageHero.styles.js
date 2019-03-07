@@ -10,21 +10,22 @@ export const ImageHeroStyle = styled.section`
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
+  height: ${(props) => `${getHeight(props.height)};`};
+
+  ${(props) =>
+    Array.isArray(props.height) &&
+    `@media screen and (min-width: ${bp.LARGE}px) {
+    height: ${getHeight(props.height, 1)};
+  }`}
 `;
 
 export const StaticImage = styled(Box)`
-  height: ${(props) => `${getHeight(props.height)};`}
+  height: 100%;
   width: 100%;
   background-image: url('${(props) => props.src}');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  ${(props) =>
-    Array.isArray(props.height) &&
-    `@media screen and (min-width: ${bp.SMALL}px) {
-      height: ${getHeight(props.height, 1)};
-    }`}
 `;
 
 export const MediaContainer = styled.div`
@@ -32,6 +33,7 @@ export const MediaContainer = styled.div`
   box-sizing: border-box;
   overflow: hidden;
   opacity: 0.5;
+  height: 100%;
 `;
 
 export const TextContainer = styled.div`
@@ -57,5 +59,5 @@ const getHeight = (height, index = 0) => {
     ? Array.isArray(height)
       ? `${height[index]}`
       : `${height}`
-    : '40vh';
+    : '25vh';
 };

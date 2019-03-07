@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Text, Flex, Button, Box } from 'rebass';
+import { Heading, Text, Flex, Box } from 'rebass';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -8,6 +8,7 @@ import { graphql } from 'gatsby';
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 import TextHero from '../../components/Heroes/TextHero';
 import Side2SideHero from '../../components/Heroes/Side2SideHero';
+import Button from '../../components/Button';
 
 const GivePage = (props) => {
   const { image } = props.data;
@@ -47,16 +48,7 @@ const GivePage = (props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                py="20px"
-                px="36px"
-                fontSize={4}
-                borderColor="primary"
-                border="4px solid"
-                borderRadius="0"
-                bg="white"
-                color="primary"
-              >
+              <Button variant="inverse" p="1rem 2rem">
                 Give Online
               </Button>
             </a>
@@ -69,7 +61,7 @@ const GivePage = (props) => {
       <Side2SideHero
         heroText="What is Tithing?"
         imageSrc={image.childImageSharp.fluid.src}
-        height="60vh"
+        height={['40vh', '60vh']}
       >
         <p>
           Tithing in the bible was an offering from the Law of Moses that
