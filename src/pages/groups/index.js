@@ -4,12 +4,12 @@ import { Heading } from 'rebass';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
-const ConnectPage = () => (
+const GroupsPage = () => (
   <Layout>
-    <SEO title="Connect" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Groups" keywords={[`gatsby`, `application`, `react`]} />
     {/* hero goes here */}
-    <Heading>Connect Page</Heading>
+    <Heading>Groups Page</Heading>
   </Layout>
 );
 
-export default ConnectPage;
+export default GroupsPage;

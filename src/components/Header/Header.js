@@ -71,12 +71,12 @@ const Header = (props) => {
         </NavItem>
         <NavItem>
           <Styles.NavLink
-            to="/connect"
+            to="/groups"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
             <Heading as="h3" fontSize={3}>
-              Connect
+              Groups
             </Heading>
           </Styles.NavLink>
         </NavItem>
