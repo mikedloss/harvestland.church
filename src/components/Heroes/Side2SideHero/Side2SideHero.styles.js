@@ -7,7 +7,7 @@ export const Side2SideHeroStyle = styled(Flex)`
   flex-direction: column;
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    flex-direction: ${props => props.inverse ? 'row-reverse' : 'row'};
+    flex-direction: ${(props) => (props.inverse ? 'row-reverse' : 'row')};
   }
 `;
 export const HeroContainer = styled(Flex)`

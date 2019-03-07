@@ -17,7 +17,7 @@ const ButtonLinksContainer = styled(Flex)`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: ${ bp.SMALL }px) {
+  @media screen and (min-width: ${bp.SMALL}px) {
     flex-direction: row;
     align-items: center;
   }
@@ -27,7 +27,7 @@ const HeroContentContainer = styled(Flex)`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: ${ bp.SMALL }px) {
+  @media screen and (min-width: ${bp.SMALL}px) {
     flex-direction: row;
     align-items: center;
   }
@@ -63,12 +63,16 @@ const AboutPage = (props) => {
             </Text>
             <ButtonLinksContainer mb="1rem">
               <Link to="/about/beliefs">
-                <Button variant="inverse" mr={[null, "2rem"]} mb={["1rem", "0"]}>Our beliefs</Button>
+                <Button
+                  variant="inverse"
+                  mr={[null, '2rem']}
+                  mb={['1rem', '0']}
+                >
+                  Our beliefs
+                </Button>
               </Link>
               <Link to="/about/leaders">
-                <Button variant="inverse">
-                  Our leaders
-                </Button>
+                <Button variant="inverse">Our leaders</Button>
               </Link>
             </ButtonLinksContainer>
           </Flex>
@@ -97,12 +101,12 @@ const AboutPage = (props) => {
       </Side2SideHero>
       <ImageHero imageSrc={groupsImage.childImageSharp.fluid.src} height="50vh">
         <HeroContentContainer width="100%" p="4rem">
-          <Box width={[null, "50%"]}>
+          <Box width={[null, '50%']}>
             <Heading py="2rem" fontSize={[5, 6]}>
               something
             </Heading>
           </Box>
-          <Box width={[null, "50%"]}>
+          <Box width={[null, '50%']}>
             <Text>Text text text</Text>
           </Box>
         </HeroContentContainer>
