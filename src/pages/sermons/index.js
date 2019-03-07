@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Heading } from 'rebass';
+import { Heading } from 'rebass';
 import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
@@ -15,10 +15,13 @@ const SermonsPage = (props) => {
     <Layout>
       <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
-        text="Sermons"
         imageSrc={image.childImageSharp.fluid.src}
         height={['30vh', '50vh']}
-      />
+      >
+        <Heading p="20px" fontSize={[5, 6]}>
+          Sermons
+        </Heading>
+      </ImageHero>
       <LayoutStyle.ContentContainer>
         {sermons.edges.map((sermon, index) => {
           return (

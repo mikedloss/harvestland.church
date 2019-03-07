@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Box, Flex } from 'rebass';
+import { Heading } from 'rebass';
 
 import ImageHero from '../ImageHero';
 
@@ -17,7 +17,11 @@ export const Side2SideHero = ({
   return (
     <Styles.Side2SideHeroStyle as="section">
       <Styles.HeroContainer height={height}>
-        <ImageHero text={heroText} imageSrc={imageSrc} height={height} />
+        <ImageHero imageSrc={imageSrc} height={height}>
+          <Heading p="20px" fontSize={[5, 6]}>
+            {heroText}
+          </Heading>
+        </ImageHero>
       </Styles.HeroContainer>
       <Styles.TextBlockContainer
         p="24px"

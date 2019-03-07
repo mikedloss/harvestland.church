@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text } from 'rebass';
+import { Flex, Text, Heading } from 'rebass';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -15,10 +15,13 @@ const SermonPostTemplate = (props) => {
     <Layout>
       <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
-        text={sermon.title}
         imageSrc={image.childImageSharp.fluid.src}
         height={['50vh', '30vh']}
-      />
+      >
+        <Heading p="20px" fontSize={[5, 6]}>
+          {sermon.title}
+        </Heading>
+      </ImageHero>
       <Container>
         <SermonCard data={sermon} currentPath={props['*']} />
         <Flex alignItems="center" justifyContent="center">

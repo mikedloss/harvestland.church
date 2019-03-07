@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heading, Flex, Box } from 'rebass';
+import { Flex, Box } from 'rebass';
 import { breakpointValues as bp } from '../../Elements/theme';
 
 export const ImageHeroStyle = styled.section`
@@ -48,10 +48,6 @@ export const TextContainer = styled.div`
 
 export const TextOverlay = styled(Flex)`
   height: 100%;
-`;
-
-export const WelcomeText = styled(Heading)`
-  text-align: center;
 `;
 
 const getHeight = (height, index = 0) => {

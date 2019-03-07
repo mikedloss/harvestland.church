@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import * as Styles from './ImageHero.styles';
 
-export const ImageHero = ({ imageSrc, height, children }) => {
+export const ImageHero = ({ title, subtitle, cta, imageSrc, height, children }) => {
   return (
     <Styles.ImageHeroStyle height={height}>
       <Styles.MediaContainer>
@@ -11,7 +11,9 @@ export const ImageHero = ({ imageSrc, height, children }) => {
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">
-          {children || 'Hero Text'}
+          <Styles.WelcomeText p="20px" fontSize={[5, 6]}>
+            {text || 'Hero Text'}
+          </Styles.WelcomeText>
         </Styles.TextOverlay>
       </Styles.TextContainer>
     </Styles.ImageHeroStyle>
@@ -19,10 +21,10 @@ export const ImageHero = ({ imageSrc, height, children }) => {
 };
 
 ImageHero.propTypes = {
+  title: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   height: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
-  children: PropTypes.node,
 };

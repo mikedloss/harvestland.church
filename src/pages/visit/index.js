@@ -15,10 +15,13 @@ const AboutPage = (props) => {
     <Layout>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
-        text="Visit Us"
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['30vh', '50vh']}
-      />
+      >
+        <Heading p="20px" fontSize={[5, 6]}>
+          Visit Us
+        </Heading>
+      </ImageHero>
       <Container>
         <Flex flexDirection="column" alignItems="center" mb="2rem">
           <Heading my="4px" fontSize={5}>
