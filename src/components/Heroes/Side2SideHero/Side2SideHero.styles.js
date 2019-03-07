@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { Flex } from 'rebass';
 import { breakpointValues as bp } from '../../Elements/theme';
+import { getHeight } from '../ImageHero/ImageHero.styles';
 
 export const Side2SideHeroStyle = styled(Flex)`
   flex-direction: column;
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    flex-direction: row;
+    flex-direction: ${props => props.inverse ? 'row-reverse' : 'row'};
   }
 `;
 export const HeroContainer = styled(Flex)`
@@ -28,12 +29,3 @@ export const TextBlockContainer = styled(Flex)`
     align-items: ${(props) => props.textBlockJustify || 'flex-start'};
   }
 `;
-
-const getHeight = (height, index = 0) => {
-  console.log(height, index);
-  return height
-    ? Array.isArray(height)
-      ? `${height[index]}`
-      : `${height}`
-    : '25vh';
-};

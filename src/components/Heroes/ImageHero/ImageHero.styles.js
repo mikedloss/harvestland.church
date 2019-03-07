@@ -50,7 +50,7 @@ export const TextOverlay = styled(Flex)`
   height: 100%;
 `;
 
-const getHeight = (height, index = 0) => {
+export const getHeight = (height, index = 0) => {
   return height
     ? Array.isArray(height)
       ? `${height[index]}`

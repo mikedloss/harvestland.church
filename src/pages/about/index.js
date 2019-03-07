@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { Text, Flex, Box } from 'rebass';
+import { Text, Flex, Box, Heading } from 'rebass';
+import styled from 'styled-components';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -8,6 +9,29 @@ import TextHero from '../../components/Heroes/TextHero';
 import Button from '../../components/Button';
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 import Side2SideHero from '../../components/Heroes/Side2SideHero';
+import ImageHero from '../../components/Heroes/ImageHero';
+
+import { breakpointValues as bp } from '../../components/Elements/theme';
+
+const ButtonLinksContainer = styled(Flex)`
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: ${ bp.SMALL }px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+
+const HeroContentContainer = styled(Flex)`
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: ${ bp.SMALL }px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
 
 const AboutPage = (props) => {
   const { heroImage } = props.data;
@@ -36,14 +60,16 @@ const AboutPage = (props) => {
               are welcome here. Join us for our Sunday service and be a part of
               our family.
             </Text>
-            <Link to="/about/beliefs">
-              <Button variant="inverse">Our beliefs</Button>
-            </Link>
-            <Link to="/about/leaders">
-              <Button variant="inverse" my="1rem">
-                Our leaders
-              </Button>
-            </Link>
+            <ButtonLinksContainer mb="1rem">
+              <Link to="/about/beliefs">
+                <Button variant="inverse" mr={[null, "2rem"]} mb={["1rem", "0"]}>Our beliefs</Button>
+              </Link>
+              <Link to="/about/leaders">
+                <Button variant="inverse">
+                  Our leaders
+                </Button>
+              </Link>
+            </ButtonLinksContainer>
           </Flex>
         </Box>
       </Container>
@@ -68,13 +94,18 @@ const AboutPage = (props) => {
           are you are.
         </Text>
       </Side2SideHero>
-      <Side2SideHero
-        heroText="something"
-        imageSrc={heroImage.childImageSharp.fluid.src}
-        height="20vh"
-      >
-        <Text>Description about ministry</Text>
-      </Side2SideHero>
+      <ImageHero imageSrc={heroImage.childImageSharp.fluid.src} height="50vh">
+        <HeroContentContainer width="100%" p="4rem">
+          <Box width={[null, "50%"]}>
+            <Heading py="2rem" fontSize={[5, 6]}>
+              something
+            </Heading>
+          </Box>
+          <Box width={[null, "50%"]}>
+            <Text>Text text text</Text>
+          </Box>
+        </HeroContentContainer>
+      </ImageHero>
     </Layout>
   );
 };

@@ -25,11 +25,24 @@ export const buttons = {
     backgroundColor: colors.primary,
     color: colors.white,
     border: `3px solid ${colors.primary}`,
+    transition: 'all 0.2s ease-in-out',
+    ':hover': {
+      cursor: 'pointer',
+      backgroundColor: '#547050',
+      borderColor: '#547050',
+    },
   },
   inverse: {
     backgroundColor: colors.white,
     color: colors.primary,
     border: `3px solid ${colors.primary}`,
+    transition: 'all 0.2s ease-in-out',
+    ':hover': {
+      cursor: 'pointer',
+      color: colors.white,
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
   },
 };
 

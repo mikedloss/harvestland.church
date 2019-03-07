@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 import { Button } from 'rebass';
 
-export const ButtonStyle = styled(Button)`
-  :hover {
-    cursor: pointer;
-  }
-`;
+export const ButtonStyle = styled(Button)``;
 
 ButtonStyle.defaultProps = {
   as: 'button',

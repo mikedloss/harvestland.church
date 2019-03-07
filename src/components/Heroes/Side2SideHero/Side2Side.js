@@ -11,11 +11,11 @@ export const Side2SideHero = ({
   imageSrc,
   height,
   textBlockJustify,
+  inverse,
   children,
 }) => {
-  console.log(height);
   return (
-    <Styles.Side2SideHeroStyle as="section">
+    <Styles.Side2SideHeroStyle as="section" inverse={inverse}>
       <Styles.HeroContainer height={height}>
         <ImageHero imageSrc={imageSrc} height={height}>
           <Heading p="20px" fontSize={[5, 6]}>
@@ -27,6 +27,7 @@ export const Side2SideHero = ({
         p="24px"
         flexDirection="column"
         alignItems="center"
+        justifyContent={textBlockJustify || "flex-start"}
       >
         {children}
       </Styles.TextBlockContainer>
@@ -42,5 +43,6 @@ Side2SideHero.propTypes = {
     PropTypes.arrayOf(PropTypes.string),
   ]),
   textBlockJustify: PropTypes.string,
+  inverse: PropTypes.bool,
   children: PropTypes.node,
 };
