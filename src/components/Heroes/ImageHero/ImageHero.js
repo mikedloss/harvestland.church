@@ -42,6 +42,6 @@ ImageHero.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
-  opacity: PropTypes.string,  // changes dark overlay opacity, higher number == lighter
+  opacity: PropTypes.string, // changes dark overlay opacity, higher number == lighter
   children: PropTypes.node,
 };

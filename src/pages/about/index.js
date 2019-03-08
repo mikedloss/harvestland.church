@@ -37,7 +37,7 @@ const HeroContentContainer = styled(Flex)`
 
 const GroupsContent = styled(Box)`
   text-align: center;
-`
+`;
 
 const AboutPage = (props) => {
   const { heroImage, groupsImage } = props.data;
