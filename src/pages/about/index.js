@@ -30,7 +30,7 @@ const HeroContentContainer = styled(Flex)`
   justify-content: center;
 
   @media screen and (min-width: ${bp.SMALL}px) {
-    flex-direction: row;
+    flex-direction: ${props => props.inverse ? 'row-reverse' : 'row'};
     justify-content: space-between;
   }
 `;
@@ -118,7 +118,7 @@ const AboutPage = (props) => {
         textJustify="flex-start"
       >
         <HeroContentContainer alignItems="center">
-          <Box width={[null, '60%']}>
+          <Box width={[null, '40%']}>
             <Heading py="2rem" fontSize={[5, 6]}>
               Groups
             </Heading>
