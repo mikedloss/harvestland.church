@@ -18,7 +18,7 @@ const SermonsPage = (props) => {
         imageSrc={image.childImageSharp.fluid.src}
         height={['30vh', '50vh']}
       >
-        <Heading p="20px" fontSize={[5, 6]}>
+        <Heading p="20px" fontSize={[6, 7]}>
           Sermons
         </Heading>
       </ImageHero>

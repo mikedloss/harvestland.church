@@ -30,7 +30,7 @@ const HeroContentContainer = styled(Flex)`
   justify-content: center;
 
   @media screen and (min-width: ${bp.SMALL}px) {
-    flex-direction: ${props => props.inverse ? 'row-reverse' : 'row'};
+    flex-direction: ${(props) => (props.inverse ? 'row-reverse' : 'row')};
     justify-content: space-between;
   }
 `;
@@ -130,7 +130,7 @@ const AboutPage = (props) => {
               opportunity.
             </Text>
             <Link to="/groups">
-              <Button mt="1rem">See our Groups</Button>
+              <Button mt="1rem">Learn More</Button>
             </Link>
           </GroupsContent>
         </HeroContentContainer>
@@ -148,7 +148,7 @@ export const query = graphql`
         }
       }
     }
-    groupsImage: file(relativePath: { eq: "images/campfire.jpg" }) {
+    groupsImage: file(relativePath: { eq: "images/groups/campfire.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid

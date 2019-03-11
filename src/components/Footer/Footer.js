@@ -11,7 +11,6 @@ export const Footer = () => {
       as="footer"
       alignItems="center"
       p="1rem"
-      mt="16px"
       bg="offWhite"
       color="black"
     >

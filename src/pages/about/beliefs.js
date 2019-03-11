@@ -16,7 +16,7 @@ const BeliefsPage = (props) => {
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['30vh', '50vh']}
       >
-        <Heading p="20px" fontSize={[5, 6]}>
+        <Heading p="1rem" fontSize={[5, 6]}>
           What We Believe
         </Heading>
       </ImageHero>

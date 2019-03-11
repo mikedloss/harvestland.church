@@ -19,7 +19,7 @@ export const VideoHero = ({ text, videoSrc, imageSrc, imageHeight }) => {
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay alignItems="center" justifyContent="center">
-          <Styles.WelcomeText fontSize={[5, 6]}>
+          <Styles.WelcomeText fontSize={[6, 7]}>
             {text || 'Hero Text'}
           </Styles.WelcomeText>
         </Styles.TextOverlay>
