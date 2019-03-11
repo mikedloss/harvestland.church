@@ -1,13 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Heading } from 'rebass';
+import { Text, Heading, Flex, Box, Card, Image } from 'rebass';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
+import LeaderInfo from '../../components/LeaderInfo';
+import Side2Side from '../../components/Heroes/Side2SideHero';
+
+import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import * as Styles from '../../components/LeaderInfo/LeaderInfo.styles';
 
 const LeadersPage = (props) => {
-  const { heroImage } = props.data;
+  const { heroImage, peteHeather, devanne, mike, willis, summer } = props.data;
   return (
     <Layout>
       <SEO title="Leaders" keywords={[`gatsby`, `application`, `react`]} />
@@ -16,12 +21,28 @@ const LeadersPage = (props) => {
           Our Leaders
         </Heading>
       </ImageHero>
-      <Heading>Leaders Page</Heading>
+      <Container>
+        <Flex flexDirection="column" alignItems="center">
+          <LeaderInfo who="peteHeather" imageSrc={peteHeather} />
+          <LeaderInfo who="devanne" imageSrc={devanne} />
+          <LeaderInfo who="mike" imageSrc={mike} />
+          <LeaderInfo who="willis" imageSrc={willis} />
+          <LeaderInfo who="summer" imageSrc={summer} />
+        </Flex>
+      </Container>
     </Layout>
   );
 };
 
 export const query = graphql`
+  fragment leaderPicture on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
   {
     heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
       childImageSharp {
@@ -29,6 +50,21 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    peteHeather: file(relativePath: { eq: "images/leaders/pete-heather.png" }) {
+      ...leaderPicture
+    }
+    devanne: file(relativePath: { eq: "images/leaders/devanne.jpg" }) {
+      ...leaderPicture
+    }
+    mike: file(relativePath: { eq: "images/leaders/mike.jpg" }) {
+      ...leaderPicture
+    }
+    willis: file(relativePath: { eq: "images/leaders/willis.jpg" }) {
+      ...leaderPicture
+    }
+    summer: file(relativePath: { eq: "images/leaders/summer.jpg" }) {
+      ...leaderPicture
     }
   }
 `;

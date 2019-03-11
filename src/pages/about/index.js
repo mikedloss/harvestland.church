@@ -87,7 +87,7 @@ const AboutPage = (props) => {
       <Side2SideHero
         heroText="What to expect"
         imageSrc={heroImage.childImageSharp.fluid.src}
-        height="40vh"
+        height="45vh"
       >
         <Text my="12px">
           We open up in praise and worship, listen to a message from our Pastor,
