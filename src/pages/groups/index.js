@@ -22,15 +22,15 @@ const HeroContentContainer = styled(Flex)`
   }
 `;
 
-const GroupsContent = styled(Flex)`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+// const GroupsContent = styled(Flex)`
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
 
-  @media screen and (min-width: ${bp.SMALL}px) {
-    align-items: flex-start;
-  }
-`;
+//   @media screen and (min-width: ${bp.SMALL}px) {
+//     align-items: flex-start;
+//   }
+// `;
 
 const GroupsPage = (props) => {
   const { heroImage, igniteImage } = props.data;

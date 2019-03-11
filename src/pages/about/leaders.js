@@ -1,15 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Text, Heading, Flex, Box, Card, Image } from 'rebass';
+import { Heading, Flex } from 'rebass';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
 import LeaderInfo from '../../components/LeaderInfo';
-import Side2Side from '../../components/Heroes/Side2SideHero';
 
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
-import * as Styles from '../../components/LeaderInfo/LeaderInfo.styles';
 
 const LeadersPage = (props) => {
   const { heroImage, peteHeather, devanne, mike, willis, summer } = props.data;

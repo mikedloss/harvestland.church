@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Text, Heading, Flex, Box, Card, Image } from 'rebass';
+import { Flex, Box, Image } from 'rebass';
 
 import { breakpointValues as bp } from '../../components/Elements/theme';
 
