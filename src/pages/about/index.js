@@ -35,8 +35,14 @@ const HeroContentContainer = styled(Flex)`
   }
 `;
 
-const GroupsContent = styled(Box)`
-  text-align: center;
+const GroupsContent = styled(Flex)`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: ${bp.SMALL}px) {
+    align-items: flex-start;
+  }
 `;
 
 const AboutPage = (props) => {
@@ -111,18 +117,6 @@ const AboutPage = (props) => {
         textAlign="flex-start"
         textJustify="flex-start"
       >
-        {/* <HeroContentContainer alignItems="center" justifyContent="center" p="2rem">
-          <Box>
-            <Heading py="2rem" fontSize={[5, 6]}>
-              Groups
-            </Heading>
-          </Box>
-          <Box mx="auto" />
-          <Box>
-            <Text>We want to offer a path for everyone to grow their faith in community. We have groups for all ages that give everyone that opportunity.</Text>
-            <Button width="auto">See our Groups</Button>
-          </Box>
-        </HeroContentContainer> */}
         <HeroContentContainer alignItems="center">
           <Box width={[null, '60%']}>
             <Heading py="2rem" fontSize={[5, 6]}>
