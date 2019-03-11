@@ -10,11 +10,12 @@ export const ImageHero = ({
   textJustify,
   containerPadding,
   opacity,
+  overlay,
   children,
 }) => {
   return (
     <Styles.ImageHeroStyle height={height}>
-      <Styles.MediaContainer opacity={opacity || '0.5'}>
+      <Styles.MediaContainer opacity={opacity || '0.6'} overlay={overlay}>
         <Styles.StaticImage src={imageSrc} />
       </Styles.MediaContainer>
       <Styles.TextContainer>
@@ -42,6 +43,7 @@ ImageHero.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
+  overlay: PropTypes.object,
   opacity: PropTypes.string, // changes dark overlay opacity, higher number == lighter
   children: PropTypes.node,
 };

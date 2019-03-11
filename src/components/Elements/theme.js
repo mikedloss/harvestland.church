@@ -14,6 +14,8 @@ export const breakpoints = [`${SMALL}px`, `${MEDIUM}px`, `${LARGE}px`];
 
 export const colors = {
   primary: '#42613d',
+  primaryLight: '#79a672',
+  primaryLighter: '#b5ceb1',
   black: '#22292F',
   white: '#fff',
   realBlack: '#000',

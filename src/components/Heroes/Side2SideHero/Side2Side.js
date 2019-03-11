@@ -13,12 +13,14 @@ export const Side2SideHero = ({
   textBlockJustify,
   inverse,
   opacity,
+  overlay,
   children,
 }) => {
+  const imageHeroProps = { imageSrc, height, opacity, overlay };
   return (
     <Styles.Side2SideHeroStyle as="section" inverse={inverse}>
       <Styles.HeroContainer height={height}>
-        <ImageHero imageSrc={imageSrc} height={height} opacity={opacity}>
+        <ImageHero {...imageHeroProps}>
           <Heading p="20px" fontSize={[5, 6]}>
             {heroText}
           </Heading>

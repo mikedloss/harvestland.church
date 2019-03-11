@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex, Box } from 'rebass';
-import { breakpointValues as bp } from '../../Elements/theme';
+import { breakpointValues as bp, colors } from '../../Elements/theme';
 
 export const ImageHeroStyle = styled.section`
   background-color: #000;
@@ -34,6 +34,21 @@ export const MediaContainer = styled.div`
   overflow: hidden;
   opacity: ${(props) => props.opacity};
   height: 100%;
+
+  ${(props) =>
+    props.overlay &&
+    `
+    ::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: ${props.overlay.color || colors.primaryLight};
+      opacity: .5;
+    }
+    `}
 `;
 
 export const TextContainer = styled.div`
