@@ -126,11 +126,7 @@ const BeliefsPage = (props) => {
 export const query = graphql`
   {
     heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...FullWidthImage
     }
   }
 `;

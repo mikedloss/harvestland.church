@@ -43,11 +43,7 @@ export const query = graphql`
 
   {
     heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...FullWidthImage
     }
     peteHeather: file(relativePath: { eq: "images/leaders/pete-heather.png" }) {
       ...leaderPicture

@@ -23,16 +23,29 @@ const IndexPage = (props) => {
 };
 
 export const query = graphql`
+
+  fragment FullWidthImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1600) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
+  fragment SmallImage on File {
+    childImageSharp {
+      fluid(maxWidth: 810) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
   {
     video: file(relativePath: { eq: "videos/front.mp4" }) {
       publicURL
     }
     image: file(relativePath: { eq: "images/tall.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 810) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...SmallImage
     }
   }
 `;

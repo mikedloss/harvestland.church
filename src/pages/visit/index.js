@@ -69,11 +69,7 @@ const AboutPage = (props) => {
 export const query = graphql`
   {
     heroImage: file(relativePath: { eq: "images/visit-header.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...FullWidthImage
     }
   }
 `;

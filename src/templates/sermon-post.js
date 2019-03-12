@@ -10,15 +10,15 @@ import SermonCard from '../components/SermonCard';
 import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 
 const SermonPostTemplate = (props) => {
-  const { image, sermon } = props.data;
+  const { heroImage, sermon } = props.data;
   return (
     <Layout>
       <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
-        imageSrc={image.childImageSharp.fluid.src}
-        height={['50vh', '30vh']}
+        imageSrc={heroImage.childImageSharp.fluid.src}
+        height={['30vh', '50vh']}
       >
-        <Heading p="20px" fontSize={[5, 6]}>
+        <Heading p="1rem" fontSize={[5, 7]}>
           {sermon.title}
         </Heading>
       </ImageHero>
@@ -36,12 +36,8 @@ const SermonPostTemplate = (props) => {
 
 export const query = graphql`
   query($id: String!) {
-    image: file(relativePath: { eq: "images/sermons-header.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
+    heroImage: file(relativePath: { eq: "images/sermons-header.jpg" }) {
+      ...FullWidthImage
     }
     sermon: contentfulSermon(id: { eq: $id }) {
       title

@@ -145,11 +145,7 @@ const GivePage = (props) => {
 export const query = graphql`
   {
     image: file(relativePath: { eq: "images/give-header.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...FullWidthImage
     }
   }
 `;

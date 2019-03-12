@@ -78,18 +78,10 @@ const GroupsPage = (props) => {
 export const query = graphql`
   {
     heroImage: file(relativePath: { eq: "images/groups-header.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...FullWidthImage
     }
     igniteImage: file(relativePath: { eq: "images/groups/ignite.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...FullWidthImage
     }
   }
 `;
