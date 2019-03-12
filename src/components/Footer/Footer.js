@@ -13,7 +13,16 @@ const ContentfulImage = () => (
       mt="1rem"
     />
   </a>
-)
+);
+
+const ContentfulAttribute = () => (
+  <Styles.SmallLine>
+    Powered by{' '}
+    <a href="http://contentful.com" rel="nofollow" target="_blank">
+      Contentful
+    </a>
+  </Styles.SmallLine>
+);
 
 export const Footer = () => {
   return (
@@ -49,9 +58,10 @@ export const Footer = () => {
             © {new Date().getFullYear()} Harvestland Church
           </Styles.SmallLine>
         </Styles.Container>
-        <Media.SmallOnly>
-          <ContentfulImage />
-        </Media.SmallOnly>
+        <ContentfulAttribute />
+        {/* <Media.SmallOnly>
+          <ContentfulAttribute />
+        </Media.SmallOnly> */}
       </Styles.LeftContainer>
       <Styles.RightContainer
         width="50%"
@@ -60,7 +70,7 @@ export const Footer = () => {
       >
         <Media.NotSmall>
           <PageLinks />
-          <ContentfulImage />
+          {/* <ContentfulImage /> */}
         </Media.NotSmall>
       </Styles.RightContainer>
     </Styles.FooterStyle>
