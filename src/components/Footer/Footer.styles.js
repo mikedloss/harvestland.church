@@ -1,12 +1,17 @@
 import styled from 'styled-components';
-import { Text, Flex, Box } from 'rebass';
+import { Text, Flex, Box, Image } from 'rebass';
 
 export const FooterStyle = styled(Flex)``;
 
 export const Container = styled(Flex)``;
 
 export const LeftContainer = styled(Box)``;
+export const CenterContainer = styled(Flex)``;
 export const RightContainer = styled(Flex)``;
+
+export const ContentfulImage = styled(Image)`
+  max-width: 100px;
+`;
 
 export const SmallLine = styled(Text)``;
 

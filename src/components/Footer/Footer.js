@@ -5,6 +5,16 @@ import PageLinks from './components/PageLinks';
 import * as Media from '../Elements/media';
 import * as Styles from './Footer.styles';
 
+const ContentfulImage = () => (
+  <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
+    <Styles.ContentfulImage
+      src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
+      alt="Powered by Contentful"
+      mt="1rem"
+    />
+  </a>
+)
+
 export const Footer = () => {
   return (
     <Styles.FooterStyle
@@ -14,7 +24,7 @@ export const Footer = () => {
       bg="offWhite"
       color="black"
     >
-      <Styles.LeftContainer width={1 / 2}>
+      <Styles.LeftContainer width="50%">
         <Styles.Container flexDirection="column">
           <Styles.SmallLine>Harvestland Church</Styles.SmallLine>
           <Styles.SmallLine>5858 Clintonville Road</Styles.SmallLine>
@@ -39,14 +49,18 @@ export const Footer = () => {
             © {new Date().getFullYear()} Harvestland Church
           </Styles.SmallLine>
         </Styles.Container>
+        <Media.SmallOnly>
+          <ContentfulImage />
+        </Media.SmallOnly>
       </Styles.LeftContainer>
       <Styles.RightContainer
-        width={1 / 2}
+        width="50%"
         flexDirection="row"
         justifyContent="flex-end"
       >
         <Media.NotSmall>
           <PageLinks />
+          <ContentfulImage />
         </Media.NotSmall>
       </Styles.RightContainer>
     </Styles.FooterStyle>

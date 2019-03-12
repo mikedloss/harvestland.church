@@ -23,7 +23,6 @@ const IndexPage = (props) => {
 };
 
 export const query = graphql`
-
   fragment FullWidthImage on File {
     childImageSharp {
       fluid(maxWidth: 1600) {
