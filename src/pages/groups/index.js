@@ -9,7 +9,6 @@ import TextHero from '../../components/Heroes/TextHero';
 import GroupHero from '../../components/Heroes/GroupHero';
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 
-
 const GroupsPage = (props) => {
   const {
     heroImage,

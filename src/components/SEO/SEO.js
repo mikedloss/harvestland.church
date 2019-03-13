@@ -6,9 +6,17 @@ import { graphql, useStaticQuery } from 'gatsby';
 const SEO = ({ description, lang, keywords, title }) => {
   const data = useStaticQuery(graphql`
     query DefaultSEOQuery {
-      image: file(relativePath:{eq: "images/seo-image.jpg"}) {
-        childImageSharp{
-          fixed{
+      site {
+        siteMetadata {
+          title
+          author
+          siteUrl
+          description
+        }
+      }
+      image: file(relativePath: { eq: "images/seo-image.jpg" }) {
+        childImageSharp {
+          fixed {
             src
           }
         }
@@ -18,10 +26,12 @@ const SEO = ({ description, lang, keywords, title }) => {
 
   const pageTitle = `${title} | Harvestland Church`;
   const metaDescription = description || data.site.siteMetadata.description;
-  const imageLink = `https://harvestland.church${data.image.childImageSharp.fixed.src}`;
+  const imageLink = `https://harvestland.church${
+    data.image.childImageSharp.fixed.src
+  }`;
 
   return (
-    <Helmet htmlAttributes={{ lang, }}>
+    <Helmet htmlAttributes={{ lang }}>
       <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="image" content={imageLink} />

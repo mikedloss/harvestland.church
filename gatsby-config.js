@@ -4,7 +4,8 @@ module.exports = {
   siteMetadata: {
     title: `Harvestland Church`,
     author: `Mike DLoss`,
-    siteUrl: 'https://harvestland.church'
+    siteUrl: 'https://harvestland.church',
+    description: "Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,6 +38,8 @@ module.exports = {
       }
     },
     '@contentful/gatsby-transformer-contentful-richtext',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
