@@ -60,9 +60,19 @@ const SEO = ({ description, lang, keywords, title }) => {
 };
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  keywords: [],
+  keywords: [
+    'church',
+    'clarkston',
+    'detroit',
+    'michigan',
+    'non denominational church',
+    'open bible church',
+    'harvestland church',
+    'harvestland',
+    'modern church',
+  ],
 };
 
 SEO.propTypes = {

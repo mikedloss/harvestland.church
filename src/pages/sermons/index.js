@@ -13,7 +13,15 @@ const SermonsPage = (props) => {
   const { heroImage, sermons } = props.data;
   return (
     <Layout>
-      <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Sermons"
+        keywords={[
+          'harvestland pastor',
+          'pete freeman',
+          'harvestland sermons',
+          'sermons',
+        ]}
+      />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}

@@ -12,7 +12,16 @@ const AboutPage = (props) => {
   const { heroImage } = props.data;
   return (
     <Layout>
-      <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="About"
+        keywords={[
+          'harvestland address',
+          'harvestland phone number',
+          'harvestland service times',
+          'service times',
+          'harvestland email address',
+        ]}
+      />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['30vh', '50vh']}

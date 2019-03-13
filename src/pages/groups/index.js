@@ -21,7 +21,7 @@ const GroupsPage = (props) => {
   // TODO: Need to put this stuff into Contentful
   return (
     <Layout>
-      <SEO title="Groups" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Groups" keywords={['community', 'groups', 'connections']} />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}

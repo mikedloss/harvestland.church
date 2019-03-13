@@ -49,7 +49,10 @@ const AboutPage = (props) => {
   const { heroImage, groupsImage } = props.data;
   return (
     <Layout>
-      <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="About"
+        keywords={['help', 'harvestland beliefs', 'harvestland leaders']}
+      />
       <TextHero color="black">
         <Text>Win.</Text>
         <Text>Build.</Text>

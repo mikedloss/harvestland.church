@@ -5,6 +5,9 @@ import PageLinks from './components/PageLinks';
 import * as Media from '../Elements/media';
 import * as Styles from './Footer.styles';
 
+import FacebookSvg from '../../assets/svg/facebook.svg';
+import InstagramSvg from '../../assets/svg/instagram.svg';
+
 // const ContentfulImage = () => (
 //   <a
 //     href="https://www.contentful.com/"
@@ -59,6 +62,14 @@ export const Footer = () => {
             <Styles.LinkText href="mailto:info@harvestland.church">
               info@harvestland.church
             </Styles.LinkText>
+          </Styles.SmallLine>
+          <Styles.SmallLine mt="4px">
+            <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+              <FacebookSvg style={{ maxWidth: '20px', marginRight: '0.25rem' }} />
+            </a>
+            <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+              <InstagramSvg style={{ maxWidth: '20px' }} />
+            </a>
           </Styles.SmallLine>
         </Styles.Container>
         <Styles.Container flexDirection="column">

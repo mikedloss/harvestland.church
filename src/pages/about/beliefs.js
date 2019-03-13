@@ -11,7 +11,7 @@ const BeliefsPage = (props) => {
   const { heroImage } = props.data;
   return (
     <Layout>
-      <SEO title="Beliefs" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Beliefs" keywords={['harvestland beliefs', 'beliefs']} />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}

@@ -14,7 +14,7 @@ const GivePage = (props) => {
   const { image } = props.data;
   return (
     <Layout>
-      <SEO title="Give" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Give" keywords={['charity', 'help']} />
       <TextHero>
         <Text as="p">Generosity</Text>
         <Text fontSize={5}>

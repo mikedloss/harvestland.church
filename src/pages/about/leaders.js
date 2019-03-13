@@ -13,7 +13,7 @@ const LeadersPage = (props) => {
   const { heroImage, peteHeather, devanne, mike, willis, summer } = props.data;
   return (
     <Layout>
-      <SEO title="Leaders" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Leaders" keywords={['harvestland leaders', 'leaders']} />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}
