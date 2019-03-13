@@ -16,7 +16,7 @@ const SermonsPage = (props) => {
       <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['30vh', '50vh']}
+        height={['40vh', '50vh']}
       >
         <Heading p="1rem" fontSize={[6, 7]}>
           Sermons

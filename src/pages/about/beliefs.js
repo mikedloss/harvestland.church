@@ -14,7 +14,7 @@ const BeliefsPage = (props) => {
       <SEO title="Beliefs" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['30vh', '50vh']}
+        height={['40vh', '50vh']}
       >
         <Heading p="1rem" fontSize={[5, 6]}>
           What We Believe

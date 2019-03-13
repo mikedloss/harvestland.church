@@ -1,46 +1,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 import { Heading, Text, Box, Flex } from 'rebass';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
 import TextHero from '../../components/Heroes/TextHero';
+import GroupHero from '../../components/Heroes/GroupHero';
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 
-import { breakpointValues as bp } from '../../components/Elements/theme';
-
-const HeroContentContainer = styled(Flex)`
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-
-  @media screen and (min-width: ${bp.SMALL}px) {
-    flex-direction: ${(props) => (props.inverse ? 'row-reverse' : 'row')};
-    justify-content: space-between;
-  }
-`;
-
-// const GroupsContent = styled(Flex)`
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-
-//   @media screen and (min-width: ${bp.SMALL}px) {
-//     align-items: flex-start;
-//   }
-// `;
 
 const GroupsPage = (props) => {
-  const { heroImage, gamingTable, moreThanMarried } = props.data;
+  const {
+    heroImage,
+    gamingTable,
+    mens,
+    moreThanMarried,
+    united,
+    womens,
+  } = props.data;
+  // TODO: Need to put this stuff into Contentful
   return (
     <Layout>
       <SEO title="Groups" keywords={[`gatsby`, `application`, `react`]} />
       <ImageHero
         imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['30vh', '40vh', '50vh']}
+        height={['40vh', '50vh']}
       >
         <Heading p="1.25rem" fontSize={[6, 7]}>
           Groups
@@ -62,48 +47,51 @@ const GroupsPage = (props) => {
           </Box>
         </Flex>
       </Container>
-      <ImageHero
+      <GroupHero
         imageSrc={gamingTable.childImageSharp.fluid.src}
-        height="40vh"
-        textAlign="flex-start"
-        textJustify="flex-start"
+        groupName="The Gaming Table"
+        groupFrequency="once a month"
       >
-        <HeroContentContainer alignItems="center">
-          <Box width={[null, '50%']}>
-            <Heading fontSize={[5, 6]}>The Gaming Table</Heading>
-            <Text fontSize={3}>Meets once a month</Text>
-          </Box>
-          <Box width={[null, '50%']}>
-            <Text>
-              We get together and play board games. But even more, we connect
-              with each other in a way that lets you focus on something fun with
-              people who like playing games. We have games of all difficulties
-              and cater to people of all ages.
-            </Text>
-          </Box>
-        </HeroContentContainer>
-      </ImageHero>
-      <ImageHero
+        We connect with each other in a way that lets you focus on something fun
+        with people who like playing board and card games. We have games of all
+        difficulties that cater to people of all ages.
+      </GroupHero>
+      <GroupHero
         imageSrc={moreThanMarried.childImageSharp.fluid.src}
-        height="40vh"
-        textAlign="flex-start"
-        textJustify="flex-start"
+        groupName="More Than Married"
+        groupFrequency="once a month"
       >
-        <HeroContentContainer alignItems="center">
-          <Box width={[null, '50%']}>
-            <Heading fontSize={[5, 6]}>More Than Married</Heading>
-            <Text fontSize={3}>Meets once a month</Text>
-          </Box>
-          <Box width={[null, '50%']}>
-            <Text>
-              We get together and play board games. But even more, we connect
-              with each other in a way that lets you focus on something fun with
-              people who like playing games. We have games of all difficulties
-              and cater to people of all ages.
-            </Text>
-          </Box>
-        </HeroContentContainer>
-      </ImageHero>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
+        consequat ante metus eu mauris. Maecenas cursus est eget sed.
+      </GroupHero>
+      <GroupHero
+        imageSrc={united.childImageSharp.fluid.src}
+        groupName="United"
+        groupFrequency="once a month"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
+        consequat ante metus eu mauris. Maecenas cursus est eget sed.
+      </GroupHero>
+      <GroupHero
+        imageSrc={mens.childImageSharp.fluid.src}
+        groupName="Mens Bible Study"
+        groupFrequency="every Sunday"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
+        consequat ante metus eu mauris. Maecenas cursus est eget sed.
+      </GroupHero>
+      <GroupHero
+        imageSrc={womens.childImageSharp.fluid.src}
+        groupName="Womens Bible Study"
+        groupFrequency="every Sunday"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
+        consequat ante metus eu mauris. Maecenas cursus est eget sed.
+      </GroupHero>
     </Layout>
   );
 };
@@ -116,7 +104,18 @@ export const query = graphql`
     gamingTable: file(relativePath: { eq: "images/groups/gaming-table.jpg" }) {
       ...FullWidthImage
     }
-    moreThanMarried: file(relativePath: { eq: "images/groups/more-than-married.jpg" }) {
+    mens: file(relativePath: { eq: "images/groups/mens.jpg" }) {
+      ...FullWidthImage
+    }
+    moreThanMarried: file(
+      relativePath: { eq: "images/groups/more-than-married.jpg" }
+    ) {
+      ...FullWidthImage
+    }
+    united: file(relativePath: { eq: "images/groups/united.jpg" }) {
+      ...FullWidthImage
+    }
+    womens: file(relativePath: { eq: "images/groups/womens.jpg" }) {
       ...FullWidthImage
     }
   }
