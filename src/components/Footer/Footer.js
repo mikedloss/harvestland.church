@@ -5,19 +5,19 @@ import PageLinks from './components/PageLinks';
 import * as Media from '../Elements/media';
 import * as Styles from './Footer.styles';
 
-const ContentfulImage = () => (
-  <a
-    href="https://www.contentful.com/"
-    rel="nofollow noopener noreferrer"
-    target="_blank"
-  >
-    <Styles.ContentfulImage
-      src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-      alt="Powered by Contentful"
-      mt="1rem"
-    />
-  </a>
-);
+// const ContentfulImage = () => (
+//   <a
+//     href="https://www.contentful.com/"
+//     rel="nofollow noopener noreferrer"
+//     target="_blank"
+//   >
+//     <Styles.ContentfulImage
+//       src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
+//       alt="Powered by Contentful"
+//       mt="1rem"
+//     />
+//   </a>
+// );
 
 const ContentfulAttribute = () => (
   <Styles.SmallLine>

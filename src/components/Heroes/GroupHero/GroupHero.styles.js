@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Flex } from 'rebass';
 
-import { breakpointValues as bp } from '../../components/Elements/theme';
+import { breakpointValues as bp } from '../../../components/Elements/theme';
 
 export const HeroContentContainer = styled(Flex)`
   height: 100%;
-  ${'' /* width: 100%; */}
+  width: 100%;
   flex-direction: column;
   justify-content: center;
 

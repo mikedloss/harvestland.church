@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Heading, Text, Flex } from 'rebass';
 
+import ImageHero from '../ImageHero';
 import * as Styles from './GroupHero.styles';
 
 export const GroupHero = ({
@@ -16,7 +18,7 @@ export const GroupHero = ({
     textJustify="flex-start"
     opacity="0.5"
   >
-    <HeroContentContainer alignItems="center">
+    <Styles.HeroContentContainer alignItems="center">
       <Flex
         flexDirection="column"
         alignItems={['center', 'flex-start']}
@@ -33,7 +35,7 @@ export const GroupHero = ({
       >
         <Text>{children}</Text>
       </Flex>
-    </HeroContentContainer>
+    </Styles.HeroContentContainer>
   </ImageHero>
 );
 
