@@ -13,7 +13,7 @@ export const GroupHero = ({
 }) => (
   <ImageHero
     imageSrc={imageSrc}
-    height="40vh"
+    height={["50vh", "40vh"]}
     textAlign="flex-start"
     textJustify="flex-start"
     opacity="0.5"

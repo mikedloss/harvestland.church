@@ -52,6 +52,9 @@ const SEO = ({ description, lang, keywords, title }) => {
 
       {/* meta keywords */}
       <meta name="keywords" content={keywords.join(', ')} />
+
+      {/* favicons */}
+      {/* <link rel="icon" type="image/png" href={favicon192} /> */}
     </Helmet>
   );
 };
