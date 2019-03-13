@@ -9,7 +9,7 @@ const IndexPage = (props) => {
   const { video, image } = props.data;
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Welcome" description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work." keywords={[`gatsby`, `application`, `react`]} />
       <VideoHero
         videoSrc={video.publicURL}
         imageSrc={image.childImageSharp.fluid.src}
