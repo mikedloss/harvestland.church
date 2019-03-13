@@ -10,7 +10,6 @@ import { ContentContainer as Container } from '../../components/Layout/Layout.st
 
 const AboutPage = (props) => {
   const { heroImage } = props.data;
-  console.log(props);
   return (
     <Layout>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />

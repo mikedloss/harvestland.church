@@ -47,7 +47,6 @@ const GroupsContent = styled(Flex)`
 
 const AboutPage = (props) => {
   const { heroImage, groupsImage } = props.data;
-  console.log(groupsImage);
   return (
     <Layout>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
