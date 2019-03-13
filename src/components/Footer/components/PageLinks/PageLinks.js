@@ -21,9 +21,12 @@ export const PageLinks = () => (
       events
     </Styles.LinkText>{' '}
     /{' '}
-    <Styles.LinkText as={Link} to="give">
-      give
+    <Styles.LinkText as={Link} to="visit">
+      visit
     </Styles.LinkText>{' '}
     /{' '}
+    <Styles.LinkText as={Link} to="give">
+      give
+    </Styles.LinkText>
   </Styles.PageLinkStyle>
 );
