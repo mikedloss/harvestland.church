@@ -64,10 +64,20 @@ export const Footer = () => {
             </Styles.LinkText>
           </Styles.SmallLine>
           <Styles.SmallLine mt="4px">
-            <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-              <FacebookSvg style={{ maxWidth: '20px', marginRight: '0.25rem' }} />
+            <a
+              href="https://google.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FacebookSvg
+                style={{ maxWidth: '20px', marginRight: '0.25rem' }}
+              />
             </a>
-            <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://google.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <InstagramSvg style={{ maxWidth: '20px' }} />
             </a>
           </Styles.SmallLine>

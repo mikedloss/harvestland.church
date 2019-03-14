@@ -26,7 +26,7 @@ export const GroupHero = ({
         mb="1rem"
       >
         <Heading fontSize={[4, 6]}>{groupName}</Heading>
-        <Text fontSize={[1, 3]}>Meets {groupFrequency}</Text>
+        <Text fontSize={[1, 3]}>{groupFrequency}</Text>
       </Flex>
       <Flex
         flexDirection="column"

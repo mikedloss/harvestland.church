@@ -10,15 +10,8 @@ import GroupHero from '../../components/Heroes/GroupHero';
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 
 const GroupsPage = (props) => {
-  const {
-    heroImage,
-    gamingTable,
-    mens,
-    moreThanMarried,
-    united,
-    womens,
-  } = props.data;
-  // TODO: Need to put this stuff into Contentful
+  const { heroImage, groups } = props.data;
+  // if you need to save API calls from Contentful, just add this stuff locally
   return (
     <Layout>
       <SEO title="Groups" keywords={['community', 'groups', 'connections']} />
@@ -46,51 +39,18 @@ const GroupsPage = (props) => {
           </Box>
         </Flex>
       </Container>
-      <GroupHero
-        imageSrc={gamingTable.childImageSharp.fluid.src}
-        groupName="The Gaming Table"
-        groupFrequency="once a month"
-      >
-        We connect with each other in a way that lets you focus on something fun
-        with people who like playing board and card games. We have games of all
-        difficulties that cater to people of all ages.
-      </GroupHero>
-      <GroupHero
-        imageSrc={moreThanMarried.childImageSharp.fluid.src}
-        groupName="More Than Married"
-        groupFrequency="once a month"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
-        consequat ante metus eu mauris. Maecenas cursus est eget sed.
-      </GroupHero>
-      <GroupHero
-        imageSrc={united.childImageSharp.fluid.src}
-        groupName="United"
-        groupFrequency="once a month"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
-        consequat ante metus eu mauris. Maecenas cursus est eget sed.
-      </GroupHero>
-      <GroupHero
-        imageSrc={mens.childImageSharp.fluid.src}
-        groupName="Mens Bible Study"
-        groupFrequency="every Sunday"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
-        consequat ante metus eu mauris. Maecenas cursus est eget sed.
-      </GroupHero>
-      <GroupHero
-        imageSrc={womens.childImageSharp.fluid.src}
-        groupName="Womens Bible Study"
-        groupFrequency="every Sunday"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-        lacinia, erat in aliquet dapibus, lectus mi volutpat nisi, eget
-        consequat ante metus eu mauris. Maecenas cursus est eget sed.
-      </GroupHero>
+      {groups.edges.map(({ node }) => {
+        return (
+          <GroupHero
+            key={node.id}
+            imageSrc={node.groupImage.fluid.src}
+            groupName={node.groupName}
+            groupFrequency={node.groupFrequency}
+          >
+            { node.groupDescription.groupDescription }
+          </GroupHero>
+        )
+      })}
     </Layout>
   );
 };
@@ -100,22 +60,22 @@ export const query = graphql`
     heroImage: file(relativePath: { eq: "images/groups-header.jpg" }) {
       ...FullWidthImage
     }
-    gamingTable: file(relativePath: { eq: "images/groups/gaming-table.jpg" }) {
-      ...FullWidthImage
-    }
-    mens: file(relativePath: { eq: "images/groups/mens.jpg" }) {
-      ...FullWidthImage
-    }
-    moreThanMarried: file(
-      relativePath: { eq: "images/groups/more-than-married.jpg" }
-    ) {
-      ...FullWidthImage
-    }
-    united: file(relativePath: { eq: "images/groups/united.jpg" }) {
-      ...FullWidthImage
-    }
-    womens: file(relativePath: { eq: "images/groups/womens.jpg" }) {
-      ...FullWidthImage
+    groups: allContentfulGroup(sort: { fields: [groupName], order: ASC }) {
+      edges {
+        node {
+          id
+          groupName
+          groupFrequency
+          groupDescription {
+            groupDescription
+          }
+          groupImage {
+            fluid(maxWidth: 1600) {
+              src
+            }
+          }
+        }
+      }
     }
   }
 `;
