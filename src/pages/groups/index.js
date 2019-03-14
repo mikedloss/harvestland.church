@@ -44,6 +44,7 @@ const GroupsPage = (props) => {
           <GroupHero
             key={node.id}
             imageSrc={node.groupImage.fluid.src}
+            imageDesc={node.groupImage.title}
             groupName={node.groupName}
             groupFrequency={node.groupFrequency}
           >
@@ -70,6 +71,7 @@ export const query = graphql`
             groupDescription
           }
           groupImage {
+            title
             fluid(maxWidth: 1600) {
               src
             }

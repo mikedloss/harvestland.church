@@ -8,15 +8,13 @@ import * as Styles from './Side2SideHero.styles';
 
 export const Side2SideHero = ({
   heroText,
-  imageSrc,
   height,
   textBlockJustify,
   inverse,
-  opacity,
-  overlay,
   children,
+  ...imageHeroProps
 }) => {
-  const imageHeroProps = { imageSrc, height, opacity, overlay };
+  imageHeroProps = { ...imageHeroProps, height };
   return (
     <Styles.Side2SideHeroStyle as="section" inverse={inverse}>
       <Styles.HeroContainer height={height}>

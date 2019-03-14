@@ -26,6 +26,7 @@ export const StaticImage = styled(Box)`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
 `;
 
 export const MediaContainer = styled.div`

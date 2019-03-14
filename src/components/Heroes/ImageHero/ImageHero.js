@@ -5,6 +5,7 @@ import * as Styles from './ImageHero.styles';
 
 export const ImageHero = ({
   imageSrc,
+  imageDesc,
   height,
   textAlign,
   textJustify,
@@ -16,7 +17,7 @@ export const ImageHero = ({
   return (
     <Styles.ImageHeroStyle height={height}>
       <Styles.MediaContainer opacity={opacity || '0.6'} overlay={overlay}>
-        <Styles.StaticImage src={imageSrc} />
+        <Styles.StaticImage as="img" src={imageSrc} alt={imageDesc} />
       </Styles.MediaContainer>
       <Styles.TextContainer>
         <Styles.TextOverlay

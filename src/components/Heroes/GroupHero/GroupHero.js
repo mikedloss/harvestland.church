@@ -7,12 +7,14 @@ import * as Styles from './GroupHero.styles';
 
 export const GroupHero = ({
   imageSrc,
+  imageDesc,
   groupName,
   groupFrequency,
   children,
 }) => (
   <ImageHero
     imageSrc={imageSrc}
+    imageDesc={imageDesc}
     height={['50vh', '40vh']}
     textAlign="flex-start"
     textJustify="flex-start"
@@ -41,6 +43,7 @@ export const GroupHero = ({
 
 GroupHero.propTypes = {
   imageSrc: PropTypes.string.isRequired,
+  imageDesc: PropTypes.string.isRequired,
   groupName: PropTypes.string.isRequired,
   groupFrequency: PropTypes.string.isRequired,
   children: PropTypes.node,
