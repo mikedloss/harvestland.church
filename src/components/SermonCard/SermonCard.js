@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import dayjs from 'dayjs';
 import slugify from '../../../scripts/slugify';
 
-import * as Styles from './SermonCard.style';
+import * as Styles from './SermonCard.styles';
 import Verse from '../Verse';
 
 export const SermonCard = (props) => {
@@ -13,14 +13,14 @@ export const SermonCard = (props) => {
   const verses = props.data.verses && props.data.verses.split(', ');
   return (
     <Styles.SermonCardStyle
-      width={[1, 1 / 2]}
+      width={['100%', '50%']}
       mt="0"
       mb="8px"
       mx="auto"
       p="1rem"
       onClick={props.onClick}
     >
-      <Styles.SermonInfoContainer mb="16px">
+      <Styles.SermonInfoContainer mb="1rem">
         <Styles.SermonDate fontSize={1} color="#888">
           {dayjs(date).format('MMMM DD, YYYY')}
         </Styles.SermonDate>

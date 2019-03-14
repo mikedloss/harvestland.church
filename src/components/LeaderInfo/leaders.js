@@ -1,3 +1,4 @@
+// TODO: Put this in contentful
 export const leaders = {
   peteHeather: {
     name: 'Pete & Heather Freeman',

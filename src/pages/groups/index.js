@@ -48,9 +48,9 @@ const GroupsPage = (props) => {
             groupName={node.groupName}
             groupFrequency={node.groupFrequency}
           >
-            { node.groupDescription.groupDescription }
+            {node.groupDescription.groupDescription}
           </GroupHero>
-        )
+        );
       })}
     </Layout>
   );

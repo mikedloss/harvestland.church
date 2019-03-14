@@ -7,7 +7,7 @@ import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
 import SermonCard from '../../components/SermonCard';
 
-import * as LayoutStyle from '../../components/Layout/Layout.styles';
+import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 
 const SermonsPage = (props) => {
   const { heroImage, sermons } = props.data;
@@ -30,7 +30,7 @@ const SermonsPage = (props) => {
           Sermons
         </Heading>
       </ImageHero>
-      <LayoutStyle.ContentContainer>
+      <Container>
         {sermons.edges.map((sermon, index) => {
           return (
             <SermonCard
@@ -40,7 +40,7 @@ const SermonsPage = (props) => {
             />
           );
         })}
-      </LayoutStyle.ContentContainer>
+      </Container>
     </Layout>
   );
 };

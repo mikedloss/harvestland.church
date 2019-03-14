@@ -8,6 +8,7 @@
 const path = require('path');
 const slugify = require('./scripts/slugify');
 const podcast = require('./scripts/podcast-rss');
+const dayjs = require('dayjs');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -17,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allContentfulSermon(
+            sermons: allContentfulSermon (
               sort: { fields: [date], order: DESC }
             ) {
               edges {
@@ -44,12 +45,23 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+
+            events: allContentfulEvent {
+              edges {
+                node {
+                  id
+                  eventName
+                  date
+                }
+              }
+            }
           }
         `
       ).then(result => {
         if (result.errors) reject(result.errors);
         
-        const sermons = result.data.allContentfulSermon.edges
+        // sermon page creation
+        const sermons = result.data.sermons.edges
         sermons.forEach(({ node }) => {
           const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
           
@@ -62,6 +74,23 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
+        // event page creation
+        const events = result.data.events.edges;
+        events.forEach(({ node }) => {
+          // only use the year and month
+          const slugDate = dayjs(node.date).format('YYYY/MM');
+          const eventPath = `/events/${ slugDate }/${ slugify(node.eventName) }`
+          
+          createPage({
+            component: path.resolve('./src/templates/event.js'),
+            path: eventPath,
+            context: {
+              id: node.id
+            }
+          })
+        })
+
+        // write the podcast RSS if we're in production
         process.env.NODE_ENV === "production" && podcast.writeRSS(sermons);
 
         resolve();
