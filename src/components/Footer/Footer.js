@@ -65,7 +65,7 @@ export const Footer = () => {
           </Styles.SmallLine>
           <Styles.SmallLine mt="4px">
             <a
-              href="https://google.com"
+              href="https://www.facebook.com/HarvestlandOpenBible/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -74,7 +74,7 @@ export const Footer = () => {
               />
             </a>
             <a
-              href="https://google.com"
+              href="https://www.instagram.com/harvestlandchurch/"
               rel="noopener noreferrer"
               target="_blank"
             >
