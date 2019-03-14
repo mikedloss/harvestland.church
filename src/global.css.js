@@ -5,7 +5,7 @@ const fontFamily =
 
 export default createGlobalStyle`
   html {
-    font-family: sans-serif;
+    font-family: ${fontFamily};
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
