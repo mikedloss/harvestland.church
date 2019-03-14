@@ -30,7 +30,9 @@ const EventsList = ({ events }) => {
           ).format('MMMM D, YYYY')}`
         : `${dayjs(node.date).format('MMMM D, YYYY [at] hh:mm A')}`;
 
-    const eventLink = `/events/${dayjs(node.date).format('YYYY/MM')}/${slugify(node.eventName)}`;
+    const eventLink = `/events/${dayjs(node.date).format('YYYY/MM')}/${slugify(
+      node.eventName
+    )}`;
     return (
       <Flex key={index} flexDirection={['column', 'row']} mb="1rem">
         <Box width={['100%', '50%']}>
@@ -68,17 +70,41 @@ const EventsPage = (props) => {
     <Layout>
       <SEO title="Events" keywords={[`gatsby`, `application`, `react`]} />
       <Container>
-        <TextHero>
-          Upcoming Events
-        </TextHero>
-        <Flex flexDirection="column" alignItems="center" mb="2rem" mx="auto" width="80%">
-          <Text>In addition to the events listed below, our <Heading as="span" fontSize={3} color="primary">Build</Heading> groups meet regularly. Join a group that you're interested in!</Text>
+        <TextHero>Upcoming Events</TextHero>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          mb="2rem"
+          mx="auto"
+          width="80%"
+        >
+          <Text>
+            In addition to the events listed below, our{' '}
+            <Heading as="span" fontSize={3} color="primary">
+              Build
+            </Heading>{' '}
+            groups meet regularly. Join a group that you're interested in!
+          </Text>
           <Link to="/groups">
-            <Button mt="1rem" variant="inverse">Visit Groups Page</Button>
+            <Button mt="1rem" variant="inverse">
+              Visit Groups Page
+            </Button>
           </Link>
         </Flex>
         <hr />
-        {events && eventsInFuture && <EventsList events={eventsInFuture} />}
+        {events && eventsInFuture.length ? (
+          <EventsList events={eventsInFuture} />
+        ) : (
+          <Flex justifyContent="center" mx="auto" width="80%">
+            <Text>
+              No upcoming events listed, but join us at one of our{' '}
+              <Heading as="span" fontSize={3} color="primary">
+                Build
+              </Heading>{' '}
+              group meetings!
+            </Text>
+          </Flex>
+        )}
       </Container>
     </Layout>
   );
@@ -92,7 +118,7 @@ const isInFuture = ({ node }) => {
 
 export const query = graphql`
   {
-    events: allContentfulEvent {
+    events: allContentfulEvent(sort: { fields: [date], order: ASC }) {
       edges {
         node {
           eventName
