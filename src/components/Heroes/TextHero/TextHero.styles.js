@@ -10,4 +10,4 @@ TextHeroStyle.defaultProps = {
   alignItems: 'center',
   justifyContent: 'center',
   bg: 'white',
-}
+};

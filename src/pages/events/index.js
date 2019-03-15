@@ -10,25 +10,15 @@ import Button from '../../components/Button';
 import TextHero from '../../components/Heroes/TextHero';
 
 import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import dayUtil from '../../utils/day';
 
 const EventsList = ({ events }) => {
   // TODO: Turn this into an "EventCard" component
   return events.map(({ node }, index) => {
-    console.log(node);
-    // determine if both dates are the dame day but at different times
-    const endDateMatchesStartDate = node.endDate
-      ? dayjs(node.date).isSame(node.endDate, 'day')
-      : false;
-
     // generate the date text:
     //  - if we have an end date AND the end date does not match the start date, display a date range
     //  - if we do not have an end date OR we have an end date AND it matches the start date, display the full start date
-    const dateText =
-      node.endDate && !endDateMatchesStartDate
-        ? `${dayjs(node.date).format('MMMM D, YYYY')} - ${dayjs(
-            node.endDate
-          ).format('MMMM D, YYYY')}`
-        : `${dayjs(node.date).format('MMMM D, YYYY [at] hh:mm A')}`;
+    const dateText = dayUtil.getDateText(node);
 
     const eventLink = `/events/${dayjs(node.date).format('YYYY/MM')}/${slugify(
       node.eventName
@@ -64,7 +54,9 @@ const EventsList = ({ events }) => {
 const EventsPage = (props) => {
   const { events } = props.data;
   // check to see if we have events that haven't passed yet
-  const eventsInFuture = events.edges.filter((event) => isInFuture(event));
+  const eventsInFuture = events.edges.filter((event) =>
+    dayUtil.isInFuture(event)
+  );
 
   return (
     <Layout>
@@ -112,12 +104,6 @@ const EventsPage = (props) => {
       </Container>
     </Layout>
   );
-};
-
-const isInFuture = ({ node }) => {
-  const futureDate = node.endDate || node.date;
-  const afterNow = dayjs(futureDate).isAfter(dayjs());
-  return afterNow;
 };
 
 export const query = graphql`

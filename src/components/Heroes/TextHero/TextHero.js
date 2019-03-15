@@ -21,11 +21,7 @@ export const TextHero = ({
       m={useMargin && ['6rem', '8rem']}
       p={!useMargin && ['6rem', '8rem']}
     >
-      {children ? (
-        children
-      ) : (
-        <Heading fontSize={6}>Text Hero</Heading>
-      )}
+      {children ? children : <Heading fontSize={6}>Text Hero</Heading>}
     </Styles.TextHeroStyle>
   );
 };
