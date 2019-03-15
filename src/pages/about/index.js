@@ -115,13 +115,13 @@ const AboutPage = (props) => {
       </Side2SideHero>
       <ImageHero
         imageSrc={groupsImage.childImageSharp.fluid.src}
-        height="50vh"
+        height={["60vh", "50vh"]}
         textAlign="flex-start"
         textJustify="flex-start"
       >
         <HeroContentContainer alignItems="center">
           <Box width={[null, '40%']}>
-            <Heading py="2rem" fontSize={[5, 6]}>
+            <Heading pb="2rem" fontSize={[5, 6]}>
               Groups
             </Heading>
           </Box>
