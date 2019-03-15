@@ -70,7 +70,11 @@ const EventsPage = (props) => {
     <Layout>
       <SEO title="Events" keywords={[`gatsby`, `application`, `react`]} />
       <Container>
-        <TextHero>Upcoming Events</TextHero>
+        <TextHero>
+          <Heading fontSize={6} color="primary">
+            Upcoming Events
+          </Heading>
+        </TextHero>
         <Flex
           flexDirection="column"
           alignItems="center"

@@ -53,10 +53,16 @@ const AboutPage = (props) => {
         title="About"
         keywords={['help', 'harvestland beliefs', 'harvestland leaders']}
       />
-      <TextHero color="black">
-        <Text>Win.</Text>
-        <Text>Build.</Text>
-        <Text>Equip.</Text>
+      <TextHero>
+        <Heading fontSize={6} color="black">
+          Win.
+        </Heading>
+        <Heading fontSize={6} color="black">
+          Build.
+        </Heading>
+        <Heading fontSize={6} color="black">
+          Equip.
+        </Heading>
       </TextHero>
       <Container>
         <Box width="100%" px={['2rem', '8rem', '20rem']}>
@@ -115,7 +121,7 @@ const AboutPage = (props) => {
       </Side2SideHero>
       <ImageHero
         imageSrc={groupsImage.childImageSharp.fluid.src}
-        height={["60vh", "50vh"]}
+        height={['60vh', '50vh']}
         textAlign="flex-start"
         textJustify="flex-start"
       >

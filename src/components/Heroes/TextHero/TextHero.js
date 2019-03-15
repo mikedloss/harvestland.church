@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Heading } from 'rebass';
 
 import * as Styles from './TextHero.styles';
 
 export const TextHero = ({
   useMargin,
   bg,
-  color,
   alignItems,
   justifyContent,
   flexDirection,
@@ -14,15 +14,18 @@ export const TextHero = ({
 }) => {
   return (
     <Styles.TextHeroStyle
-      flexDirection={flexDirection || 'column'}
-      alignItems={alignItems || 'center'}
-      justifyContent={justifyContent || 'center'}
-      bg={bg || 'white'}
-      color={color || 'primary'}
+      flexDirection={flexDirection}
+      alignItems={alignItems}
+      justifyContent={justifyContent}
+      bg={bg}
       m={useMargin && ['6rem', '8rem']}
       p={!useMargin && ['6rem', '8rem']}
     >
-      <Styles.HeroText fontSize={6}>{children || 'Text Hero'}</Styles.HeroText>
+      {children ? (
+        children
+      ) : (
+        <Heading fontSize={6}>Text Hero</Heading>
+      )}
     </Styles.TextHeroStyle>
   );
 };
@@ -30,7 +33,6 @@ export const TextHero = ({
 TextHero.propTypes = {
   useMargin: PropTypes.bool,
   bg: PropTypes.string,
-  color: PropTypes.string,
   alignItems: PropTypes.string,
   justifyContent: PropTypes.string,
   flexDirection: PropTypes.string,

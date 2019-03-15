@@ -25,7 +25,11 @@ const GroupsPage = (props) => {
       </ImageHero>
       <Container>
         <Flex flexDirection="column" alignItems="center" mb="1rem">
-          <TextHero>Grow in Christ together.</TextHero>
+          <TextHero>
+            <Heading fontSize={6} color="primary">
+              Grow in Christ together.
+            </Heading>
+          </TextHero>
           <Box width="100%" px={['2rem', '4rem']}>
             <Text>
               One of our core principles at Harvestland is to have healthy small

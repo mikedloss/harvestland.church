@@ -16,7 +16,9 @@ const GivePage = (props) => {
     <Layout>
       <SEO title="Give" keywords={['charity', 'help']} />
       <TextHero>
-        <Text as="p">Generosity</Text>
+        <Heading as="h1" fontSize={6} color="primary">
+          Generosity
+        </Heading>
         <Text fontSize={5}>
           <span role="img" aria-label="praying hands">
             🙏
@@ -125,7 +127,11 @@ const GivePage = (props) => {
       </Container>
 
       {/* still have questions? */}
-      <TextHero color="black">Still have questions?</TextHero>
+      <TextHero>
+        <Heading fontSize={6} color="black">
+          Still have questions?
+        </Heading>
+      </TextHero>
       <Container>
         <Flex
           flexDirection="column"
