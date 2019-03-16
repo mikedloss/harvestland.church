@@ -64,7 +64,7 @@ const Header = (props) => {
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
-            <Heading as="h3" fontSize={3}>
+            <Heading as="h3" fontSize={[4, 3]}>
               About
             </Heading>
           </Styles.NavLink>
@@ -75,7 +75,7 @@ const Header = (props) => {
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
-            <Heading as="h3" fontSize={3}>
+            <Heading as="h3" fontSize={[4, 3]}>
               Groups
             </Heading>
           </Styles.NavLink>
@@ -86,7 +86,7 @@ const Header = (props) => {
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
-            <Heading as="h3" fontSize={3}>
+            <Heading as="h3" fontSize={[4, 3]}>
               Sermons
             </Heading>
           </Styles.NavLink>
@@ -97,7 +97,7 @@ const Header = (props) => {
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
-            <Heading as="h3" fontSize={3}>
+            <Heading as="h3" fontSize={[4, 3]}>
               Events
             </Heading>
           </Styles.NavLink>
@@ -108,7 +108,7 @@ const Header = (props) => {
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
-            <Heading as="h3" fontSize={3}>
+            <Heading as="h3" fontSize={[4, 3]}>
               Visit
             </Heading>
           </Styles.NavLink>
@@ -119,7 +119,7 @@ const Header = (props) => {
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
           >
-            <Heading as="h3" fontSize={3}>
+            <Heading as="h3" fontSize={[4, 3]}>
               Give
             </Heading>
           </Styles.NavLink>

@@ -6,9 +6,7 @@ import * as Styles from './NavItem.styles';
 const NavItem = (props) => {
   return (
     <Styles.NavItem as="li">
-      <Styles.NavContent fontSize={3} fontWeight="bold">
-        {props.children || ''}
-      </Styles.NavContent>
+      <Styles.NavContent>{props.children || ''}</Styles.NavContent>
     </Styles.NavItem>
   );
 };

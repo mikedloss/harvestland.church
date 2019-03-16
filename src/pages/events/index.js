@@ -62,7 +62,7 @@ const EventsPage = (props) => {
     <Layout>
       <SEO title="Events" keywords={[`gatsby`, `application`, `react`]} />
       <Container>
-        <TextHero>
+        <TextHero useMargin>
           <Heading fontSize={6} color="primary">
             Upcoming Events
           </Heading>

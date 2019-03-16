@@ -8,10 +8,11 @@ import TextHero from '../components/Heroes/TextHero';
 import Button from '../components/Button';
 
 import { ContentContainer as Container } from '../components/Layout/Layout.styles';
-import dayUtils from '../utils/day';
+import dayUtils, { dateTimeFormat } from '../utils/day';
 
 const SermonPostTemplate = (props) => {
   const { event } = props.data;
+  // console.log(event);
   return (
     <Layout>
       <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
@@ -23,16 +24,16 @@ const SermonPostTemplate = (props) => {
           width={['100%', '70%']}
         >
           <Box>
-            <TextHero>
-              <Heading fontSize={6} color="black">
-                {event.eventName}
-              </Heading>
-              <Text>{dayUtils.getDateText(event)}</Text>
-            </TextHero>
             <Image
               src={event.eventImage.fluid.src}
               alt={event.eventImage.title}
             />
+            <TextHero useMargin m="4rem">
+              <Heading fontSize={6} color="black">
+                {event.eventName}
+              </Heading>
+              <Text fontSize={2}>{dayUtils.getDateText(event)}</Text>
+            </TextHero>
           </Box>
           <Flex flexDirection={['column', 'row']}>
             <Flex
@@ -57,6 +58,16 @@ const SermonPostTemplate = (props) => {
                   __html: event.eventAddress.childMarkdownRemark.html,
                 }}
               />
+              <Heading fontSize={2}>Starts on</Heading>
+              <Text>{dateTimeFormat(event.date)}</Text>
+              {event.endDate && (
+                <>
+                  <Heading fontSize={2} mt="0.5rem">
+                    Ends on
+                  </Heading>
+                  <Text>{dateTimeFormat(event.endDate)}</Text>
+                </>
+              )}
               {event.ticketLink && (
                 <Text
                   mt="1rem"

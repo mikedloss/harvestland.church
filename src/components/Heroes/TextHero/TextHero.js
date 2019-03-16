@@ -4,22 +4,12 @@ import { Heading } from 'rebass';
 
 import * as Styles from './TextHero.styles';
 
-export const TextHero = ({
-  useMargin,
-  bg,
-  alignItems,
-  justifyContent,
-  flexDirection,
-  children,
-}) => {
+export const TextHero = ({ useMargin, children, ...props }) => {
   return (
     <Styles.TextHeroStyle
-      flexDirection={flexDirection}
-      alignItems={alignItems}
-      justifyContent={justifyContent}
-      bg={bg}
-      m={useMargin && ['6rem', '8rem']}
-      p={!useMargin && ['6rem', '8rem']}
+      m={useMargin && ['8rem 4rem', '8rem']}
+      p={!useMargin && ['8rem 4rem', '8rem']}
+      {...props}
     >
       {children ? children : <Heading fontSize={6}>Text Hero</Heading>}
     </Styles.TextHeroStyle>
@@ -28,9 +18,5 @@ export const TextHero = ({
 
 TextHero.propTypes = {
   useMargin: PropTypes.bool,
-  bg: PropTypes.string,
-  alignItems: PropTypes.string,
-  justifyContent: PropTypes.string,
-  flexDirection: PropTypes.string,
   children: PropTypes.node,
 };
