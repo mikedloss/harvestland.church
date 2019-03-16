@@ -58,6 +58,8 @@ const EventsPage = (props) => {
     dayUtil.isInFuture(event)
   );
 
+  console.log(events);
+
   return (
     <Layout>
       <SEO title="Events" keywords={[`gatsby`, `application`, `react`]} />

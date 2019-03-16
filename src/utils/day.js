@@ -17,12 +17,10 @@ const isInFuture = ({ node }) => {
  * @param: { node } - event from GraphQL / Contentful
  * @returns string
  */
-const getDateText = (node) => {
-  return node.endDate && !endDateMatchesStartDate
-    ? `${dayjs(node.date).format('MMMM D, YYYY')} - ${dayjs(
-        node.endDate
-      ).format('MMMM D, YYYY')}`
-    : `${dayjs(node.date).format('MMMM D, YYYY [at] hh:mm A')}`;
+const getDateText = (event) => {
+  return event.endDate && !endDateMatchesStartDate(event)
+    ? `${shortDateFormat(event.date)} - ${shortDateFormat(event.endDate)}`
+    : `${dateTimeFormat(event.date)}`;
 };
 
 /**
@@ -30,8 +28,15 @@ const getDateText = (node) => {
  * @param: { node } - event from GraphQL / Contentful
  * @returns boolean
  */
-const endDateMatchesStartDate = ({ node }) =>
-  node.endDate ? dayjs(node.date).isSame(node.endDate, 'day') : false;
+const endDateMatchesStartDate = (event) =>
+  event.endDate ? dayjs(event.date).isSame(event.endDate, 'day') : false;
+
+// date formatting utils
+export const shortDateFormat = (date) => dayjs(date).format('MMMM D, YYYY');
+export const dateTimeFormat = (date) =>
+  dayjs(date).format('MMMM D, YYYY [at] hh:mm A');
+export const longDateFormat = (date) =>
+  dayjs(date).format('dddd, MMMM D, YYYY [at] hh:mm A');
 
 export default {
   isInFuture,
