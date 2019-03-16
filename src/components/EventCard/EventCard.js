@@ -17,7 +17,6 @@ export const EventCard = (props) => {
     eventSummary,
   } = props.data;
   const { currentPath } = props;
-  console.log(props);
   return (
     <Styles.EventCardStyle mt="0" mb="8px" mx="auto" p="1rem">
       <Styles.EventContainer>

@@ -7,13 +7,11 @@ import SEO from '../components/SEO';
 import TextHero from '../components/Heroes/TextHero';
 import Button from '../components/Button';
 
-import * as Media from '../components/Elements/media';
 import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 import dayUtils from '../utils/day';
 
 const SermonPostTemplate = (props) => {
   const { event } = props.data;
-  console.log(event);
   return (
     <Layout>
       <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
