@@ -60,8 +60,26 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) reject(result.errors);
         
-        // sermon page creation
+        // sermon stuff
         const sermons = result.data.sermons.edges
+        const sermonsPerPage =  10
+        const numberOfPages = Math.ceil(sermons.length / sermonsPerPage)
+
+        // sermon list pages
+        Array.from({ length: numberOfPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? '/sermons' : `/sermons/page-${i + 1}`,
+            component: path.resolve('./src/templates/sermon-list.js'),
+            context: {
+              limit: sermonsPerPage,
+              skip: i * sermonsPerPage,
+              numberOfPages,
+              currentPage: i + 1,
+            }
+          })
+        })
+
+        // sermon specific pages
         sermons.forEach(({ node }) => {
           const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
           

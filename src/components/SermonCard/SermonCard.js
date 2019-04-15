@@ -25,7 +25,7 @@ export const SermonCard = (props) => {
           {dayjs(date).format('MMMM DD, YYYY')}
         </Styles.SermonDate>
         <Styles.SermonTitle>
-          {currentPath === 'sermons' ? (
+          {currentPath === 'sermonList' ? (
             <Link to={`/sermons/${slugify(date, '/')}/${slugify(title)}`}>
               {title}
             </Link>
