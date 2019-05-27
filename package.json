@@ -30,10 +30,10 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf public .cache",
-    "build": "npm run clean && gatsby build",
+    "build": "yarn clean && gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop",
-    "serve": "npm run build && gatsby serve",
+    "start": "yarn develop",
+    "serve": "yarn build && gatsby serve",
     "format": "prettier --write \"src/**/*.js\" --config-precedence file-override"
   },
   "devDependencies": {
