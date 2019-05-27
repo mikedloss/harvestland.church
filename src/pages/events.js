@@ -2,15 +2,15 @@ import React from 'react';
 import { Heading, Text, Box, Flex, Image } from 'rebass';
 import { Link, graphql } from 'gatsby';
 import dayjs from 'dayjs';
-import slugify from '../../../scripts/slugify';
+import slugify from '../../scripts/slugify';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import Button from '../../components/Button';
-import TextHero from '../../components/Heroes/TextHero';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Button from '../components/Button';
+import TextHero from '../components/Heroes/TextHero';
 
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
-import dayUtil from '../../utils/day';
+import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import dayUtil from '../utils/day';
 
 const EventsList = ({ events }) => {
   // TODO: Turn this into an "EventCard" component

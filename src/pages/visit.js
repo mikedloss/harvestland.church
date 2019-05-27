@@ -2,11 +2,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Text, Flex } from 'rebass';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import ImageHero from '../../components/Heroes/ImageHero';
-import Button from '../../components/Button';
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import ImageHero from '../components/Heroes/ImageHero';
+import Button from '../components/Button';
+import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 
 const AboutPage = (props) => {
   const { heroImage } = props.data;

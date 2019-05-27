@@ -2,12 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Text, Box, Flex } from 'rebass';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import ImageHero from '../../components/Heroes/ImageHero';
-import TextHero from '../../components/Heroes/TextHero';
-import GroupHero from '../../components/Heroes/GroupHero';
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import ImageHero from '../components/Heroes/ImageHero';
+import TextHero from '../components/Heroes/TextHero';
+import GroupHero from '../components/Heroes/GroupHero';
+import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 
 const GroupsPage = (props) => {
   const { heroImage, groups } = props.data;

@@ -1,14 +1,14 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { Heading, Text, Flex, Box } from 'rebass';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
-import TextHero from '../../components/Heroes/TextHero';
-import Side2SideHero from '../../components/Heroes/Side2SideHero';
-import Button from '../../components/Button';
+import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import TextHero from '../components/Heroes/TextHero';
+import Side2SideHero from '../components/Heroes/Side2SideHero';
+import Button from '../components/Button';
 
 const GivePage = (props) => {
   const { image } = props.data;
