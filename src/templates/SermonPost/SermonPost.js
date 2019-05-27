@@ -2,12 +2,12 @@ import React from 'react';
 import { Flex, Text, Heading } from 'rebass';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import ImageHero from '../components/Heroes/ImageHero';
-import SermonCard from '../components/SermonCard';
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
+import ImageHero from '../../components/Heroes/ImageHero';
+import SermonCard from '../../components/SermonCard';
 
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
 
 const SermonPostTemplate = (props) => {
   const { heroImage, sermon } = props.data;
@@ -25,7 +25,7 @@ const SermonPostTemplate = (props) => {
       <Container>
         <SermonCard data={sermon} currentPath={props['*']} />
         <Flex alignItems="center" justifyContent="center">
-          <Link to="/sermons">
+          <Link as="a" to="/sermons">
             <Text fontSize={1}>Return to All Sermons</Text>
           </Link>
         </Flex>

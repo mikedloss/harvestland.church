@@ -69,7 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
         Array.from({ length: numberOfPages }).forEach((_, i) => {
           createPage({
             path: i === 0 ? '/sermons' : `/sermons/page-${i + 1}`,
-            component: path.resolve('./src/templates/sermon-list.js'),
+            component: path.resolve('./src/templates/SermonList/SermonList.js'),
             context: {
               limit: sermonsPerPage,
               skip: i * sermonsPerPage,
@@ -84,7 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
           const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
           
           createPage({
-            component: path.resolve('./src/templates/sermon-post.js'),
+            component: path.resolve('./src/templates/SermonPost/SermonPost.js'),
             path: sermonPath,
             context: {
               id: node.id

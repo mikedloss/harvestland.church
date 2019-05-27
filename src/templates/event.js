@@ -10,7 +10,7 @@ import Button from '../components/Button';
 import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 import dayUtils, { dateTimeFormat } from '../utils/day';
 
-const SermonPostTemplate = (props) => {
+const EventTemplate = (props) => {
   const { event } = props.data;
   // console.log(event);
   return (
@@ -61,12 +61,12 @@ const SermonPostTemplate = (props) => {
               <Heading fontSize={2}>Starts on</Heading>
               <Text>{dateTimeFormat(event.date)}</Text>
               {event.endDate && (
-                <>
+                <React.Fragment>
                   <Heading fontSize={2} mt="0.5rem">
                     Ends on
                   </Heading>
                   <Text>{dateTimeFormat(event.endDate)}</Text>
-                </>
+                </React.Fragment>
               )}
               {event.ticketLink && (
                 <Text
@@ -133,4 +133,4 @@ export const query = graphql`
   }
 `;
 
-export default SermonPostTemplate;
+export default EventTemplate;

@@ -1,17 +1,20 @@
 import React from 'react';
-import { Heading, Text, Flex } from 'rebass';
+import { Heading, Text, Flex, Link as RebassLink } from 'rebass';
 import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import ImageHero from '../components/Heroes/ImageHero';
-import SermonCard from '../components/SermonCard';
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
+import ImageHero from '../../components/Heroes/ImageHero';
+import TextHero from '../../components/Heroes/TextHero';
+import SermonCard from '../../components/SermonCard';
 
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import * as Styled from './SermonList.styles';
 
 const SermonListPage = (props) => {
   const { currentPage, numberOfPages } = props.pageContext;
-  const { heroImage, allContentfulSermon: { sermons } } = props.data;
+  const { heroImage, spotifyImage, allContentfulSermon: { sermons } } = props.data;
 
   const previousPageUrl = currentPage >= 2 ? 
     currentPage === 2
@@ -47,6 +50,23 @@ const SermonListPage = (props) => {
           ) }
         </Flex>
       </ImageHero>
+      <TextHero>
+        <Flex flexDirection={["column", "row"]} alignItems="center">
+          <Heading as="h1" fontSize={[5, 6]} color="black" mr={[null, "1rem"]} mb={["0.5rem", null]}>
+            All of our messages can be found on
+          </Heading>
+          <Styled.ImageContainer>
+            <Styled.Image src={spotifyImage.childImageSharp.fluid.src} />
+          </Styled.ImageContainer>
+        </Flex>
+        <Flex justifyContent="center" mt={["2rem", "1rem"]}>
+          <Heading as="h2" fontSize={4} color="black">
+            <Styled.Link color="primary" href="https://open.spotify.com/show/3E5VM0Ji3Rb2Oa55PlCC90?si=usLSeMexRam2vRhs52BR_A" target="_blank">
+              View our Spotify profile
+            </Styled.Link>
+          </Heading>
+        </Flex>
+      </TextHero>
       <Container>
         { sermons.map(({ sermon }, index) => {
           return (
@@ -77,6 +97,9 @@ const SermonListPage = (props) => {
 export const query = graphql`
   query SermonListQuery($skip: Int!, $limit: Int!) {
     heroImage: file(relativePath: { eq: "images/sermons-header.jpg" }) {
+      ...FullWidthImage
+    }
+    spotifyImage: file(relativePath: { eq: "images/spotify-logo.png" }) {
       ...FullWidthImage
     }
 
