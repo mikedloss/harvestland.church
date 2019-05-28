@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Text, Flex, Link as RebassLink } from 'rebass';
+import { Heading, Text, Flex, Box, Link as RebassLink } from 'rebass';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -50,9 +50,9 @@ const SermonListPage = (props) => {
           ) }
         </Flex>
       </ImageHero>
-      <TextHero>
-        <Flex flexDirection={["column", "row"]} alignItems="center">
-          <Heading as="h1" fontSize={[5, 6]} color="black" mr={[null, "1rem"]} mb={["0.5rem", null]}>
+      <TextHero p="4rem">
+        <Flex flexDirection="column" alignItems="center">
+          <Heading as="h1" fontSize={[5, 6]} color="black" mb="1rem">
             All of our messages can be found on
           </Heading>
           <Styled.ImageContainer>
@@ -77,15 +77,18 @@ const SermonListPage = (props) => {
             />
           )
         }) }
-        <Flex justifyContent="space-between" width={["100%", "50%"]} mx="auto">
+        <Flex justifyContent="center" width={["100%", "50%"]} mx="auto">
           { previousPageUrl && (
             <Link to={previousPageUrl}>
-              <Text>{'<< '}Newer</Text>
+              <Heading as="h4" fontSize="2">Newer</Heading>
             </Link>
+          )}
+          { previousPageUrl && nextPageUrl && (
+            <Box mx="0.5rem" />
           )}
           { nextPageUrl && (
             <Link to={nextPageUrl}>
-              <Text>Older{' >>'}</Text>
+              <Heading as="h4" fontSize="2">Older</Heading>
             </Link>
           )}
         </Flex>
