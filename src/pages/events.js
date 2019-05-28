@@ -8,8 +8,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
 import TextHero from '../components/Heroes/TextHero';
+import Container from '../components/Container';
 
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 import dayUtil from '../utils/day';
 
 const EventsList = ({ events }) => {

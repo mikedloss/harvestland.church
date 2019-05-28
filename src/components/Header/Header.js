@@ -5,7 +5,7 @@ import { Heading } from 'rebass';
 
 import NavItem from './components/NavItem';
 import * as Media from '../Elements/media';
-import * as Styles from './Header.styles';
+import * as Styled from './Header.styles';
 
 const Header = (props) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -26,40 +26,24 @@ const Header = (props) => {
   `);
 
   return (
-    <Styles.Nav as="nav">
+    <Styled.Nav as="nav">
       <Media.SmallOnly>
-        <Styles.MenuButton
-          bg="white"
-          color="black"
-          py="5px"
-          px="10px"
-          my="15px"
-          mx="10px"
-          fontSize={0}
-          onClick={toggleMenu}
-          menuOpen={menuOpen}
-        >
+        <Styled.MenuButton onClick={toggleMenu} menuOpen={menuOpen}>
           {menuOpen ? 'Close' : 'Menu'}
-        </Styles.MenuButton>
+        </Styled.MenuButton>
       </Media.SmallOnly>
-      <Heading
-        as="h1"
-        py="16px"
-        pl="16px"
-        fontSize={2}
-        style={{ display: 'inline-block' }}
-      >
-        <Styles.Logo to="/">
+      <Styled.NavHeading as="h1">
+        <Styled.Logo to="/">
           {/* <Heading>words</Heading> */}
-          <Styles.LogoImage
+          <Styled.LogoImage
             src={data.file.childImageSharp.fluid.src}
             alt="Harvestland Church"
           />
-        </Styles.Logo>
-      </Heading>
-      <Styles.NavList isVisible={menuOpen}>
+        </Styled.Logo>
+      </Styled.NavHeading>
+      <Styled.NavList isVisible={menuOpen}>
         <NavItem>
-          <Styles.NavLink
+          <Styled.NavLink
             to="/about"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
@@ -67,10 +51,10 @@ const Header = (props) => {
             <Heading as="h3" fontSize={[4, 3]}>
               About
             </Heading>
-          </Styles.NavLink>
+          </Styled.NavLink>
         </NavItem>
         <NavItem>
-          <Styles.NavLink
+          <Styled.NavLink
             to="/groups"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
@@ -78,10 +62,10 @@ const Header = (props) => {
             <Heading as="h3" fontSize={[4, 3]}>
               Groups
             </Heading>
-          </Styles.NavLink>
+          </Styled.NavLink>
         </NavItem>
         <NavItem>
-          <Styles.NavLink
+          <Styled.NavLink
             to="/sermons"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
@@ -89,10 +73,10 @@ const Header = (props) => {
             <Heading as="h3" fontSize={[4, 3]}>
               Sermons
             </Heading>
-          </Styles.NavLink>
+          </Styled.NavLink>
         </NavItem>
         <NavItem>
-          <Styles.NavLink
+          <Styled.NavLink
             to="/events"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
@@ -100,10 +84,10 @@ const Header = (props) => {
             <Heading as="h3" fontSize={[4, 3]}>
               Events
             </Heading>
-          </Styles.NavLink>
+          </Styled.NavLink>
         </NavItem>
         <NavItem>
-          <Styles.NavLink
+          <Styled.NavLink
             to="/visit"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
@@ -111,10 +95,10 @@ const Header = (props) => {
             <Heading as="h3" fontSize={[4, 3]}>
               Visit
             </Heading>
-          </Styles.NavLink>
+          </Styled.NavLink>
         </NavItem>
         <NavItem>
-          <Styles.NavLink
+          <Styled.NavLink
             to="/give"
             onClick={resetMenu}
             activeStyle={{ color: '#42613d' }}
@@ -122,10 +106,10 @@ const Header = (props) => {
             <Heading as="h3" fontSize={[4, 3]}>
               Give
             </Heading>
-          </Styles.NavLink>
+          </Styled.NavLink>
         </NavItem>
-      </Styles.NavList>
-    </Styles.Nav>
+      </Styled.NavList>
+    </Styled.Nav>
   );
 };
 

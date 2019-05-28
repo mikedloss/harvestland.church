@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Heading, Text, Flex } from 'rebass';
 
 import ImageHero from '../ImageHero';
-import * as Styles from './GroupHero.styles';
+import * as Styled from './GroupHero.styles';
 
 export const GroupHero = ({
   imageSrc,
@@ -20,7 +20,7 @@ export const GroupHero = ({
     textJustify="flex-start"
     opacity="0.5"
   >
-    <Styles.HeroContentContainer alignItems="center">
+    <Styled.HeroContentContainer alignItems="center">
       <Flex
         flexDirection="column"
         alignItems={['center', 'flex-start']}
@@ -37,7 +37,7 @@ export const GroupHero = ({
       >
         <Text>{children}</Text>
       </Flex>
-    </Styles.HeroContentContainer>
+    </Styled.HeroContentContainer>
   </ImageHero>
 );
 

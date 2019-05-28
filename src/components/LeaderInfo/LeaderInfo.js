@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import { Text, Heading } from 'rebass';
 
 import { leaders } from './leaders';
-import * as Styles from './LeaderInfo.styles';
+import * as Styled from './LeaderInfo.styles';
 
 export const LeaderInfo = ({ who, imageSrc, children }) => {
   const leader = leaders[who];
   return (
-    <Styles.LeaderInfoStyle>
-      <Styles.PictureContainer>
-        <Styles.LeaderPicture src={imageSrc.childImageSharp.fluid.src} />
-      </Styles.PictureContainer>
-      <Styles.LeaderDescription>
+    <Styled.LeaderInfoStyle>
+      <Styled.PictureContainer>
+        <Styled.LeaderPicture src={imageSrc.childImageSharp.fluid.src} />
+      </Styled.PictureContainer>
+      <Styled.LeaderDescription>
         <Heading>{leader.name}</Heading>
         {leader.jobs.map((job, index) => (
           <Text key={index} fontSize={1}>
@@ -23,8 +23,8 @@ export const LeaderInfo = ({ who, imageSrc, children }) => {
           {leader.email}
         </Text>
         {children}
-      </Styles.LeaderDescription>
-    </Styles.LeaderInfoStyle>
+      </Styled.LeaderDescription>
+    </Styled.LeaderInfoStyle>
   );
 };
 

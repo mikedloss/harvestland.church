@@ -4,12 +4,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../../global.css';
-import theme from '../Elements/theme';
+import theme from '../theme';
 import Header from '../Header';
 import Footer from '../Footer';
-import { SiteContainer } from './Layout.styles';
 
-const Layout = ({ children }) => {
+import * as Styled from './Layout.styles';
+
+const Layout = ({ children, fullWidth }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,18 +22,22 @@ const Layout = ({ children }) => {
   `);
   return (
     <ThemeProvider theme={theme}>
-      <SiteContainer>
+      <Styled.SiteContainer isFullWidth={fullWidth}>
         <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer />
-      </SiteContainer>
+      </Styled.SiteContainer>
     </ThemeProvider>
   );
 };
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+};
+
+Layout.defaultProps = {
+  fullWidth: false,
 };
 
 export default Layout;

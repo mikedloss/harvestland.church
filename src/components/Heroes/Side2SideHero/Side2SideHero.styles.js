@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from 'rebass';
-import { breakpointValues as bp } from '../../Elements/theme';
+import { breakpointValues as bp } from '../../theme';
 import { getHeight } from '../ImageHero/ImageHero.styles';
 
 export const Side2SideHeroStyle = styled(Flex)`

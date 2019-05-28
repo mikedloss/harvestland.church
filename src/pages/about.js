@@ -7,11 +7,11 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import TextHero from '../components/Heroes/TextHero';
 import Button from '../components/Button';
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import Container from '../components/Container';
 import Side2SideHero from '../components/Heroes/Side2SideHero';
 import ImageHero from '../components/Heroes/ImageHero';
 
-import { breakpointValues as bp } from '../components/Elements/theme';
+import { breakpointValues as bp } from '../components/theme';
 
 const ButtonLinksContainer = styled(Flex)`
   flex-direction: column;

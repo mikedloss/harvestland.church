@@ -4,7 +4,7 @@ import { Heading } from 'rebass';
 
 import ImageHero from '../ImageHero';
 
-import * as Styles from './Side2SideHero.styles';
+import * as Styled from './Side2SideHero.styles';
 
 export const Side2SideHero = ({
   heroText,
@@ -16,23 +16,23 @@ export const Side2SideHero = ({
 }) => {
   imageHeroProps = { ...imageHeroProps, height };
   return (
-    <Styles.Side2SideHeroStyle as="section" inverse={inverse}>
-      <Styles.HeroContainer height={height}>
+    <Styled.Side2SideHeroStyle as="section" inverse={inverse}>
+      <Styled.HeroContainer height={height}>
         <ImageHero {...imageHeroProps}>
           <Heading p="20px" fontSize={[5, 6]}>
             {heroText}
           </Heading>
         </ImageHero>
-      </Styles.HeroContainer>
-      <Styles.TextBlockContainer
+      </Styled.HeroContainer>
+      <Styled.TextBlockContainer
         p="2rem"
         flexDirection="column"
         alignItems="center"
         justifyContent={textBlockJustify || 'flex-start'}
       >
         {children}
-      </Styles.TextBlockContainer>
-    </Styles.Side2SideHeroStyle>
+      </Styled.TextBlockContainer>
+    </Styled.Side2SideHeroStyle>
   );
 };
 

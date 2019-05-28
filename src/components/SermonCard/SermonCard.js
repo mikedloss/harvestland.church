@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import dayjs from 'dayjs';
 import slugify from '../../../scripts/slugify';
 
-import * as Styles from './SermonCard.styles';
+import * as Styled from './SermonCard.styles';
 import Verse from '../Verse';
 
 export const SermonCard = (props) => {
@@ -12,7 +12,7 @@ export const SermonCard = (props) => {
   const { currentPath } = props;
   const verses = props.data.verses && props.data.verses.split(', ');
   return (
-    <Styles.SermonCardStyle
+    <Styled.SermonCardStyle
       width={['100%', '50%']}
       mt="0"
       mb="8px"
@@ -20,11 +20,11 @@ export const SermonCard = (props) => {
       p="1rem"
       onClick={props.onClick}
     >
-      <Styles.SermonInfoContainer mb="1rem">
-        <Styles.SermonDate fontSize={1} color="#888">
+      <Styled.SermonInfoContainer mb="1rem">
+        <Styled.SermonDate fontSize={1} color="#888">
           {dayjs(date).format('MMMM DD, YYYY')}
-        </Styles.SermonDate>
-        <Styles.SermonTitle>
+        </Styled.SermonDate>
+        <Styled.SermonTitle>
           {currentPath === 'sermonList' ? (
             <Link to={`/sermons/${slugify(date, '/')}/${slugify(title)}`}>
               {title}
@@ -32,16 +32,16 @@ export const SermonCard = (props) => {
           ) : (
             title
           )}
-        </Styles.SermonTitle>
-        <Styles.SermonSpeaker fontSize={2}>{speaker}</Styles.SermonSpeaker>
-      </Styles.SermonInfoContainer>
+        </Styled.SermonTitle>
+        <Styled.SermonSpeaker fontSize={2}>{speaker}</Styled.SermonSpeaker>
+      </Styled.SermonInfoContainer>
       {(audio || audioUrl) && (
-        <Styles.SermonAudio controls>
+        <Styled.SermonAudio controls>
           <source src={audio.file.url || audioUrl} type="audio/mpeg" />
-        </Styles.SermonAudio>
+        </Styled.SermonAudio>
       )}
       {verses && (
-        <Styles.SermonVerses fontSize={1}>
+        <Styled.SermonVerses fontSize={1}>
           Verses:{' '}
           {verses.map((verse, index) => (
             <span key={index}>
@@ -49,9 +49,9 @@ export const SermonCard = (props) => {
               {index === verses.length - 1 ? '' : ', '}
             </span>
           ))}
-        </Styles.SermonVerses>
+        </Styled.SermonVerses>
       )}
-    </Styles.SermonCardStyle>
+    </Styled.SermonCardStyle>
   );
 };
 

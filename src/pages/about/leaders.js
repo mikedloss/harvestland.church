@@ -6,8 +6,7 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
 import LeaderInfo from '../../components/LeaderInfo';
-
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import Container from '../../components/Container';
 
 const LeadersPage = (props) => {
   const { heroImage, peteHeather, devanne, mike, willis, summer } = props.data;

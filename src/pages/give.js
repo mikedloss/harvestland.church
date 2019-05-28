@@ -5,7 +5,7 @@ import { Heading, Text, Flex, Box } from 'rebass';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import Container from '../components/Container';
 import TextHero from '../components/Heroes/TextHero';
 import Side2SideHero from '../components/Heroes/Side2SideHero';
 import Button from '../components/Button';

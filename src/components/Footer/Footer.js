@@ -3,7 +3,7 @@ import React from 'react';
 import PageLinks from './components/PageLinks';
 
 import * as Media from '../Elements/media';
-import * as Styles from './Footer.styles';
+import * as Styled from './Footer.styles';
 
 import FacebookSvg from '../../assets/svg/facebook.svg';
 import InstagramSvg from '../../assets/svg/instagram.svg';
@@ -14,7 +14,7 @@ import InstagramSvg from '../../assets/svg/instagram.svg';
 //     rel="nofollow noopener noreferrer"
 //     target="_blank"
 //   >
-//     <Styles.ContentfulImage
+//     <Styled.ContentfulImage
 //       src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
 //       alt="Powered by Contentful"
 //       mt="1rem"
@@ -23,47 +23,46 @@ import InstagramSvg from '../../assets/svg/instagram.svg';
 // );
 
 const ContentfulAttribute = () => (
-  <Styles.SmallLine>
+  <Styled.SmallLine>
     Powered by{' '}
     <a
-      href="http://contentful.com"
+      href="https://contentful.com"
       rel="nofollow noopener noreferrer"
       target="_blank"
     >
       Contentful
     </a>
-  </Styles.SmallLine>
+  </Styled.SmallLine>
 );
 
 export const Footer = () => {
   return (
-    <Styles.FooterStyle
+    <Styled.FooterStyle
       as="footer"
-      alignItems="center"
-      p="1rem"
-      bg="offWhite"
-      color="black"
+      flexDirection={['column-reverse', 'row']}
+      alignItems={[null, 'center']}
+      justifyContent={['flex-start', null]}
     >
-      <Styles.LeftContainer width="50%">
-        <Styles.Container flexDirection="column">
-          <Styles.SmallLine>Harvestland Church</Styles.SmallLine>
-          <Styles.SmallLine>5858 Clintonville Road</Styles.SmallLine>
-          <Styles.SmallLine>Clarkston, MI 48348</Styles.SmallLine>
-        </Styles.Container>
-        <Styles.Container flexDirection="column">
-          <Styles.SmallLine>
+      <Styled.LeftContainer width="75%">
+        <Styled.Container flexDirection="column">
+          <Styled.SmallLine>Harvestland Church</Styled.SmallLine>
+          <Styled.SmallLine>5858 Clintonville Road</Styled.SmallLine>
+          <Styled.SmallLine>Clarkston, MI 48348</Styled.SmallLine>
+        </Styled.Container>
+        <Styled.Container flexDirection="column">
+          <Styled.SmallLine>
             phone:{' '}
-            <Styles.LinkText href="tel:+12483912063">
+            <Styled.LinkText href="tel:+12483912063">
               248-391-2063
-            </Styles.LinkText>
-          </Styles.SmallLine>
-          <Styles.SmallLine>
+            </Styled.LinkText>
+          </Styled.SmallLine>
+          <Styled.SmallLine>
             email:{' '}
-            <Styles.LinkText href="mailto:info@harvestland.church">
+            <Styled.LinkText href="mailto:info@harvestland.church">
               info@harvestland.church
-            </Styles.LinkText>
-          </Styles.SmallLine>
-          <Styles.SmallLine mt="4px">
+            </Styled.LinkText>
+          </Styled.SmallLine>
+          <Styled.SmallLine mt="4px">
             <a
               href="https://www.facebook.com/HarvestlandOpenBible/"
               rel="noopener noreferrer"
@@ -80,28 +79,22 @@ export const Footer = () => {
             >
               <InstagramSvg style={{ maxWidth: '20px' }} />
             </a>
-          </Styles.SmallLine>
-        </Styles.Container>
-        <Styles.Container flexDirection="column">
-          <Styles.SmallLine>
+          </Styled.SmallLine>
+        </Styled.Container>
+        <Styled.Container flexDirection="column">
+          <Styled.SmallLine>
             © {new Date().getFullYear()} Harvestland Church
-          </Styles.SmallLine>
-        </Styles.Container>
+          </Styled.SmallLine>
+        </Styled.Container>
         <ContentfulAttribute />
-        {/* <Media.SmallOnly>
-          <ContentfulAttribute />
-        </Media.SmallOnly> */}
-      </Styles.LeftContainer>
-      <Styles.RightContainer
-        width="50%"
+      </Styled.LeftContainer>
+      <Styled.RightContainer
+        width="25%"
         flexDirection="row"
-        justifyContent="flex-end"
+        justifyContent="flex-start"
       >
-        <Media.NotSmall>
-          <PageLinks />
-          {/* <ContentfulImage /> */}
-        </Media.NotSmall>
-      </Styles.RightContainer>
-    </Styles.FooterStyle>
+        <PageLinks />
+      </Styled.RightContainer>
+    </Styled.FooterStyle>
   );
 };

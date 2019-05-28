@@ -1,30 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import * as Styles from './VideoHero.styles';
+import * as Styled from './VideoHero.styles';
 import * as Media from '../../Elements/media';
 
 export const VideoHero = ({ text, videoSrc, imageSrc, imageHeight }) => {
   return (
-    <Styles.VideoHeroStyle>
-      <Styles.MediaContainer>
+    <Styled.VideoHeroStyle>
+      <Styled.MediaContainer>
         <Media.SmallOnly>
-          <Styles.StaticImage src={imageSrc} height={imageHeight} />
+          <Styled.StaticImage src={imageSrc} height={imageHeight} />
         </Media.SmallOnly>
         <Media.NotSmall>
-          <Styles.Video autoPlay loop muted>
+          <Styled.Video autoPlay loop muted>
             <source src={videoSrc} type="video/mp4" />
-          </Styles.Video>
+          </Styled.Video>
         </Media.NotSmall>
-      </Styles.MediaContainer>
-      <Styles.TextContainer>
-        <Styles.TextOverlay alignItems="center" justifyContent="center">
-          <Styles.WelcomeText fontSize={[6, 7]}>
+      </Styled.MediaContainer>
+      <Styled.TextContainer>
+        <Styled.TextOverlay alignItems="center" justifyContent="center">
+          <Styled.WelcomeText fontSize={[6, 7]}>
             {text || 'Hero Text'}
-          </Styles.WelcomeText>
-        </Styles.TextOverlay>
-      </Styles.TextContainer>
-    </Styles.VideoHeroStyle>
+          </Styled.WelcomeText>
+        </Styled.TextOverlay>
+      </Styled.TextContainer>
+    </Styled.VideoHeroStyle>
   );
 };
 

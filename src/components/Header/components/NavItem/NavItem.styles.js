@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Text } from 'rebass';
-import { breakpointValues as bp } from '../../../Elements/theme';
+import { breakpointValues as bp } from '../../../theme';
 
 export const NavItem = styled(Text)`
   text-align: center;

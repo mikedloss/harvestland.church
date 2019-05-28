@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import * as Styles from './ImageHero.styles';
+import * as Styled from './ImageHero.styles';
 
 export const ImageHero = ({
   imageSrc,
@@ -15,20 +15,20 @@ export const ImageHero = ({
   children,
 }) => {
   return (
-    <Styles.ImageHeroStyle height={height}>
-      <Styles.MediaContainer opacity={opacity || '0.6'} overlay={overlay}>
-        <Styles.StaticImage as="img" src={imageSrc} alt={imageDesc} />
-      </Styles.MediaContainer>
-      <Styles.TextContainer>
-        <Styles.TextOverlay
+    <Styled.ImageHeroStyle height={height}>
+      <Styled.MediaContainer opacity={opacity || '0.6'} overlay={overlay}>
+        <Styled.StaticImage as="img" src={imageSrc} alt={imageDesc} />
+      </Styled.MediaContainer>
+      <Styled.TextContainer>
+        <Styled.TextOverlay
           p={containerPadding || '2rem'}
           alignItems={textAlign || 'center'}
           justifyContent={textJustify || 'center'}
         >
           {children || 'Hero Text'}
-        </Styles.TextOverlay>
-      </Styles.TextContainer>
-    </Styles.ImageHeroStyle>
+        </Styled.TextOverlay>
+      </Styled.TextContainer>
+    </Styled.ImageHeroStyle>
   );
 };
 

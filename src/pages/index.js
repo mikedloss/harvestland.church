@@ -8,7 +8,7 @@ import VideoHero from '../components/Heroes/VideoHero';
 const IndexPage = (props) => {
   const { video, image } = props.data;
   return (
-    <Layout>
+    <Layout fullWidth>
       <SEO
         title="Welcome"
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."

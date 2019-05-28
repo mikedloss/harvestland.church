@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpointValues as bp } from './theme';
+import { breakpointValues as bp } from '../theme';
 
 //////////////////// SMALL
 export const SmallOnly = styled.div`

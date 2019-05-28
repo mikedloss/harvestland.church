@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as Styles from './Verse.styles';
+import * as Styled from './Verse.styles';
 
 export const Verse = ({ verse }) => {
   const regexedVerse = verse.match(BIBLE_REGEX);
@@ -12,13 +12,13 @@ export const Verse = ({ verse }) => {
   const bibleUrl = `https://www.bible.com/bible/111/${finalVersePath}.NIV`;
 
   return (
-    <Styles.VerseStyle
+    <Styled.VerseStyle
       href={bibleUrl}
       target="_blank"
       rel="noopener noreferrer"
     >
       {verse}
-    </Styles.VerseStyle>
+    </Styled.VerseStyle>
   );
 };
 

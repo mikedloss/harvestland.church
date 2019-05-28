@@ -6,8 +6,7 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
 import SermonCard from '../../components/SermonCard';
-
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import Container from '../../components/Container';
 
 const SermonPostTemplate = (props) => {
   const { heroImage, sermon } = props.data;

@@ -1,11 +1,11 @@
 import React from 'react';
+import { Heading, Text, Flex } from 'rebass';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import dayjs from 'dayjs';
-import slugify from '../../../scripts/slugify';
-import { Heading, Text, Box, Flex, Image } from 'rebass';
 
-import * as Styles from './EventCard.styles';
+import slugify from '../../../scripts/slugify';
+
+import * as Styled from './EventCard.styles';
 
 export const EventCard = (props) => {
   // const { title, speaker, date, audioUrl, audio } = props.data;
@@ -18,14 +18,14 @@ export const EventCard = (props) => {
   } = props.data;
   const { currentPath } = props;
   return (
-    <Styles.EventCardStyle mt="0" mb="8px" mx="auto" p="1rem">
-      <Styles.EventContainer>
-        <Styles.EventImageContainer width="50%">
-          <Styles.EventImage
+    <Styled.EventCardStyle mt="0" mb="8px" mx="auto" p="1rem">
+      <Styled.EventContainer>
+        <Styled.EventImageContainer width="50%">
+          <Styled.EventImage
             src={eventImage.fluid.src}
             alt={eventImage.title}
           />
-        </Styles.EventImageContainer>
+        </Styled.EventImageContainer>
         <Flex
           flexDirection="column"
           justifyContent="center"
@@ -37,12 +37,12 @@ export const EventCard = (props) => {
           </Link>
           <Text fontSize={1}>{eventSummary}</Text>
         </Flex>
-      </Styles.EventContainer>
-      {/* <Styles.SermonInfoContainer mb="1rem">
-        <Styles.SermonDate fontSize={1} color="#888">
+      </Styled.EventContainer>
+      {/* <Styled.SermonInfoContainer mb="1rem">
+        <Styled.SermonDate fontSize={1} color="#888">
           {dayjs(date).format('MMMM DD, YYYY')}
-        </Styles.SermonDate>
-        <Styles.SermonTitle>
+        </Styled.SermonDate>
+        <Styled.SermonTitle>
           {currentPath === 'sermons' ? (
             <Link to={`/sermons/${slugify(date, '/')}/${slugify(title)}`}>
               {title}
@@ -50,16 +50,16 @@ export const EventCard = (props) => {
           ) : (
             title
           )}
-        </Styles.SermonTitle>
-        <Styles.SermonSpeaker fontSize={2}>{speaker}</Styles.SermonSpeaker>
-      </Styles.SermonInfoContainer>
+        </Styled.SermonTitle>
+        <Styled.SermonSpeaker fontSize={2}>{speaker}</Styled.SermonSpeaker>
+      </Styled.SermonInfoContainer>
       {(audio || audioUrl) && (
-        <Styles.SermonAudio controls>
+        <Styled.SermonAudio controls>
           <source src={audio.file.url || audioUrl} type="audio/mpeg" />
-        </Styles.SermonAudio>
+        </Styled.SermonAudio>
       )}
       {verses && (
-        <Styles.SermonVerses fontSize={1}>
+        <Styled.SermonVerses fontSize={1}>
           Verses:{' '}
           {verses.map((verse, index) => (
             <span key={index}>
@@ -67,9 +67,9 @@ export const EventCard = (props) => {
               {index === verses.length - 1 ? '' : ', '}
             </span>
           ))}
-        </Styles.SermonVerses>
+        </Styled.SermonVerses>
       )} */}
-    </Styles.EventCardStyle>
+    </Styled.EventCardStyle>
   );
 };
 

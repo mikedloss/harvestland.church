@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Flex, Box, Image } from 'rebass';
 
-import { breakpointValues as bp } from '../../components/Elements/theme';
+import { breakpointValues as bp } from '../../components/theme';
 
 export const LeaderInfoStyle = styled(Flex)`
   width: 100%;

@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 import ImageHero from '../components/Heroes/ImageHero';
 import TextHero from '../components/Heroes/TextHero';
 import GroupHero from '../components/Heroes/GroupHero';
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
+import Container from '../components/Container';
 
 const GroupsPage = (props) => {
   const { heroImage, groups } = props.data;

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import * as Styles from './Button.styles';
+import * as Styled from './Button.styles';
 
 export const Button = ({ children, variant, small, ...props }) => {
   return (
-    <Styles.ButtonStyle variant={variant} small={small} {...props}>
+    <Styled.ButtonStyle variant={variant} small={small} {...props}>
       {children}
-    </Styles.ButtonStyle>
+    </Styled.ButtonStyle>
   );
 };
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Card, Flex, Box, Heading, Text } from 'rebass';
+import { Card, Flex, Box } from 'rebass';
 
 export const EventCardStyle = styled(Card)``;
 export const EventContainer = styled(Flex)``;

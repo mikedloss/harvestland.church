@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex, Box } from 'rebass';
-import { breakpointValues as bp, colors } from '../../Elements/theme';
+import { breakpointValues as bp, colors } from '../../theme';
 
 export const ImageHeroStyle = styled.section`
   background-color: #000;

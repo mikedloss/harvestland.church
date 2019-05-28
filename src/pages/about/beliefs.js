@@ -5,7 +5,7 @@ import { Heading, Text, Box, Flex } from 'rebass';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ImageHero from '../../components/Heroes/ImageHero';
-import { ContentContainer as Container } from '../../components/Layout/Layout.styles';
+import Container from '../../components/Container';
 
 const BeliefsPage = (props) => {
   const { heroImage } = props.data;

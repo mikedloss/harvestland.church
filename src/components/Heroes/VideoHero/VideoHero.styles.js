@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Heading, Flex, Box } from 'rebass';
-import { breakpointValues as bp } from '../../Elements/theme';
+import { breakpointValues as bp } from '../../theme';
 
 export const VideoHeroStyle = styled.section`
   background-color: #000;

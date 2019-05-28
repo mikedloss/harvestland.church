@@ -21,6 +21,8 @@ export const colors = {
   offWhite: '#f8fafc',
 };
 
+export const space = [0, 4, 8, 12, 16, 20, 24, 28, 32];
+
 export const buttons = {
   default: {
     backgroundColor: colors.primary,
@@ -48,8 +50,9 @@ export const buttons = {
 };
 
 export default {
-  colors,
-  fontSizes,
   breakpoints,
   buttons,
+  colors,
+  fontSizes,
+  space,
 };

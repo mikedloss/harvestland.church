@@ -6,8 +6,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import TextHero from '../components/Heroes/TextHero';
 import Button from '../components/Button';
+import Container from '../components/Container';
 
-import { ContentContainer as Container } from '../components/Layout/Layout.styles';
 import dayUtils, { dateTimeFormat } from '../utils/day';
 
 const EventTemplate = (props) => {
