@@ -9,10 +9,6 @@ export const ImageContainer = styled.div`
   @media screen and (min-width: ${bp.MEDIUM}px) {
     width: 300px;
   }
-
-  @media screen and (min-width: ${bp.LARGE}px) {
-    width: 400px;
-  }
 `;
 
 export const Image = styled.img`

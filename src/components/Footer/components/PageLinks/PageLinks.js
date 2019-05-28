@@ -9,8 +9,8 @@ export const PageLinks = () => (
       about
     </Styles.LinkText>{' '}
     /{' '}
-    <Styles.LinkText as={Link} to="connect">
-      connect
+    <Styles.LinkText as={Link} to="groups">
+      groups
     </Styles.LinkText>{' '}
     /{' '}
     <Styles.LinkText as={Link} to="sermons">

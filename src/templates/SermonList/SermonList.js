@@ -25,6 +25,8 @@ const SermonListPage = (props) => {
   const nextPageUrl = currentPage !== numberOfPages
     ? `/sermons/page-${currentPage + 1}`
     : null;
+
+  const isFirstPage = nextPageUrl && !previousPageUrl;
   
   return (
     <Layout>
@@ -50,15 +52,17 @@ const SermonListPage = (props) => {
           ) }
         </Flex>
       </ImageHero>
-      <TextHero p="4rem">
-        <Flex flexDirection="column" alignItems="center">
-          <Heading as="h1" fontSize={[5, 6]} color="black" mb="1rem">
-            All of our messages can be found on
-          </Heading>
-          <Styled.ImageContainer>
-            <Styled.Image src={spotifyImage.childImageSharp.fluid.src} />
-          </Styled.ImageContainer>
-        </Flex>
+      <TextHero p={ isFirstPage ? "4rem" : "0.5rem" }>
+        { isFirstPage && (
+          <Flex flexDirection="column" alignItems="center">
+            <Heading as="h1" fontSize={[5, 6]} color="black" mb="1rem">
+              All of our messages can be found on
+            </Heading>
+            <Styled.ImageContainer>
+              <Styled.Image src={spotifyImage.childImageSharp.fluid.src} />
+            </Styled.ImageContainer>
+          </Flex>
+        )}
         <Flex justifyContent="center" mt={["2rem", "1rem"]}>
           <Heading as="h2" fontSize={4} color="black">
             <Styled.Link color="primary" href="https://open.spotify.com/show/3E5VM0Ji3Rb2Oa55PlCC90?si=usLSeMexRam2vRhs52BR_A" target="_blank">
