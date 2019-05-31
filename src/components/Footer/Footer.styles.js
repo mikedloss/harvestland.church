@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { Text, Flex, Box, Image } from 'rebass';
 
-export const FooterStyle = styled(Flex)``;
+export const FooterStyle = styled(Flex)`
+  max-width: 1600px;
+  margin: 0 auto;
+`;
 FooterStyle.defaultProps = {
   p: 16,
   bg: 'offWhite',

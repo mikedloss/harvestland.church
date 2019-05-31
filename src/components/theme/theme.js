@@ -21,7 +21,8 @@ export const colors = {
   offWhite: '#f8fafc',
 };
 
-export const space = [0, 4, 8, 12, 16, 20, 24, 28, 32];
+//                    0  1  2  3   4   5   6   7   8   9   10
+export const space = [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40];
 
 export const buttons = {
   default: {
