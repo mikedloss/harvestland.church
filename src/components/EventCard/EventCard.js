@@ -1,86 +1,41 @@
 import React from 'react';
-import { Heading, Text, Flex } from 'rebass';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import dayjs from 'dayjs';
 
 import slugify from '../../../scripts/slugify';
+import dayUtil from '../../utils/day';
+import Button from '../Button';
 
 import * as Styled from './EventCard.styles';
 
-export const EventCard = (props) => {
-  // const { title, speaker, date, audioUrl, audio } = props.data;
-  const {
-    eventName,
-    date,
-    eventLocation,
-    eventImage,
-    eventSummary,
-  } = props.data;
-  const { currentPath } = props;
+export const EventCard = ({ event }) => {
+  const dateText = dayUtil.getDateText(event);
+
+  const { date, eventName, eventImage, eventSummary } = event;
+  const eventLink = `/events/${dayjs(date).format('YYYY/MM')}/${slugify(
+    eventName
+  )}`;
+
   return (
-    <Styled.EventCardStyle mt="0" mb="8px" mx="auto" p="1rem">
-      <Styled.EventContainer>
-        <Styled.EventImageContainer width="50%">
-          <Styled.EventImage
-            src={eventImage.fluid.src}
-            alt={eventImage.title}
-          />
-        </Styled.EventImageContainer>
-        <Flex
-          flexDirection="column"
-          justifyContent="center"
-          p="2rem"
-          width="50%"
-        >
-          <Link to={`/events/${slugify(eventName)}`}>
-            <Heading>{eventName}</Heading>
-          </Link>
-          <Text fontSize={1}>{eventSummary}</Text>
-        </Flex>
-      </Styled.EventContainer>
-      {/* <Styled.SermonInfoContainer mb="1rem">
-        <Styled.SermonDate fontSize={1} color="#888">
-          {dayjs(date).format('MMMM DD, YYYY')}
-        </Styled.SermonDate>
-        <Styled.SermonTitle>
-          {currentPath === 'sermons' ? (
-            <Link to={`/sermons/${slugify(date, '/')}/${slugify(title)}`}>
-              {title}
-            </Link>
-          ) : (
-            title
-          )}
-        </Styled.SermonTitle>
-        <Styled.SermonSpeaker fontSize={2}>{speaker}</Styled.SermonSpeaker>
-      </Styled.SermonInfoContainer>
-      {(audio || audioUrl) && (
-        <Styled.SermonAudio controls>
-          <source src={audio.file.url || audioUrl} type="audio/mpeg" />
-        </Styled.SermonAudio>
-      )}
-      {verses && (
-        <Styled.SermonVerses fontSize={1}>
-          Verses:{' '}
-          {verses.map((verse, index) => (
-            <span key={index}>
-              <Verse verse={verse} />
-              {index === verses.length - 1 ? '' : ', '}
-            </span>
-          ))}
-        </Styled.SermonVerses>
-      )} */}
-    </Styled.EventCardStyle>
+    <Styled.EventContainer>
+      <Styled.EventImageContainer>
+        <Styled.EventImage src={eventImage.fluid.src} alt={eventImage.title} />
+      </Styled.EventImageContainer>
+      <Styled.EventInfoContainer>
+        <Link to={eventLink}>
+          <Styled.EventTitle as="h2">{eventName}</Styled.EventTitle>
+        </Link>
+        <Styled.EventDateText as="small">{dateText}</Styled.EventDateText>
+        <Styled.EventSummary>{eventSummary}</Styled.EventSummary>
+        <Link to={eventLink}>
+          <Button small>View Details</Button>
+        </Link>
+      </Styled.EventInfoContainer>
+    </Styled.EventContainer>
   );
 };
 
 EventCard.propTypes = {
-  // data: PropTypes.shape({
-  //   title: PropTypes.string.isRequired,
-  //   speaker: PropTypes.string.isRequired,
-  //   date: PropTypes.string.isRequired,
-  //   audioUrl: PropTypes.string,
-  //   verses: PropTypes.string,
-  //   audio: PropTypes.object,
-  // }),
-  currentPath: PropTypes.string.isRequired,
+  event: PropTypes.object.isRequired,
 };

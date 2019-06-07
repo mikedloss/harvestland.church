@@ -25,7 +25,8 @@ export const Side2SideHero = ({
         </ImageHero>
       </Styled.HeroContainer>
       <Styled.TextBlockContainer
-        p="2rem"
+        py="1rem"
+        px="2rem"
         flexDirection="column"
         alignItems="center"
         justifyContent={textBlockJustify || 'flex-start'}
