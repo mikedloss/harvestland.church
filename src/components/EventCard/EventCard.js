@@ -12,6 +12,8 @@ import * as Styled from './EventCard.styles';
 export const EventCard = ({ event }) => {
   const dateText = dayUtil.getDateText(event);
 
+  const isHappeningNow = dayUtil.isHappeningNow(event);
+
   const { date, eventName, eventImage, eventSummary } = event;
   const eventLink = `/events/${dayjs(date).format('YYYY/MM')}/${slugify(
     eventName
@@ -27,6 +29,9 @@ export const EventCard = ({ event }) => {
           <Styled.EventTitle as="h2">{eventName}</Styled.EventTitle>
         </Link>
         <Styled.EventDateText as="small">{dateText}</Styled.EventDateText>
+        { isHappeningNow && (
+          <Styled.EventInProgress as="small">Happening now</Styled.EventInProgress>
+        )}
         <Styled.EventSummary>{eventSummary}</Styled.EventSummary>
         <Link to={eventLink}>
           <Button small>View Details</Button>

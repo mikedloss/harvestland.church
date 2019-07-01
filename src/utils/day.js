@@ -12,6 +12,12 @@ const isInFuture = ({ node }) => {
   return afterNow;
 };
 
+const isHappeningNow = (event) => {
+  const hasStarted = dayjs().isAfter(event.date, 'day');
+  const hasEnded = dayjs().isAfter(event.endDate, 'day');
+  return hasStarted && !hasEnded;
+}
+
 /**
  * Generates a date text
  * @param: { node } - event from GraphQL / Contentful
@@ -40,5 +46,6 @@ export const longDateFormat = (date) =>
 
 export default {
   isInFuture,
+  isHappeningNow,
   getDateText,
 };
