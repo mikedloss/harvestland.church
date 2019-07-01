@@ -31,7 +31,7 @@ export const Footer = () => {
       <Styled.LeftContainer width="75%">
         <Styled.Container flexDirection="column">
           <Styled.SmallLine>Harvestland Church</Styled.SmallLine>
-          <Styled.SmallLine>5858 Clintonville Road</Styled.SmallLine>
+          <Styled.SmallLine>5848 Clintonville Road</Styled.SmallLine>
           <Styled.SmallLine>Clarkston, MI 48348</Styled.SmallLine>
         </Styled.Container>
         <Styled.Container flexDirection="column">

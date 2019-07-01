@@ -10,12 +10,21 @@ import Container from '../components/Container';
 
 import dayUtils, { dateTimeFormat } from '../utils/day';
 
-const EventTemplate = (props) => {
-  const { event } = props.data;
-  // console.log(event);
+const EventTemplate = ({ data: { event }}) => {
   return (
     <Layout>
-      <SEO title="Sermons" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title={event.eventName}
+        keywords={
+          event.keywords || [
+            'harvestland church',
+            'harvestland',
+            'clarkston',
+            'clarkston events',
+            'clarkston michigan events',
+          ]
+        }
+      />
       <Container>
         <Flex
           flexDirection="column"
@@ -129,6 +138,7 @@ export const query = graphql`
       isFrontPage
       facebookEventLink
       ticketLink
+      keywords
     }
   }
 `;
