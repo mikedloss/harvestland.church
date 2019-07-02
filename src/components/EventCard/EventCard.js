@@ -29,8 +29,10 @@ export const EventCard = ({ event }) => {
           <Styled.EventTitle as="h2">{eventName}</Styled.EventTitle>
         </Link>
         <Styled.EventDateText as="small">{dateText}</Styled.EventDateText>
-        { isHappeningNow && (
-          <Styled.EventInProgress as="small">Happening now</Styled.EventInProgress>
+        {isHappeningNow && (
+          <Styled.EventInProgress as="small">
+            Happening now
+          </Styled.EventInProgress>
         )}
         <Styled.EventSummary>{eventSummary}</Styled.EventSummary>
         <Link to={eventLink}>

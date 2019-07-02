@@ -5,6 +5,18 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import VideoHero from '../components/Heroes/VideoHero';
 
+const SEOKeywords = [
+  'harvestland church',
+  'harvestland',
+  'clarkston, mi',
+  'clarkston',
+  'michigan',
+  'non-denominational',
+  'non-denominational church',
+  'detroit',
+  'detroit, mi',
+];
+
 const IndexPage = (props) => {
   const { video, image } = props.data;
   return (
@@ -12,7 +24,7 @@ const IndexPage = (props) => {
       <SEO
         title="Welcome"
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
-        keywords={[`gatsby`, `application`, `react`]}
+        keywords={SEOKeywords}
       />
       <VideoHero
         videoSrc={video.publicURL}
@@ -37,7 +49,7 @@ export const query = graphql`
 
   fragment SmallImage on File {
     childImageSharp {
-      fluid(maxWidth: 810) {
+      fluid(maxWidth: 810, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -47,7 +59,7 @@ export const query = graphql`
     video: file(relativePath: { eq: "videos/front.mp4" }) {
       publicURL
     }
-    image: file(relativePath: { eq: "images/tall.png" }) {
+    image: file(relativePath: { eq: "images/visit-header.png" }) {
       ...SmallImage
     }
   }

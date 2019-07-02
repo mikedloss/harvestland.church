@@ -10,7 +10,7 @@ import Container from '../components/Container';
 
 import dayUtils, { dateTimeFormat } from '../utils/day';
 
-const EventTemplate = ({ data: { event }}) => {
+const EventTemplate = ({ data: { event } }) => {
   return (
     <Layout>
       <SEO

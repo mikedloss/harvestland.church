@@ -46,4 +46,4 @@ export const EventInProgress = styled(Text)`
 `;
 EventInProgress.defaultProps = {
   fontSize: 1,
-}
+};

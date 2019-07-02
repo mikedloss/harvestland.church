@@ -16,7 +16,7 @@ const isHappeningNow = (event) => {
   const hasStarted = dayjs().isAfter(event.date, 'day');
   const hasEnded = dayjs().isAfter(event.endDate, 'day');
   return hasStarted && !hasEnded;
-}
+};
 
 /**
  * Generates a date text
