@@ -14,8 +14,8 @@ const SEOKeywords = [
   'michigan events',
   'church events',
   'volunteer events',
-  'events'
-]
+  'events',
+];
 
 const EventsPage = (props) => {
   const { events } = props.data;

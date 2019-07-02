@@ -6,6 +6,7 @@ import { Layout, SEO, Hero, Button, Container } from '../components';
 import { isDesktop } from '../utils/screen';
 
 import * as Styled from '../page-styles/index-page';
+import * as Media from '../components/Elements/media';
 
 // TODO: move these into a more central location, make this more extendable
 const SEOKeywords = [
@@ -74,24 +75,20 @@ const IndexPage = ({
         </Styled.ContentBlock>
       </Hero.Video>
       <Container>
-        <Flex
-          flexDirection="row"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Flex flexDirection="column" alignItems="center" mr={ desktop ? "2rem" : null}>
+        <Flex flexDirection="row" alignItems="center" justifyContent="center">
+          <Flex flexDirection="column" alignItems="center" mr={[null, '2rem']}>
             <Styled.HoursText fontSize={3}>Sundays at 10 AM</Styled.HoursText>
             <Styled.HoursText fontSize={3}>Wednesdays at 7 PM</Styled.HoursText>
           </Flex>
-          { desktop && (
+          <Media.NotSmall>
             <Flex>
               <Link to="/visit">
                 <Button variant="inverse">Visit Us</Button>
               </Link>
             </Flex>
-          ) }
+          </Media.NotSmall>
         </Flex>
-        <Hero.Text p={["1rem", "4rem"]}>
+        <Hero.Text p={['1rem', '4rem']}>
           <Flex flexDirection="column" alignItems="center" my="2rem">
             <Heading>
               Practicing the ways of{' '}
@@ -123,8 +120,7 @@ const IndexPage = ({
               </Text>
               <Link to="/visit">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">
-                  Join us for our next service{' '}
-                  <Styled.Chevron width="20px" color="primary" />
+                  Join us for our next service <Styled.Chevron />
                 </Heading>
               </Link>
             </Box>
@@ -144,7 +140,7 @@ const IndexPage = ({
               </Text>
               <Link to="/groups">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">
-                  See our groups <Styled.Chevron width="20px" color="primary" />
+                  See our groups <Styled.Chevron />
                 </Heading>
               </Link>
             </Box>
@@ -161,12 +157,12 @@ const IndexPage = ({
               </Text>
               <Link to="/events">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">
-                  See our events <Styled.Chevron width="20px" color="primary" />
+                  See our events <Styled.Chevron />
                 </Heading>
               </Link>
               <Link to="/give">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">
-                  Give online <Styled.Chevron width="20px" color="primary" />
+                  Give online <Styled.Chevron />
                 </Heading>
               </Link>
             </Box>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Flex, Image, Heading, Text } from 'rebass';
+import { Flex, Image, Heading } from 'rebass';
 
 import { breakpointValues as bp } from '../components/theme';
 import ChevronRight from '../assets/svg/right-chevron.svg';

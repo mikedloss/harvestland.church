@@ -35,14 +35,12 @@ export const Header = ({ hideLogo }) => {
         </Styled.MenuButton>
       </Media.SmallOnly>
       <Styled.NavHeading>
-        {(isMobile() || !hideLogo) && (
-          <Styled.Logo to="/">
-            <Styled.LogoImage
-              src={data.file.childImageSharp.fluid.src}
-              alt="Harvestland Church"
-            />
-          </Styled.Logo>
-        )}
+        <Styled.Logo to="/">
+          <Styled.LogoImage
+            src={data.file.childImageSharp.fluid.src}
+            alt="Harvestland Church"
+          />
+        </Styled.Logo>
       </Styled.NavHeading>
       <Styled.NavList isVisible={menuOpen}>
         <NavItem>
