@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { Heading, Flex, Text, Box } from 'rebass';
 
 import { Layout, SEO, Hero, Button, Container } from '../components';
+import { isDesktop } from '../utils/screen';
 
 import * as Styled from '../page-styles/index-page';
 
@@ -40,17 +41,13 @@ const IndexPage = ({
           m="1rem"
         />
       </Heading>
-      <Text as="small" fontSize="3">
-        Sundays at 10 AM
-      </Text>
-      <Text as="small" fontSize="3">
-        Wednesdays at 7 PM
-      </Text>
       <Link to="/visit">
-        <Button mt="2rem">Visit us</Button>
+        <Button>Visit us</Button>
       </Link>
     </Styled.ContentBlock>
   );
+
+  const desktop = isDesktop();
 
   return (
     <Layout fullWidth>
@@ -78,14 +75,23 @@ const IndexPage = ({
       </Hero.Video>
       <Container>
         <Flex
-          flexDirection="column"
+          flexDirection="row"
           alignItems="center"
           justifyContent="center"
         >
-          <Heading fontSize={3}>Sundays at 10 AM</Heading>
-          <Heading fontSize={3}>Wednesdays at 7 PM</Heading>
+          <Flex flexDirection="column" alignItems="center" mr={ desktop ? "2rem" : null}>
+            <Styled.HoursText fontSize={3}>Sundays at 10 AM</Styled.HoursText>
+            <Styled.HoursText fontSize={3}>Wednesdays at 7 PM</Styled.HoursText>
+          </Flex>
+          { desktop && (
+            <Flex>
+              <Link to="/visit">
+                <Button variant="inverse">Visit Us</Button>
+              </Link>
+            </Flex>
+          ) }
         </Flex>
-        <Hero.Text p="4rem">
+        <Hero.Text p={["1rem", "4rem"]}>
           <Flex flexDirection="column" alignItems="center" my="2rem">
             <Heading>
               Practicing the ways of{' '}
@@ -94,7 +100,7 @@ const IndexPage = ({
               </Text>{' '}
               on Earth as it is in Heaven.
             </Heading>
-            <Heading mt={["1rem", null]}>
+            <Heading mt="0.5rem">
               We accept{' '}
               <Text as="span" color="primary">
                 you
@@ -126,6 +132,7 @@ const IndexPage = ({
           <Hero.Side2Side
             imageSrc={gatherImage.childImageSharp.fluid.src}
             height="40vh"
+            opacity="1"
             inverse
           >
             <Box my="1rem">

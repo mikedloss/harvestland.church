@@ -13,9 +13,11 @@ export const Button = ({ children, variant, small, ...props }) => {
 
 Button.defaultProps = {
   variant: 'default',
+  small: false,
 };
 
 Buffer.propTypes = {
   variant: PropTypes.string,
+  small: PropTypes.bool,
   children: PropTypes.node,
 };

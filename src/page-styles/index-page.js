@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Flex, Image } from 'rebass';
+import { Flex, Image, Heading, Text } from 'rebass';
 
 import { breakpointValues as bp } from '../components/theme';
 import ChevronRight from '../assets/svg/right-chevron.svg';
@@ -20,6 +20,10 @@ export const WhiteLogo = styled(Image)`
   @media screen and (min-width: ${bp.MEDIUM}px) {
     width: 100%;
   }
+`;
+
+export const HoursText = styled(Heading)`
+  line-height: 1.1;
 `;
 
 export const Chevron = styled(ChevronRight)`

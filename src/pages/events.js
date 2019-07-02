@@ -6,6 +6,17 @@ import { Layout, SEO, Button, Hero, Container, EventCard } from '../components';
 
 import dayUtil from '../utils/day';
 
+const SEOKeywords = [
+  'harvestland',
+  'harvestland church',
+  'harvestland church events',
+  'clarkston events',
+  'michigan events',
+  'church events',
+  'volunteer events',
+  'events'
+]
+
 const EventsPage = (props) => {
   const { events } = props.data;
   // check to see if we have events that haven't passed yet
@@ -15,7 +26,7 @@ const EventsPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Events" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Events" keywords={SEOKeywords} />
       <Container>
         <Hero.Text useMargin>
           <Heading fontSize={6} color="primary">
