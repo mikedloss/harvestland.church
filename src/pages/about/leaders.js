@@ -2,32 +2,28 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Flex } from 'rebass';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import ImageHero from '../../components/Heroes/ImageHero';
-import LeaderInfo from '../../components/LeaderInfo';
-import Container from '../../components/Container';
+import { Layout, SEO, Hero, LeaderInfo, Container } from '../../components';
 
-const LeadersPage = (props) => {
-  const { heroImage, peteHeather, devanne, mike, willis, summer } = props.data;
+const LeadersPage = ({ data: { heroImage, ...leaders } }) => {
   return (
     <Layout>
-      <SEO title="Leaders" keywords={['harvestland leaders', 'leaders']} />
-      <ImageHero
+      <SEO
+        title="Leaders"
+        keywords={['harvestland church leaders', 'leaders']}
+      />
+      <Hero.Image
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}
       >
         <Heading p="20px" fontSize={[5, 6]}>
           Our Leaders
         </Heading>
-      </ImageHero>
+      </Hero.Image>
       <Container>
         <Flex flexDirection="column" alignItems="center">
-          <LeaderInfo who="peteHeather" imageSrc={peteHeather} />
-          <LeaderInfo who="devanne" imageSrc={devanne} />
-          <LeaderInfo who="mike" imageSrc={mike} />
-          <LeaderInfo who="willis" imageSrc={willis} />
-          <LeaderInfo who="summer" imageSrc={summer} />
+          {Object.keys(leaders).map((leader) => (
+            <LeaderInfo who={leader} imageSrc={leaders[leader]} key={leader} />
+          ))}
         </Flex>
       </Container>
     </Layout>
@@ -44,7 +40,7 @@ export const query = graphql`
   }
 
   {
-    heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
+    heroImage: file(relativePath: { eq: "images/pages/about/header.jpg" }) {
       ...FullWidthImage
     }
     peteHeather: file(relativePath: { eq: "images/leaders/pete-heather.png" }) {

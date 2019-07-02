@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Image, Box, Button, Heading } from 'rebass';
 import { Link } from 'gatsby';
+import { Image, Box, Button, Heading } from 'rebass';
 import { breakpointValues as bp } from '../theme';
 
 export const Nav = styled(Box)`

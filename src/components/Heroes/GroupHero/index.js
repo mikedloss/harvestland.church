@@ -1,1 +1,1 @@
-export { GroupHero as default } from './GroupHero';
+export { GroupHero } from './GroupHero';

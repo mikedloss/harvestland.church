@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 import slugify from '../../../scripts/slugify';
 import dayUtil from '../../utils/day';
-import Button from '../Button';
+import { Button } from '../Button';
 
 import * as Styled from './EventCard.styles';
 

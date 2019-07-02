@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 import slugify from '../../../scripts/slugify';
 
 import * as Styled from './SermonCard.styles';
-import Verse from '../Verse';
+import { Verse } from '../Verse';
 
 export const SermonCard = (props) => {
   const { title, speaker, date, audioUrl, audio } = props.data;

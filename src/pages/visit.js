@@ -2,34 +2,29 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Text, Flex } from 'rebass';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import ImageHero from '../components/Heroes/ImageHero';
-import Button from '../components/Button';
-import Container from '../components/Container';
+import { Layout, SEO, Hero, Button, Container } from '../components';
+
+const SEOKeywords = [
+  'harvestland address',
+  'harvestland phone number',
+  'harvestland service times',
+  'service times',
+  'harvestland email address',
+];
 
 const AboutPage = (props) => {
   const { heroImage } = props.data;
   return (
     <Layout>
-      <SEO
-        title="About"
-        keywords={[
-          'harvestland address',
-          'harvestland phone number',
-          'harvestland service times',
-          'service times',
-          'harvestland email address',
-        ]}
-      />
-      <ImageHero
+      <SEO title="Visit" keywords={SEOKeywords} />
+      <Hero.Image
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['30vh', '50vh']}
       >
         <Heading p="20px" fontSize={[6, 7]}>
           Visit Us
         </Heading>
-      </ImageHero>
+      </Hero.Image>
       <Container>
         <Flex flexDirection="column" alignItems="center" mb="2rem">
           <Heading my="4px" fontSize={5}>
@@ -76,7 +71,7 @@ const AboutPage = (props) => {
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "images/visit-header.png" }) {
+    heroImage: file(relativePath: { eq: "images/pages/visit/header.png" }) {
       ...FullWidthImage
     }
   }

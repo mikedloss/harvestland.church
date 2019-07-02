@@ -1,1 +1,1 @@
-export { TextHero as default } from './TextHero';
+export { TextHero } from './TextHero';

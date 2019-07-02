@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link as RebassLink } from 'rebass';
-
 import { breakpointValues as bp } from '../../components/theme';
 
 export const ImageContainer = styled.div`

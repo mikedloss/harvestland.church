@@ -1,1 +1,1 @@
-export { Side2SideHero as default } from './Side2Side';
+export { Side2SideHero } from './Side2Side';

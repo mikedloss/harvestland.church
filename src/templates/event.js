@@ -2,11 +2,7 @@ import React from 'react';
 import { Flex, Text, Heading, Image, Box } from 'rebass';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import TextHero from '../components/Heroes/TextHero';
-import Button from '../components/Button';
-import Container from '../components/Container';
+import { Layout, SEO, Hero, Button, Container } from '../components';
 
 import dayUtils, { dateTimeFormat } from '../utils/day';
 
@@ -37,12 +33,12 @@ const EventTemplate = ({ data: { event } }) => {
               src={event.eventImage.fluid.src}
               alt={event.eventImage.title}
             />
-            <TextHero useMargin m="4rem">
+            <Hero.Text useMargin m="4rem">
               <Heading fontSize={6} color="black">
                 {event.eventName}
               </Heading>
               <Text fontSize={2}>{dayUtils.getDateText(event)}</Text>
-            </TextHero>
+            </Hero.Text>
           </Box>
           <Flex flexDirection={['column', 'row']}>
             <Flex

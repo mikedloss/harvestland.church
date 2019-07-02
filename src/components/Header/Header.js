@@ -9,7 +9,7 @@ import { isMobile } from '../../utils/screen';
 import * as Media from '../Elements/media';
 import * as Styled from './Header.styles';
 
-const Header = ({ hideLogo }) => {
+export const Header = ({ hideLogo }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -123,5 +123,3 @@ Header.propTypes = {
 Header.defaultProps = {
   hideLogo: false,
 };
-
-export default Header;

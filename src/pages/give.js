@@ -2,20 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Text, Flex, Box } from 'rebass';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-
-import Container from '../components/Container';
-import TextHero from '../components/Heroes/TextHero';
-import Side2SideHero from '../components/Heroes/Side2SideHero';
-import Button from '../components/Button';
+import { Layout, SEO, Container, Hero, Button } from '../components';
 
 const GivePage = (props) => {
   const { image } = props.data;
   return (
     <Layout>
       <SEO title="Give" keywords={['charity', 'help']} />
-      <TextHero>
+      <Hero.Text>
         <Heading as="h1" fontSize={6} color="primary">
           Generosity
         </Heading>
@@ -24,7 +18,7 @@ const GivePage = (props) => {
             🙏
           </span>
         </Text>
-      </TextHero>
+      </Hero.Text>
       <Container>
         <Flex flexDirection="column" alignItems="center">
           <Box width="100%" px={['2rem', '4rem']}>
@@ -60,7 +54,7 @@ const GivePage = (props) => {
       </Container>
 
       {/* explain what is tithing (use bible photo) */}
-      <Side2SideHero
+      <Hero.Side2Side
         heroText="What is Tithing?"
         imageSrc={image.childImageSharp.fluid.src}
         height={['40vh', '60vh']}
@@ -77,7 +71,7 @@ const GivePage = (props) => {
           blessings and provisions He gives us every day, not just with words
           but with action!
         </p>
-      </Side2SideHero>
+      </Hero.Side2Side>
 
       {/* faq section */}
       <Container>
@@ -127,7 +121,7 @@ const GivePage = (props) => {
       </Container>
 
       {/* still have questions? */}
-      <TextHero>
+      <Hero.Text>
         <Heading fontSize={6} color="black" mb="2rem">
           Still have questions?
         </Heading>
@@ -135,14 +129,14 @@ const GivePage = (props) => {
         <a href="mailto:giving@harvestland.church" rel="noopener noreferrer">
           giving@harvestland.church
         </a>
-      </TextHero>
+      </Hero.Text>
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    image: file(relativePath: { eq: "images/give-header.jpg" }) {
+    image: file(relativePath: { eq: "images/pages/give/header.jpg" }) {
       ...FullWidthImage
     }
   }

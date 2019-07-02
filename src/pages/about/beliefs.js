@@ -2,24 +2,21 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Text, Box, Flex } from 'rebass';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import ImageHero from '../../components/Heroes/ImageHero';
-import Container from '../../components/Container';
+import { Layout, SEO, Hero, Container } from '../../components';
 
 const BeliefsPage = (props) => {
   const { heroImage } = props.data;
   return (
     <Layout>
       <SEO title="Beliefs" keywords={['harvestland beliefs', 'beliefs']} />
-      <ImageHero
+      <Hero.Image
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}
       >
         <Heading p="1rem" fontSize={[5, 6]}>
           What We Believe
         </Heading>
-      </ImageHero>
+      </Hero.Image>
       <Container width={['100%', '80%']} mx="auto">
         <Flex flexDirection="column">
           <Heading fontSize={5}>Our Beliefs</Heading>
@@ -142,7 +139,7 @@ const BeliefsPage = (props) => {
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
+    heroImage: file(relativePath: { eq: "images/pages/about/header.jpg" }) {
       ...FullWidthImage
     }
   }

@@ -2,13 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Heading, Flex, Text, Box } from 'rebass';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import TextHero from '../components/Heroes/TextHero';
-import VideoHero from '../components/Heroes/VideoHero';
-import Side2SideHero from '../components/Heroes/Side2SideHero';
-import Button from '../components/Button';
-import Container from '../components/Container';
+import { Layout, SEO, Hero, Button, Container } from '../components';
 
 import * as Styled from '../page-styles/index-page';
 
@@ -65,7 +59,7 @@ const IndexPage = ({
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
         keywords={SEOKeywords}
       />
-      <VideoHero
+      <Hero.Video
         videoSrc={video.publicURL}
         fallbackImageSrc={fallbackImage.childImageSharp.fluid.src}
         fallbackImageHeight="60vh"
@@ -87,9 +81,9 @@ const IndexPage = ({
             Wednesdays at 7 PM
           </Text>
         </Styled.ContentBlock>
-      </VideoHero>
+      </Hero.Video>
       <Container>
-        <TextHero p="4rem">
+        <Hero.Text p="4rem">
           <Flex alignItems="center" my="2rem">
             <Heading>
               Practicing the ways of{' '}
@@ -99,9 +93,9 @@ const IndexPage = ({
               on Earth as it is in Heaven.
             </Heading>
           </Flex>
-        </TextHero>
+        </Hero.Text>
         <Box>
-          <Side2SideHero
+          <Hero.Side2Side
             imageSrc={worshipImage.childImageSharp.fluid.src}
             height="40vh"
           >
@@ -120,8 +114,8 @@ const IndexPage = ({
                 </Heading>
               </Link>
             </Box>
-          </Side2SideHero>
-          <Side2SideHero
+          </Hero.Side2Side>
+          <Hero.Side2Side
             imageSrc={gatherImage.childImageSharp.fluid.src}
             height="40vh"
             inverse
@@ -139,8 +133,8 @@ const IndexPage = ({
                 </Heading>
               </Link>
             </Box>
-          </Side2SideHero>
-          <Side2SideHero
+          </Hero.Side2Side>
+          <Hero.Side2Side
             imageSrc={serveImage.childImageSharp.fluid.src}
             height="40vh"
           >
@@ -161,7 +155,7 @@ const IndexPage = ({
                 </Heading>
               </Link>
             </Box>
-          </Side2SideHero>
+          </Hero.Side2Side>
         </Box>
       </Container>
     </Layout>
@@ -185,11 +179,19 @@ export const query = graphql`
     }
   }
 
+  fragment MaxImageSize on File {
+    childImageSharp {
+      fluid(maxWidth: 1600) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
   {
     video: file(relativePath: { eq: "videos/front.mp4" }) {
       publicURL
     }
-    fallbackImage: file(relativePath: { eq: "images/visit-header.png" }) {
+    fallbackImage: file(relativePath: { eq: "images/pages/visit/header.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
@@ -204,25 +206,13 @@ export const query = graphql`
       }
     }
     worshipImage: file(relativePath: { eq: "images/pages/index/worship.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...MaxImageSize
     }
     gatherImage: file(relativePath: { eq: "images/pages/index/gather.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...MaxImageSize
     }
     serveImage: file(relativePath: { eq: "images/pages/index/serve.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...MaxImageSize
     }
   }
 

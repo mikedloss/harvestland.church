@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Heading, Flex } from 'rebass';
 
-import ImageHero from '../ImageHero';
+import { ImageHero } from '../ImageHero';
 
 import * as Styled from './VideoHero.styles';
 import * as Media from '../../Elements/media';

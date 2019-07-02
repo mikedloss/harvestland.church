@@ -1,1 +1,1 @@
-export { Verse as default } from './Verse';
+export { Verse } from './Verse';

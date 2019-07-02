@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Heading } from 'rebass';
 
-import ImageHero from '../ImageHero';
+import { ImageHero } from '../ImageHero';
 
 import * as Styled from './Side2SideHero.styles';
 

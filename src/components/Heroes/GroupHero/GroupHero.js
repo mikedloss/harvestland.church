@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Heading, Text, Flex } from 'rebass';
 
-import ImageHero from '../ImageHero';
+import { ImageHero } from '../ImageHero';
 import * as Styled from './GroupHero.styles';
 
 export const GroupHero = ({

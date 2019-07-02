@@ -2,12 +2,7 @@ import React from 'react';
 import { Heading, Text, Flex, Box } from 'rebass';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import ImageHero from '../../components/Heroes/ImageHero';
-import TextHero from '../../components/Heroes/TextHero';
-import SermonCard from '../../components/SermonCard';
-import Container from '../../components/Container';
+import { Layout, SEO, Hero, SermonCard, Container } from '../../components';
 
 import * as Styled from './SermonList.styles';
 
@@ -42,7 +37,7 @@ const SermonListPage = (props) => {
           'sermons',
         ]}
       />
-      <ImageHero
+      <Hero.Image
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}
       >
@@ -52,8 +47,8 @@ const SermonListPage = (props) => {
           </Heading>
           {currentPage !== 1 && <Text>Page {currentPage}</Text>}
         </Flex>
-      </ImageHero>
-      <TextHero p={isFirstPage ? '4rem' : '0.5rem'}>
+      </Hero.Image>
+      <Hero.Text p={isFirstPage ? '4rem' : '0.5rem'}>
         {isFirstPage && (
           <Flex flexDirection="column" alignItems="center">
             <Heading as="h1" fontSize={[5, 6]} color="black" mb="1rem">
@@ -75,7 +70,7 @@ const SermonListPage = (props) => {
             </Styled.Link>
           </Heading>
         </Flex>
-      </TextHero>
+      </Hero.Text>
       <Container>
         {sermons.map(({ sermon }, index) => {
           return (
@@ -106,7 +101,7 @@ const SermonListPage = (props) => {
 
 export const query = graphql`
   query SermonListQuery($skip: Int!, $limit: Int!) {
-    heroImage: file(relativePath: { eq: "images/sermons-header.jpg" }) {
+    heroImage: file(relativePath: { eq: "images/pages/sermons/header.jpg" }) {
       ...FullWidthImage
     }
     spotifyImage: file(relativePath: { eq: "images/spotify-logo.png" }) {

@@ -1,1 +1,1 @@
-export { SermonCard as default } from './SermonCard';
+export { SermonCard } from './SermonCard';

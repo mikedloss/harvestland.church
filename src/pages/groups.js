@@ -2,34 +2,28 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Heading, Text, Box, Flex } from 'rebass';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import ImageHero from '../components/Heroes/ImageHero';
-import TextHero from '../components/Heroes/TextHero';
-import GroupHero from '../components/Heroes/GroupHero';
-import Container from '../components/Container';
+import { Layout, SEO, Hero, Container } from '../components';
 
-const GroupsPage = (props) => {
-  const { heroImage, groups } = props.data;
+const GroupsPage = ({ data: { heroImage, groups }, ...props }) => {
   // if you need to save API calls from Contentful, just add this stuff locally
   return (
     <Layout>
       <SEO title="Groups" keywords={['community', 'groups', 'connections']} />
-      <ImageHero
+      <Hero.Image
         imageSrc={heroImage.childImageSharp.fluid.src}
         height={['40vh', '50vh']}
       >
         <Heading p="1.25rem" fontSize={[6, 7]}>
           Groups
         </Heading>
-      </ImageHero>
+      </Hero.Image>
       <Container>
         <Flex flexDirection="column" alignItems="center" mb="1rem">
-          <TextHero>
+          <Hero.Text>
             <Heading fontSize={6} color="primary">
               Grow in Christ together.
             </Heading>
-          </TextHero>
+          </Hero.Text>
           <Box width="100%" px={['2rem', '4rem']}>
             <Text>
               One of our core principles at Harvestland is to have healthy small
@@ -45,7 +39,7 @@ const GroupsPage = (props) => {
       </Container>
       {groups.edges.map(({ node }) => {
         return (
-          <GroupHero
+          <Hero.Group
             key={node.id}
             imageSrc={node.groupImage.fluid.src}
             imageDesc={node.groupImage.title}
@@ -53,7 +47,7 @@ const GroupsPage = (props) => {
             groupFrequency={node.groupFrequency}
           >
             {node.groupDescription.groupDescription}
-          </GroupHero>
+          </Hero.Group>
         );
       })}
     </Layout>
@@ -62,7 +56,7 @@ const GroupsPage = (props) => {
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "images/groups-header.jpg" }) {
+    heroImage: file(relativePath: { eq: "images/pages/groups/header.jpg" }) {
       ...FullWidthImage
     }
     groups: allContentfulGroup(sort: { fields: [groupName], order: ASC }) {

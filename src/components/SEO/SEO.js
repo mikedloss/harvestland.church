@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
-const SEO = ({ description, lang, keywords, title }) => {
+export const SEO = ({ description, lang, keywords, title }) => {
   const data = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
@@ -68,6 +68,7 @@ SEO.defaultProps = {
     'detroit',
     'michigan',
     'non denominational church',
+    'non-denominational church',
     'open bible church',
     'harvestland church',
     'harvestland',
@@ -81,5 +82,3 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 };
-
-export default SEO;

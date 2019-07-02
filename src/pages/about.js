@@ -1,50 +1,10 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Text, Flex, Box, Heading } from 'rebass';
-import styled from 'styled-components';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import TextHero from '../components/Heroes/TextHero';
-import Button from '../components/Button';
-import Container from '../components/Container';
-import Side2SideHero from '../components/Heroes/Side2SideHero';
-import ImageHero from '../components/Heroes/ImageHero';
+import { Layout, SEO, Button, Container, Hero } from '../components';
 
-import { breakpointValues as bp } from '../components/theme';
-
-// TODO: move these into page-styles
-const ButtonLinksContainer = styled(Flex)`
-  flex-direction: column;
-  align-items: center;
-
-  @media screen and (min-width: ${bp.SMALL}px) {
-    flex-direction: row;
-    align-items: center;
-  }
-`;
-
-const HeroContentContainer = styled(Flex)`
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-
-  @media screen and (min-width: ${bp.SMALL}px) {
-    flex-direction: ${(props) => (props.inverse ? 'row-reverse' : 'row')};
-    justify-content: space-between;
-  }
-`;
-
-const GroupsContent = styled(Flex)`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (min-width: ${bp.SMALL}px) {
-    align-items: flex-start;
-  }
-`;
+import * as Styled from '../page-styles/about-page';
 
 const AboutPage = ({ data: { heroImage, campfireImage } }) => {
   return (
@@ -53,7 +13,7 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
         title="About"
         keywords={['help', 'harvestland beliefs', 'harvestland leaders']}
       />
-      <TextHero>
+      <Hero.Text>
         <Heading fontSize={6} color="black">
           Win.
         </Heading>
@@ -63,7 +23,7 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
         <Heading fontSize={6} color="black">
           Equip.
         </Heading>
-      </TextHero>
+      </Hero.Text>
       <Container>
         <Box width="100%" px={['2rem', '8rem', '20rem']}>
           <Flex
@@ -81,7 +41,7 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
               are welcome here. Join us for our Sunday service and be a part of
               our family.
             </Text>
-            <ButtonLinksContainer mb="1rem">
+            <Styled.ButtonLinksContainer mb="1rem">
               <Link to="/about/beliefs">
                 <Button
                   variant="inverse"
@@ -94,11 +54,11 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
               <Link to="/about/leaders">
                 <Button variant="inverse">Our leaders</Button>
               </Link>
-            </ButtonLinksContainer>
+            </Styled.ButtonLinksContainer>
           </Flex>
         </Box>
       </Container>
-      <Side2SideHero
+      <Hero.Side2Side
         heroText="What to expect"
         imageSrc={heroImage.childImageSharp.fluid.src}
         height="45vh"
@@ -118,20 +78,20 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
           walks of life. We don't expect anyone to dress up, we want you to come
           are you are.
         </Text>
-      </Side2SideHero>
-      <ImageHero
+      </Hero.Side2Side>
+      <Hero.Image
         imageSrc={campfireImage.childImageSharp.fluid.src}
         height={['60vh', '50vh']}
         textAlign="flex-start"
         textJustify="flex-start"
       >
-        <HeroContentContainer alignItems="center">
+        <Styled.HeroContentContainer alignItems="center">
           <Box width={[null, '40%']}>
             <Heading pb="2rem" fontSize={[5, 6]}>
               Groups
             </Heading>
           </Box>
-          <GroupsContent width={[null, '60%']}>
+          <Styled.GroupsContent width={[null, '60%']}>
             <Text>
               We want to offer a path for everyone to grow their faith in
               community. We have groups for all ages that give everyone that
@@ -140,19 +100,19 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
             <Link to="/groups">
               <Button mt="1rem">Learn More</Button>
             </Link>
-          </GroupsContent>
-        </HeroContentContainer>
-      </ImageHero>
+          </Styled.GroupsContent>
+        </Styled.HeroContentContainer>
+      </Hero.Image>
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
+    heroImage: file(relativePath: { eq: "images/pages/about/header.jpg" }) {
       ...FullWidthImage
     }
-    campfireImage: file(relativePath: { eq: "images/groups/campfire.jpg" }) {
+    campfireImage: file(relativePath: { eq: "images/common/campfire.jpg" }) {
       ...FullWidthImage
     }
   }

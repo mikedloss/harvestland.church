@@ -2,12 +2,7 @@ import React from 'react';
 import { Heading, Text, Flex } from 'rebass';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import Button from '../components/Button';
-import TextHero from '../components/Heroes/TextHero';
-import Container from '../components/Container';
-import EventCard from '../components/EventCard';
+import { Layout, SEO, Button, Hero, Container, EventCard } from '../components';
 
 import dayUtil from '../utils/day';
 
@@ -22,11 +17,11 @@ const EventsPage = (props) => {
     <Layout>
       <SEO title="Events" keywords={[`gatsby`, `application`, `react`]} />
       <Container>
-        <TextHero useMargin>
+        <Hero.Text useMargin>
           <Heading fontSize={6} color="primary">
             Upcoming Events
           </Heading>
-        </TextHero>
+        </Hero.Text>
         <Flex
           flexDirection="column"
           alignItems="center"

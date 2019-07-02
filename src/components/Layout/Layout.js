@@ -5,12 +5,12 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../../global.css';
 import theme from '../theme';
-import Header from '../Header';
-import Footer from '../Footer';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 import * as Styled from './Layout.styles';
 
-const Layout = ({ children, fullWidth, hideLogo }) => {
+export const Layout = ({ children, fullWidth, hideLogo }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -43,5 +43,3 @@ Layout.defaultProps = {
   fullWidth: false,
   hideLogo: false,
 };
-
-export default Layout;
