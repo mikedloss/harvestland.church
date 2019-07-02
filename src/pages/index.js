@@ -53,7 +53,7 @@ const IndexPage = ({
   );
 
   return (
-    <Layout fullWidth hideLogo>
+    <Layout fullWidth>
       <SEO
         title="Welcome"
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
@@ -74,23 +74,31 @@ const IndexPage = ({
             alt="Harvestland Church"
             m="1rem"
           />
-          <Text as="small" fontSize={3}>
-            Sundays at 10 AM
-          </Text>
-          <Text as="small" fontSize={3}>
-            Wednesdays at 7 PM
-          </Text>
         </Styled.ContentBlock>
       </Hero.Video>
       <Container>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Heading fontSize={3}>Sundays at 10 AM</Heading>
+          <Heading fontSize={3}>Wednesdays at 7 PM</Heading>
+        </Flex>
         <Hero.Text p="4rem">
-          <Flex alignItems="center" my="2rem">
+          <Flex flexDirection="column" alignItems="center" my="2rem">
             <Heading>
               Practicing the ways of{' '}
               <Text as="span" color="primary">
                 Jesus
               </Text>{' '}
               on Earth as it is in Heaven.
+            </Heading>
+            <Heading mt={["1rem", null]}>
+              We accept{' '}
+              <Text as="span" color="primary">
+                you
+              </Text>, no matter what.
             </Heading>
           </Flex>
         </Hero.Text>
@@ -100,7 +108,7 @@ const IndexPage = ({
             height="40vh"
           >
             <Box my="1rem">
-              <Heading color="primary">Worship</Heading>
+              <Heading color="primary">To Worship</Heading>
               <Text>
                 We worship God every week by how we live, how we act, and how we
                 treat others. We spend time together each week learning about
@@ -121,11 +129,11 @@ const IndexPage = ({
             inverse
           >
             <Box my="1rem">
-              <Heading color="primary">Gather</Heading>
+              <Heading color="primary">To Gather</Heading>
               <Text>
                 We were made for relationship, so we prioritize gathering,
                 discipling, and encourage one another. We weren't made to live
-                in isolation.
+                isolated from one another.
               </Text>
               <Link to="/groups">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">
@@ -139,10 +147,10 @@ const IndexPage = ({
             height="40vh"
           >
             <Box my="1rem">
-              <Heading color="primary">Serve</Heading>
+              <Heading color="primary">To Serve</Heading>
               <Text>
                 We extend God's grace, mercy, and love to others for His glory
-                alone, through humility, generosity, and hospitality
+                alone, through humility, generosity, and hospitality.
               </Text>
               <Link to="/events">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">

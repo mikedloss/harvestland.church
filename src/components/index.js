@@ -22,4 +22,4 @@ export {
   SEO,
   SermonCard,
   Verse,
-}
+};
