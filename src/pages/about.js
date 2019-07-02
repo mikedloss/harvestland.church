@@ -13,6 +13,7 @@ import ImageHero from '../components/Heroes/ImageHero';
 
 import { breakpointValues as bp } from '../components/theme';
 
+// TODO: move these into page-styles
 const ButtonLinksContainer = styled(Flex)`
   flex-direction: column;
   align-items: center;
@@ -45,8 +46,7 @@ const GroupsContent = styled(Flex)`
   }
 `;
 
-const AboutPage = (props) => {
-  const { heroImage, groupsImage } = props.data;
+const AboutPage = ({ data: { heroImage, campfireImage } }) => {
   return (
     <Layout>
       <SEO
@@ -120,7 +120,7 @@ const AboutPage = (props) => {
         </Text>
       </Side2SideHero>
       <ImageHero
-        imageSrc={groupsImage.childImageSharp.fluid.src}
+        imageSrc={campfireImage.childImageSharp.fluid.src}
         height={['60vh', '50vh']}
         textAlign="flex-start"
         textJustify="flex-start"
@@ -152,7 +152,7 @@ export const query = graphql`
     heroImage: file(relativePath: { eq: "images/about-header.jpg" }) {
       ...FullWidthImage
     }
-    groupsImage: file(relativePath: { eq: "images/groups/campfire.jpg" }) {
+    campfireImage: file(relativePath: { eq: "images/groups/campfire.jpg" }) {
       ...FullWidthImage
     }
   }

@@ -128,22 +128,14 @@ const GivePage = (props) => {
 
       {/* still have questions? */}
       <TextHero>
-        <Heading fontSize={6} color="black">
+        <Heading fontSize={6} color="black" mb="2rem">
           Still have questions?
         </Heading>
+        <Text>send us an email at </Text>
+        <a href="mailto:giving@harvestland.church" rel="noopener noreferrer">
+          giving@harvestland.church
+        </a>
       </TextHero>
-      <Container>
-        <Flex
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Text>send us an email at </Text>
-          <a href="mailto:giving@harvestland.church" rel="noopener noreferrer">
-            giving@harvestland.church
-          </a>
-        </Flex>
-      </Container>
     </Layout>
   );
 };

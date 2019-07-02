@@ -113,13 +113,27 @@ const BeliefsPage = (props) => {
               we rally together for common goals.
             </Text>
           </Box>
-          <Box mt="1rem">
+          <Box my="1rem">
             <Heading fontSize={3}>Love Through Compassion</Heading>
             <Text>
               We serve the least, the last, and the lost. We embrace an
               environment of love, grace and forgiveness.
             </Text>
           </Box>
+          <hr style={{ width: '100%' }} />
+          <Text>
+            We are affiliated with Open Bible Churches, an association of
+            churches with a unified mission to globally make disciples, develop
+            leaders, and plant churches. You can learn more about Open Bible
+            churches{' '}
+            <a
+              href="https://www.openbible.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>.
+          </Text>
         </Flex>
       </Container>
     </Layout>

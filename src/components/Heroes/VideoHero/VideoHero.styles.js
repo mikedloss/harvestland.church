@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heading, Flex, Box } from 'rebass';
+import { Flex, Box } from 'rebass';
 import { breakpointValues as bp } from '../../theme';
 
 export const VideoHeroStyle = styled.section`
@@ -43,17 +43,6 @@ export const TextContainer = styled.div`
 
 export const TextOverlay = styled(Flex)`
   height: 100%;
-`;
-
-export const WelcomeText = styled(Heading)`
-  ::selection {
-    background: #386238; /* WebKit/Blink Browsers */
-    color: #fff;
-  }
-  ::-moz-selection {
-    background: #386238; /* Gecko Browsers */
-    color: #fff;
-  }
 `;
 
 export const Video = styled.video`

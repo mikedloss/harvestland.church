@@ -55,6 +55,7 @@ export default createGlobalStyle`
   a:active,
   a:hover {
     outline-width: 0;
+    text-decoration: underline;
   }
   abbr[title] {
     border-bottom: none;

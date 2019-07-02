@@ -27,7 +27,7 @@ export const MenuButton = styled(Button)`
     `
     background-color: ${props.theme.colors.primary};
     color: ${props.theme.colors.white};
-  `}
+  `};
 `;
 MenuButton.defaultProps = {
   bg: 'white',

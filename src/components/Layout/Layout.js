@@ -10,7 +10,7 @@ import Footer from '../Footer';
 
 import * as Styled from './Layout.styles';
 
-const Layout = ({ children, fullWidth }) => {
+const Layout = ({ children, fullWidth, hideLogo }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,11 +20,12 @@ const Layout = ({ children, fullWidth }) => {
       }
     }
   `);
+
   return (
     <ThemeProvider theme={theme}>
       <Styled.SiteContainer isFullWidth={fullWidth}>
         <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} hideLogo={hideLogo} />
         <main>{children}</main>
         <Footer />
       </Styled.SiteContainer>
@@ -33,11 +34,14 @@ const Layout = ({ children, fullWidth }) => {
 };
 
 Layout.propTypes = {
+  fullWidth: PropTypes.bool,
+  hideLogo: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 
 Layout.defaultProps = {
   fullWidth: false,
+  hideLogo: false,
 };
 
 export default Layout;

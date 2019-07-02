@@ -16,7 +16,7 @@ export const ImageHeroStyle = styled.section`
     Array.isArray(props.height) &&
     `@media screen and (min-width: ${bp.LARGE}px) {
     height: ${getHeight(props.height, 1)};
-  }`}
+  }`};
 `;
 
 export const StaticImage = styled(Box)`
@@ -49,7 +49,7 @@ export const MediaContainer = styled.div`
       background: ${props.overlay.color || colors.primaryLight};
       opacity: .5;
     }
-    `}
+    `};
 `;
 
 export const TextContainer = styled.div`

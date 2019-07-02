@@ -19,6 +19,7 @@ export const Side2SideHero = ({
     <Styled.Side2SideHeroStyle as="section" inverse={inverse}>
       <Styled.HeroContainer height={height}>
         <ImageHero {...imageHeroProps}>
+          {/* TODO: only pass in a component here, don't force a style on content */}
           <Heading p="20px" fontSize={[5, 6]}>
             {heroText}
           </Heading>
@@ -38,7 +39,7 @@ export const Side2SideHero = ({
 };
 
 Side2SideHero.propTypes = {
-  heroText: PropTypes.string.isRequired,
+  heroText: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   height: PropTypes.oneOfType([
     PropTypes.string,

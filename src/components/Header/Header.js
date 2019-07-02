@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Heading } from 'rebass';
 
 import NavItem from './components/NavItem';
+import { isMobile } from '../../utils/screen';
+
 import * as Media from '../Elements/media';
 import * as Styled from './Header.styles';
 
-const Header = (props) => {
-  const [menuOpen, setMenuOpen] = React.useState(false);
+const Header = ({ hideLogo }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const resetMenu = () => setMenuOpen(false);
@@ -32,14 +34,15 @@ const Header = (props) => {
           {menuOpen ? 'Close' : 'Menu'}
         </Styled.MenuButton>
       </Media.SmallOnly>
-      <Styled.NavHeading as="h1">
-        <Styled.Logo to="/">
-          {/* <Heading>words</Heading> */}
-          <Styled.LogoImage
-            src={data.file.childImageSharp.fluid.src}
-            alt="Harvestland Church"
-          />
-        </Styled.Logo>
+      <Styled.NavHeading>
+        {(isMobile() || !hideLogo) && (
+          <Styled.Logo to="/">
+            <Styled.LogoImage
+              src={data.file.childImageSharp.fluid.src}
+              alt="Harvestland Church"
+            />
+          </Styled.Logo>
+        )}
       </Styled.NavHeading>
       <Styled.NavList isVisible={menuOpen}>
         <NavItem>
@@ -114,11 +117,11 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  hideLogo: PropTypes.bool,
 };
 
 Header.defaultProps = {
-  siteTitle: ``,
+  hideLogo: false,
 };
 
 export default Header;

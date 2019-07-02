@@ -19,17 +19,4 @@ export const Image = styled.img`
 
 export const Link = styled(RebassLink)`
   display: inline-block;
-
-  &:after {
-    content: '';
-    width: 0px;
-    height: 4px;
-    display: block;
-    background: ${({ theme }) => theme.colors.primary};
-    transition: 300ms;
-  }
-
-  &:hover:after {
-    width: 100%;
-  }
 `;
