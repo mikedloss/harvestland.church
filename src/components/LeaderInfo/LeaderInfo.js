@@ -27,5 +27,10 @@ export const LeaderInfo = ({ who }) => {
 };
 
 LeaderInfo.propTypes = {
-  who: PropTypes.object.isRequired,
+  who: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    jobs: PropTypes.arrayOf(PropTypes.string).isRequired,
+    email: PropTypes.string.isRequired,
+    picture: PropTypes.object.isRequired,
+  }),
 };

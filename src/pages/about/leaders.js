@@ -73,17 +73,4 @@ export const query = graphql`
   }
 `;
 
-// devanne: file(relativePath: { eq: "images/leaders/devanne.jpg" }) {
-//   ...leaderPicture
-// }
-// mike: file(relativePath: { eq: "images/leaders/mike.jpg" }) {
-//   ...leaderPicture
-// }
-// willis: file(relativePath: { eq: "images/leaders/willis.jpg" }) {
-//   ...leaderPicture
-// }
-// summer: file(relativePath: { eq: "images/leaders/summer.jpg" }) {
-//   ...leaderPicture
-// }
-
 export default LeadersPage;
