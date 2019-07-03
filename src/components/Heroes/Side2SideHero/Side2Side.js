@@ -9,15 +9,17 @@ import * as Styled from './Side2SideHero.styles';
 export const Side2SideHero = ({
   heroText,
   height,
+  imageWidth,
   textBlockJustify,
   inverse,
   children,
   ...imageHeroProps
 }) => {
   imageHeroProps = { ...imageHeroProps, height };
+  // debugger;
   return (
     <Styled.Side2SideHeroStyle as="section" inverse={inverse}>
-      <Styled.HeroContainer height={height}>
+      <Styled.HeroContainer height={height} imageWidth={imageWidth}>
         <ImageHero {...imageHeroProps}>
           {/* TODO: only pass in a component here, don't force a style on content */}
           <Heading p="20px" fontSize={[5, 6]}>
@@ -28,6 +30,7 @@ export const Side2SideHero = ({
       <Styled.TextBlockContainer
         py="1rem"
         px="2rem"
+        imageWidth={imageWidth}
         flexDirection="column"
         alignItems="center"
         justifyContent={textBlockJustify || 'flex-start'}
@@ -45,6 +48,7 @@ Side2SideHero.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
+  imageWidth: PropTypes.string,
   textBlockJustify: PropTypes.string,
   inverse: PropTypes.bool,
   opacity: PropTypes.string,

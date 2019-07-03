@@ -43,7 +43,7 @@ const IndexPage = ({
         />
       </Heading>
       <Link to="/visit">
-        <Button>Visit us</Button>
+        <Button variant="inverse">Visit us</Button>
       </Link>
     </Styled.ContentBlock>
   );
@@ -74,20 +74,20 @@ const IndexPage = ({
           />
         </Styled.ContentBlock>
       </Hero.Video>
-      <Container>
-        <Flex flexDirection="row" alignItems="center" justifyContent="center">
-          <Flex flexDirection="column" alignItems="center" mr={[null, '2rem']}>
-            <Styled.HoursText fontSize={3}>Sundays at 10 AM</Styled.HoursText>
-            <Styled.HoursText fontSize={3}>Wednesdays at 7 PM</Styled.HoursText>
-          </Flex>
-          <Media.NotSmall>
-            <Flex>
-              <Link to="/visit">
-                <Button variant="inverse">Visit Us</Button>
-              </Link>
-            </Flex>
-          </Media.NotSmall>
+      <Flex flexDirection="row" alignItems="center" justifyContent="center" bg="primary" p="0.5rem">
+        <Flex flexDirection="column" alignItems="center" mr={[null, '2rem']}>
+          <Styled.HoursText fontSize={3} color="white">Sundays at 10 AM</Styled.HoursText>
+          <Styled.HoursText fontSize={3} color="white">Wednesdays at 7 PM</Styled.HoursText>
         </Flex>
+        <Media.NotSmall>
+          <Flex>
+            <Link to="/visit">
+              <Button variant="inverse">Visit Us</Button>
+            </Link>
+          </Flex>
+        </Media.NotSmall>
+      </Flex>
+      <Container>
         <Hero.Text p={['1rem', '4rem']}>
           <Flex flexDirection="column" alignItems="center" my="2rem">
             <Heading>
@@ -109,6 +109,7 @@ const IndexPage = ({
           <Hero.Side2Side
             imageSrc={worshipImage.childImageSharp.fluid.src}
             height="40vh"
+            imageWidth="60%"
           >
             <Box my="1rem">
               <Heading color="primary">To Worship</Heading>
@@ -129,6 +130,7 @@ const IndexPage = ({
             imageSrc={gatherImage.childImageSharp.fluid.src}
             height="40vh"
             opacity="1"
+            imageWidth="60%"
             inverse
           >
             <Box my="1rem">
@@ -148,6 +150,7 @@ const IndexPage = ({
           <Hero.Side2Side
             imageSrc={serveImage.childImageSharp.fluid.src}
             height="40vh"
+            imageWidth="60%"
           >
             <Box my="1rem">
               <Heading color="primary">To Serve</Heading>

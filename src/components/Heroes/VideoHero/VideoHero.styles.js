@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Flex, Box } from 'rebass';
 import { breakpointValues as bp } from '../../theme';
 
+
+// TODO: fix these video styles... they need to be more robust, and easily changeable
 export const VideoHeroStyle = styled.section`
   background-color: #000;
   color: #fff;
@@ -50,7 +52,6 @@ export const Video = styled.video`
   display: block;
   object-fit: cover;
   min-width: 100%;
-  min-height: 100%;
   width: 100%;
   height: 100%;
   opacity: 0.8;
