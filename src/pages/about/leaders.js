@@ -22,7 +22,7 @@ const LeadersPage = ({ data: { heroImage, ...leaders } }) => {
       <Container>
         <Flex flexDirection="column" alignItems="center">
           {Object.keys(leaders).map((leader) => (
-            <LeaderInfo who={leader} imageSrc={leaders[leader]} key={leader} />
+            <LeaderInfo who={leaders[leader]} key={leader.name} />
           ))}
         </Flex>
       </Container>
@@ -39,27 +39,51 @@ export const query = graphql`
     }
   }
 
+  fragment LeaderData on ContentfulLeader {
+    name
+    email
+    jobs
+    picture {
+      title
+      fluid(maxWidth: 1000) {
+        src
+      }
+    }
+  }
+
   {
     heroImage: file(relativePath: { eq: "images/pages/about/header.jpg" }) {
       ...FullWidthImage
     }
-    peteHeather: file(relativePath: { eq: "images/leaders/pete-heather.png" }) {
-      ...leaderPicture
+    peteHeather: contentfulLeader(name: { eq: "Pete & Heather Freeman" }) {
+      ...LeaderData
     }
-    devanne: file(relativePath: { eq: "images/leaders/devanne.jpg" }) {
-      ...leaderPicture
+    devanne: contentfulLeader(name: { eq: "Devanne DLoss" }) {
+      ...LeaderData
     }
-    mike: file(relativePath: { eq: "images/leaders/mike.jpg" }) {
-      ...leaderPicture
+    mike: contentfulLeader(name: { eq: "Mike DLoss" }) {
+      ...LeaderData
     }
-    willis: file(relativePath: { eq: "images/leaders/willis.jpg" }) {
-      ...leaderPicture
+    willis: contentfulLeader(name: { eq: "Willis Greer" }) {
+      ...LeaderData
     }
-    summer: file(relativePath: { eq: "images/leaders/summer.jpg" }) {
-      ...leaderPicture
+    summer: contentfulLeader(name: { eq: "Summer Posey" }) {
+      ...LeaderData
     }
   }
-
 `;
+
+// devanne: file(relativePath: { eq: "images/leaders/devanne.jpg" }) {
+//   ...leaderPicture
+// }
+// mike: file(relativePath: { eq: "images/leaders/mike.jpg" }) {
+//   ...leaderPicture
+// }
+// willis: file(relativePath: { eq: "images/leaders/willis.jpg" }) {
+//   ...leaderPicture
+// }
+// summer: file(relativePath: { eq: "images/leaders/summer.jpg" }) {
+//   ...leaderPicture
+// }
 
 export default LeadersPage;

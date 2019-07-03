@@ -129,7 +129,8 @@ const BeliefsPage = (props) => {
               rel="noopener noreferrer"
             >
               here
-            </a>.
+            </a>
+            .
           </Text>
         </Flex>
       </Container>

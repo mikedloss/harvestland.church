@@ -74,10 +74,20 @@ const IndexPage = ({
           />
         </Styled.ContentBlock>
       </Hero.Video>
-      <Flex flexDirection="row" alignItems="center" justifyContent="center" bg="primary" p="0.5rem">
+      <Flex
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        bg="primary"
+        p="0.5rem"
+      >
         <Flex flexDirection="column" alignItems="center" mr={[null, '2rem']}>
-          <Styled.HoursText fontSize={3} color="white">Sundays at 10 AM</Styled.HoursText>
-          <Styled.HoursText fontSize={3} color="white">Wednesdays at 7 PM</Styled.HoursText>
+          <Styled.HoursText fontSize={3} color="white">
+            Sundays at 10 AM
+          </Styled.HoursText>
+          <Styled.HoursText fontSize={3} color="white">
+            Wednesdays at 7 PM
+          </Styled.HoursText>
         </Flex>
         <Media.NotSmall>
           <Flex>
@@ -101,7 +111,8 @@ const IndexPage = ({
               We accept{' '}
               <Text as="span" color="primary">
                 you
-              </Text>, no matter what.
+              </Text>
+              , no matter what.
             </Heading>
           </Flex>
         </Hero.Text>
@@ -229,7 +240,6 @@ export const query = graphql`
       ...MaxImageSize
     }
   }
-
 `;
 
 export default IndexPage;

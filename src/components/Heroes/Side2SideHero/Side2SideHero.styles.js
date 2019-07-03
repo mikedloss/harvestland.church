@@ -15,7 +15,7 @@ export const HeroContainer = styled(Flex)`
   height: ${(props) => `${getHeight(props.height)};`};
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    width: ${props => props.imageWidth || "50%"};
+    width: ${(props) => props.imageWidth || '50%'};
     height: ${(props) => `${getHeight(props.height, 1)};`};
   }
 `;
@@ -25,7 +25,8 @@ export const TextBlockContainer = styled(Flex)`
   justify-content: center;
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    width: ${props => props.imageWidth ? `calc(100% - ${props.imageWidth})` : "50%"};
+    width: ${(props) =>
+      props.imageWidth ? `calc(100% - ${props.imageWidth})` : '50%'};
     align-items: ${(props) => props.textBlockJustify || 'flex-start'};
   }
 `;

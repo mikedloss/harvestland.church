@@ -2,34 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, Heading } from 'rebass';
 
-import { leaders } from './leaders';
 import * as Styled from './LeaderInfo.styles';
 
-export const LeaderInfo = ({ who, imageSrc, children }) => {
-  const leader = leaders[who];
+export const LeaderInfo = ({ who }) => {
+  const { imageSrc: src } = who.picture.fluid;
   return (
     <Styled.LeaderInfoStyle>
       <Styled.PictureContainer>
-        <Styled.LeaderPicture src={imageSrc.childImageSharp.fluid.src} />
+        <Styled.LeaderPicture src={src} />
       </Styled.PictureContainer>
       <Styled.LeaderDescription>
-        <Heading>{leader.name}</Heading>
-        {leader.jobs.map((job, index) => (
+        <Heading>{who.name}</Heading>
+        {who.jobs.map((job, index) => (
           <Text key={index} fontSize={1}>
             {job}
           </Text>
         ))}
-        <Text as="a" href={`mailto:${leader.email}`} fontSize={1}>
-          {leader.email}
+        <Text as="a" href={`mailto:${who.email}`} fontSize={1}>
+          {who.email}
         </Text>
-        {children}
       </Styled.LeaderDescription>
     </Styled.LeaderInfoStyle>
   );
 };
 
 LeaderInfo.propTypes = {
-  who: PropTypes.string.isRequired,
-  imageSrc: PropTypes.object.isRequired,
-  children: PropTypes.node,
+  who: PropTypes.object.isRequired,
 };

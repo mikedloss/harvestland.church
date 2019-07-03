@@ -12,8 +12,7 @@ const SEOKeywords = [
   'harvestland email address',
 ];
 
-const AboutPage = (props) => {
-  const { heroImage } = props.data;
+const AboutPage = ({ data: { heroImage } }) => {
   return (
     <Layout>
       <SEO title="Visit" keywords={SEOKeywords} />
