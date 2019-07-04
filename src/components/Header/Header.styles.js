@@ -7,6 +7,7 @@ export const Nav = styled(Box)`
   margin: 0 auto;
   max-width: 1600px;
   min-height: 64px;
+  z-index: 9;
   @media screen and (min-width: ${bp.SMALL}px) {
     display: flex;
     justify-content: space-between;
@@ -67,7 +68,7 @@ export const NavList = styled.ul`
   width: 100%;
   background-color: ${(props) => props.theme.colors.white};
   top: 60px;
-  z-index: ${({ isVisible }) => (isVisible ? '2' : '0')};
+  z-index: 2;
   border-bottom: 2px solid ${(props) => props.theme.colors.primary};
 
   @media screen and (min-width: ${bp.SMALL}px) {

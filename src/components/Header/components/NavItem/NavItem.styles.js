@@ -3,12 +3,22 @@ import { Text } from 'rebass';
 import { breakpointValues as bp } from '../../../theme';
 
 export const NavItem = styled(Text)`
-  text-align: center;
-  margin: 16px auto;
+  ${'' /* mobile */} margin: 1rem;
 
   @media screen and (min-width: ${bp.SMALL}px) {
-    margin-right: 16px;
+    ${'' /* desktop */} margin-left: auto;
+    text-align: center;
   }
+
+  ${(props) =>
+    props.isDropdown &&
+    `
+    @media screen and (min-width: ${bp.SMALL}px) {
+      ${'' /* desktop */}
+      margin: 1rem 0;
+      text-align: left;
+    }
+  `};
 `;
 
 // li content

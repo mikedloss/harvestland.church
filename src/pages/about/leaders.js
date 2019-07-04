@@ -71,6 +71,7 @@ export const query = graphql`
       ...LeaderData
     }
   }
+
 `;
 
 export default LeadersPage;

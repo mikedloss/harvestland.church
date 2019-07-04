@@ -240,6 +240,7 @@ export const query = graphql`
       ...MaxImageSize
     }
   }
+
 `;
 
 export default IndexPage;
