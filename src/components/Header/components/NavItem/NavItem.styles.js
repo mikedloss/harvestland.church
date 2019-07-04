@@ -3,20 +3,33 @@ import { Text } from 'rebass';
 import { breakpointValues as bp } from '../../../theme';
 
 export const NavItem = styled(Text)`
-  ${'' /* mobile */} margin: 1rem;
+  margin: 1rem;
 
   @media screen and (min-width: ${bp.SMALL}px) {
-    ${'' /* desktop */} margin-left: auto;
+    margin-left: auto;
     text-align: center;
   }
 
   ${(props) =>
     props.isDropdown &&
     `
+    :not(:last-child) {
+      margin: 0 0 1rem 1rem;
+    }
+    :last-child {
+      margin: 0 0 0 1rem;
+    }
+
     @media screen and (min-width: ${bp.SMALL}px) {
-      ${'' /* desktop */}
       margin: 1rem 0;
       text-align: left;
+
+      :not(:last-child) {
+        margin: 0 0 1rem 0;
+      }
+      :last-child {
+        margin: 0;
+      }
     }
   `};
 `;

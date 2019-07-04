@@ -9,6 +9,35 @@ import { useClickAway } from '../../hooks/useClickAway';
 
 import * as Media from '../Elements/media';
 import * as Styled from './Header.styles';
+import { links } from './links';
+
+const buildLinks = (links, linkOnClick) => {
+  const allLinks = links.map((link) => {
+    if (link.dropdown) {
+      return (
+        <NavDropdown label={link.label}>
+          {buildLinks(link.dropdownContent, linkOnClick)}
+        </NavDropdown>
+      );
+    } else {
+      return (
+        <NavItem key={link.label}>
+          <Styled.NavLink
+            to={link.route}
+            onClick={linkOnClick}
+            activeStyle={{ color: '#42613d' }}
+          >
+            <Heading as="h3" fontSize={[4, 3]}>
+              {link.label}
+            </Heading>
+          </Styled.NavLink>
+        </NavItem>
+      );
+    }
+  });
+
+  return allLinks;
+};
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +60,11 @@ export const Header = () => {
     }
   `);
 
+  console.log(links);
+  const allLinks = buildLinks(links, resetMenu);
+
+  // debugger;
+
   return (
     <Styled.Nav ref={navRef} as="nav">
       <Media.SmallOnly>
@@ -46,98 +80,7 @@ export const Header = () => {
           />
         </Styled.Logo>
       </Styled.NavHeading>
-      <Styled.NavList isVisible={menuOpen}>
-        <NavItem>
-          <Styled.NavLink
-            to="/about"
-            onClick={resetMenu}
-            activeStyle={{ color: '#42613d' }}
-          >
-            <Heading as="h3" fontSize={[4, 3]}>
-              About
-            </Heading>
-          </Styled.NavLink>
-        </NavItem>
-        <NavDropdown label="Thing">
-          <NavItem>
-            <Styled.NavLink
-              to="/groups"
-              onClick={resetMenu}
-              activeStyle={{ color: '#42613d' }}
-            >
-              <Heading as="h3" fontSize={[4, 3]}>
-                Groups
-              </Heading>
-            </Styled.NavLink>
-          </NavItem>
-          <NavItem>
-            <Styled.NavLink
-              to="/sermons"
-              onClick={resetMenu}
-              activeStyle={{ color: '#42613d' }}
-            >
-              <Heading as="h3" fontSize={[4, 3]}>
-                Sermons
-              </Heading>
-            </Styled.NavLink>
-          </NavItem>
-        </NavDropdown>
-        <NavItem>
-          <Styled.NavLink
-            to="/groups"
-            onClick={resetMenu}
-            activeStyle={{ color: '#42613d' }}
-          >
-            <Heading as="h3" fontSize={[4, 3]}>
-              Groups
-            </Heading>
-          </Styled.NavLink>
-        </NavItem>
-        <NavItem>
-          <Styled.NavLink
-            to="/sermons"
-            onClick={resetMenu}
-            activeStyle={{ color: '#42613d' }}
-          >
-            <Heading as="h3" fontSize={[4, 3]}>
-              Sermons
-            </Heading>
-          </Styled.NavLink>
-        </NavItem>
-        <NavItem>
-          <Styled.NavLink
-            to="/events"
-            onClick={resetMenu}
-            activeStyle={{ color: '#42613d' }}
-          >
-            <Heading as="h3" fontSize={[4, 3]}>
-              Events
-            </Heading>
-          </Styled.NavLink>
-        </NavItem>
-        <NavItem>
-          <Styled.NavLink
-            to="/visit"
-            onClick={resetMenu}
-            activeStyle={{ color: '#42613d' }}
-          >
-            <Heading as="h3" fontSize={[4, 3]}>
-              Visit
-            </Heading>
-          </Styled.NavLink>
-        </NavItem>
-        <NavItem>
-          <Styled.NavLink
-            to="/give"
-            onClick={resetMenu}
-            activeStyle={{ color: '#42613d' }}
-          >
-            <Heading as="h3" fontSize={[4, 3]}>
-              Give
-            </Heading>
-          </Styled.NavLink>
-        </NavItem>
-      </Styled.NavList>
+      <Styled.NavList isVisible={menuOpen}>{allLinks}</Styled.NavList>
     </Styled.Nav>
   );
 };

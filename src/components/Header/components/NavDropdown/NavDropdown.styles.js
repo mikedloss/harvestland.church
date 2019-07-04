@@ -2,18 +2,15 @@ import styled from 'styled-components';
 import { Heading, Box } from 'rebass';
 
 import ChevronDown from '../../../../assets/svg/down-chevron.svg';
+import ChevronUp from '../../../../assets/svg/up-chevron.svg';
 import { breakpointValues as bp } from '../../../theme';
 
 export const Dropdown = styled(Box)``;
 
 export const Label = styled(Heading)`
   text-align: left;
-  margin: 1rem;
-  ${(props) =>
-    props.isExpanded &&
-    `
-    margin-bottom: 0.5rem;
-  `} cursor: pointer;
+  margin-left: 1rem;
+  ${(props) => props.isExpanded && `margin-bottom: 0.5rem;`} cursor: pointer;
 
   @media screen and (min-width: ${bp.SMALL}px) {
     margin: 1rem;
@@ -26,7 +23,12 @@ Label.defaultProps = {
   fontSize: [4, 3],
 };
 
-export const Chevron = styled(ChevronDown)`
+export const DownChevron = styled(ChevronDown)`
+  width: 8px;
+  margin-left: 4px;
+`;
+
+export const UpChevron = styled(ChevronUp)`
   width: 8px;
   margin-left: 4px;
 `;
@@ -37,7 +39,7 @@ export const DropdownContent = styled(Box)`
   z-index: 2;
   background-color: ${(props) => props.theme.colors.offWhite};
   min-width: 160px;
-  padding: 0.5rem;
+  padding: 0.75rem;
 
   @media screen and (min-width: ${bp.SMALL}px) {
     position: absolute;

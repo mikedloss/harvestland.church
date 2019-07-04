@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import { Flex } from 'rebass';
 
 import { useClickAway } from '../../../../hooks/useClickAway';
 import * as Styled from './NavDropdown.styles';
@@ -15,13 +16,15 @@ export const NavDropdown = ({ label, children }) => {
   return (
     <IsDropdownContext.Provider value={true}>
       <Styled.Dropdown ref={dropdownRef}>
-        <Styled.Label
-          onClick={() => setExpanded(!expanded)}
-          isExpanded={expanded}
-        >
-          {label}
-          <Styled.Chevron />
-        </Styled.Label>
+        <Flex flexDirection="row" alignItems="center">
+          <Styled.Label
+            onClick={() => setExpanded(!expanded)}
+            isExpanded={expanded}
+          >
+            {label}
+            {expanded ? <Styled.UpChevron /> : <Styled.DownChevron />}
+          </Styled.Label>
+        </Flex>
         <Styled.DropdownContent shouldDisplay={expanded}>
           {children}
         </Styled.DropdownContent>

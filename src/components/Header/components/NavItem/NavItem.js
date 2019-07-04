@@ -6,7 +6,7 @@ import * as Styled from './NavItem.styles';
 
 const NavItem = ({ children }) => {
   const isDropdown = useContext(IsDropdownContext);
-  
+
   return (
     <Styled.NavItem as="li" isDropdown={isDropdown}>
       <Styled.NavContent>{children || 'Default'}</Styled.NavContent>
