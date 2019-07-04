@@ -3,24 +3,39 @@ import { Link } from 'gatsby';
 import { Flex, Heading } from 'rebass';
 
 import * as Styled from './PageLinks.styles';
+import { links } from '../../../Header/links';
 
-const PageLink = ({ to, children }) => (
-  <Heading>
-    <Styled.LinkText as={Link} to={to}>
-      {children}
-    </Styled.LinkText>
-  </Heading>
-);
+const buildLinks = (links, isInDropdown = false) => {
+  const allLinks = links.map((link) => {
+    if (link.dropdown) {
+      return (
+        <Flex flexDirection="column" key={`footer-${link.label}-dropdown`} alignItems="flex-start">
+          <Heading color="primary">{link.label}</Heading>
+          <Styled.SubLinkContainer>
+            {buildLinks(link.dropdownContent, true)}
+          </Styled.SubLinkContainer>
+        </Flex>
+      );
+    } else {
+      return (
+        <Link to={link.route} key={`footer-${link.label}`}>
+          { isInDropdown ? (
+            <Styled.SubLinkText>
+              {link.label}
+            </Styled.SubLinkText>
+          ) : (
+            <Styled.LinkText>
+              {link.label}
+            </Styled.LinkText>
+          )}
+        </Link>
+      )
+    }
+  });
+
+  return allLinks;
+};
 
 export const PageLinks = () => {
-  return (
-    <Flex flexDirection="column">
-      <PageLink to="about">About</PageLink>
-      <PageLink to="groups">Groups</PageLink>
-      <PageLink to="sermons">Sermons</PageLink>
-      <PageLink to="events">Events</PageLink>
-      <PageLink to="visit">Visit</PageLink>
-      <PageLink to="give">Give</PageLink>
-    </Flex>
-  );
+  return <Flex flexDirection="column">{buildLinks(links)}</Flex>;
 };

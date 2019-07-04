@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby';
 import { Heading, Flex, Text, Box } from 'rebass';
 
 import { Layout, SEO, Hero, Button, Container } from '../components';
-import { isDesktop } from '../utils/screen';
 
 import * as Styled from '../page-styles/index-page';
 import * as Media from '../components/Elements/media';
@@ -47,8 +46,6 @@ const IndexPage = ({
       </Link>
     </Styled.ContentBlock>
   );
-
-  const desktop = isDesktop();
 
   return (
     <Layout fullWidth>

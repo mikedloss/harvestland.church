@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Heading } from 'rebass';
 
@@ -15,13 +14,13 @@ const buildLinks = (links, linkOnClick) => {
   const allLinks = links.map((link) => {
     if (link.dropdown) {
       return (
-        <NavDropdown label={link.label}>
+        <NavDropdown label={link.label} key={`header-${link.label}-dropdown`}>
           {buildLinks(link.dropdownContent, linkOnClick)}
         </NavDropdown>
       );
     } else {
       return (
-        <NavItem key={link.label}>
+        <NavItem key={`header-${link.label}`}>
           <Styled.NavLink
             to={link.route}
             onClick={linkOnClick}
@@ -60,10 +59,7 @@ export const Header = () => {
     }
   `);
 
-  console.log(links);
   const allLinks = buildLinks(links, resetMenu);
-
-  // debugger;
 
   return (
     <Styled.Nav ref={navRef} as="nav">

@@ -28,7 +28,7 @@ export const Footer = () => {
       alignItems={[null, 'center']}
       justifyContent={['flex-start', null]}
     >
-      <Styled.LeftContainer width="75%">
+      <Styled.LeftContainer width={['100%', '75%']}>
         <Styled.Container flexDirection="column">
           <Styled.SmallLine>Harvestland Church</Styled.SmallLine>
           <Styled.SmallLine>5848 Clintonville Road</Styled.SmallLine>
@@ -74,7 +74,7 @@ export const Footer = () => {
         <ContentfulAttribute />
       </Styled.LeftContainer>
       <Styled.RightContainer
-        width="25%"
+        width={['100%', '25%']}
         flexDirection="row"
         justifyContent="flex-start"
       >
