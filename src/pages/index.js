@@ -222,7 +222,7 @@ export const query = graphql`
     }
     whiteLogo: file(relativePath: { eq: "images/logo-white.png" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

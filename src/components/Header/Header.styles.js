@@ -56,6 +56,7 @@ export const Logo = styled(Link)`
 
 export const LogoImage = styled(Image)`
   color: ${(props) => props.theme.colors.primary};
+  width: 210px;
 `;
 
 // main-nav

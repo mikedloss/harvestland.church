@@ -15,7 +15,8 @@ ContentBlock.defaultProps = {
 
 export const WhiteLogo = styled(Image)`
   color: ${(props) => props.theme.colors.white};
-  width: 90%;
+  max-width: 90%;
+  width: 300px;
 
   @media screen and (min-width: ${bp.MEDIUM}px) {
     width: 100%;
