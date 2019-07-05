@@ -12,7 +12,7 @@ const SEOKeywords = [
   'harvestland email address',
 ];
 
-const AboutPage = ({ data: { heroImage } }) => {
+const VisitPage = ({ data: { heroImage } }) => {
   return (
     <Layout>
       <SEO title="Visit" keywords={SEOKeywords} />
@@ -76,4 +76,4 @@ export const query = graphql`
   }
 `;
 
-export default AboutPage;
+export default VisitPage;
