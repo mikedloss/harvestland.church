@@ -64,7 +64,7 @@ export const Header = ({ hideLogo }) => {
               src={data.file.childImageSharp.fluid.src}
               alt="Harvestland Church"
             /> */}
-            <Styled.LogoImage />
+            <Styled.LogoImage width="0px" />
           </Styled.Logo>
         </Styled.NavHeading>
       )}
