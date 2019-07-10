@@ -16,7 +16,7 @@ export const Side2SideHero = ({
   ...imageHeroProps
 }) => {
   imageHeroProps = { ...imageHeroProps, height };
-  
+
   return (
     <Styled.Side2SideHeroStyle as="section" inverse={inverse}>
       <Styled.HeroContainer height={height} imageWidth={imageWidth}>

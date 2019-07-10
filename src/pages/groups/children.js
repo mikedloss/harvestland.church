@@ -29,60 +29,32 @@ const ChildrenPage = ({ data: { heroImage, kidsLogo } }) => {
           />
         </Flex>
       </Hero.Image>
-      <Container>
-        <Hero.Text p="2rem">
-          <Text>
-            Every Sunday, infants through children in fifth grade experience a
-            safe, age-appropriate environment where the Bible is taught in a
-            creative and relevant way.
-          </Text>
-        </Hero.Text>
-        <Hero.Image>
-          {/* <Heading mb="1rem">Your First Visit</Heading>
-          <Text mb="1rem">
+      <Hero.Text p="4rem">
+        <Text fontSize={[3, 4]}>
+          Every Sunday, infants through children in fifth grade experience a
+          safe, age-appropriate environment where the Bible is taught in a
+          creative and relevant way.
+        </Text>
+      </Hero.Text>
+      <Hero.Image height={['60vh', '50vh']}>
+        <Flex flexDirection="column" px={[null, '4rem']}>
+          <Heading mb="1rem" fontSize={[5, 6]}>
+            Your First Visit
+          </Heading>
+          <Text fontSize={[2, 3]} mb="1rem">
             Your first stop when you arrive is the first-time check in area. We
             want to serve you and your child well, so we’ll take some time to
             get to know you. We’ll ask about allergies, make sure we know what
             your child likes to be called, and collect your contact information.
           </Text>
-          <Text>
-            Then, you a code designated for your child. If for any reason we
-            need to reach you during our service, you’ll see your kid’s code in
-            the lower corner of the screen. This code is also what you’ll use to
-            pick-up your child after service.
-          </Text> */}
-        </Hero.Image>
-        <Hero.Side2Side height="50vh" imageWidth="60%">
-          <Heading mb="1rem">Your First Visit</Heading>
-          <Text mb="1rem">
-            Your first stop when you arrive is the first-time check in area. We
-            want to serve you and your child well, so we’ll take some time to
-            get to know you. We’ll ask about allergies, make sure we know what
-            your child likes to be called, and collect your contact information.
-          </Text>
-          <Text>
+          <Text fontSize={[2, 3]}>
             Then, you a code designated for your child. If for any reason we
             need to reach you during our service, you’ll see your kid’s code in
             the lower corner of the screen. This code is also what you’ll use to
             pick-up your child after service.
           </Text>
-        </Hero.Side2Side>
-        <Hero.Side2Side height="50vh" imageWidth="60%" inverse>
-          <Heading mb="1rem">Your First Visit</Heading>
-          <Text mb="1rem">
-            Your first stop when you arrive is the first-time check in area. We
-            want to serve you and your child well, so we’ll take some time to
-            get to know you. We’ll ask about allergies, make sure we know what
-            your child likes to be called, and collect your contact information.
-          </Text>
-          <Text>
-            Then, you a code designated for your child. If for any reason we
-            need to reach you during our service, you’ll see your kid’s code in
-            the lower corner of the screen. This code is also what you’ll use to
-            pick-up your child after service.
-          </Text>
-        </Hero.Side2Side>
-      </Container>
+        </Flex>
+      </Hero.Image>
     </Layout>
   );
 };
