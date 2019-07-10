@@ -13,7 +13,7 @@ export const SermonCard = (props) => {
   const verses = props.data.verses && props.data.verses.split(', ');
   return (
     <Styled.SermonCardStyle
-      width={['100%', '50%']}
+      width={['100%', '70%', '50%']}
       mt="0"
       mb="8px"
       mx="auto"
