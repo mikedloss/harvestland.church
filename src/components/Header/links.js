@@ -5,7 +5,17 @@ export const links = [
   },
   {
     label: 'Groups',
-    route: '/groups',
+    dropdown: true,
+    dropdownContent: [
+      {
+        label: 'Build Groups',
+        route: '/groups',
+      },
+      {
+        label: 'Children',
+        route: '/groups/children',
+      },
+    ],
   },
   {
     label: 'Sermons',
