@@ -118,6 +118,7 @@ const IndexPage = ({
             imageSrc={worshipImage.childImageSharp.fluid.src}
             height="40vh"
             imageWidth="60%"
+            opacity="1"
           >
             <Box my="1rem">
               <Heading color="primary">To Worship</Heading>
@@ -159,6 +160,7 @@ const IndexPage = ({
             imageSrc={serveImage.childImageSharp.fluid.src}
             height="40vh"
             imageWidth="60%"
+            opacity="1"
           >
             <Box my="1rem">
               <Heading color="primary">To Serve</Heading>
