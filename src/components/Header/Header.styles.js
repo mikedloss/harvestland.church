@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Image, Box, Button, Heading } from 'rebass';
+import { Box, Button, Heading } from 'rebass';
 import { breakpointValues as bp } from '../theme';
 
 import LogoSVG from '../../assets/svg/logo.svg';

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Flex, Heading, Text } from 'rebass';
 
-import { Layout, SEO, Hero, Button } from '../components';
+import { Layout, Hero, Button } from '../components';
 
 const NotFoundPage = () => (
   <Layout>
