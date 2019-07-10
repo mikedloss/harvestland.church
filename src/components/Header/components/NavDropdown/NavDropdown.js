@@ -22,7 +22,11 @@ export const NavDropdown = ({ label, children }) => {
             isExpanded={expanded}
           >
             {label}
-            {expanded ? <Styled.UpChevron width="0" /> : <Styled.DownChevron width="0" />}
+            {expanded ? (
+              <Styled.UpChevron width="0" />
+            ) : (
+              <Styled.DownChevron width="0" />
+            )}
           </Styled.Label>
         </Flex>
         <Styled.DropdownContent shouldDisplay={expanded}>

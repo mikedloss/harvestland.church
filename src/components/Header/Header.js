@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Heading } from 'rebass';
 
@@ -38,7 +39,7 @@ const buildLinks = (links, linkOnClick) => {
   return allLinks;
 };
 
-export const Header = () => {
+export const Header = ({ hideLogo }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -46,18 +47,6 @@ export const Header = () => {
   const resetMenu = () => setMenuOpen(false);
 
   useClickAway(navRef, () => menuOpen && resetMenu());
-
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "images/logo-green.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
 
   const allLinks = buildLinks(links, resetMenu);
 
@@ -68,15 +57,22 @@ export const Header = () => {
           {menuOpen ? 'Close' : 'Menu'}
         </Styled.MenuButton>
       </Media.SmallOnly>
-      <Styled.NavHeading>
-        <Styled.Logo to="/">
-          <Styled.LogoImage
-            src={data.file.childImageSharp.fluid.src}
-            alt="Harvestland Church"
-          />
-        </Styled.Logo>
-      </Styled.NavHeading>
+      {!hideLogo && (
+        <Styled.NavHeading>
+          <Styled.Logo to="/">
+            {/* <Styled.LogoImage
+              src={data.file.childImageSharp.fluid.src}
+              alt="Harvestland Church"
+            /> */}
+            <Styled.LogoImage />
+          </Styled.Logo>
+        </Styled.NavHeading>
+      )}
       <Styled.NavList isVisible={menuOpen}>{allLinks}</Styled.NavList>
     </Styled.Nav>
   );
+};
+
+Header.propTypes = {
+  hideLogo: PropTypes.bool,
 };

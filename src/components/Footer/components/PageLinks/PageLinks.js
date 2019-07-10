@@ -9,7 +9,11 @@ const buildLinks = (links, isInDropdown = false) => {
   const allLinks = links.map((link) => {
     if (link.dropdown) {
       return (
-        <Flex flexDirection="column" key={`footer-${link.label}-dropdown`} alignItems="flex-start">
+        <Flex
+          flexDirection="column"
+          key={`footer-${link.label}-dropdown`}
+          alignItems="flex-start"
+        >
           <Heading color="primary">{link.label}</Heading>
           <Styled.SubLinkContainer>
             {buildLinks(link.dropdownContent, true)}
@@ -19,17 +23,13 @@ const buildLinks = (links, isInDropdown = false) => {
     } else {
       return (
         <Link to={link.route} key={`footer-${link.label}`}>
-          { isInDropdown ? (
-            <Styled.SubLinkText>
-              {link.label}
-            </Styled.SubLinkText>
+          {isInDropdown ? (
+            <Styled.SubLinkText>{link.label}</Styled.SubLinkText>
           ) : (
-            <Styled.LinkText>
-              {link.label}
-            </Styled.LinkText>
+            <Styled.LinkText>{link.label}</Styled.LinkText>
           )}
         </Link>
-      )
+      );
     }
   });
 

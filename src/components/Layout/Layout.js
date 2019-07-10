@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, useStaticQuery } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../../global.css';
@@ -11,21 +10,13 @@ import { Footer } from '../Footer';
 import * as Styled from './Layout.styles';
 
 export const Layout = ({ children, fullWidth, hideLogo }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  const headerProps = { hideLogo };
 
   return (
     <ThemeProvider theme={theme}>
       <Styled.SiteContainer isFullWidth={fullWidth}>
         <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata.title} hideLogo={hideLogo} />
+        <Header {...headerProps} />
         <main>{children}</main>
         <Footer />
       </Styled.SiteContainer>

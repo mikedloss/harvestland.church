@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 import { Image, Box, Button, Heading } from 'rebass';
 import { breakpointValues as bp } from '../theme';
 
+import LogoSVG from '../../assets/svg/logo.svg';
+
 export const Nav = styled(Box)`
   margin: 0 auto;
   max-width: 1600px;
@@ -54,10 +56,17 @@ export const Logo = styled(Link)`
   color: ${(props) => props.theme.colors.black};
 `;
 
-export const LogoImage = styled(Image)`
-  color: ${(props) => props.theme.colors.primary};
+export const LogoImage = styled(LogoSVG)`
   width: 210px;
+  height: auto;
+  & path {
+    fill: ${(props) => props.theme.colors.primary};
+  }
 `;
+// export const LogoImage = styled(Image)`
+//   color: ${(props) => props.theme.colors.primary};
+//   width: 210px;
+// `;
 
 // main-nav
 export const NavList = styled.ul`
@@ -93,3 +102,5 @@ export const NavLink = styled(Link)`
     color: ${(props) => props.theme.colors.primary};
   }
 `;
+
+// export const LogoImage = styled(LogoSVG)``;
