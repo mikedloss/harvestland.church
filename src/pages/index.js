@@ -64,11 +64,14 @@ const IndexPage = ({
           <Heading as="h1" fontSize={4}>
             Welcome to
           </Heading>
-          <Styled.WhiteLogo
+          <Box mt="1rem">
+            <Styled.WhiteLogo />
+          </Box>
+          {/* <Styled.WhiteLogo
             src={whiteLogo.childImageSharp.fluid.src}
             alt="Harvestland Church"
             m="1rem"
-          />
+          /> */}
         </Styled.ContentBlock>
       </Hero.Video>
       <Flex
