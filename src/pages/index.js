@@ -34,13 +34,10 @@ const IndexPage = ({
     <Styled.ContentBlock>
       <Heading as="h1" fontSize={4}>
         Welcome to
-        <br />
-        <Styled.WhiteLogo
-          src={whiteLogo.childImageSharp.fluid.src}
-          alt="Harvestland Church"
-          m="1rem"
-        />
       </Heading>
+      <Box mt="1rem">
+        <Styled.WhiteLogo />
+      </Box>
       <Link to="/visit">
         <Button variant="inverse">Visit us</Button>
       </Link>
