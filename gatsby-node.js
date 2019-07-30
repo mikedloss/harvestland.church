@@ -57,7 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then(async result => {
         if (result.errors) reject(result.errors);
         
         // sermon stuff
@@ -109,7 +109,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // write the podcast RSS if we're in production
-        process.env.NODE_ENV === "production" && podcast.writeRSS(sermons);
+        process.env.NODE_ENV === "production" && await podcast.writeRSS(sermons);
 
         resolve();
       })
