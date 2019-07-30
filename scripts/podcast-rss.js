@@ -12,7 +12,7 @@ exports.writeRSS = async (sermons) => {
   console.log(`WRITING TO ${RSS_PATH}`);
   fs.writeFileSync(
     RSS_PATH, `<?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://www.rssboard.org/media-rss" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://www.rssboard.org/media-rss" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Harvestland Church</title>
     <link>https://www.harvestland.church/sermons/</link>
@@ -34,6 +34,7 @@ exports.writeRSS = async (sermons) => {
     <copyright>Harvestland Church</copyright>
     <itunes:type>episodic</itunes:type>
     <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+    <atom:link href="https://harvestlandchurch.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
 `
   );
 
