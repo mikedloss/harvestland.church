@@ -29,7 +29,7 @@ exports.writeRSS = async (sermons) => {
     <itunes:email>mike@harvestland.church</itunes:email>
     </itunes:owner>
     <itunes:category text="Religion &amp; Spirituality">
-    <itunes:category text="Christianity" />
+      <itunes:category text="Christianity" />
     </itunes:category>
     <copyright>Harvestland Church</copyright>
     <itunes:type>episodic</itunes:type>
