@@ -3,7 +3,7 @@
   <channel>
     <title>Harvestland Church</title>
     <link>https://www.harvestland.church/sermons/</link>
-    <lastBuildDate>Tue, 30 Jul 2019 17:02:28 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 17:24:01 GMT</lastBuildDate>
     <language>en-US</language>
     <generator>custom node script</generator>
     <itunes:author>Harvestland Church</itunes:author>
@@ -34,8 +34,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Limitless (Part 2)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/5WOnFqXql7FN4H5QxYgwzE/d830aa4d45f292adbaed6fccfed9f652/2019-05-26_Limitless_Part_2.mp3" length="27551275" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/5WOnFqXql7FN4H5QxYgwzE/d830aa4d45f292adbaed6fccfed9f652/2019-05-26_Limitless_Part_2.mp3" length="27551275" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/5WOnFqXql7FN4H5QxYgwzE/d830aa4d45f292adbaed6fccfed9f652/2019-05-26_Limitless_Part_2.mp3" length="27551275" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/5WOnFqXql7FN4H5QxYgwzE/d830aa4d45f292adbaed6fccfed9f652/2019-05-26_Limitless_Part_2.mp3" length="27551275" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Limitless (Part 2)</media:title>
       </media:content>
     </item>
@@ -52,8 +52,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Limitless</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/450VdPPGYrmxnIjdwittfb/4e10f09b58b5feda45e8276c11321f85/2019-05-19_Limitless.mp3" length="23115544" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/450VdPPGYrmxnIjdwittfb/4e10f09b58b5feda45e8276c11321f85/2019-05-19_Limitless.mp3" length="23115544" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/450VdPPGYrmxnIjdwittfb/4e10f09b58b5feda45e8276c11321f85/2019-05-19_Limitless.mp3" length="23115544" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/450VdPPGYrmxnIjdwittfb/4e10f09b58b5feda45e8276c11321f85/2019-05-19_Limitless.mp3" length="23115544" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Limitless</media:title>
       </media:content>
     </item>
@@ -70,8 +70,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Mother's Day</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/3jUC9tcl5o0f7pKiikGU6g/25b34b112cc40a891bdae3e1c16e12e8/2019-05-12_Mothers_Day__Romy_Gingras_.mp3" length="26694413" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/3jUC9tcl5o0f7pKiikGU6g/25b34b112cc40a891bdae3e1c16e12e8/2019-05-12_Mothers_Day__Romy_Gingras_.mp3" length="26694413" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3jUC9tcl5o0f7pKiikGU6g/25b34b112cc40a891bdae3e1c16e12e8/2019-05-12_Mothers_Day__Romy_Gingras_.mp3" length="26694413" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3jUC9tcl5o0f7pKiikGU6g/25b34b112cc40a891bdae3e1c16e12e8/2019-05-12_Mothers_Day__Romy_Gingras_.mp3" length="26694413" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Mother's Day</media:title>
       </media:content>
     </item>
@@ -88,8 +88,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Seasons of Change</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/6TdM1Hea8WGtI248RAotIn/7aa5875a6536ba74e98995a862c6cc26/2019-05-05_Seasons_of_Change.mp3" length="45238284" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/6TdM1Hea8WGtI248RAotIn/7aa5875a6536ba74e98995a862c6cc26/2019-05-05_Seasons_of_Change.mp3" length="45238284" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/6TdM1Hea8WGtI248RAotIn/7aa5875a6536ba74e98995a862c6cc26/2019-05-05_Seasons_of_Change.mp3" length="45238284" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/6TdM1Hea8WGtI248RAotIn/7aa5875a6536ba74e98995a862c6cc26/2019-05-05_Seasons_of_Change.mp3" length="45238284" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Seasons of Change</media:title>
       </media:content>
     </item>
@@ -106,8 +106,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Realign Part 3</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/dI1QMLywxyeuymUmQMN3y/b0581ba322e76ba27e3d2fd9e2d685ca/2019-04-28_Realign_Part_3.mp3" length="35760234" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/dI1QMLywxyeuymUmQMN3y/b0581ba322e76ba27e3d2fd9e2d685ca/2019-04-28_Realign_Part_3.mp3" length="35760234" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/dI1QMLywxyeuymUmQMN3y/b0581ba322e76ba27e3d2fd9e2d685ca/2019-04-28_Realign_Part_3.mp3" length="35760234" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/dI1QMLywxyeuymUmQMN3y/b0581ba322e76ba27e3d2fd9e2d685ca/2019-04-28_Realign_Part_3.mp3" length="35760234" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Realign Part 3</media:title>
       </media:content>
     </item>
@@ -124,8 +124,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Good Morning, Sound Believers! (Easter)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/6qQmoK3iAFTcL32rKroMox/f2b2ec103e5a0b03b2cd39ccda4c8eb9/2019-04-21_Good_Morning__Sound_Believers.mp3" length="27256472" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/6qQmoK3iAFTcL32rKroMox/f2b2ec103e5a0b03b2cd39ccda4c8eb9/2019-04-21_Good_Morning__Sound_Believers.mp3" length="27256472" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/6qQmoK3iAFTcL32rKroMox/f2b2ec103e5a0b03b2cd39ccda4c8eb9/2019-04-21_Good_Morning__Sound_Believers.mp3" length="27256472" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/6qQmoK3iAFTcL32rKroMox/f2b2ec103e5a0b03b2cd39ccda4c8eb9/2019-04-21_Good_Morning__Sound_Believers.mp3" length="27256472" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Good Morning, Sound Believers! (Easter)</media:title>
       </media:content>
     </item>
@@ -142,8 +142,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>The Need Was Great</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/2FfkwH6J8nUpn06Pq45LDv/e0fab3e3de6db837d4fb38afa9a556fd/2019-04-14_The_Need_Was_Great.mp3" length="28945554" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/2FfkwH6J8nUpn06Pq45LDv/e0fab3e3de6db837d4fb38afa9a556fd/2019-04-14_The_Need_Was_Great.mp3" length="28945554" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/2FfkwH6J8nUpn06Pq45LDv/e0fab3e3de6db837d4fb38afa9a556fd/2019-04-14_The_Need_Was_Great.mp3" length="28945554" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/2FfkwH6J8nUpn06Pq45LDv/e0fab3e3de6db837d4fb38afa9a556fd/2019-04-14_The_Need_Was_Great.mp3" length="28945554" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">The Need Was Great</media:title>
       </media:content>
     </item>
@@ -160,8 +160,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Realign (Part 2)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/5qcgJayUkBesG4zjwadkVT/0fe26a3435a66fc17469bf377da45e9b/2019-04-07_Realign_Part_2.mp3" length="22825588" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/5qcgJayUkBesG4zjwadkVT/0fe26a3435a66fc17469bf377da45e9b/2019-04-07_Realign_Part_2.mp3" length="22825588" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/5qcgJayUkBesG4zjwadkVT/0fe26a3435a66fc17469bf377da45e9b/2019-04-07_Realign_Part_2.mp3" length="22825588" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/5qcgJayUkBesG4zjwadkVT/0fe26a3435a66fc17469bf377da45e9b/2019-04-07_Realign_Part_2.mp3" length="22825588" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Realign (Part 2)</media:title>
       </media:content>
     </item>
@@ -178,8 +178,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Realign</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/3kD2SVr7vpPX1iYcrnxBjz/e42344d83ee760aedba79189647d43ab/2019-03-31_Realign.mp3" length="26458790" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/3kD2SVr7vpPX1iYcrnxBjz/e42344d83ee760aedba79189647d43ab/2019-03-31_Realign.mp3" length="26458790" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3kD2SVr7vpPX1iYcrnxBjz/e42344d83ee760aedba79189647d43ab/2019-03-31_Realign.mp3" length="26458790" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3kD2SVr7vpPX1iYcrnxBjz/e42344d83ee760aedba79189647d43ab/2019-03-31_Realign.mp3" length="26458790" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Realign</media:title>
       </media:content>
     </item>
@@ -196,8 +196,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Love, the Attribute You Can't Afford to Get Wrong</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/uhBnSqpUcb5R0jjAyo04a/8d33f312beeaeac383d04ba0fc9c0158/2019-03-24_Love__the_Attribute_You_Can_t_Afford_to_Get_Wrong.mp3" length="31958640" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/uhBnSqpUcb5R0jjAyo04a/8d33f312beeaeac383d04ba0fc9c0158/2019-03-24_Love__the_Attribute_You_Can_t_Afford_to_Get_Wrong.mp3" length="31958640" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/uhBnSqpUcb5R0jjAyo04a/8d33f312beeaeac383d04ba0fc9c0158/2019-03-24_Love__the_Attribute_You_Can_t_Afford_to_Get_Wrong.mp3" length="31958640" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/uhBnSqpUcb5R0jjAyo04a/8d33f312beeaeac383d04ba0fc9c0158/2019-03-24_Love__the_Attribute_You_Can_t_Afford_to_Get_Wrong.mp3" length="31958640" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Love, the Attribute You Can't Afford to Get Wrong</media:title>
       </media:content>
     </item>
@@ -214,8 +214,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>You Matter</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/23rnc9D7dRWGTGz7B5Xwcq/2871c087e5653d630fac23303a917b3b/2019-03-17_You_Matter.mp3" length="29319544" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/23rnc9D7dRWGTGz7B5Xwcq/2871c087e5653d630fac23303a917b3b/2019-03-17_You_Matter.mp3" length="29319544" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/23rnc9D7dRWGTGz7B5Xwcq/2871c087e5653d630fac23303a917b3b/2019-03-17_You_Matter.mp3" length="29319544" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/23rnc9D7dRWGTGz7B5Xwcq/2871c087e5653d630fac23303a917b3b/2019-03-17_You_Matter.mp3" length="29319544" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">You Matter</media:title>
       </media:content>
     </item>
@@ -232,8 +232,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Lessons From The Storm</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/3KRwHyuCCWshN0P9WAzCuk/a3b5c2aeeec8aa6549daeb61444e5b4b/2019-03-10_Lessons_from_the_Storm.mp3" length="16456468" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/3KRwHyuCCWshN0P9WAzCuk/a3b5c2aeeec8aa6549daeb61444e5b4b/2019-03-10_Lessons_from_the_Storm.mp3" length="16456468" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3KRwHyuCCWshN0P9WAzCuk/a3b5c2aeeec8aa6549daeb61444e5b4b/2019-03-10_Lessons_from_the_Storm.mp3" length="16456468" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3KRwHyuCCWshN0P9WAzCuk/a3b5c2aeeec8aa6549daeb61444e5b4b/2019-03-10_Lessons_from_the_Storm.mp3" length="16456468" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Lessons From The Storm</media:title>
       </media:content>
     </item>
@@ -250,8 +250,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Known (Part 2)</itunes:title>
       <content:encoded />
-      <enclosure url="//assets.ctfassets.net/m1p6j93uez0z/3qnfh2sZOxF7NHnMhtO16q/bd20db066acf03be0944d353eefd846f/2019-03-03_Known__Part_2_.mp3" length="8348501" type="audio/mpeg" />
-      <media:content url="//assets.ctfassets.net/m1p6j93uez0z/3qnfh2sZOxF7NHnMhtO16q/bd20db066acf03be0944d353eefd846f/2019-03-03_Known__Part_2_.mp3" length="8348501" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://assets.ctfassets.net/m1p6j93uez0z/3qnfh2sZOxF7NHnMhtO16q/bd20db066acf03be0944d353eefd846f/2019-03-03_Known__Part_2_.mp3" length="8348501" type="audio/mpeg" />
+      <media:content url="https://assets.ctfassets.net/m1p6j93uez0z/3qnfh2sZOxF7NHnMhtO16q/bd20db066acf03be0944d353eefd846f/2019-03-03_Known__Part_2_.mp3" length="8348501" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Known (Part 2)</media:title>
       </media:content>
     </item>
@@ -268,8 +268,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Known</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/4oXG3kxO0LFmpnhAEG3uE1/b886acb0662ef31acc621d19c9817e8c/2019-02-24_Known.mp3" length="16492408" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/4oXG3kxO0LFmpnhAEG3uE1/b886acb0662ef31acc621d19c9817e8c/2019-02-24_Known.mp3" length="16492408" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/4oXG3kxO0LFmpnhAEG3uE1/b886acb0662ef31acc621d19c9817e8c/2019-02-24_Known.mp3" length="16492408" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/4oXG3kxO0LFmpnhAEG3uE1/b886acb0662ef31acc621d19c9817e8c/2019-02-24_Known.mp3" length="16492408" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Known</media:title>
       </media:content>
     </item>
@@ -286,8 +286,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Momentum (Part 4)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/5XwXgTcZIgIXuWDiERMF0S/219f35ac0ea0c5896bee26ad0180427b/2019-02-10_Momentum_pt4.mp3" length="18968892" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/5XwXgTcZIgIXuWDiERMF0S/219f35ac0ea0c5896bee26ad0180427b/2019-02-10_Momentum_pt4.mp3" length="18968892" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/5XwXgTcZIgIXuWDiERMF0S/219f35ac0ea0c5896bee26ad0180427b/2019-02-10_Momentum_pt4.mp3" length="18968892" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/5XwXgTcZIgIXuWDiERMF0S/219f35ac0ea0c5896bee26ad0180427b/2019-02-10_Momentum_pt4.mp3" length="18968892" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Momentum (Part 4)</media:title>
       </media:content>
     </item>
@@ -304,8 +304,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Momentum (Part 3)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/3POCRQYaZ0L6b0yEWhdYv3/1686509698ad5e55619ee9ebe1b96fa4/2019-02-03_Momentum_pt3.mp3" length="15726073" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/3POCRQYaZ0L6b0yEWhdYv3/1686509698ad5e55619ee9ebe1b96fa4/2019-02-03_Momentum_pt3.mp3" length="15726073" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3POCRQYaZ0L6b0yEWhdYv3/1686509698ad5e55619ee9ebe1b96fa4/2019-02-03_Momentum_pt3.mp3" length="15726073" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3POCRQYaZ0L6b0yEWhdYv3/1686509698ad5e55619ee9ebe1b96fa4/2019-02-03_Momentum_pt3.mp3" length="15726073" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Momentum (Part 3)</media:title>
       </media:content>
     </item>
@@ -322,8 +322,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Momentum (Part 2)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/3vHdPv5lsxIDNS2gjE6kTg/3779bcc2b2480b3dea02c88f17da5b5a/2019-01-27_Momentum_pt2.mp3" length="11916501" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/3vHdPv5lsxIDNS2gjE6kTg/3779bcc2b2480b3dea02c88f17da5b5a/2019-01-27_Momentum_pt2.mp3" length="11916501" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3vHdPv5lsxIDNS2gjE6kTg/3779bcc2b2480b3dea02c88f17da5b5a/2019-01-27_Momentum_pt2.mp3" length="11916501" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3vHdPv5lsxIDNS2gjE6kTg/3779bcc2b2480b3dea02c88f17da5b5a/2019-01-27_Momentum_pt2.mp3" length="11916501" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Momentum (Part 2)</media:title>
       </media:content>
     </item>
@@ -340,8 +340,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Thrones Not Graves (Part 2)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/2gPJ3TTf38J7GxKp9k1C61/05e34f2613b9c9b164eba431df326a83/2019-01-20_Thrones_Not_Graves_pt2.mp3" length="24052167" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/2gPJ3TTf38J7GxKp9k1C61/05e34f2613b9c9b164eba431df326a83/2019-01-20_Thrones_Not_Graves_pt2.mp3" length="24052167" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/2gPJ3TTf38J7GxKp9k1C61/05e34f2613b9c9b164eba431df326a83/2019-01-20_Thrones_Not_Graves_pt2.mp3" length="24052167" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/2gPJ3TTf38J7GxKp9k1C61/05e34f2613b9c9b164eba431df326a83/2019-01-20_Thrones_Not_Graves_pt2.mp3" length="24052167" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Thrones Not Graves (Part 2)</media:title>
       </media:content>
     </item>
@@ -358,8 +358,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Thrones Not Graves (Part 1)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/2D0vEmEJPPZoBfg44w1kUf/6890534cad3a229850ebb0cfdfe5f02c/E_2019-01-13_Thrones_Not_Graves.mp3" length="19278612" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/2D0vEmEJPPZoBfg44w1kUf/6890534cad3a229850ebb0cfdfe5f02c/E_2019-01-13_Thrones_Not_Graves.mp3" length="19278612" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/2D0vEmEJPPZoBfg44w1kUf/6890534cad3a229850ebb0cfdfe5f02c/E_2019-01-13_Thrones_Not_Graves.mp3" length="19278612" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/2D0vEmEJPPZoBfg44w1kUf/6890534cad3a229850ebb0cfdfe5f02c/E_2019-01-13_Thrones_Not_Graves.mp3" length="19278612" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Thrones Not Graves (Part 1)</media:title>
       </media:content>
     </item>
@@ -376,8 +376,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Momentum</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/1Lz0LGDxJlXUOf3asi7Bln/cecaf01e828e4cc53aa84f37e909aa6e/2019-01-06_Momentum.mp3" length="15240032" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/1Lz0LGDxJlXUOf3asi7Bln/cecaf01e828e4cc53aa84f37e909aa6e/2019-01-06_Momentum.mp3" length="15240032" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/1Lz0LGDxJlXUOf3asi7Bln/cecaf01e828e4cc53aa84f37e909aa6e/2019-01-06_Momentum.mp3" length="15240032" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/1Lz0LGDxJlXUOf3asi7Bln/cecaf01e828e4cc53aa84f37e909aa6e/2019-01-06_Momentum.mp3" length="15240032" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Momentum</media:title>
       </media:content>
     </item>
@@ -394,8 +394,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>Christmas Service</itunes:title>
       <content:encoded />
-      <enclosure url="//assets.ctfassets.net/m1p6j93uez0z/7Ekvz0sxqVPgPhN3vsugOH/613dfa5a659739d04f8d73291abe2129/2018-12-23_Christmas_Sermon__Pete_.mp3" length="6717287" type="audio/mpeg" />
-      <media:content url="//assets.ctfassets.net/m1p6j93uez0z/7Ekvz0sxqVPgPhN3vsugOH/613dfa5a659739d04f8d73291abe2129/2018-12-23_Christmas_Sermon__Pete_.mp3" length="6717287" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://assets.ctfassets.net/m1p6j93uez0z/7Ekvz0sxqVPgPhN3vsugOH/613dfa5a659739d04f8d73291abe2129/2018-12-23_Christmas_Sermon__Pete_.mp3" length="6717287" type="audio/mpeg" />
+      <media:content url="https://assets.ctfassets.net/m1p6j93uez0z/7Ekvz0sxqVPgPhN3vsugOH/613dfa5a659739d04f8d73291abe2129/2018-12-23_Christmas_Sermon__Pete_.mp3" length="6717287" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">Christmas Service</media:title>
       </media:content>
     </item>
@@ -412,8 +412,8 @@
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>God With Us (Part 2)</itunes:title>
       <content:encoded />
-      <enclosure url="//downloads.ctfassets.net/m1p6j93uez0z/48leg8DQ9D8uRAtV4GBWcU/aea0282914de0aa59903b0e67c12b438/2018-12-16_God_With_Us__Part_2_.mp3" length="17811687" type="audio/mpeg" />
-      <media:content url="//downloads.ctfassets.net/m1p6j93uez0z/48leg8DQ9D8uRAtV4GBWcU/aea0282914de0aa59903b0e67c12b438/2018-12-16_God_With_Us__Part_2_.mp3" length="17811687" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/48leg8DQ9D8uRAtV4GBWcU/aea0282914de0aa59903b0e67c12b438/2018-12-16_God_With_Us__Part_2_.mp3" length="17811687" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/48leg8DQ9D8uRAtV4GBWcU/aea0282914de0aa59903b0e67c12b438/2018-12-16_God_With_Us__Part_2_.mp3" length="17811687" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">God With Us (Part 2)</media:title>
       </media:content>
     </item>

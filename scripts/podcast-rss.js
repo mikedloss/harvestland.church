@@ -66,8 +66,8 @@ exports.writeRSS = async (sermons) => {
       <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
       <itunes:title>${ data.title }</itunes:title>
       <content:encoded />
-      <enclosure url="${ audioURL }" length="${ audioRequest['content-length'] }" type="audio/mpeg" />
-      <media:content url="${ audioURL }" length="${ audioRequest['content-length'] }" type="audio/mpeg" isDefault="true" medium="audio">
+      <enclosure url="https:${ audioURL }" length="${ audioRequest['content-length'] }" type="audio/mpeg" />
+      <media:content url="https:${ audioURL }" length="${ audioRequest['content-length'] }" type="audio/mpeg" isDefault="true" medium="audio">
         <media:title type="plain">${ data.title }</media:title>
       </media:content>
     </item>
