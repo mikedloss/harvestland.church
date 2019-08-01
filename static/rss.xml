@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://www.rssboard.org/media-rss" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Harvestland Church</title>
+    <link>https://www.harvestland.church/sermons/</link>
+    <lastBuildDate>Thu, 01 Aug 2019 16:22:31 GMT</lastBuildDate>
+    <language>en-US</language>
+    <generator>custom node script</generator>
+    <itunes:author>Harvestland Church</itunes:author>
+    <itunes:subtitle>Clarkston, MI</itunes:subtitle>
+    <itunes:summary>Thanks for joining us this week at Harvestland Church! Make sure to check back for more inspirational messages from our Pastor Pete Freeman and other guests. Visit our website at http://harvestland.church to find out more or to visit us in person.</itunes:summary>
+    <description>Thanks for joining us this week at Harvestland Church! Make sure to check back for more inspirational messages from our Pastor Pete Freeman and other guests. Visit our website at http://harvestland.church to find out more or to visit us in person.</description>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:owner>
+    <itunes:name>Mike DLoss</itunes:name>
+    <itunes:email>mike@harvestland.church</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Religion &amp; Spirituality">
+      <itunes:category text="Christianity" />
+    </itunes:category>
+    <copyright>Harvestland Church</copyright>
+    <itunes:type>episodic</itunes:type>
+    <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+    <atom:link href="https://harvestlandchurch.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Limitless (Part 2)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 26 May 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/05/26/limitless-part-2</link>
+      <guid isPermaLink="false">53abb2ff-4fb0-57b9-8085-4de8715e23d7</guid>
+      <description><![CDATA[<p>John 1:17, Romans 6:14, Hebrews 10:11-25, Mark 10:1-4</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:45:10</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Limitless (Part 2)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/5WOnFqXql7FN4H5QxYgwzE/d830aa4d45f292adbaed6fccfed9f652/2019-05-26_Limitless_Part_2.mp3" length="27551275" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/5WOnFqXql7FN4H5QxYgwzE/d830aa4d45f292adbaed6fccfed9f652/2019-05-26_Limitless_Part_2.mp3" length="27551275" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Limitless (Part 2)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Limitless</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/05/19/limitless</link>
+      <guid isPermaLink="false">3f3c7841-1994-5ad0-a02f-5ae7acfd79c8</guid>
+      <description><![CDATA[<p>John 1:17, Romans 6:14, 1 John 3:1</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:39:17</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Limitless</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/450VdPPGYrmxnIjdwittfb/4e10f09b58b5feda45e8276c11321f85/2019-05-19_Limitless.mp3" length="23115544" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/450VdPPGYrmxnIjdwittfb/4e10f09b58b5feda45e8276c11321f85/2019-05-19_Limitless.mp3" length="23115544" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Limitless</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Mother's Day</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/05/12/mother-s-day</link>
+      <guid isPermaLink="false">d68a4e15-cdca-53b3-b958-a0fd02b5af79</guid>
+      <description></description>
+      <itunes:author>Romy Gingras</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:49:38</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Mother's Day</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3jUC9tcl5o0f7pKiikGU6g/25b34b112cc40a891bdae3e1c16e12e8/2019-05-12_Mothers_Day__Romy_Gingras_.mp3" length="26694413" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3jUC9tcl5o0f7pKiikGU6g/25b34b112cc40a891bdae3e1c16e12e8/2019-05-12_Mothers_Day__Romy_Gingras_.mp3" length="26694413" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Mother's Day</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Seasons of Change</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 05 May 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/05/05/seasons-of-change</link>
+      <guid isPermaLink="false">26176961-306e-5138-a446-29385fb47f0f</guid>
+      <description></description>
+      <itunes:author>John Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>01:13:20</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Seasons of Change</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/6TdM1Hea8WGtI248RAotIn/7aa5875a6536ba74e98995a862c6cc26/2019-05-05_Seasons_of_Change.mp3" length="45238284" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/6TdM1Hea8WGtI248RAotIn/7aa5875a6536ba74e98995a862c6cc26/2019-05-05_Seasons_of_Change.mp3" length="45238284" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Seasons of Change</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Realign Part 3</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/04/28/realign-part-3</link>
+      <guid isPermaLink="false">d88380b9-decb-5d5c-aa65-7d4038c27f90</guid>
+      <description><![CDATA[<p>Philippians 1:3-6, 2 Corinthians 3:4-6, Hebrews 10:19</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>01:00:28</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Realign Part 3</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/dI1QMLywxyeuymUmQMN3y/b0581ba322e76ba27e3d2fd9e2d685ca/2019-04-28_Realign_Part_3.mp3" length="35760234" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/dI1QMLywxyeuymUmQMN3y/b0581ba322e76ba27e3d2fd9e2d685ca/2019-04-28_Realign_Part_3.mp3" length="35760234" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Realign Part 3</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Good Morning, Sound Believers! (Easter)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 21 Apr 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/04/21/good-morning-sound-believers-easter</link>
+      <guid isPermaLink="false">0431d7ea-af86-5a32-a014-a5968297cffb</guid>
+      <description></description>
+      <itunes:author>John Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:44:25</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Good Morning, Sound Believers! (Easter)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/6qQmoK3iAFTcL32rKroMox/f2b2ec103e5a0b03b2cd39ccda4c8eb9/2019-04-21_Good_Morning__Sound_Believers.mp3" length="27256472" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/6qQmoK3iAFTcL32rKroMox/f2b2ec103e5a0b03b2cd39ccda4c8eb9/2019-04-21_Good_Morning__Sound_Believers.mp3" length="27256472" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Good Morning, Sound Believers! (Easter)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>The Need Was Great</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/04/14/the-need-was-great</link>
+      <guid isPermaLink="false">1595f3b6-46c2-54d8-ae83-0e0f02e5eab4</guid>
+      <description><![CDATA[<p>Matthew 21:1-11, Zechariah 9:9-10, Romans 1:18, Romans 1:22-23, 1 Peter 2:22-25, Isaiah 53:4-5</p>]]></description>
+      <itunes:author>Devanne DLoss</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:49:26</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>The Need Was Great</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/2FfkwH6J8nUpn06Pq45LDv/e0fab3e3de6db837d4fb38afa9a556fd/2019-04-14_The_Need_Was_Great.mp3" length="28945554" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/2FfkwH6J8nUpn06Pq45LDv/e0fab3e3de6db837d4fb38afa9a556fd/2019-04-14_The_Need_Was_Great.mp3" length="28945554" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">The Need Was Great</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Realign (Part 2)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/04/07/realign-part-2</link>
+      <guid isPermaLink="false">11de7cc3-2bb1-5ba6-9e19-097f41530421</guid>
+      <description><![CDATA[<p>Luke 10:27, Philippians 4:6-7, Romans 12:2, Proverbs 23:7, 2 Corinthians 4:17-18</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:34:22</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Realign (Part 2)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/5qcgJayUkBesG4zjwadkVT/0fe26a3435a66fc17469bf377da45e9b/2019-04-07_Realign_Part_2.mp3" length="22825588" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/5qcgJayUkBesG4zjwadkVT/0fe26a3435a66fc17469bf377da45e9b/2019-04-07_Realign_Part_2.mp3" length="22825588" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Realign (Part 2)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Realign</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/03/31/realign</link>
+      <guid isPermaLink="false">a7208466-6e00-560d-80b4-57a97c84f985</guid>
+      <description><![CDATA[<p>Colossians 3:3, 1 John 2:20, 1 Corinthians 2:9-16, Colossians 3:1-2, Psalm 8:1-9, Colossians 3:10</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:41:42</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Realign</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3kD2SVr7vpPX1iYcrnxBjz/e42344d83ee760aedba79189647d43ab/2019-03-31_Realign.mp3" length="26458790" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3kD2SVr7vpPX1iYcrnxBjz/e42344d83ee760aedba79189647d43ab/2019-03-31_Realign.mp3" length="26458790" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Realign</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Love, the Attribute You Can't Afford to Get Wrong</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 24 Mar 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/03/24/love-the-attribute-you-can-t-afford-to-get-wrong</link>
+      <guid isPermaLink="false">950268f4-ad25-550a-80c0-ad404692c704</guid>
+      <description></description>
+      <itunes:author>Keith Harris</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:50:35</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Love, the Attribute You Can't Afford to Get Wrong</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/uhBnSqpUcb5R0jjAyo04a/8d33f312beeaeac383d04ba0fc9c0158/2019-03-24_Love__the_Attribute_You_Can_t_Afford_to_Get_Wrong.mp3" length="31958640" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/uhBnSqpUcb5R0jjAyo04a/8d33f312beeaeac383d04ba0fc9c0158/2019-03-24_Love__the_Attribute_You_Can_t_Afford_to_Get_Wrong.mp3" length="31958640" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Love, the Attribute You Can't Afford to Get Wrong</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>You Matter</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 17 Mar 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/03/17/you-matter</link>
+      <guid isPermaLink="false">d621be32-b2ca-5678-90f2-684c69d5af95</guid>
+      <description><![CDATA[<p>Mark 5:1-20, Mark 4:35-41</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:20:12</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>You Matter</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/23rnc9D7dRWGTGz7B5Xwcq/2871c087e5653d630fac23303a917b3b/2019-03-17_You_Matter.mp3" length="29319544" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/23rnc9D7dRWGTGz7B5Xwcq/2871c087e5653d630fac23303a917b3b/2019-03-17_You_Matter.mp3" length="29319544" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">You Matter</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Lessons From The Storm</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/03/03/lessons-from-the-storm</link>
+      <guid isPermaLink="false">9a23c4a2-90f1-54db-aa6f-c13bd14261b9</guid>
+      <description><![CDATA[<p>Mark 5:1-20, Mark 4:35-41</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:38:27</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Lessons From The Storm</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3KRwHyuCCWshN0P9WAzCuk/a3b5c2aeeec8aa6549daeb61444e5b4b/2019-03-10_Lessons_from_the_Storm.mp3" length="16456468" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3KRwHyuCCWshN0P9WAzCuk/a3b5c2aeeec8aa6549daeb61444e5b4b/2019-03-10_Lessons_from_the_Storm.mp3" length="16456468" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Lessons From The Storm</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Known (Part 2)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/03/03/known-part-2</link>
+      <guid isPermaLink="false">94aa8e3e-f692-58a6-afcd-031b354137f9</guid>
+      <description><![CDATA[<p>Mark 5:1-20</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:20:26</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Known (Part 2)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://assets.ctfassets.net/m1p6j93uez0z/3qnfh2sZOxF7NHnMhtO16q/bd20db066acf03be0944d353eefd846f/2019-03-03_Known__Part_2_.mp3" length="8348501" type="audio/mpeg" />
+      <media:content url="https://assets.ctfassets.net/m1p6j93uez0z/3qnfh2sZOxF7NHnMhtO16q/bd20db066acf03be0944d353eefd846f/2019-03-03_Known__Part_2_.mp3" length="8348501" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Known (Part 2)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Known</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/02/24/known</link>
+      <guid isPermaLink="false">a3f334af-f1a6-58ac-9f22-85049ed33f6b</guid>
+      <description><![CDATA[<p>2 Timothy 2:1-17, Matthew 5:13-16, Galatians 2:20</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:39:58</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Known</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/4oXG3kxO0LFmpnhAEG3uE1/b886acb0662ef31acc621d19c9817e8c/2019-02-24_Known.mp3" length="16492408" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/4oXG3kxO0LFmpnhAEG3uE1/b886acb0662ef31acc621d19c9817e8c/2019-02-24_Known.mp3" length="16492408" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Known</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Momentum (Part 4)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/02/10/momentum-part-4</link>
+      <guid isPermaLink="false">e4946d91-639e-5718-a2ca-5198b3e795d9</guid>
+      <description><![CDATA[<p>2 Kings 2:1-17</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:46:14</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Momentum (Part 4)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/5XwXgTcZIgIXuWDiERMF0S/219f35ac0ea0c5896bee26ad0180427b/2019-02-10_Momentum_pt4.mp3" length="18968892" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/5XwXgTcZIgIXuWDiERMF0S/219f35ac0ea0c5896bee26ad0180427b/2019-02-10_Momentum_pt4.mp3" length="18968892" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Momentum (Part 4)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Momentum (Part 3)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/02/03/momentum-part-3</link>
+      <guid isPermaLink="false">28fc2067-921f-5a49-b5ef-811888f7cd0b</guid>
+      <description><![CDATA[<p>Exodus 8:1-14, Matthew 6:31-34</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:38:05</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Momentum (Part 3)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3POCRQYaZ0L6b0yEWhdYv3/1686509698ad5e55619ee9ebe1b96fa4/2019-02-03_Momentum_pt3.mp3" length="15726073" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3POCRQYaZ0L6b0yEWhdYv3/1686509698ad5e55619ee9ebe1b96fa4/2019-02-03_Momentum_pt3.mp3" length="15726073" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Momentum (Part 3)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Momentum (Part 2)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/01/27/momentum-part-2</link>
+      <guid isPermaLink="false">4ab95788-ba2e-5e93-8c67-c35fb0cf536f</guid>
+      <description><![CDATA[<p>John 5:1-9</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:29:19</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Momentum (Part 2)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/3vHdPv5lsxIDNS2gjE6kTg/3779bcc2b2480b3dea02c88f17da5b5a/2019-01-27_Momentum_pt2.mp3" length="11916501" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/3vHdPv5lsxIDNS2gjE6kTg/3779bcc2b2480b3dea02c88f17da5b5a/2019-01-27_Momentum_pt2.mp3" length="11916501" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Momentum (Part 2)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Thrones Not Graves (Part 2)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/01/20/thrones-not-graves-part-2</link>
+      <guid isPermaLink="false">f8bdbceb-9bdf-531c-b3c5-49a3cacc74c3</guid>
+      <description><![CDATA[<p>Daniel 3:14-27, 1 Peter 2:5-9</p>]]></description>
+      <itunes:author>Devanne DLoss</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>01:08:16</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Thrones Not Graves (Part 2)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/2gPJ3TTf38J7GxKp9k1C61/05e34f2613b9c9b164eba431df326a83/2019-01-20_Thrones_Not_Graves_pt2.mp3" length="24052167" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/2gPJ3TTf38J7GxKp9k1C61/05e34f2613b9c9b164eba431df326a83/2019-01-20_Thrones_Not_Graves_pt2.mp3" length="24052167" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Thrones Not Graves (Part 2)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Thrones Not Graves (Part 1)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 13 Jan 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/01/13/thrones-not-graves-part-1</link>
+      <guid isPermaLink="false">241ad00f-9f61-5e91-8be0-0e68408d9683</guid>
+      <description><![CDATA[<p>Exodus 3:1-14</p>]]></description>
+      <itunes:author>Devanne DLoss</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:55:17</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Thrones Not Graves (Part 1)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/2D0vEmEJPPZoBfg44w1kUf/6890534cad3a229850ebb0cfdfe5f02c/E_2019-01-13_Thrones_Not_Graves.mp3" length="19278612" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/2D0vEmEJPPZoBfg44w1kUf/6890534cad3a229850ebb0cfdfe5f02c/E_2019-01-13_Thrones_Not_Graves.mp3" length="19278612" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Thrones Not Graves (Part 1)</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Momentum</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2019/01/06/momentum</link>
+      <guid isPermaLink="false">57261c0c-a3ec-5818-8a4c-0b8d8baa9846</guid>
+      <description><![CDATA[<p>Genesis 45:1-8</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:40:32</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Momentum</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/1Lz0LGDxJlXUOf3asi7Bln/cecaf01e828e4cc53aa84f37e909aa6e/2019-01-06_Momentum.mp3" length="15240032" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/1Lz0LGDxJlXUOf3asi7Bln/cecaf01e828e4cc53aa84f37e909aa6e/2019-01-06_Momentum.mp3" length="15240032" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Momentum</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Christmas Service</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2018/12/23/christmas-service</link>
+      <guid isPermaLink="false">5eafea71-797e-525a-9447-b3198744fcfe</guid>
+      <description></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:17:41</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>Christmas Service</itunes:title>
+      <content:encoded />
+      <enclosure url="https://assets.ctfassets.net/m1p6j93uez0z/7Ekvz0sxqVPgPhN3vsugOH/613dfa5a659739d04f8d73291abe2129/2018-12-23_Christmas_Sermon__Pete_.mp3" length="6717287" type="audio/mpeg" />
+      <media:content url="https://assets.ctfassets.net/m1p6j93uez0z/7Ekvz0sxqVPgPhN3vsugOH/613dfa5a659739d04f8d73291abe2129/2018-12-23_Christmas_Sermon__Pete_.mp3" length="6717287" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">Christmas Service</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>God With Us (Part 2)</title>
+      <dc:creator>Mike DLoss</dc:creator>
+      <pubDate>Sun, 16 Dec 2018 00:00:00 GMT</pubDate>
+      <link>https://www.harvestland.church/sermons/2018/12/16/god-with-us-part-2</link>
+      <guid isPermaLink="false">3d5f41d9-3fe4-50c9-acbc-c388f3a124f9</guid>
+      <description><![CDATA[<p>Matthew 1:18-25, 2 Corinthians 5:17, Psalms 20:4-5</p>]]></description>
+      <itunes:author>Pete Freeman</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:duration>00:41:19</itunes:duration>
+      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+      <itunes:title>God With Us (Part 2)</itunes:title>
+      <content:encoded />
+      <enclosure url="https://downloads.ctfassets.net/m1p6j93uez0z/48leg8DQ9D8uRAtV4GBWcU/aea0282914de0aa59903b0e67c12b438/2018-12-16_God_With_Us__Part_2_.mp3" length="17811687" type="audio/mpeg" />
+      <media:content url="https://downloads.ctfassets.net/m1p6j93uez0z/48leg8DQ9D8uRAtV4GBWcU/aea0282914de0aa59903b0e67c12b438/2018-12-16_God_With_Us__Part_2_.mp3" length="17811687" type="audio/mpeg" isDefault="true" medium="audio">
+        <media:title type="plain">God With Us (Part 2)</media:title>
+      </media:content>
+    </item>
+  </channel>
+</rss>
