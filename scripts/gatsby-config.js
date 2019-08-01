@@ -47,6 +47,7 @@ const buildRSSPluginOptions = () => (
           copyright: `${ new Date().getFullYear() } Harvestland Church`,
           custom_namespaces: {
             itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+            media: 'http://www.rssboard.org/media-rss',
           },
           custom_elements: [
             { 'itunes:author': 'Harvestland Church' },
