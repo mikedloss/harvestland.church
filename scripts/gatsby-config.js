@@ -84,8 +84,8 @@ const buildRSSPluginOptions = () => (
         feeds: [
           {
             serialize: ({ query: { sermons } } ) => {
+              console.log("Using gatsby-plugin-feed to generate rss.xml...");
               return sermons.edges.map(({ node: sermon }) => {
-                console.log(sermon.title);
                 const audioURL = `https:${ sermon.audio ? sermon.audio.file.url : sermon.audioURL }`;
                 return Object.assign({}, {
                   title: sermon.title,
@@ -151,7 +151,7 @@ const buildRSSPluginOptions = () => (
               }
             }
             `,
-            output: '/new-rss.xml',
+            output: '/rss.xml',
           }
         ]
       }

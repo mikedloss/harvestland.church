@@ -51,7 +51,7 @@ module.exports = {
     '@contentful/gatsby-transformer-contentful-richtext',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
-    buildRSSPluginOptions(),
+    process.env.USE_RSS_PLUGIN && buildRSSPluginOptions(),
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
