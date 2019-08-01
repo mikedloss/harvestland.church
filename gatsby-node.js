@@ -108,10 +108,10 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        // write the podcast RSS if we're in production
-        console.log('!!! Writing XML for Podcasts... !!!')
-        process.env.NODE_ENV === "production" && await podcast.writeRSS(sermons);
-        console.log('!!! Finished writing XML for Podcasts, find at /rss.xml !!!')
+        // // write the podcast RSS if we're in production
+        // console.log('!!! Writing XML for Podcasts... !!!')
+        // process.env.NODE_ENV === "production" && await podcast.writeRSS(sermons);
+        // console.log('!!! Finished writing XML for Podcasts, find at /rss.xml !!!')
 
         resolve();
       })
