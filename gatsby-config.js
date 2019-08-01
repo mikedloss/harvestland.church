@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const { buildRSSPluginOptions } = require('./scripts/gatsby-config');
+
 module.exports = {
   siteMetadata: {
     title: `Harvestland Church`,
@@ -48,7 +50,8 @@ module.exports = {
     },
     '@contentful/gatsby-transformer-contentful-richtext',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt'
+    'gatsby-plugin-robots-txt',
+    buildRSSPluginOptions(),
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
