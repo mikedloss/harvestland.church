@@ -1,3 +1,4 @@
+const dayjs = require('dayjs');
 const slugify = require('./slugify');
 
 const buildSermonPath = (sermon) => `sermons/${ slugify(sermon.date, '/') }/${ slugify(sermon.title) }`;
@@ -87,12 +88,16 @@ const buildRSSPluginOptions = () => (
               console.log("Using gatsby-plugin-feed to generate rss.xml...");
               return sermons.edges.map(({ node: sermon }) => {
                 const audioURL = `https:${ sermon.audio ? sermon.audio.file.url : sermon.audioURL }`;
+                // console.log(sermon.date);
+                // console.log(new Date(sermon.date).toString());
+                // console.log(new Date(sermon.date).toGMTString());
+                // console.log(dayjs(sermon.date).toString())
                 return Object.assign({}, {
                   title: sermon.title,
                   description: sermon.verses ? sermon.verses : ``,
                   guid: sermon.id,
                   custom_elements: [
-                    { pubDate: new Date(sermon.date).toString(), },
+                    { pubDate: dayjs(sermon.date).toString(), },
                     { link: `https://www.harvestland.church/${ buildSermonPath(sermon) }`, },
                     { 'dc:creator': 'Mike DLoss', },
                     { 'itunes:author': sermon.speaker, },
