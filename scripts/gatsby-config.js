@@ -91,9 +91,8 @@ const buildRSSPluginOptions = () => (
                   title: sermon.title,
                   description: sermon.verses ? sermon.verses : ``,
                   guid: sermon.id,
-                  date: new Date(sermon.date).toGMTString(),
                   custom_elements: [
-                    { pubDate: new Date(sermon.date).toGMTString(), },
+                    { pubDate: new Date(sermon.date).toString(), },
                     { link: `https://www.harvestland.church/${ buildSermonPath(sermon) }`, },
                     { 'dc:creator': 'Mike DLoss', },
                     { 'itunes:author': sermon.speaker, },
