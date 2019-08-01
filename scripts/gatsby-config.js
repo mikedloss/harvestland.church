@@ -1,3 +1,4 @@
+const dayjs = require('dayjs');
 const slugify = require('./slugify');
 
 const buildSermonPath = (sermon) => `sermons/${ slugify(sermon.date, '/') }/${ slugify(sermon.title) }`;
@@ -91,9 +92,8 @@ const buildRSSPluginOptions = () => (
                   title: sermon.title,
                   description: sermon.verses ? sermon.verses : ``,
                   guid: sermon.id,
-                  date: new Date(sermon.date).toGMTString(),
                   custom_elements: [
-                    { pubDate: new Date(sermon.date).toGMTString(), },
+                    { pubDate: dayjs(sermon.date).add(16, 'hour').toString(), },
                     { link: `https://www.harvestland.church/${ buildSermonPath(sermon) }`, },
                     { 'dc:creator': 'Mike DLoss', },
                     { 'itunes:author': sermon.speaker, },
