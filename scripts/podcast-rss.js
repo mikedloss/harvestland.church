@@ -55,7 +55,7 @@ exports.writeRSS = async (sermons) => {
     console.log(`WRITING ${ node.title }`);
     fs.appendFileSync(
       RSS_PATH, `    <item>
-      <title>${ data.title }</title>
+      <title>${ data.title } - ${ data.speaker }</title>
       <dc:creator>Mike DLoss</dc:creator>
       <pubDate>${ new Date(data.date).toGMTString() }</pubDate>
       <link>https://www.harvestland.church${ sermonPath }</link>
