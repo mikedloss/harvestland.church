@@ -43,7 +43,7 @@ const buildRSSPluginOptions = () => (
           description: 'Thanks for joining us this week at Harvestland Church! Make sure to check back for more inspirational messages from our Pastor Pete Freeman and other guests. Visit our website at http://harvestland.church to find out more or to visit us in person.',
           language: 'en-US',
           link: 'https://www.harvestland.church',
-          generator: 'sillyboy',
+          generator: 'custom node script',
           categories: ['Religion & Spirituality', 'Christianity'],
           copyright: `${ new Date().getFullYear() } Harvestland Church`,
           custom_namespaces: {
@@ -89,7 +89,7 @@ const buildRSSPluginOptions = () => (
               return sermons.edges.map(({ node: sermon }) => {
                 const audioURL = `https:${ sermon.audio ? sermon.audio.file.url : sermon.audioURL }`;
                 return Object.assign({}, {
-                  title: sermon.title,
+                  title: `${sermon.title} - ${sermon.speaker}`,
                   description: sermon.verses ? sermon.verses : ``,
                   guid: sermon.id,
                   custom_elements: [
