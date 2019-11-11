@@ -1,19 +1,20 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Heading, Flex } from 'rebass';
+import React from "react";
+import { graphql } from "gatsby";
+import { Heading, Flex } from "rebass";
 
-import { Layout, SEO, Hero, LeaderInfo, Container } from '../../components';
+import { Layout, SEO, Hero, LeaderInfo, Container } from "../../components";
 
 const LeadersPage = ({ data: { heroImage, ...leaders } }) => {
+  console.log("leaders :", leaders);
   return (
     <Layout>
       <SEO
         title="Leaders"
-        keywords={['harvestland church leaders', 'leaders']}
+        keywords={["harvestland church leaders", "leaders"]}
       />
       <Hero.Image
         imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['40vh', '50vh']}
+        height={["40vh", "50vh"]}
       >
         <Heading p="20px" fontSize={[5, 6]}>
           Our Leaders
@@ -21,7 +22,7 @@ const LeadersPage = ({ data: { heroImage, ...leaders } }) => {
       </Hero.Image>
       <Container>
         <Flex flexDirection="column" alignItems="center">
-          {Object.keys(leaders).map((leader) => (
+          {Object.keys(leaders).map(leader => (
             <LeaderInfo who={leaders[leader]} key={leader.name} />
           ))}
         </Flex>
@@ -56,12 +57,6 @@ export const query = graphql`
       ...FullWidthImage
     }
     peteHeather: contentfulLeader(name: { eq: "Pete & Heather Freeman" }) {
-      ...LeaderData
-    }
-    devanne: contentfulLeader(name: { eq: "Devanne DLoss" }) {
-      ...LeaderData
-    }
-    mike: contentfulLeader(name: { eq: "Mike DLoss" }) {
       ...LeaderData
     }
     willis: contentfulLeader(name: { eq: "Willis Greer" }) {
