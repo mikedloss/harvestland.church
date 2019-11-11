@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Text, Heading } from 'rebass';
+import React from "react";
+import PropTypes from "prop-types";
+import { Text, Heading } from "rebass";
 
-import * as Styled from './LeaderInfo.styles';
+import * as Styled from "./LeaderInfo.styles";
 
 export const LeaderInfo = ({ who }) => {
-  const { imageSrc: src } = who.picture.fluid;
+  const { src } = who.picture.fluid;
   return (
     <Styled.LeaderInfoStyle>
       <Styled.PictureContainer>
@@ -31,6 +31,6 @@ LeaderInfo.propTypes = {
     name: PropTypes.string.isRequired,
     jobs: PropTypes.arrayOf(PropTypes.string).isRequired,
     email: PropTypes.string.isRequired,
-    picture: PropTypes.object.isRequired,
-  }),
+    picture: PropTypes.object.isRequired
+  })
 };
