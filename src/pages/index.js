@@ -168,11 +168,6 @@ const IndexPage = ({
                 We extend God's grace, mercy, and love to others for His glory
                 alone, through humility, generosity, and hospitality.
               </Text>
-              <Link to="/events">
-                <Heading as="h4" fontSize={3} color="primary" mt="1rem">
-                  See our events <Styled.Chevron />
-                </Heading>
-              </Link>
               <Link to="/give">
                 <Heading as="h4" fontSize={3} color="primary" mt="1rem">
                   Give online <Styled.Chevron />
