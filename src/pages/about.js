@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { Text, Flex, Box, Heading } from 'rebass';
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { Text, Flex, Box, Heading } from "rebass";
 
-import { Layout, SEO, Button, Container, Hero } from '../components';
+import { Layout, SEO, Button, Container, Hero } from "../components";
 
-import * as Styled from '../page-styles/about-page';
+import * as Styled from "../page-styles/about-page";
 
 const AboutPage = ({ data: { heroImage, campfireImage } }) => {
   return (
     <Layout>
       <SEO
         title="About"
-        keywords={['help', 'harvestland beliefs', 'harvestland leaders']}
+        keywords={["help", "harvestland beliefs", "harvestland leaders"]}
       />
       <Hero.Text>
         <Heading fontSize={6} color="black">
@@ -25,15 +25,15 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
         </Heading>
       </Hero.Text>
       <Container>
-        <Box width="100%" px={['2rem', '8rem', '20rem']}>
+        <Box width="100%" px={["2rem", "8rem", "20rem"]}>
           <Flex
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
           >
             <Text>
-              Our mission is to <strong>win</strong> people to Jesus, and to{' '}
-              <strong>build</strong> a community where people are{' '}
+              Our mission is to <strong>win</strong> people to Jesus, and to{" "}
+              <strong>build</strong> a community where people are{" "}
               <strong>equipped</strong> to do God's work.
             </Text>
             <Text mt="1rem" mb="2rem">
@@ -45,8 +45,8 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
               <Link to="/about/beliefs">
                 <Button
                   variant="inverse"
-                  mr={[null, '2rem']}
-                  mb={['1rem', '0']}
+                  mr={[null, "2rem"]}
+                  mb={["1rem", "0"]}
                 >
                   Our beliefs
                 </Button>
@@ -81,17 +81,17 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
       </Hero.Side2Side>
       <Hero.Image
         imageSrc={campfireImage.childImageSharp.fluid.src}
-        height={['60vh', '50vh']}
+        height={["60vh", "50vh"]}
         textAlign="flex-start"
         textJustify="flex-start"
       >
         <Styled.HeroContentContainer alignItems="center">
-          <Box width={[null, '40%']}>
+          <Box width={[null, "40%"]}>
             <Heading pb="2rem" fontSize={[5, 6]}>
               Groups
             </Heading>
           </Box>
-          <Styled.GroupsContent width={[null, '60%']}>
+          <Styled.GroupsContent width={[null, "60%"]}>
             <Text>
               We want to offer a path for everyone to grow their faith in
               community. We have groups for all ages that give everyone that
@@ -109,10 +109,10 @@ const AboutPage = ({ data: { heroImage, campfireImage } }) => {
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "images/pages/about/header.jpg" }) {
+    heroImage: file(relativePath: { eq: "images/pages/about/header2.jpg" }) {
       ...FullWidthImage
     }
-    campfireImage: file(relativePath: { eq: "images/common/campfire.jpg" }) {
+    campfireImage: file(relativePath: { eq: "images/common/campfire2.jpg" }) {
       ...FullWidthImage
     }
   }

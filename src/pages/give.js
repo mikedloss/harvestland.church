@@ -1,14 +1,14 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Heading, Text, Flex, Box } from 'rebass';
+import React from "react";
+import { graphql } from "gatsby";
+import { Heading, Text, Flex, Box } from "rebass";
 
-import { Layout, SEO, Container, Hero, Button } from '../components';
+import { Layout, SEO, Container, Hero, Button } from "../components";
 
-const GivePage = (props) => {
+const GivePage = props => {
   const { image } = props.data;
   return (
     <Layout>
-      <SEO title="Give" keywords={['charity', 'help']} />
+      <SEO title="Give" keywords={["charity", "help"]} />
       <Hero.Text>
         <Heading as="h1" fontSize={6} color="primary">
           Generosity
@@ -21,10 +21,10 @@ const GivePage = (props) => {
       </Hero.Text>
       <Container>
         <Flex flexDirection="column" alignItems="center">
-          <Box width="100%" px={['2rem', '4rem']}>
+          <Box width="100%" px={["2rem", "4rem"]}>
             <Text>
               The Bible gives us many references what Jesus thinks about
-              competing interests. In{' '}
+              competing interests. In{" "}
               <a
                 href="https://www.bible.com/bible/116/MAT.6.24.NLT"
                 target="_blank"
@@ -57,7 +57,7 @@ const GivePage = (props) => {
       <Hero.Side2Side
         heroText="What is Tithing?"
         imageSrc={image.childImageSharp.fluid.src}
-        height={['40vh', '60vh']}
+        height={["40vh", "60vh"]}
       >
         <p>
           Tithing in the bible was an offering from the Law of Moses that
@@ -109,7 +109,7 @@ const GivePage = (props) => {
           <Heading>What other options do I have to give?</Heading>
           <Text>
             You can give <strong>during our service</strong> when we give our
-            offering during our time of worship. You can also{' '}
+            offering during our time of worship. You can also{" "}
             <strong>mail a check</strong> to our church. Our address is below:
           </Text>
           <Flex flexDirection="column" alignItems="center" mt="2rem">
@@ -126,8 +126,8 @@ const GivePage = (props) => {
           Still have questions?
         </Heading>
         <Text>send us an email at </Text>
-        <a href="mailto:giving@harvestland.church" rel="noopener noreferrer">
-          giving@harvestland.church
+        <a href="mailto:info@harvestland.church" rel="noopener noreferrer">
+          info@harvestland.church
         </a>
       </Hero.Text>
     </Layout>
