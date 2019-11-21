@@ -3,10 +3,10 @@ export const links = [
     label: "About",
     route: "/about"
   },
-  // {
-  //   label: 'Groups',
-  //   route: '/groups',
-  // },
+  {
+    label: "Groups",
+    route: "/groups"
+  },
   {
     label: "Sermons",
     route: "/sermons"

@@ -1,23 +1,23 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { Heading, Flex, Text, Box } from 'rebass';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { Heading, Flex, Text, Box } from "rebass";
 
-import { Layout, SEO, Hero, Button, Container } from '../components';
+import { Layout, SEO, Hero, Button, Container } from "../components";
 
-import * as Styled from '../page-styles/index-page';
-import * as Media from '../components/Elements/media';
+import * as Styled from "../page-styles/index-page";
+import * as Media from "../components/Elements/media";
 
 // TODO: move these into a more central location, make this more extendable
 const SEOKeywords = [
-  'harvestland church',
-  'harvestland',
-  'clarkston, mi',
-  'clarkston',
-  'michigan',
-  'non-denominational',
-  'non-denominational church',
-  'detroit',
-  'detroit, mi',
+  "harvestland church",
+  "harvestland",
+  "clarkston, mi",
+  "clarkston",
+  "michigan",
+  "non-denominational",
+  "non-denominational church",
+  "detroit",
+  "detroit, mi"
 ];
 
 const IndexPage = ({
@@ -27,8 +27,8 @@ const IndexPage = ({
     whiteLogo,
     worshipImage,
     gatherImage,
-    serveImage,
-  },
+    serveImage
+  }
 }) => {
   const fallbackImageContent = (
     <Styled.ContentBlock>
@@ -78,7 +78,7 @@ const IndexPage = ({
         bg="primary"
         p="0.5rem"
       >
-        <Flex flexDirection="column" alignItems="center" mr={[null, '2rem']}>
+        <Flex flexDirection="column" alignItems="center" mr={[null, "2rem"]}>
           <Styled.HoursText fontSize={3} color="white">
             Sundays at 10 AM
           </Styled.HoursText>
@@ -95,17 +95,17 @@ const IndexPage = ({
         </Media.NotSmall>
       </Flex>
       <Container>
-        <Hero.Text p={['1rem', '4rem']}>
+        <Hero.Text p={["1rem", "4rem"]}>
           <Flex flexDirection="column" alignItems="center" my="2rem">
             <Heading>
-              Practicing the ways of{' '}
+              Practicing the ways of{" "}
               <Text as="span" color="primary">
                 Jesus
-              </Text>{' '}
+              </Text>{" "}
               on Earth as it is in Heaven.
             </Heading>
             <Heading mt="0.5rem">
-              We accept{' '}
+              We accept{" "}
               <Text as="span" color="primary">
                 you
               </Text>
@@ -212,7 +212,7 @@ export const query = graphql`
   }
 
   {
-    video: file(relativePath: { eq: "videos/front.mp4" }) {
+    video: file(relativePath: { eq: "videos/homepage-v1.mp4" }) {
       publicURL
     }
     fallbackImage: file(relativePath: { eq: "images/pages/visit/header.png" }) {
