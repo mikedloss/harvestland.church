@@ -18,9 +18,6 @@ export const LeaderInfo = ({ who }) => {
             {job}
           </Text>
         ))}
-        <Text as="a" href={`mailto:${who.email}`} fontSize={1}>
-          {who.email}
-        </Text>
       </Styled.LeaderDescription>
     </Styled.LeaderInfoStyle>
   );
@@ -30,7 +27,6 @@ LeaderInfo.propTypes = {
   who: PropTypes.shape({
     name: PropTypes.string.isRequired,
     jobs: PropTypes.arrayOf(PropTypes.string).isRequired,
-    email: PropTypes.string.isRequired,
     picture: PropTypes.object.isRequired
   })
 };

@@ -1,28 +1,23 @@
 // TODO: Put this in contentful
 export const leaders = {
   peteHeather: {
-    name: 'Pete & Heather Freeman',
-    jobs: ['Lead Pastors'],
-    email: 'pastors@harvestland.church',
+    name: "Pete & Heather Freeman",
+    jobs: ["Lead Pastors"]
   },
   devanne: {
-    name: 'Devanne DLoss',
-    jobs: ['Youth Pastor', 'Administrative Pastor'],
-    email: 'devanne@harvestland.church',
+    name: "Devanne DLoss",
+    jobs: ["Youth Pastor", "Administrative Pastor"]
   },
   mike: {
-    name: 'Mike DLoss',
-    jobs: ['Creative Director', 'Youth Pastor'],
-    email: 'mike@harvestland.church',
+    name: "Mike DLoss",
+    jobs: ["Creative Director", "Youth Pastor"]
   },
   willis: {
-    name: 'Willis Greer',
-    jobs: ['Worship Leader'],
-    email: 'willis@harvestland.church',
+    name: "Willis Greer",
+    jobs: ["Worship Leader"]
   },
   summer: {
-    name: 'Summer Posey',
-    jobs: ["Children's Director"],
-    email: 'summer@harvestland.church',
-  },
+    name: "Summer Posey",
+    jobs: ["Children's Director"]
+  }
 };
