@@ -45,7 +45,15 @@ const IndexPage = ({
   );
 
   return (
-    <Layout fullWidth showAlert alertProps={{ alertType: "warning" }}>
+    <Layout
+      fullWidth
+      showAlert
+      alertProps={{
+        alertType: "warning",
+        alertTitle: "COVID-19 Update at Harvestland Church",
+        alertLink: "/covid19-update"
+      }}
+    >
       <SEO
         title="Welcome"
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."

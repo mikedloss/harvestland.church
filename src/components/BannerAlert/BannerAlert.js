@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 
 import * as Styled from "./BannerAlert.styles";
 
-export const BannerAlert = ({ alertType }) => {
+export const BannerAlert = ({ alertType, alertTitle, alertLink }) => {
   return (
     <Flex
       flexDirection="row"
@@ -15,8 +15,8 @@ export const BannerAlert = ({ alertType }) => {
       p="0.5rem"
     >
       <Flex flexDirection="column" alignItems="center" mr={[null, "2rem"]}>
-        <Styled.AlertTextLink to="/covid19-update">
-          <Styled.AlertText color="white">COVID-19 Update</Styled.AlertText>
+        <Styled.AlertTextLink to={alertLink}>
+          <Styled.AlertText color="white">{alertTitle}</Styled.AlertText>
         </Styled.AlertTextLink>
       </Flex>
     </Flex>
@@ -25,5 +25,6 @@ export const BannerAlert = ({ alertType }) => {
 
 export const BannerAlertPropTypes = {
   alertType: PropTypes.oneOf(["info", "warning"]),
-  alertTitle: PropTypes.string
+  alertTitle: PropTypes.string.isRequired,
+  alertLink: PropTypes.string.isRequired
 };
