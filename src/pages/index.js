@@ -45,7 +45,7 @@ const IndexPage = ({
   );
 
   return (
-    <Layout fullWidth>
+    <Layout fullWidth showAlert alertProps={{ alertType: "warning" }}>
       <SEO
         title="Welcome"
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
