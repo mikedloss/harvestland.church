@@ -6,17 +6,10 @@ import GlobalStyle from "../../global.css";
 import theme from "../theme";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-import { BannerAlert, BannerAlertPropTypes } from "../BannerAlert";
 
 import * as Styled from "./Layout.styles";
 
-export const Layout = ({
-  children,
-  fullWidth,
-  hideLogo,
-  showAlert,
-  alertProps
-}) => {
+export const Layout = ({ children, fullWidth, hideLogo, alertProps }) => {
   const headerProps = { hideLogo };
 
   return (
@@ -24,7 +17,6 @@ export const Layout = ({
       <Styled.SiteContainer isFullWidth={fullWidth}>
         <GlobalStyle />
         <Header {...headerProps} />
-        {showAlert && <BannerAlert {...alertProps} />}
         <main>{children}</main>
         <Footer />
       </Styled.SiteContainer>
@@ -35,8 +27,6 @@ export const Layout = ({
 Layout.propTypes = {
   fullWidth: PropTypes.bool,
   hideLogo: PropTypes.bool,
-  showAlert: PropTypes.bool,
-  alertProps: BannerAlertPropTypes,
   children: PropTypes.node.isRequired
 };
 

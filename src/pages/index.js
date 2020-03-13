@@ -2,7 +2,14 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Heading, Flex, Text, Box } from "rebass";
 
-import { Layout, SEO, Hero, Button, Container } from "../components";
+import {
+  Layout,
+  SEO,
+  Hero,
+  Button,
+  Container,
+  BannerAlert
+} from "../components";
 
 import * as Styled from "../page-styles/index-page";
 import * as Media from "../components/Elements/media";
@@ -45,19 +52,16 @@ const IndexPage = ({
   );
 
   return (
-    <Layout
-      fullWidth
-      showAlert
-      alertProps={{
-        alertType: "warning",
-        alertTitle: "COVID-19 Update at Harvestland Church",
-        alertLink: "/covid19-update"
-      }}
-    >
+    <Layout fullWidth>
       <SEO
         title="Welcome"
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
         keywords={SEOKeywords}
+      />
+      <BannerAlert
+        alertType="warning"
+        alertTitle="COVID-19 Update at Harvestland Church"
+        alertLink="/covid19-update"
       />
       <Hero.Video
         videoSrc={video.publicURL}
