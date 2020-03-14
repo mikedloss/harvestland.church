@@ -12,3 +12,6 @@ export const AlertTextLink = styled(Link)`
 `;
 
 export const AlertText = styled(Text)``;
+AlertText.defaultProps = {
+  color: "white"
+};

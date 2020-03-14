@@ -58,11 +58,6 @@ const IndexPage = ({
         description="Harvestland Church exists to win people to Jesus, build a community of believers, and to equip those people to do God's work."
         keywords={SEOKeywords}
       />
-      <BannerAlert
-        alertType="warning"
-        alertTitle="COVID-19 Update at Harvestland Church"
-        alertLink="/covid19-update"
-      />
       <Hero.Video
         videoSrc={video.publicURL}
         fallbackImageSrc={fallbackImage.childImageSharp.fluid.src}

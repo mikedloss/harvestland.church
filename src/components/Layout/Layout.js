@@ -8,8 +8,9 @@ import { Header } from "../Header";
 import { Footer } from "../Footer";
 
 import * as Styled from "./Layout.styles";
+import { BannerAlert } from "../BannerAlert/BannerAlert";
 
-export const Layout = ({ children, fullWidth, hideLogo, alertProps }) => {
+export const Layout = ({ children, fullWidth, hideLogo }) => {
   const headerProps = { hideLogo };
 
   return (
@@ -17,6 +18,13 @@ export const Layout = ({ children, fullWidth, hideLogo, alertProps }) => {
       <Styled.SiteContainer isFullWidth={fullWidth}>
         <GlobalStyle />
         <Header {...headerProps} />
+        <BannerAlert type="warning">
+          <BannerAlert.Link to="/covid19-update">
+            <BannerAlert.Text>
+              COVID-19 Update at Harvestland Church
+            </BannerAlert.Text>
+          </BannerAlert.Link>
+        </BannerAlert>
         <main>{children}</main>
         <Footer />
       </Styled.SiteContainer>
