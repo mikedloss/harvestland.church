@@ -2,7 +2,14 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Heading, Flex, Text, Box } from "rebass";
 
-import { Layout, SEO, Hero, Button, Container } from "../components";
+import {
+  Layout,
+  SEO,
+  Hero,
+  Button,
+  Container,
+  BannerAlert
+} from "../components";
 
 import * as Styled from "../page-styles/index-page";
 import * as Media from "../components/Elements/media";
