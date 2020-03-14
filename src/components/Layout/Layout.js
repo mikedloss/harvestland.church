@@ -21,7 +21,7 @@ export const Layout = ({ children, fullWidth, hideLogo }) => {
         <BannerAlert type="warning">
           <BannerAlert.Link to="/covid19-update">
             <BannerAlert.Text>
-              COVID-19 Update at Harvestland Church
+              COVID-19 Update at Harvestland Church - Click here
             </BannerAlert.Text>
           </BannerAlert.Link>
         </BannerAlert>
