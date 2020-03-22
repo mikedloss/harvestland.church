@@ -22,6 +22,7 @@ export const BannerAlert = ({ type, children }) => {
 
 BannerAlert.Text = Styled.AlertText;
 BannerAlert.Link = Styled.AlertTextLink;
+BannerAlert.ExternalLink = Styled.AlertTextLinkExternal;
 
 export const BannerAlertPropTypes = {
   type: PropTypes.oneOf(["info", "warning"])

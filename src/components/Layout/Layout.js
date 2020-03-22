@@ -18,12 +18,16 @@ export const Layout = ({ children, fullWidth, hideLogo }) => {
       <Styled.SiteContainer isFullWidth={fullWidth}>
         <GlobalStyle />
         <Header {...headerProps} />
-        <BannerAlert type="warning">
-          <BannerAlert.Link to="/covid19-update">
+        <BannerAlert>
+          <BannerAlert.ExternalLink
+            href="https://www.facebook.com/HarvestlandOpenBible/videos/554429205423753/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <BannerAlert.Text>
-              COVID-19 Update at Harvestland Church - Click here
+              March 22, 2020 Sermon - Click Here
             </BannerAlert.Text>
-          </BannerAlert.Link>
+          </BannerAlert.ExternalLink>
         </BannerAlert>
         <main>{children}</main>
         <Footer />
