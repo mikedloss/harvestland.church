@@ -20,12 +20,12 @@ export const Layout = ({ children, fullWidth, hideLogo }) => {
         <Header {...headerProps} />
         <BannerAlert>
           <BannerAlert.ExternalLink
-            href="https://www.facebook.com/HarvestlandOpenBible/videos/554429205423753/"
+            href="https://www.facebook.com/HarvestlandOpenBible"
             rel="noopener noreferrer"
             target="_blank"
           >
             <BannerAlert.Text>
-              March 22, 2020 Sermon - Click Here
+              Online Services on Facebook - Click Here
             </BannerAlert.Text>
           </BannerAlert.ExternalLink>
         </BannerAlert>
