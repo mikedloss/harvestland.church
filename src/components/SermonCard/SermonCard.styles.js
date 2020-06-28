@@ -6,6 +6,7 @@ export const SermonInfoContainer = styled(Box)``;
 export const SermonDate = styled(Text)``;
 export const SermonTitle = styled(Heading)``;
 export const SermonSpeaker = styled(Text)``;
+export const SermonVideoLink = styled(Text)``;
 export const SermonAudio = styled.audio`
   width: 100%;
 `;

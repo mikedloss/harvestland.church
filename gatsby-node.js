@@ -5,10 +5,10 @@
  */
 
 // You can delete this file if you're not using it
-const path = require("path");
-const slugify = require("./scripts/slugify");
-const podcast = require("./scripts/podcast-rss");
-const dayjs = require("dayjs");
+const path = require('path');
+const slugify = require('./scripts/slugify');
+const podcast = require('./scripts/podcast-rss');
+const dayjs = require('dayjs');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -35,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
                     }
                   }
                   audioUrl
+                  videoUrl
                   duration
                   verses
                   description {
@@ -70,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(async result => {
+      ).then(async (result) => {
         if (result.errors) reject(result.errors);
 
         // sermon stuff
@@ -81,29 +82,29 @@ exports.createPages = ({ graphql, actions }) => {
         // sermon list pages
         Array.from({ length: numberOfPages }).forEach((_, i) => {
           createPage({
-            path: i === 0 ? "/sermons" : `/sermons/page-${i + 1}`,
-            component: path.resolve("./src/templates/SermonList/SermonList.js"),
+            path: i === 0 ? '/sermons' : `/sermons/page-${i + 1}`,
+            component: path.resolve('./src/templates/SermonList/SermonList.js'),
             context: {
               limit: sermonsPerPage,
               skip: i * sermonsPerPage,
               numberOfPages,
-              currentPage: i + 1
-            }
+              currentPage: i + 1,
+            },
           });
         });
 
         // sermon specific pages
         sermons.forEach(({ node }) => {
-          const sermonPath = `/sermons/${slugify(node.date, "/")}/${slugify(
+          const sermonPath = `/sermons/${slugify(node.date, '/')}/${slugify(
             node.title
           )}`;
 
           createPage({
-            component: path.resolve("./src/templates/SermonPost/SermonPost.js"),
+            component: path.resolve('./src/templates/SermonPost/SermonPost.js'),
             path: sermonPath,
             context: {
-              id: node.id
-            }
+              id: node.id,
+            },
           });
         });
 
@@ -111,25 +112,25 @@ exports.createPages = ({ graphql, actions }) => {
         const events = result.data.events.edges;
         events.forEach(({ node }) => {
           // only use the year and month
-          const slugDate = dayjs(node.date).format("YYYY/MM");
+          const slugDate = dayjs(node.date).format('YYYY/MM');
           const eventPath = `/events/${slugDate}/${slugify(node.eventName)}`;
 
           createPage({
-            component: path.resolve("./src/templates/event.js"),
+            component: path.resolve('./src/templates/event.js'),
             path: eventPath,
             context: {
-              id: node.id
-            }
+              id: node.id,
+            },
           });
         });
 
         // write the podcast RSS if we're in production
         if (!process.env.USE_RSS_PLUGIN) {
-          console.log("!!! Writing XML for Podcasts... !!!");
-          process.env.NODE_ENV === "production" &&
+          console.log('!!! Writing XML for Podcasts... !!!');
+          process.env.NODE_ENV === 'production' &&
             (await podcast.writeRSS(sermons));
           console.log(
-            "!!! Finished writing XML for Podcasts, find at /rss.xml !!!"
+            '!!! Finished writing XML for Podcasts, find at /rss.xml !!!'
           );
         }
 
@@ -139,8 +140,8 @@ exports.createPages = ({ graphql, actions }) => {
           if (node.frontmatter.path) {
             createPage({
               path: node.frontmatter.path,
-              component: path.resolve("./src/templates/alert.js"),
-              context: {}
+              component: path.resolve('./src/templates/alert.js'),
+              context: {},
             });
           }
         });

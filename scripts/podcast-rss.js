@@ -6,12 +6,13 @@ const STATIC_PATH = './static';
 const RSS_PATH = `${STATIC_PATH}/rss.xml`;
 
 exports.writeRSS = async (sermons) => {
-  console.log(`TRUNCATING ${ RSS_PATH }`);
+  console.log(`TRUNCATING ${RSS_PATH}`);
   fs.truncateSync(RSS_PATH);
 
   console.log(`WRITING TO ${RSS_PATH}`);
   fs.writeFileSync(
-    RSS_PATH, `<?xml version="1.0" encoding="UTF-8"?>
+    RSS_PATH,
+    `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://www.rssboard.org/media-rss" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Harvestland Church</title>
@@ -41,49 +42,61 @@ exports.writeRSS = async (sermons) => {
   await asyncForEach(sermons, async ({ node }) => {
     // console.log(`LOOKING AT ${ node.title }`);
     const data = node;
-    const sermonPath = `/sermons/${ slugify(node.date, "/") }/${ slugify(node.title) }`;
-    
-    const audioURL = data.audio
-      ? data.audio.file.url
-      : data.audioURL
-    
-    const audioRequest = await rp({
-      url: `https:${ audioURL }`,
-      method: "HEAD"
-    });
+    if (!data.hasOwnProperty(videoUrl)) {
+      // only do this if we don't have a video
+      const sermonPath = `/sermons/${slugify(node.date, '/')}/${slugify(
+        node.title
+      )}`;
 
-    console.log(`WRITING ${ node.title }`);
-    fs.appendFileSync(
-      RSS_PATH, `    <item>
-      <title>${ data.title } - ${ data.speaker }</title>
-      <dc:creator>Mike DLoss</dc:creator>
-      <pubDate>${ new Date(data.date).toGMTString() }</pubDate>
-      <link>https://www.harvestland.church${ sermonPath }</link>
-      <guid isPermaLink="false">${ data.id }</guid>
-      <description>${ data.verses ? `<![CDATA[<p>${ data.verses }</p>]]>` : `` }</description>
-      <itunes:author>${ data.speaker }</itunes:author>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:duration>${ data.duration }</itunes:duration>
-      <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
-      <itunes:title>${ data.title }</itunes:title>
-      <content:encoded />
-      <enclosure url="https:${ audioURL }" length="${ audioRequest['content-length'] }" type="audio/mpeg" />
-      <media:content url="https:${ audioURL }" length="${ audioRequest['content-length'] }" type="audio/mpeg" isDefault="true" medium="audio">
-        <media:title type="plain">${ data.title }</media:title>
-      </media:content>
-    </item>
-`);
-  })
+      const audioURL = data.audio ? data.audio.file.url : data.audioURL;
+
+      const audioRequest = await rp({
+        url: `https:${audioURL}`,
+        method: 'HEAD',
+      });
+
+      console.log(`WRITING ${node.title}`);
+      fs.appendFileSync(
+        RSS_PATH,
+        `    <item>
+        <title>${data.title} - ${data.speaker}</title>
+        <dc:creator>Mike DLoss</dc:creator>
+        <pubDate>${new Date(data.date).toGMTString()}</pubDate>
+        <link>https://www.harvestland.church${sermonPath}</link>
+        <guid isPermaLink="false">${data.id}</guid>
+        <description>${
+          data.verses ? `<![CDATA[<p>${data.verses}</p>]]>` : ``
+        }</description>
+        <itunes:author>${data.speaker}</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:duration>${data.duration}</itunes:duration>
+        <itunes:image href="http://images.ctfassets.net/m1p6j93uez0z/76ZAUPkA49dUK0lCTZJGru/7ef8149009c2c5c1f8447048855f2900/podcast-icon.png" />
+        <itunes:title>${data.title}</itunes:title>
+        <content:encoded />
+        <enclosure url="https:${audioURL}" length="${
+          audioRequest['content-length']
+        }" type="audio/mpeg" />
+        <media:content url="https:${audioURL}" length="${
+          audioRequest['content-length']
+        }" type="audio/mpeg" isDefault="true" medium="audio">
+          <media:title type="plain">${data.title}</media:title>
+        </media:content>
+      </item>
+`
+      );
+    }
+  });
 
   console.log(`FINISHING XML`);
   fs.appendFileSync(
-    RSS_PATH, `  </channel>
+    RSS_PATH,
+    `  </channel>
 </rss>`
-  )
-}
+  );
+};
 
 const asyncForEach = async (array, cb) => {
   for (let i = 0; i < array.length; i++) {
     await cb(array[i], i, array);
   }
-}
+};

@@ -38,6 +38,7 @@ export const query = graphql`
       title
       speaker
       date
+      videoUrl
       audioUrl
       verses
       audio {

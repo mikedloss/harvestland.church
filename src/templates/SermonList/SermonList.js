@@ -11,6 +11,7 @@ const SermonListPage = (props) => {
   const {
     heroImage,
     spotifyImage,
+    facebookImage,
     allContentfulSermon: { sermons },
   } = props.data;
 
@@ -54,22 +55,33 @@ const SermonListPage = (props) => {
             <Heading as="h1" fontSize={[5, 6]} color="black" mb="1rem">
               All of our messages can be found on
             </Heading>
-            <Styled.ImageContainer>
-              <Styled.Image src={spotifyImage.childImageSharp.fluid.src} />
-            </Styled.ImageContainer>
+            <Flex
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Styled.Link
+                color="primary"
+                href="https://www.facebook.com/HarvestlandOpenBible/live_videos/"
+                target="_blank"
+                marginBottom={4}
+              >
+                <Styled.ImageContainer>
+                  <Styled.Image src={facebookImage.childImageSharp.fluid.src} />
+                </Styled.ImageContainer>
+              </Styled.Link>
+              <Styled.Link
+                color="primary"
+                href="https://open.spotify.com/show/3E5VM0Ji3Rb2Oa55PlCC90?si=usLSeMexRam2vRhs52BR_A"
+                target="_blank"
+              >
+                <Styled.ImageContainer>
+                  <Styled.Image src={spotifyImage.childImageSharp.fluid.src} />
+                </Styled.ImageContainer>
+              </Styled.Link>
+            </Flex>
           </Flex>
         )}
-        <Flex justifyContent="center" mt={['2rem', '1rem']}>
-          <Heading as="h2" fontSize={4} color="black">
-            <Styled.Link
-              color="primary"
-              href="https://open.spotify.com/show/3E5VM0Ji3Rb2Oa55PlCC90?si=usLSeMexRam2vRhs52BR_A"
-              target="_blank"
-            >
-              View our Spotify profile
-            </Styled.Link>
-          </Heading>
-        </Flex>
       </Hero.Text>
       <Container>
         {sermons.map(({ sermon }, index) => {
@@ -107,6 +119,9 @@ export const query = graphql`
     spotifyImage: file(relativePath: { eq: "images/spotify-logo.png" }) {
       ...FullWidthImage
     }
+    facebookImage: file(relativePath: { eq: "images/facebook.png" }) {
+      ...FullWidthImage
+    }
 
     allContentfulSermon(
       sort: { fields: [date], order: DESC }
@@ -118,6 +133,7 @@ export const query = graphql`
           title
           speaker
           date
+          videoUrl
           audioUrl
           verses
           audio {

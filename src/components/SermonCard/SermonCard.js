@@ -8,9 +8,10 @@ import * as Styled from './SermonCard.styles';
 import { Verse } from '../Verse';
 
 export const SermonCard = (props) => {
-  const { title, speaker, date, audioUrl, audio } = props.data;
+  const { title, speaker, date, audioUrl, audio, videoUrl } = props.data;
   const { currentPath } = props;
   const verses = props.data.verses && props.data.verses.split(', ');
+
   return (
     <Styled.SermonCardStyle
       width={['100%', '70%', '50%']}
@@ -35,10 +36,20 @@ export const SermonCard = (props) => {
         </Styled.SermonTitle>
         <Styled.SermonSpeaker fontSize={2}>{speaker}</Styled.SermonSpeaker>
       </Styled.SermonInfoContainer>
-      {(audio || audioUrl) && (
-        <Styled.SermonAudio controls>
-          <source src={audio.file.url || audioUrl} type="audio/mpeg" />
-        </Styled.SermonAudio>
+      {videoUrl ? (
+        <Styled.SermonVideoLink>
+          <a href={videoUrl} target="_blank">
+            Watch on Facebook
+          </a>
+        </Styled.SermonVideoLink>
+      ) : (
+        <>
+          {(audio || audioUrl) && (
+            <Styled.SermonAudio controls>
+              <source src={audio.file.url || audioUrl} type="audio/mpeg" />
+            </Styled.SermonAudio>
+          )}
+        </>
       )}
       {verses && (
         <Styled.SermonVerses fontSize={1}>
