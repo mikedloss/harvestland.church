@@ -5,10 +5,12 @@
  */
 
 // You can delete this file if you're not using it
-export const onClientEntry = () => {
-  // gatsby-image polyfill (Safari, IE)
-  if (typeof IntersectionObserver === `undefined`) {
-    import(`intersection-observer`);
-    console.log(`IntersectionObserver is polyfilled`)
-  }
-}
+// export const onClientEntry = async () => {
+//   // gatsby-image polyfill (Safari, IE)
+//   if (typeof IntersectionObserver === `undefined`) {
+//     import(`intersection-observer`);
+//     console.log(`IntersectionObserver is polyfilled`);
+//   }
+
+//   return;
+// };
