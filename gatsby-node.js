@@ -83,7 +83,9 @@ exports.createPages = ({ graphql, actions }) => {
         Array.from({ length: numberOfPages }).forEach((_, i) => {
           createPage({
             path: i === 0 ? '/sermons' : `/sermons/page-${i + 1}`,
-            component: path.resolve('./src/templates/SermonList/SermonList.js'),
+            component: path.resolve(
+              './src/templates/SermonList/SermonList.tsx'
+            ),
             context: {
               limit: sermonsPerPage,
               skip: i * sermonsPerPage,
@@ -100,7 +102,9 @@ exports.createPages = ({ graphql, actions }) => {
           )}`;
 
           createPage({
-            component: path.resolve('./src/templates/SermonPost/SermonPost.js'),
+            component: path.resolve(
+              './src/templates/SermonPost/SermonPost.tsx'
+            ),
             path: sermonPath,
             context: {
               id: node.id,
@@ -116,7 +120,7 @@ exports.createPages = ({ graphql, actions }) => {
           const eventPath = `/events/${slugDate}/${slugify(node.eventName)}`;
 
           createPage({
-            component: path.resolve('./src/templates/event.js'),
+            component: path.resolve('./src/templates/event.tsx'),
             path: eventPath,
             context: {
               id: node.id,
@@ -140,7 +144,7 @@ exports.createPages = ({ graphql, actions }) => {
           if (node.frontmatter.path) {
             createPage({
               path: node.frontmatter.path,
-              component: path.resolve('./src/templates/alert.js'),
+              component: path.resolve('./src/templates/alert.tsx'),
               context: {},
             });
           }

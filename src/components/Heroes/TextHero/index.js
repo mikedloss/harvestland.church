@@ -1,1 +1,0 @@
-export { TextHero } from './TextHero';

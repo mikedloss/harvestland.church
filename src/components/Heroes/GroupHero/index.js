@@ -1,1 +1,0 @@
-export { GroupHero } from './GroupHero';
