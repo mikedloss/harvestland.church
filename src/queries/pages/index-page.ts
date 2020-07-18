@@ -8,7 +8,6 @@ export interface IndexPageQueryShape {
     publicURL: string;
   };
   fallbackImage: ChildImageSharp;
-  whiteLogo: ChildImageSharp;
   worshipImage: ChildImageSharp;
   gatherImage: ChildImageSharp;
   serveImage: ChildImageSharp;
@@ -17,7 +16,6 @@ export interface IndexPageQueryShape {
 export interface IndexPageQuery {
   videoUrl: string;
   fallbackImage: string;
-  whiteLogo: string;
   worshipImage: string;
   gatherImage: string;
   serveImage: string;
@@ -38,13 +36,6 @@ export const useIndexPageQuery = (): IndexPageQuery => {
           }
         }
       }
-      whiteLogo: file(relativePath: { eq: "images/logo-white.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       worshipImage: file(
         relativePath: { eq: "images/pages/index/worship.jpg" }
       ) {
@@ -61,7 +52,6 @@ export const useIndexPageQuery = (): IndexPageQuery => {
 
   const videoUrl = data.video.publicURL;
   const fallbackImage = getFluidImageSrc(data.fallbackImage);
-  const whiteLogo = getFluidImageSrc(data.whiteLogo);
   const worshipImage = getFluidImageSrc(data.worshipImage);
   const gatherImage = getFluidImageSrc(data.gatherImage);
   const serveImage = getFluidImageSrc(data.serveImage);
@@ -69,7 +59,6 @@ export const useIndexPageQuery = (): IndexPageQuery => {
   return {
     videoUrl,
     fallbackImage,
-    whiteLogo,
     worshipImage,
     gatherImage,
     serveImage,

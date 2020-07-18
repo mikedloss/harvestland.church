@@ -32,7 +32,6 @@ const IndexPage: React.FC = () => {
   const {
     videoUrl,
     fallbackImage,
-    whiteLogo,
     worshipImage,
     gatherImage,
     serveImage,
@@ -71,11 +70,6 @@ const IndexPage: React.FC = () => {
           <Box mt="1rem">
             <Styled.WhiteLogo />
           </Box>
-          {/* <Styled.WhiteLogo
-            src={whiteLogo.childImageSharp.fluid.src}
-            alt="Harvestland Church"
-            m="1rem"
-          /> */}
         </Styled.ContentBlock>
       </Hero.Video>
       <Flex

@@ -25,15 +25,6 @@ export const WhiteLogo = styled(LogoSVG)`
     width: 100%;
   }
 `;
-// export const WhiteLogo = styled(Image)`
-//   color: ${(props) => props.theme.colors.white};
-//   max-width: 90%;
-//   width: 300px;
-
-//   @media screen and (min-width: ${bp.MEDIUM}px) {
-//     width: 100%;
-//   }
-// `;
 
 export const HoursText = styled(Heading)`
   line-height: 1.1;
