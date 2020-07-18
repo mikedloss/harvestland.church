@@ -1,1 +1,1 @@
-export { GroupHero } from './GroupHero';
+export { GroupHero, GroupHeroProps } from './GroupHero';

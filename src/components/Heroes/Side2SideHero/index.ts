@@ -1,1 +1,1 @@
-export { Side2SideHero } from './Side2Side';
+export { Side2SideHero, Side2SideHeroProps } from './Side2Side';

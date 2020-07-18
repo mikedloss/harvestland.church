@@ -8,9 +8,13 @@ import { useClickAway } from '../../hooks/useClickAway';
 
 import * as Media from '../Elements/media';
 import * as Styled from './Header.styles';
-import { links } from './links';
+import { links, LinkRoute } from './links';
 
-const buildLinks = (links, linkOnClick) => {
+export interface HeaderProps {
+  hideLogo?: boolean;
+}
+
+const buildLinks = (links: LinkRoute[], linkOnClick: any) => {
   const allLinks = links.map((link) => {
     if (link.dropdown) {
       return (
@@ -38,7 +42,7 @@ const buildLinks = (links, linkOnClick) => {
   return allLinks;
 };
 
-export const Header = ({ hideLogo }) => {
+export const Header: React.FC<HeaderProps> = ({ hideLogo = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -59,10 +63,6 @@ export const Header = ({ hideLogo }) => {
       {!hideLogo && (
         <Styled.NavHeading>
           <Styled.Logo to="/">
-            {/* <Styled.LogoImage
-              src={data.file.childImageSharp.fluid.src}
-              alt="Harvestland Church"
-            /> */}
             <Styled.LogoImage width="0px" />
           </Styled.Logo>
         </Styled.NavHeading>
@@ -70,8 +70,4 @@ export const Header = ({ hideLogo }) => {
       <Styled.NavList isVisible={menuOpen}>{allLinks}</Styled.NavList>
     </Styled.Nav>
   );
-};
-
-Header.propTypes = {
-  hideLogo: PropTypes.bool,
 };

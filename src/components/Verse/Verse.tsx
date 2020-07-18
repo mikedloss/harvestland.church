@@ -2,7 +2,11 @@ import React from 'react';
 
 import * as Styled from './Verse.styles';
 
-export const Verse = ({ verse }) => {
+export interface VerseProps {
+  verse: string;
+}
+
+export const Verse: React.FC<VerseProps> = ({ verse }) => {
   const regexedVerse = verse.match(BIBLE_REGEX);
   const bookName = BOOK_DECODE[regexedVerse[1]];
   const verseReference = regexedVerse[2];

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import dayjs from 'dayjs';
 import slugify from '../../../scripts/slugify';
@@ -7,7 +6,23 @@ import slugify from '../../../scripts/slugify';
 import * as Styled from './SermonCard.styles';
 import { Verse } from '../Verse';
 
-export const SermonCard = (props) => {
+export interface SermonCardData {
+  title: string;
+  speaker: string;
+  date: string;
+  audioUrl?: string;
+  videoUrl?: string;
+  verses?: string;
+  audio: any;
+}
+
+export interface SermonCardProps {
+  data: SermonCardData;
+  currentPath: string;
+  onClick?: () => void;
+}
+
+export const SermonCard: React.FC<SermonCardProps> = (props) => {
   const { title, speaker, date, audioUrl, audio, videoUrl } = props.data;
   const { currentPath } = props;
   const verses = props.data.verses && props.data.verses.split(', ');
@@ -64,16 +79,4 @@ export const SermonCard = (props) => {
       )}
     </Styled.SermonCardStyle>
   );
-};
-
-SermonCard.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    speaker: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    audioUrl: PropTypes.string,
-    verses: PropTypes.string,
-    audio: PropTypes.object,
-  }),
-  currentPath: PropTypes.string.isRequired,
 };

@@ -4,7 +4,38 @@ import { Link, graphql } from 'gatsby';
 
 import { Layout, SEO, Hero, SermonCard, Container } from '../../components';
 
-const SermonPostTemplate = (props) => {
+export interface SermonPostTemplateProps {
+  path: string;
+  data: {
+    heroImage: {
+      childImageSharp: {
+        fluid: any;
+      };
+    };
+    sermon: {
+      title: string;
+      speaker: string;
+      date: string;
+      videoUrl: string;
+      audioUrl: string;
+      verses: string;
+      audio: {
+        file: {
+          url: string;
+          fileName: string;
+          contentType: string;
+        };
+      };
+      description: {
+        childContentfulRichText: {
+          html: string;
+        };
+      };
+    };
+  };
+}
+
+const SermonPostTemplate: React.FC<SermonPostTemplateProps> = (props) => {
   const { heroImage, sermon } = props.data;
   return (
     <Layout>
@@ -18,9 +49,9 @@ const SermonPostTemplate = (props) => {
         </Heading>
       </Hero.Image>
       <Container>
-        <SermonCard data={sermon} currentPath={props['*']} />
+        <SermonCard data={sermon} currentPath={props.path} />
         <Flex alignItems="center" justifyContent="center">
-          <Link as="a" to="/sermons">
+          <Link to="/sermons">
             <Text fontSize={1}>Return to All Sermons</Text>
           </Link>
         </Flex>

@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import { Flex, Box } from 'rebass';
 import { breakpointValues as bp, colors } from '../../theme';
 
-export const ImageHeroStyle = styled.section`
+export interface ImageHeroStyleProps {
+  height: string | string[];
+}
+export const ImageHeroStyle = styled.section<ImageHeroStyleProps>`
   background-color: #000;
   color: #fff;
   display: block;
@@ -10,12 +13,12 @@ export const ImageHeroStyle = styled.section`
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
-  height: ${(props) => `${getHeight(props.height)};`};
+  height: ${({ height }) => `${getHeight(height)};`};
 
-  ${(props) =>
-    Array.isArray(props.height) &&
+  ${({ height }) =>
+    Array.isArray(height) &&
     `@media screen and (min-width: ${bp.LARGE}px) {
-    height: ${getHeight(props.height, 1)};
+    height: ${getHeight(height, 1)};
   }`};
 `;
 
@@ -29,15 +32,19 @@ export const StaticImage = styled(Box)`
   object-fit: cover;
 `;
 
-export const MediaContainer = styled.div`
+export interface MediaContainerProps {
+  opacity: string;
+  overlay: any;
+}
+export const MediaContainer = styled.div<MediaContainerProps>`
   display: block;
   box-sizing: border-box;
   overflow: hidden;
-  opacity: ${(props) => props.opacity};
+  opacity: ${({ opacity }) => opacity};
   height: 100%;
 
-  ${(props) =>
-    props.overlay &&
+  ${({ overlay }) =>
+    overlay &&
     `
     ::before {
       content: "";
@@ -46,7 +53,7 @@ export const MediaContainer = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      background: ${props.overlay.color || colors.primaryLight};
+      background: ${overlay.color || colors.primaryLight};
       opacity: .5;
     }
     `};
@@ -66,7 +73,7 @@ export const TextOverlay = styled(Flex)`
   height: 100%;
 `;
 
-export const getHeight = (height, index = 0) => {
+export const getHeight = (height: string | string[] | undefined, index = 0) => {
   return height
     ? Array.isArray(height)
       ? `${height[index]}`

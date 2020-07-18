@@ -17,22 +17,11 @@ export const Nav = styled(Box)`
   }
 `;
 
-export const MenuButton = styled(Button)`
-  position: absolute;
-  top: 2px;
-  right: 0px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
+export interface MenuButtonProps {
+  menuOpen: boolean;
+}
 
-  ${(props) =>
-    props.menuOpen &&
-    `
-    background-color: ${props.theme.colors.primary};
-    color: ${props.theme.colors.white};
-  `};
-`;
-MenuButton.defaultProps = {
+export const MenuButton = styled(Button).attrs({
   bg: 'white',
   color: 'black',
   py: '5px',
@@ -40,46 +29,59 @@ MenuButton.defaultProps = {
   my: '15px',
   mx: '10px',
   fontSize: 0,
-};
+})<MenuButtonProps>`
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
 
-export const NavHeading = styled(Heading)`
-  display: inline-block;
+  ${({ menuOpen, theme }) =>
+    menuOpen &&
+    `
+    background-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
+  `};
 `;
-NavHeading.defaultProps = {
+
+export const NavHeading = styled(Heading).attrs({
   py: 4,
   pl: 4,
   fontSize: '2',
-};
+})`
+  display: inline-block;
+`;
 
 export const Logo = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.black};
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 export const LogoImage = styled(LogoSVG)`
   width: 210px;
   height: auto;
   & path {
-    fill: ${(props) => props.theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
   }
 `;
-// export const LogoImage = styled(Image)`
-//   color: ${(props) => props.theme.colors.primary};
-//   width: 210px;
-// `;
 
 // main-nav
-export const NavList = styled.ul`
+export interface NavListProps {
+  isVisible: boolean;
+}
+
+export const NavList = styled.ul<NavListProps>`
   list-style-type: none;
   margin: 0;
   display: ${({ isVisible }) => (isVisible ? '' : 'none')};
 
   position: absolute;
   width: 100%;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   top: 60px;
   z-index: 2;
-  border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
 
   @media screen and (min-width: ${bp.SMALL}px) {
     display: flex;
@@ -95,12 +97,10 @@ export const NavList = styled.ul`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.black};
+  color: ${({ theme }) => theme.colors.black};
   transition: color 0.3s ease-out;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
-
-// export const LogoImage = styled(LogoSVG)``;

@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import { Flex, Heading } from 'rebass';
 
 import * as Styled from './PageLinks.styles';
-import { links } from '../../../Header/links';
+import { links, LinkRoute } from '../../../Header/links';
 
-const buildLinks = (links, isInDropdown = false) => {
+const buildLinks = (link: LinkRoute[], isInDropdown = false) => {
   const allLinks = links.map((link) => {
     if (link.dropdown) {
       return (

@@ -1,18 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Heading, Flex } from "rebass";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Heading, Flex } from 'rebass';
 
-import { ImageHero } from "../ImageHero";
+import { ImageHero } from '../ImageHero';
 
-import * as Styled from "./VideoHero.styles";
-import * as Media from "../../Elements/media";
+import * as Styled from './VideoHero.styles';
+import * as Media from '../../Elements/media';
+
+export interface VideoHeroProps {
+  fallbackImageSrc: string;
+  fallbackImageHeight: string;
+  fallbackImageContent: React.ReactNode;
+  videoSrc: string;
+}
 
 export const VideoHero = ({
   videoSrc,
   fallbackImageSrc,
   fallbackImageHeight,
   fallbackImageContent,
-  children
+  children,
 }) => {
   return (
     <Styled.VideoHeroStyle>
@@ -28,7 +35,7 @@ export const VideoHero = ({
                 flexDirection="column"
                 alignItems="center"
                 justifyContent="center"
-                style={{ textAlign: "center" }}
+                style={{ textAlign: 'center' }}
               >
                 <Heading fontSize={6}>Welcome to Harvestland</Heading>
               </Flex>
@@ -54,5 +61,5 @@ VideoHero.propTypes = {
   fallbackImageSrc: PropTypes.string.isRequired,
   fallbackImageHeight: PropTypes.string,
   fallbackImageContent: PropTypes.node,
-  videoSrc: PropTypes.string.isRequired
+  videoSrc: PropTypes.string.isRequired,
 };

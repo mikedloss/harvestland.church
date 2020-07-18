@@ -1,1 +1,1 @@
-export { ImageHero } from './ImageHero';
+export { ImageHero, ImageHeroProps } from './ImageHero';

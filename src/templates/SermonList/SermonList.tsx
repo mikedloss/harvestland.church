@@ -6,7 +6,7 @@ import { Layout, SEO, Hero, SermonCard, Container } from '../../components';
 
 import * as Styled from './SermonList.styles';
 
-const SermonListPage = (props) => {
+const SermonListPage: React.FC<any> = (props) => {
   const { currentPage, numberOfPages } = props.pageContext;
   const {
     heroImage,

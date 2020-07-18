@@ -4,16 +4,14 @@ import { Flex, Heading, Text } from 'rebass';
 
 import { Layout, Hero, Button } from '../components';
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <Layout>
     <Hero.Text>
       <Flex flexDirection="column">
         <Heading>Page not found!</Heading>
         <Text>Unfortunately you reached a page that doesn't exist.</Text>
-        <Link to='/'>
-          <Button mt="2rem">
-            Go Home
-          </Button>
+        <Link to="/">
+          <Button mt="2rem">Go Home</Button>
         </Link>
       </Flex>
     </Hero.Text>

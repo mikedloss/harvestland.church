@@ -13,23 +13,19 @@ export const LeaderInfoStyle = styled(Flex)`
   }
 `;
 
-export const PictureContainer = styled(Box)``;
-
-PictureContainer.defaultProps = {
+export const PictureContainer = styled(Box).attrs({
   width: ['100%', '50%'],
-};
+})``;
 
 export const LeaderPicture = styled(Image)`
   width: 100%;
 `;
 
-export const LeaderDescription = styled(Flex)``;
-
-LeaderDescription.defaultProps = {
+export const LeaderDescription = styled(Flex).attrs({
   width: ['100%', '50%'],
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'flex-start',
   p: ['1rem', '2rem'],
   mb: ['2rem', 0],
-};
+})``;

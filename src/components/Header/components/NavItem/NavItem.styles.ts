@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import { Text } from 'rebass';
 import { breakpointValues as bp } from '../../../theme';
 
-export const NavItem = styled(Text)`
+export interface NavItemProps {
+  isDropdown: boolean;
+}
+export const NavItem = styled(Text)<NavItemProps>`
   margin: 1rem;
 
   @media screen and (min-width: ${bp.SMALL}px) {
@@ -10,8 +13,8 @@ export const NavItem = styled(Text)`
     text-align: center;
   }
 
-  ${(props) =>
-    props.isDropdown &&
+  ${({ isDropdown }) =>
+    isDropdown &&
     `
     :not(:last-child) {
       margin: 0 0 1rem 1rem;

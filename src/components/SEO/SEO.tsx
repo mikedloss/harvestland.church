@@ -1,9 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
-export const SEO = ({ description, lang, keywords, title }) => {
+export interface SEOProps {
+  description?: string;
+  lang?: string;
+  keywords?: string[];
+  title: string;
+}
+
+export const SEO: React.FC<SEOProps> = ({
+  description,
+  lang,
+  keywords,
+  title,
+}) => {
   const data = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
@@ -26,9 +37,7 @@ export const SEO = ({ description, lang, keywords, title }) => {
 
   const pageTitle = `${title} | Harvestland Church`;
   const metaDescription = description || data.site.siteMetadata.description;
-  const imageLink = `https://harvestland.church${
-    data.image.childImageSharp.fixed.src
-  }`;
+  const imageLink = `https://harvestland.church${data.image.childImageSharp.fixed.src}`;
 
   return (
     <Helmet htmlAttributes={{ lang }}>
@@ -74,11 +83,4 @@ SEO.defaultProps = {
     'harvestland',
     'modern church',
   ],
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
 };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link } from "gatsby";
-import { Flex, Text } from "rebass";
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { Text } from 'rebass';
 
 const linkCss = `
   text-decoration: none;
@@ -11,6 +11,10 @@ const linkCss = `
   }
 `;
 
+export const AlertText = styled(Text).attrs({
+  color: 'white',
+})``;
+
 export const AlertTextLink = styled(Link)`
   ${linkCss}
 `;
@@ -18,8 +22,3 @@ export const AlertTextLink = styled(Link)`
 export const AlertTextLinkExternal = styled.a`
   ${linkCss}
 `;
-
-export const AlertText = styled(Text)``;
-AlertText.defaultProps = {
-  color: "white"
-};

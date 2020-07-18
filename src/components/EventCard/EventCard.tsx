@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import dayjs from 'dayjs';
 
@@ -9,7 +8,11 @@ import { Button } from '../Button';
 
 import * as Styled from './EventCard.styles';
 
-export const EventCard = ({ event }) => {
+export interface EventCardProps {
+  event: any; //TODO: Get this type
+}
+
+export const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const dateText = dayUtil.getDateText(event);
 
   const isHappeningNow = dayUtil.isHappeningNow(event);
@@ -41,8 +44,4 @@ export const EventCard = ({ event }) => {
       </Styled.EventInfoContainer>
     </Styled.EventContainer>
   );
-};
-
-EventCard.propTypes = {
-  event: PropTypes.object.isRequired,
 };

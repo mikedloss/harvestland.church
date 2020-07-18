@@ -7,7 +7,13 @@ import { breakpointValues as bp } from '../../../theme';
 
 export const Dropdown = styled(Box)``;
 
-export const Label = styled(Heading)`
+export interface LabelProps {
+  isExpanded: boolean;
+}
+export const Label = styled(Heading).attrs({
+  as: 'h3',
+  fontSize: [4, 3],
+})<LabelProps>`
   text-align: left;
   margin-left: 1rem;
   ${(props) => props.isExpanded && `margin-bottom: 0.5rem;`} cursor: pointer;
@@ -18,10 +24,6 @@ export const Label = styled(Heading)`
     text-align: left;
   }
 `;
-Label.defaultProps = {
-  as: 'h3',
-  fontSize: [4, 3],
-};
 
 export const DownChevron = styled(ChevronDown)`
   width: 8px;
@@ -33,11 +35,14 @@ export const UpChevron = styled(ChevronUp)`
   margin-left: 4px;
 `;
 
-export const DropdownContent = styled(Box)`
-  display: ${(props) => (props.shouldDisplay ? 'block' : 'none')};
+export interface DropdownContentProps {
+  shouldDisplay: boolean;
+}
+export const DropdownContent = styled(Box)<DropdownContentProps>`
+  display: ${({ shouldDisplay }) => (shouldDisplay ? 'block' : 'none')};
   position: relative;
   z-index: 2;
-  background-color: ${(props) => props.theme.colors.offWhite};
+  background-color: ${({ theme }) => theme.colors.offWhite};
   min-width: 160px;
   padding: 0.75rem;
 

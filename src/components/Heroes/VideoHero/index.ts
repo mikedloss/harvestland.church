@@ -1,1 +1,1 @@
-export { VideoHero } from './VideoHero';
+export { VideoHero, VideoHeroProps } from './VideoHero';

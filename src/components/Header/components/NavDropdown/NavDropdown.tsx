@@ -1,20 +1,26 @@
 import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { Flex } from 'rebass';
 
 import { useClickAway } from '../../../../hooks/useClickAway';
 import * as Styled from './NavDropdown.styles';
 
-export const IsDropdownContext = React.createContext();
+interface NavDropdownProps {
+  label: string;
+}
 
-export const NavDropdown = ({ label, children }) => {
+export const IsDropdownContext = React.createContext({ isDropdown: true });
+
+export const NavDropdown: React.FC<NavDropdownProps> = ({
+  label,
+  children,
+}) => {
   const [expanded, setExpanded] = useState(false);
   const dropdownRef = useRef(null);
 
   useClickAway(dropdownRef, () => expanded && setExpanded(false));
 
   return (
-    <IsDropdownContext.Provider value={true}>
+    <IsDropdownContext.Provider value={{ isDropdown: true }}>
       <Styled.Dropdown ref={dropdownRef}>
         <Flex flexDirection="row" alignItems="center">
           <Styled.Label
@@ -35,9 +41,4 @@ export const NavDropdown = ({ label, children }) => {
       </Styled.Dropdown>
     </IsDropdownContext.Provider>
   );
-};
-
-NavDropdown.propTypes = {
-  label: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
 };

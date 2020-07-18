@@ -6,7 +6,38 @@ import { Layout, SEO, Hero, Button, Container } from '../components';
 
 import dayUtils, { dateTimeFormat } from '../utils/day';
 
-const EventTemplate = ({ data: { event } }) => {
+export interface EventTemplateProps {
+  data: {
+    event: {
+      eventName: string;
+      date: string;
+      endDate: string;
+      eventAddress: {
+        childMarkdownRemark: {
+          html: string;
+        };
+      };
+      eventImage: {
+        title: string;
+        fluid: {
+          src: string;
+        };
+      };
+      eventSummary: string;
+      eventDescription: {
+        childMarkdownRemark: {
+          html: string;
+        };
+      };
+      isFrontPage: boolean;
+      facebookEventLink: string;
+      ticketLink: string;
+      keywords: string[];
+    };
+  };
+}
+
+const EventTemplate: React.FC<EventTemplateProps> = ({ data: { event } }) => {
   return (
     <Layout>
       <SEO

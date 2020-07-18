@@ -1,1 +1,1 @@
-export { TextHero } from './TextHero';
+export { TextHero, TextHeroProps } from './TextHero';

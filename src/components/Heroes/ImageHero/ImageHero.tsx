@@ -1,9 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import * as Styled from './ImageHero.styles';
 
-export const ImageHero = ({
+export interface ImageHeroProps {
+  imageSrc: string;
+  imageDesc?: string;
+  height?: string | string[];
+  textAlign?: string;
+  textJustify?: string;
+  containerPadding?: string | string[];
+  overlay?: any;
+  opacity?: string;
+}
+
+export const ImageHero: React.FC<ImageHeroProps> = ({
   imageSrc,
   imageDesc,
   height,
@@ -30,21 +40,4 @@ export const ImageHero = ({
       </Styled.TextContainer>
     </Styled.ImageHeroStyle>
   );
-};
-
-ImageHero.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
-  height: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]),
-  textAlign: PropTypes.string,
-  textJustify: PropTypes.string,
-  containerPadding: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]),
-  overlay: PropTypes.object,
-  opacity: PropTypes.string, // changes dark overlay opacity, higher number == lighter
-  children: PropTypes.node,
 };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Flex, Box } from "rebass";
-import { breakpointValues as bp } from "../../theme";
+import styled from 'styled-components';
+import { Flex, Box } from 'rebass';
+import { breakpointValues as bp } from '../../theme';
 
 // TODO: fix these video styles... they need to be more robust, and easily changeable
 export const VideoHeroStyle = styled.section`
@@ -17,13 +17,17 @@ export const VideoHeroStyle = styled.section`
   overflow: hidden;
 `;
 
-export const StaticImage = styled(Box)`
-  height: ${props => (props.height ? `${props.height}` : "40vh")};
-  ${"" /* width: 100%; */}
-  background-image: url('${props => props.src}');
+export interface StaticImageProps {
+  height: string | string[];
+  src: string;
+}
+export const StaticImage = styled(Box)<StaticImageProps>`
+  height: ${({ height }) => (height ? `${height}` : '40vh')};
+  ${'' /* width: 100%; */}
+  background-image: url('${({ src }) => src}');
   background-position: center center;
   background-repeat: no-repeat;
-  ${"" /* background-attachment: fixed; */}
+  ${'' /* background-attachment: fixed; */}
   background-size: cover;
 `;
 

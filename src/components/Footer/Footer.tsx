@@ -22,12 +22,7 @@ const ContentfulAttribute = () => (
 
 export const Footer = () => {
   return (
-    <Styled.FooterStyle
-      as="footer"
-      flexDirection={['column-reverse', 'row']}
-      alignItems={[null, 'center']}
-      justifyContent={['flex-start', null]}
-    >
+    <Styled.FooterStyle>
       <Styled.LeftContainer width={['100%', '75%']}>
         <Styled.Container flexDirection="column">
           <Styled.SmallLine>Harvestland Church</Styled.SmallLine>

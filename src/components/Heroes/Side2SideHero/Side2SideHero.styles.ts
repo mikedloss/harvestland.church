@@ -3,30 +3,43 @@ import { Flex } from 'rebass';
 import { breakpointValues as bp } from '../../theme';
 import { getHeight } from '../ImageHero/ImageHero.styles';
 
-export const Side2SideHeroStyle = styled(Flex)`
+export interface Side2SideHeroStyleProps {
+  inverse: boolean;
+}
+export const Side2SideHeroStyle = styled(Flex)<Side2SideHeroStyleProps>`
   flex-direction: column;
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    flex-direction: ${(props) => (props.inverse ? 'row-reverse' : 'row')};
+    flex-direction: ${({ inverse }) => (inverse ? 'row-reverse' : 'row')};
   }
 `;
-export const HeroContainer = styled(Flex)`
+
+export interface HeroContainerProps {
+  height?: string | string[];
+  imageWidth: string;
+}
+export const HeroContainer = styled(Flex)<HeroContainerProps>`
   width: 100%;
-  height: ${(props) => `${getHeight(props.height)};`};
+  height: ${({ height }) => `${getHeight(height)};`};
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    width: ${(props) => props.imageWidth || '50%'};
-    height: ${(props) => `${getHeight(props.height, 1)};`};
+    width: ${({ imageWidth }) => imageWidth || '50%'};
+    height: ${({ height }) => `${getHeight(height, 1)};`};
   }
 `;
-export const TextBlockContainer = styled(Flex)`
+
+export interface TextBlockContainerProps {
+  imageWidth: string;
+  textBlockJustify?: string;
+}
+export const TextBlockContainer = styled(Flex)<TextBlockContainerProps>`
   width: 100%;
   align-items: flex-start;
   justify-content: center;
 
   @media screen and (min-width: ${bp.LARGE}px) {
-    width: ${(props) =>
-      props.imageWidth ? `calc(100% - ${props.imageWidth})` : '50%'};
-    align-items: ${(props) => props.textBlockJustify || 'flex-start'};
+    width: ${({ imageWidth }) =>
+      imageWidth ? `calc(100% - ${imageWidth})` : '50%'};
+    align-items: ${({ textBlockJustify }) => textBlockJustify || 'flex-start'};
   }
 `;

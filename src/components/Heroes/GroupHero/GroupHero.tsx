@@ -1,21 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Heading, Text, Flex } from "rebass";
+import React from 'react';
+import { Heading, Text, Flex } from 'rebass';
 
-import { ImageHero } from "../ImageHero";
-import * as Styled from "./GroupHero.styles";
+import { ImageHero } from '../ImageHero';
+import * as Styled from './GroupHero.styles';
 
-export const GroupHero = ({
+export interface GroupHeroProps {
+  imageSrc: string;
+  imageDesc: string;
+  groupName: string;
+  groupFrequency: string;
+}
+
+export const GroupHero: React.FC<GroupHeroProps> = ({
   imageSrc,
   imageDesc,
   groupName,
   groupFrequency,
-  children
+  children,
 }) => (
   <ImageHero
     imageSrc={imageSrc}
     imageDesc={imageDesc}
-    height={["50vh", "40vh"]}
+    height={['50vh', '40vh']}
     textAlign="flex-start"
     textJustify="flex-start"
     opacity="0.5"
@@ -28,11 +34,3 @@ export const GroupHero = ({
     </Styled.HeroContentContainer>
   </ImageHero>
 );
-
-GroupHero.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
-  imageDesc: PropTypes.string.isRequired,
-  groupName: PropTypes.string.isRequired,
-  groupFrequency: PropTypes.string.isRequired,
-  children: PropTypes.node
-};

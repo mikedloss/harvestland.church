@@ -1,13 +1,23 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { Heading, Text, Flex } from "rebass";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Heading, Flex } from 'rebass';
 
-import { Layout, Container, Hero } from "../components";
+import { Layout, Container, Hero } from '../components';
 
-import * as Styled from "../template-styles/alert.styles";
+export interface AlertTemplateProps {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        date: string;
+        path: string;
+        title: string;
+      };
+    };
+  };
+}
 
-export default function Template({ data }) {
-  console.log("data :", data);
+const AlertTemplate: React.FC<AlertTemplateProps> = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
 
   return (
@@ -27,7 +37,9 @@ export default function Template({ data }) {
       </Container>
     </Layout>
   );
-}
+};
+
+export default AlertTemplate;
 
 export const pageQuery = graphql`
   query($path: String!) {
