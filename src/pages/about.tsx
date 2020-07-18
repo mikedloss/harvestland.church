@@ -1,25 +1,14 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import { Text, Flex, Box, Heading } from 'rebass';
 
 import { Layout, SEO, Button, Container, Hero } from '../components';
+import { useAboutPageQuery } from '../queries';
 
 import * as Styled from '../page-styles/about-page';
 
-const AboutPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      heroImage: file(relativePath: { eq: "images/pages/about/header2.jpg" }) {
-        ...FullWidthImage
-      }
-      campfireImage: file(relativePath: { eq: "images/common/campfire2.jpg" }) {
-        ...FullWidthImage
-      }
-    }
-  `);
-  console.log('data :>> ', data);
-
-  const { heroImage, campfireImage } = data;
+const AboutPage: React.FC = () => {
+  const { heroImage, campfireImage } = useAboutPageQuery();
 
   return (
     <Layout>
@@ -74,7 +63,7 @@ const AboutPage = () => {
       </Container>
       <Hero.Side2Side
         heroText="What to expect"
-        imageSrc={heroImage.childImageSharp.fluid.src}
+        imageSrc={heroImage}
         height="45vh"
       >
         <Text my="12px">
@@ -94,7 +83,7 @@ const AboutPage = () => {
         </Text>
       </Hero.Side2Side>
       <Hero.Image
-        imageSrc={campfireImage.childImageSharp.fluid.src}
+        imageSrc={campfireImage}
         height={['60vh', '50vh']}
         textAlign="flex-start"
         textJustify="flex-start"
@@ -120,16 +109,5 @@ const AboutPage = () => {
     </Layout>
   );
 };
-
-// export const query = graphql`
-//   {
-//     heroImage: file(relativePath: { eq: "images/pages/about/header2.jpg" }) {
-//       ...FullWidthImage
-//     }
-//     campfireImage: file(relativePath: { eq: "images/common/campfire2.jpg" }) {
-//       ...FullWidthImage
-//     }
-//   }
-// `;
 
 export default AboutPage;

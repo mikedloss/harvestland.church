@@ -1,18 +1,16 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { Heading, Text, Box, Flex } from 'rebass';
 
 import { Layout, SEO, Hero, Container } from '../components';
+import { useGroupsPageQuery } from '../queries';
 
-const GroupsPage = ({ data: { heroImage, groups }, ...props }) => {
+const GroupsPage: React.FC = () => {
   // if you need to save API calls from Contentful, just add this stuff locally
+  const { heroImage, groups } = useGroupsPageQuery();
   return (
     <Layout>
       <SEO title="Groups" keywords={['community', 'groups', 'connections']} />
-      <Hero.Image
-        imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['40vh', '50vh']}
-      >
+      <Hero.Image imageSrc={heroImage} height={['40vh', '50vh']}>
         <Heading p="1.25rem" fontSize={[6, 7]}>
           Groups
         </Heading>
@@ -37,47 +35,21 @@ const GroupsPage = ({ data: { heroImage, groups }, ...props }) => {
           </Box>
         </Flex>
       </Container>
-      {groups.edges.map(({ node }) => {
+      {groups.map((group) => {
         return (
           <Hero.Group
-            key={node.id}
-            imageSrc={node.groupImage.fluid.src}
-            imageDesc={node.groupImage.title}
-            groupName={node.groupName}
-            groupFrequency={node.groupFrequency}
+            key={group.id}
+            imageSrc={group.groupImage.src}
+            imageDesc={group.groupImage.title}
+            groupName={group.groupName}
+            groupFrequency={group.groupFrequency}
           >
-            {node.groupDescription.groupDescription}
+            {group.groupDescription}
           </Hero.Group>
         );
       })}
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    heroImage: file(relativePath: { eq: "images/pages/groups/header.jpg" }) {
-      ...FullWidthImage
-    }
-    groups: allContentfulGroup(sort: { fields: [groupName], order: ASC }) {
-      edges {
-        node {
-          id
-          groupName
-          groupFrequency
-          groupDescription {
-            groupDescription
-          }
-          groupImage {
-            title
-            fluid(maxWidth: 1600) {
-              src
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default GroupsPage;

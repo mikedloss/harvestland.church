@@ -1,11 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { Heading, Text, Flex, Box } from 'rebass';
 
 import { Layout, SEO, Container, Hero, Button } from '../components';
+import { useGivePageQuery } from '../queries';
 
-const GivePage = (props) => {
-  const { image } = props.data;
+const GivePage: React.FC = () => {
+  const { image } = useGivePageQuery();
   return (
     <Layout>
       <SEO title="Give" keywords={['charity', 'help']} />
@@ -56,7 +56,7 @@ const GivePage = (props) => {
       {/* explain what is tithing (use bible photo) */}
       <Hero.Side2Side
         heroText="What is Tithing?"
-        imageSrc={image.childImageSharp.fluid.src}
+        imageSrc={image}
         height={['40vh', '60vh']}
       >
         <p>
@@ -133,13 +133,5 @@ const GivePage = (props) => {
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    image: file(relativePath: { eq: "images/pages/give/header.jpg" }) {
-      ...FullWidthImage
-    }
-  }
-`;
 
 export default GivePage;

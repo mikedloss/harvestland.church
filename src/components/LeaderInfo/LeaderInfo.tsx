@@ -1,24 +1,19 @@
 import React from 'react';
 import { Text, Heading } from 'rebass';
 
+import { Leader } from '../../types';
+
 import * as Styled from './LeaderInfo.styles';
 
-export interface Who {
-  name: string;
-  jobs: string[];
-  picture: any;
-}
-
 export interface LeaderInfoProps {
-  who: Who;
+  who: Leader;
 }
 
 export const LeaderInfo: React.FC<LeaderInfoProps> = ({ who }) => {
-  const { src } = who.picture.fluid;
   return (
     <Styled.LeaderInfoStyle>
       <Styled.PictureContainer>
-        <Styled.LeaderPicture src={src} />
+        <Styled.LeaderPicture src={who.picture.src} alt={who.picture.title} />
       </Styled.PictureContainer>
       <Styled.LeaderDescription>
         <Heading>{who.name}</Heading>

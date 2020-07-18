@@ -11,3 +11,15 @@ export interface ChildImageSharp {
     fluid: GatsbyImageSharpFluid;
   };
 }
+
+export interface LeaderShape {
+  name: string;
+  email: string;
+  jobs: string[];
+  picture: {
+    title: string;
+    fluid: {
+      src: string;
+    };
+  };
+}

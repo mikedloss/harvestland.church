@@ -1,8 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { Heading, Text, Flex } from 'rebass';
 
 import { Layout, SEO, Hero, Button, Container } from '../components';
+import { useVisitPageQuery } from '../queries';
 
 const SEOKeywords = [
   'harvestland address',
@@ -12,14 +12,12 @@ const SEOKeywords = [
   'harvestland email address',
 ];
 
-const VisitPage = ({ data: { heroImage } }) => {
+const VisitPage: React.FC = () => {
+  const { heroImage } = useVisitPageQuery();
   return (
     <Layout>
       <SEO title="Visit" keywords={SEOKeywords} />
-      <Hero.Image
-        imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['30vh', '50vh']}
-      >
+      <Hero.Image imageSrc={heroImage} height={['30vh', '50vh']}>
         <Heading p="20px" fontSize={[6, 7]}>
           Visit Us
         </Heading>
@@ -67,13 +65,5 @@ const VisitPage = ({ data: { heroImage } }) => {
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    heroImage: file(relativePath: { eq: "images/pages/visit/header.png" }) {
-      ...FullWidthImage
-    }
-  }
-`;
 
 export default VisitPage;

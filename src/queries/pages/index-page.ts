@@ -1,6 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { ChildImageSharp } from '../../types';
+import { getFluidImageSrc } from '../../queries';
 
 export interface IndexPageQueryShape {
   video: {
@@ -13,8 +14,17 @@ export interface IndexPageQueryShape {
   serveImage: ChildImageSharp;
 }
 
-export const useIndexPageQuery = (): IndexPageQueryShape => {
-  const data = useStaticQuery(graphql`
+export interface IndexPageQuery {
+  videoUrl: string;
+  fallbackImage: string;
+  whiteLogo: string;
+  worshipImage: string;
+  gatherImage: string;
+  serveImage: string;
+}
+
+export const useIndexPageQuery = (): IndexPageQuery => {
+  const data = useStaticQuery<IndexPageQueryShape>(graphql`
     {
       video: file(relativePath: { eq: "videos/homepage-v1.mp4" }) {
         publicURL
@@ -49,5 +59,19 @@ export const useIndexPageQuery = (): IndexPageQueryShape => {
     }
   `);
 
-  return data;
+  const videoUrl = data.video.publicURL;
+  const fallbackImage = getFluidImageSrc(data.fallbackImage);
+  const whiteLogo = getFluidImageSrc(data.whiteLogo);
+  const worshipImage = getFluidImageSrc(data.worshipImage);
+  const gatherImage = getFluidImageSrc(data.gatherImage);
+  const serveImage = getFluidImageSrc(data.serveImage);
+
+  return {
+    videoUrl,
+    fallbackImage,
+    whiteLogo,
+    worshipImage,
+    gatherImage,
+    serveImage,
+  };
 };

@@ -66,7 +66,7 @@ export const Footer = () => {
             © {new Date().getFullYear()} Harvestland Church
           </Styled.SmallLine>
         </Styled.Container>
-        <ContentfulAttribute />
+        {/* <ContentfulAttribute /> */}
       </Styled.LeftContainer>
       <Styled.RightContainer
         width={['100%', '25%']}

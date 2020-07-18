@@ -1,18 +1,15 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { Heading, Text, Box, Flex } from 'rebass';
 
 import { Layout, SEO, Hero, Container } from '../../components';
+import { useBeliefsPageQuery } from '../../queries';
 
-const BeliefsPage = (props) => {
-  const { heroImage } = props.data;
+const BeliefsPage: React.FC = () => {
+  const { heroImage } = useBeliefsPageQuery();
   return (
     <Layout>
       <SEO title="Beliefs" keywords={['harvestland beliefs', 'beliefs']} />
-      <Hero.Image
-        imageSrc={heroImage.childImageSharp.fluid.src}
-        height={['40vh', '50vh']}
-      >
+      <Hero.Image imageSrc={heroImage} height={['40vh', '50vh']}>
         <Heading p="1rem" fontSize={[5, 6]}>
           What We Believe
         </Heading>
@@ -137,13 +134,5 @@ const BeliefsPage = (props) => {
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    heroImage: file(relativePath: { eq: "images/pages/about/header.jpg" }) {
-      ...FullWidthImage
-    }
-  }
-`;
 
 export default BeliefsPage;

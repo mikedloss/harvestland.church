@@ -29,3 +29,27 @@ export const maxImageSize = graphql`
     }
   }
 `;
+
+export const LeaderPicture = graphql`
+  fragment leaderPicture on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`;
+
+export const LeaderData = graphql`
+  fragment LeaderData on ContentfulLeader {
+    name
+    email
+    jobs
+    picture {
+      title
+      fluid(maxWidth: 1000) {
+        src
+      }
+    }
+  }
+`;

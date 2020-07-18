@@ -28,9 +28,9 @@ const SEOKeywords = [
   'detroit, mi',
 ];
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   const {
-    video,
+    videoUrl,
     fallbackImage,
     whiteLogo,
     worshipImage,
@@ -59,8 +59,8 @@ const IndexPage = () => {
         keywords={SEOKeywords}
       />
       <Hero.Video
-        videoSrc={video.publicURL}
-        fallbackImageSrc={fallbackImage.childImageSharp.fluid.src}
+        videoSrc={videoUrl}
+        fallbackImageSrc={fallbackImage}
         fallbackImageHeight="60vh"
         fallbackImageContent={fallbackImageContent}
       >
@@ -122,7 +122,7 @@ const IndexPage = () => {
         </Hero.Text>
         <Box>
           <Hero.Side2Side
-            imageSrc={worshipImage.childImageSharp.fluid.src}
+            imageSrc={worshipImage}
             height="40vh"
             imageWidth="60%"
             opacity="1"
@@ -143,7 +143,7 @@ const IndexPage = () => {
             </Box>
           </Hero.Side2Side>
           <Hero.Side2Side
-            imageSrc={gatherImage.childImageSharp.fluid.src}
+            imageSrc={gatherImage}
             height="40vh"
             opacity="1"
             imageWidth="60%"
@@ -164,7 +164,7 @@ const IndexPage = () => {
             </Box>
           </Hero.Side2Side>
           <Hero.Side2Side
-            imageSrc={serveImage.childImageSharp.fluid.src}
+            imageSrc={serveImage}
             height="40vh"
             imageWidth="60%"
             opacity="1"
