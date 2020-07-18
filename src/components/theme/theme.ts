@@ -7,19 +7,19 @@ const LARGE = 1280;
 export const breakpointValues = {
   SMALL,
   MEDIUM,
-  LARGE
+  LARGE,
 };
 export const breakpoints = [`${SMALL}px`, `${MEDIUM}px`, `${LARGE}px`];
 
 export const colors = {
-  primary: "#42613d",
-  primaryLight: "#79a672",
-  primaryLighter: "#b5ceb1",
-  black: "#22292F",
-  white: "#fff",
-  realBlack: "#000",
-  offWhite: "#f8fafc",
-  warning: "#4A1619"
+  primary: '#42613d',
+  primaryLight: '#79a672',
+  primaryLighter: '#b5ceb1',
+  black: '#22292F',
+  white: '#fff',
+  realBlack: '#000',
+  offWhite: '#f8fafc',
+  warning: '#4A1619',
 };
 
 //                    0  1  2  3   4   5   6   7   8   9   10
@@ -30,25 +30,25 @@ export const buttons = {
     backgroundColor: colors.primary,
     color: colors.white,
     border: `3px solid ${colors.primary}`,
-    transition: "all 0.2s ease-in-out",
-    ":hover": {
-      cursor: "pointer",
-      backgroundColor: "#547050",
-      borderColor: "#547050"
-    }
+    transition: 'all 0.2s ease-in-out',
+    ':hover': {
+      cursor: 'pointer',
+      backgroundColor: '#547050',
+      borderColor: '#547050',
+    },
   },
   inverse: {
     backgroundColor: colors.white,
     color: colors.primary,
     border: `3px solid ${colors.primary}`,
-    transition: "all 0.2s ease-in-out",
-    ":hover": {
-      cursor: "pointer",
+    transition: 'all 0.2s ease-in-out',
+    ':hover': {
+      cursor: 'pointer',
       color: colors.white,
       backgroundColor: colors.primary,
-      borderColor: colors.primary
-    }
-  }
+      borderColor: colors.primary,
+    },
+  },
 };
 
 export default {
@@ -56,5 +56,5 @@ export default {
   buttons,
   colors,
   fontSizes,
-  space
+  space,
 };

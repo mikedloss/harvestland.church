@@ -49,7 +49,5 @@ export const useIndexPageQuery = (): IndexPageQueryShape => {
     }
   `);
 
-  console.log(`data`, data);
-
   return data;
 };
