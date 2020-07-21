@@ -30,7 +30,7 @@ export const BannerAlert: React.FC<BannerAlertProps> &
       p="0.5rem"
     >
       <Flex flexDirection="column" alignItems="center" mr={[null, '2rem']}>
-        {children}
+        whats up
       </Flex>
     </Flex>
   );
