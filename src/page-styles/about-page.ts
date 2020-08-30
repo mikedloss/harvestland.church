@@ -32,8 +32,4 @@ export const GroupsContent = styled(Flex)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @media screen and (min-width: ${bp.SMALL}px) {
-    align-items: flex-start;
-  }
 `;

@@ -9,5 +9,4 @@ TextHeroStyle.defaultProps = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  bg: 'white',
 };

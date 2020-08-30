@@ -82,13 +82,14 @@ const AboutPage: React.FC = () => {
           are you are.
         </Text>
       </Hero.Side2Side>
-      <Hero.Image
-        imageSrc={campfireImage}
-        height={['60vh', '50vh']}
-        textAlign="flex-start"
-        textJustify="flex-start"
+      <Hero.Text
+        customFlex={{
+          alignItems: 'flex-start',
+          justifyContent: 'flex-start',
+        }}
+        customSpacing={'4rem'}
       >
-        <Styled.HeroContentContainer alignItems="center">
+        <Styled.HeroContentContainer>
           <Box width={[null, '40%']}>
             <Heading pb="2rem" fontSize={[5, 6]}>
               Groups
@@ -105,7 +106,7 @@ const AboutPage: React.FC = () => {
             </Link>
           </Styled.GroupsContent>
         </Styled.HeroContentContainer>
-      </Hero.Image>
+      </Hero.Text>
     </Layout>
   );
 };

@@ -37,15 +37,14 @@ const GroupsPage: React.FC = () => {
       </Container>
       {groups.map((group) => {
         return (
-          <Hero.Group
-            key={group.id}
-            imageSrc={group.groupImage.src}
-            imageDesc={group.groupImage.title}
-            groupName={group.groupName}
-            groupFrequency={group.groupFrequency}
-          >
-            {group.groupDescription}
-          </Hero.Group>
+          <Hero.Text customSpacing={'2rem'}>
+            <Heading fontSize={6} color="primary">
+              {group.groupName}
+            </Heading>
+            <Heading fontSize={4} color="black">
+              {group.groupDescription}
+            </Heading>
+          </Hero.Text>
         );
       })}
     </Layout>
